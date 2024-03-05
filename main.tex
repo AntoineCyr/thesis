@@ -1,0 +1,60 @@
+\documentclass[letterpaper,12pt,onecolumn,final]{report}
+
+% = = = Packages
+
+\input{setup/packages}
+\input{setup/macros}
+
+% = = = Layout
+
+\oddsidemargin 0.5in
+\evensidemargin 0.5in
+\marginparwidth 40pt
+\marginparsep 10pt
+\topmargin 0in
+\headsep 0in
+\textheight 8.75in
+\textwidth 6in
+
+% = = = Front Matter
+
+\begin{document}
+\pagenumbering{roman}
+
+\setstretch{1.25}
+\input{sections/00-cover} % Title page
+\newpage
+
+\setstretch{1.25}
+\input{sections/01-sigs} % Signature page
+\newpage
+
+\setstretch{2}
+\input{sections/02-abstract} % Abstract
+\newpage
+
+\setstretch{2}
+\input{sections/03-ack} % Acknowledgements
+\newpage
+
+\setstretch{2}
+\input{sections/04-contents} % Table of Contents/Tables/Figures
+\newpage   
+       
+% = = = Main Body 
+
+\pagenumbering{arabic}
+
+\input{sections/05-body.tex}
+
+% = = = = = = Bibliography 
+
+\addcontentsline{toc}{chapter}{Bibliography}  %  Add Bibliography to TOC
+\singlespacing % save space in the bibliography
+\bibliographystyle{abbrv}
+\bibliography{bib/pulp}
+\nocite{*}
+
+% = = = = = = Done 
+
+\end{document}

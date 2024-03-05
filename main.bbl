@@ -1,0 +1,3257 @@
+\begin{thebibliography}{100}
+
+\bibitem{ASK05}
+O.~Acii\c{c}mez, W.~Schindler, and \c{C}. K.~Ko\c{c}.
+\newblock Improving {B}rumley and {B}oneh timing attack on unprotected {SSL}
+  implementations.
+\newblock In {\em CCS}, 2005.
+
+\bibitem{Acq04}
+A.~Acquisti.
+\newblock Receipt-free homomorphic elections and write-in ballots.
+\newblock Technical report, IACR Eprint Report 2004/105, 2004.
+
+\bibitem{AGS05}
+A.~Adelsbach, S.~Gajek, and J.~Schwenk.
+\newblock Visual spoofing of {SSL} protected web sites and effective
+  countermeasures.
+\newblock In {\em ISPEC}, 2005.
+
+\bibitem{Adh17}
+M.~Adham.
+\newblock Govchain: An approach to a distributed, equitable government ledger
+  secured by its constituents.
+\newblock Technical report, BitAccess, 2017.
+
+\bibitem{Adi08}
+B.~Adida.
+\newblock Helios: web-based open-audit voting.
+\newblock In {\em USENIX Security Symposium}, pages 335--348, 2008.
+
+\bibitem{AMPQ09}
+B.~Adida, O.~d. Marneffe, O.~Pereira, and J.-J. Quisquater.
+\newblock Electing a university president using open-audit voting: Analysis of
+  real-world use of {H}elios.
+\newblock In {\em EVT/WOTE}, 2009.
+
+\bibitem{AN06}
+B.~Adida and C.~A. Neff.
+\newblock Ballot casting assurance.
+\newblock In {\em EVT}, 2006.
+
+\bibitem{AN09}
+B.~Adida and C.~A. Neff.
+\newblock Efficient receipt-free ballot casting resistant to covert channels.
+\newblock In {\em EVT/WOTE}, 2009.
+
+\bibitem{AR06}
+B.~Adida and R.~L. Rivest.
+\newblock Scratch \& {V}ote: self-contained paper-based cryptographic voting.
+\newblock In {\em ACM WPES}, pages 29--40, 2006.
+
+\bibitem{ABDV03}
+R.~Aditya, C.~Boyd, E.~Dawson, and K.~Viswanathan.
+\newblock Secure e-voting for preferential elections.
+\newblock In {\em EGOV}, 2003.
+
+\bibitem{ALBD04}
+R.~Aditya, B.~Lee, C.~Boyd, and E.~Dawson.
+\newblock An efficient mixnet-based voting scheme providing receipt-freeness.
+\newblock In {\em TrustBus}, 2004.
+
+\bibitem{ABJD10}
+G.~Aggarwal, E.~Bursztein, C.~Jackson, and D.~Boneh.
+\newblock An analysis of private browsing modes in modern browsers.
+\newblock In {\em USENIX Security}, 2010.
+
+\bibitem{AW03}
+R.~Aggarwal and G.~Wu.
+\newblock Stock market manipulation---theory and evidence.
+\newblock {\em Journal of Business}, 79(4), 2003.
+
+\bibitem{Ahm08}
+D.~Ahmad.
+\newblock Two years of broken crypto.
+\newblock {\em IEEE Security and Privacy}, 6(5), 2008.
+
+\bibitem{ABHL03}
+L.~v. Ahn, M.~Blum, N.~Hopper, and J.~Langford.
+\newblock {CAPTCHA}: Using hard {AI} problems for security.
+\newblock In {\em EUROCRYPT}, 2003.
+
+\bibitem{ABHO06}
+L.~v. Ahn, A.~Bortz, N.~J. Hopper, and K.~O'Neill.
+\newblock Selectively traceable anonymity.
+\newblock In {\em PET}, 2006.
+
+\bibitem{al2017scpki}
+M.~Al-Bassam.
+\newblock Scpki: A smart contract-based pki and identity system.
+\newblock In {\em ACM BCC}, pages 35--40. ACM, 2017.
+
+\bibitem{AP13}
+N.~J. AlFardan and K.~G. Paterson.
+\newblock Lucky thirteen: Breaking the {TLS} and {DTLS} record protocols.
+\newblock In {\em IEEE Symposium on Security and Privacy}, 2013.
+
+\bibitem{ali2016blockstack}
+M.~Ali, J.~C. Nelson, R.~Shea, and M.~J. Freedman.
+\newblock Blockstack: A global naming and storage system secured by
+  blockchains.
+\newblock In {\em USENIX ATC}, pages 181--194, 2016.
+
+\bibitem{ABCS14}
+R.~Ali, J.~Barrdear, R.~Clews, and J.~Southgate.
+\newblock Innovations in payment technologies and the emergence of digital
+  currencies.
+\newblock Quarterly bulletin, Bank of England, 2014.
+
+\bibitem{AK09}
+M.~Alicherry and A.~D. Keromytis.
+\newblock Doublecheck: Multi-path verification against man-in-the-middle
+  attacks.
+\newblock In {\em ISCC}, 2009.
+
+\bibitem{AVHS12}
+B.~Amann, M.~Vallentin, S.~Hall, and R.~Sommer.
+\newblock Revisiting {SSL}: A large-scale study of the internet's most trusted
+  protocol.
+\newblock Technical report, ICSI, 2012.
+
+\bibitem{AJL04}
+A.~Ambainis, M.~Jakobsson, and H.~Lipmaa.
+\newblock Cryptographic randomized response techniques.
+\newblock {\em PKC}, 2004.
+
+\bibitem{ATO12}
+C.~Amrutkar, P.~Traynor, and P.~van Oorschot.
+\newblock Measuring {SSL} indicators on mobile browsers: Extended life or end
+  of the road?
+\newblock In {\em ISC}, 2012.
+
+\bibitem{AnKu96}
+R.~Anderson and M.~Kuhn.
+\newblock Tamper resistance: A cautionary note.
+\newblock In {\em Proceedings of the 2nd Conference on Proceedings of the
+  Second USENIX Workshop on Electronic Commerce - Volume 2}, 1996.
+
+\bibitem{AB96}
+R.~J. Anderson and E.~Biham.
+\newblock Two practical and provably secure block ciphers: {BEARS} and {LION}.
+\newblock In {\em FSE}, 1996.
+
+\bibitem{ANS98}
+R.~J. Anderson, R.~M. Needham, and A.~Shamir.
+\newblock The steganographic file system.
+\newblock In {\em IH}, 1998.
+
+\bibitem{AKRSC13}
+E.~Androulaki, G.~O. Karame, M.~Roeschlin, T.~Scherer, and S.~Capkun.
+\newblock {Evaluating User Privacy in Bitcoin}.
+\newblock In {\em Financial Cryptography}, 2013.
+
+\bibitem{+CCES}
+S.~Ansolabehere.
+\newblock Guide to the 2008 cooperative congressional election survey.
+\newblock Technical report, M.I.T., 2009.
+
+\bibitem{APDLF10}
+M.~Antonakakis, R.~Perdisci, D.~Dagon, W.~Lee, and N.~Feamster.
+\newblock Building a dynamic reputation system for {DNS}.
+\newblock In {\em USENIX Security}, 2010.
+
+\bibitem{AMU01}
+X.~Ao, N.~H. Minsky, and V.~Ungureanu.
+\newblock Formal treatment of certificate revocation under communal access
+  control.
+\newblock In {\em IEEE Symposium on Security and Privacy}, 2001.
+
+\bibitem{AGH+08}
+A.~W. Appel, M.~Ginsburg, H.~Hursti, B.~W. Kernighan, C.~D. Richards, G.~Tan,
+  and P.~Venetis.
+\newblock The new jersey voting-machine lawsuit and the avc advantage dre
+  voting machine.
+\newblock In {\em EVT/WOTE}, 2009.
+
+\bibitem{ACG06}
+R.~Araujo, R.~F. Custodio, and J.~v. Graaf.
+\newblock A verifiable voting protocol based on {F}arnel.
+\newblock In {\em WOTE}, 2006.
+
+\bibitem{ACG10}
+R.~Araujo, R.~F. Custodio, and J.~v. Graaf.
+\newblock A verifiable voting protocol based on {F}arnel.
+\newblock In {\em Towards Trustworthy Elections}, volume 6000 of {\em LNCS}.
+  Springer, 2010.
+
+\bibitem{AFT07}
+R.~Araujo, S.~Foulle, and J.~Traor\'e.
+\newblock A practical and secure coercion-resistant scheme for remote
+  elections.
+\newblock In {\em Frontiers of Electronic Voting}, 2007.
+
+\bibitem{AFT10}
+R.~Araujo, S.~Foulle, and J.~Traor\'e.
+\newblock A practical and secure coercion-resistant scheme for internet voting.
+\newblock {\em Toward Trustworthy Elections}, LNCS 6000, 2010.
+
+\bibitem{ARR+10}
+R.~Araujo, N.~B. Rajeb, R.~Robbana, J.~Traor\'e, and S.~Yousfi.
+\newblock Towards practical and secure coercion-resistant electronic elections.
+\newblock In {\em CANS}, 2010.
+
+\bibitem{AR08}
+R.~Araujo and P.~Y.~A. Ryan.
+\newblock Improving the {F}arnel voting scheme.
+\newblock In {\em EVOTE}, 2008.
+
+\bibitem{AFGH+08}
+K.~J. Arrow, R.~Forsythe, M.~Gorham, R.~Hahn, R.~Hanson, J.~O. Ledyard,
+  S.~Levmore, R.~Litan, P.~Milgrom, F.~D. Nelson, G.~R. Neumann, M.~Ottaviani,
+  T.~C. Schelling, R.~J. Shiller, V.~L. Smith, E.~Snowberg, C.~R. Sunstein,
+  P.~C. Tetlock, P.~E. Tetlock, H.~R. Varian, J.~Wolfers, and E.~Zitzewitz.
+\newblock The promise of prediction markets.
+\newblock {\em Science}, 320(5878), 2008.
+
+\bibitem{AM01}
+G.~Ateniese and S.~Mangard.
+\newblock A new approach to {DNS} security ({DNSSEC}).
+\newblock In {\em CCS}, 2001.
+
+\bibitem{ANC08}
+T.~Aura, P.~Nikander, and G.~Camarillo.
+\newblock Effects of mobility and multihoming on transport-protocol security.
+\newblock In {\em IEEE Symposium on Security and Privacy}, 2004.
+
+\bibitem{ANL00}
+T.~Aura, P.~Nikander, and J.~Leiwo.
+\newblock {DoS}-resistant authentication with client puzzles.
+\newblock In {\em Security Protocols}, 2000.
+
+\bibitem{ACC+08}
+A.~Aviv, P.~Cerny, S.~Clark, E.~Cronin, G.~Shah, M.~Sherr, and M.~Blaze.
+\newblock Security evaluation of {ES\&S} voting machines and election
+  management system.
+\newblock In {\em EVT}, pages 1--13, 2008.
+
+\bibitem{Bab85}
+L.~Babai.
+\newblock Trading group theory for randomness.
+\newblock In {\em ACM STOC}, 1985.
+
+\bibitem{Bab88}
+L.~Babai and S.~Moran.
+\newblock Arthur-merlin games: a randomized proof system, and a hierarchy of
+  complexity class.
+\newblock {\em J. Comput. Syst. Sci.}, 36(2):254--276, 1988.
+
+\bibitem{Back02}
+A.~Back.
+\newblock Hashcash: a denial of service counter-measure, 2002.
+
+\bibitem{BCD+14}
+A.~Back, M.~Corallo, L.~Dashjr, M.~Friedenbach, G.~Maxwell, A.~Miller,
+  A.~Poelstra, J.~Tim{\'o}n, and P.~Wuille.
+\newblock Enabling blockchain innovations with pegged sidechains.
+\newblock Technical report, 2014.
+
+\bibitem{+Pat1}
+L.~C. Baird, M.~E. Harmon, R.~R. Young, and J.~E. Armstrong.
+\newblock Apparatus and method for authenticating access to a network resource.
+\newblock United States Patent, 6732278, 2004.
+
+\bibitem{BIS96}
+Implications for central banks of the development of electronic money.
+\newblock Technical report, Bank for International Settlements, 1996.
+
+\bibitem{BIS15}
+Digital currencies.
+\newblock Technical report, {Bank for International Settlements} and {Committee
+  on Payments and Market Infrastructures}, 2015.
+
+\bibitem{Jas4a}
+Cross-border interbank payments and settlements.
+\newblock Technical report, Bank of Canada, Bank of England, and Monetary
+  Authority of Singapore, Nov. 2018.
+
+\bibitem{Jas4b}
+Enabling cross-border {High} {Value} {Transfer} {Using} {Distributed} {Ledger}
+  {Technologies}.
+\newblock Technical report, Bank of Canada, Monetary Authority of Singapore,
+  Accenture, and J.P. Morgan, 2019.
+
+\bibitem{BoC20}
+Contingency planning for a central bank digital currency.
+\newblock Technical report, Bank of Canada, 2020.
+
+\bibitem{BoE20}
+Central bank digital currency: Opportunities, challenges and design.
+\newblock Discussion paper, Bank of England, 2020.
+
+\bibitem{BPS94}
+A.~{Baraani-Dastjerdi}, J.~Pieprzyk, and R.~{Safavi-Naini}.
+\newblock A practical electronic voting protocol using threshold schemes.
+\newblock In {\em ACSAC}, 1995.
+
+\bibitem{BH05}
+B.~Barak and S.~Halevi.
+\newblock A model and architecture for pseudo-random generation and
+  applications to \texttt{/dev/random}.
+\newblock In {\em ACM CCS}, 2005.
+
+\bibitem{Bar04}
+G.~Bard.
+\newblock The vulnerability of {SSL} to chosen-plaintext attack.
+\newblock Technical Report 2004/111, IACR ePrint, 2004.
+
+\bibitem{Bar06}
+G.~V. Bard.
+\newblock A challenging but feasible blockwise-adaptive chosen-plaintext attack
+  on {SSL}.
+\newblock In {\em SECRYPT}, 2006.
+
+\bibitem{Bar07}
+G.~V. Bard.
+\newblock Spelling-error tolerant, order-independent pass-phrases via the
+  {D}amerau-{L}evenshtein string-edit distance metric.
+\newblock In {\em AISW}, 2007.
+
+\bibitem{BR11}
+E.~Barker and A.~Roginsky.
+\newblock Transitions: Recommendation for transitioning the use of
+  cryptographic algorithms and key lengths.
+\newblock Special Publication 800-131A, NIST, 2011.
+
+\bibitem{BIS19}
+C.~Barontini and H.~Holden.
+\newblock Proceeding with caution: A survey on central bank digital currency.
+\newblock Technical report, Bank for International Settlements, 2019.
+
+\bibitem{BCS09}
+A.~Barth, J.~Caballero, and D.~Song.
+\newblock Secure content sniffing for web browsers, or how to stop papers from
+  reviewing themselves.
+\newblock In {\em IEEE Symposium on Security and Privacy}, 2009.
+
+\bibitem{BO91}
+J.~J. Bartholdi and J.~B. Orlin.
+\newblock Single transferable vote resists strategic voting.
+\newblock {\em Social Choice and Welfare}, 8:341--354, 1991.
+
+\bibitem{BRS18}
+D.~{Basin}, S.~{Radomirovic}, and L.~{Schmid}.
+\newblock Alethea: A provably secure random sample voting protocol.
+\newblock In {\em IEEE CSF}, 2018.
+
+\bibitem{BM10}
+J.~Bau and J.~Mitchell.
+\newblock A security evaluation of {DNSSEC} with {NSEC3}.
+\newblock In {\em NDSS}, 2010.
+
+\bibitem{BDS20}
+M.~Baudet, G.~Danezis, and A.~Sonnino.
+\newblock Fastpay: High-performance byzantine fault tolerant settlement.
+\newblock {\em arXiv:2003.11506 [cs]}, 2020.
+
+\bibitem{BFP+01}
+O.~Baudron, P.-A. Fouque, D.~Pointcheval, G.~Poupard, and J.~Stern.
+\newblock Practical multi-candidate election system.
+\newblock In {\em ACM PODC}, 2001.
+
+\bibitem{BeGa17}
+M.~L. Bech and R.~Garratt.
+\newblock Central bank cryptocurrencies.
+\newblock {\em {BIS} Quarterly Review}, September 2017.
+
+\bibitem{Beh17}
+J.~Behrens.
+\newblock The origins of liquid democracy.
+\newblock {\em The Liquid Democracy Journal}, 5, 2017.
+
+\bibitem{Bel98}
+M.~Bellare.
+\newblock Practice-oriented provable security.
+\newblock In {\em Lectures on Data Security}. LNCS 1561, 1999.
+
+\bibitem{BDJR97}
+M.~Bellare, A.~Desai, E.~Jokipii, and P.~Rogaway.
+\newblock A concrete security treatment of symmetric encryption.
+\newblock In {\em FOCS}, 1997.
+
+\bibitem{BB08}
+L.~Bello and M.~Bertachhini.
+\newblock Predictable {PRNG} in the vulnerable {D}ebian {OpenSSL} package: the
+  what and the how.
+\newblock In {\em DEFCON 16}, 2008.
+
+\bibitem{BR06}
+S.~M. Bellovin and E.~Rescorla.
+\newblock Deploying a new hash algorithm.
+\newblock In {\em NDSS}, 2006.
+
+\bibitem{Ben86}
+J.~Benaloh.
+\newblock Cryptographic capsules: A disjunctive primitive for interactive
+  protocols.
+\newblock In {\em CRYPTO}, 1986.
+
+\bibitem{Ben86b}
+J.~Benaloh.
+\newblock Secret sharing homomorphisms: Keeping a secret secret.
+\newblock In {\em EUROCRYPT}, 1986.
+
+\bibitem{Ben87}
+J.~Benaloh.
+\newblock {\em Verifiable secret-ballot elections}.
+\newblock PhD thesis, Yale University, 1987.
+
+\bibitem{Ben06}
+J.~Benaloh.
+\newblock Simple verifiable elections.
+\newblock In {\em EVT}, 2006.
+
+\bibitem{Ben07}
+J.~Benaloh.
+\newblock Ballot casting assurance via voter-initiated poll station auditing.
+\newblock In {\em EVT}, 2007.
+
+\bibitem{BMR+10}
+J.~Benaloh, T.~Moran, L.~Naish, K.~Ramchen, and V.~Teague.
+\newblock Shuffle-sum: Coercion-resistant verifiable tallying for stv voting.
+\newblock {\em IEEE TIFS}, 4(4):684--698, 2009.
+
+\bibitem{BT94}
+J.~Benaloh and D.~Tuinstra.
+\newblock Receipt-free secret-ballot elections.
+\newblock In {\em ACM STOC}, 1994.
+
+\bibitem{BY86}
+J.~Benaloh and M.~Yung.
+\newblock Distributing the power of a government to enhance the privacy of
+  voters.
+\newblock In {\em ACM PODC}, 1986.
+
+\bibitem{CF85}
+J.~D. {Benaloh ({\it n\'e} Cohen)} and M.~J. Fisher.
+\newblock A robust and verifiable cryptographically secure election scheme.
+\newblock In {\em SFCS}, 1985.
+
+\bibitem{BMR17}
+I.~Bentov, A.~Mizrahi, and M.~Rosenfeld.
+\newblock Decentralized prediction market without arbiters.
+\newblock In {\em BITCOIN}, pages 199--217, Cham, 2017. Springer International
+  Publishing.
+
+\bibitem{BFCZ08}
+K.~Bhargavan, C.~Fournet, R.~Corin, and E.~Zalinescu.
+\newblock Cryptographically verified implementations for {TLS}.
+\newblock In {\em CCS}, 2008.
+
+\bibitem{BFCZ12}
+K.~Bhargavan, C.~Fournet, R.~Corin, and E.~Z\u{a}linescu.
+\newblock Verified cryptographic implementations for {TLS}.
+\newblock {\em ACM TISSEC}, 15(1), 2012.
+
+\bibitem{BKT17}
+A.~Biryukov, D.~Khovratovich, and S.~Tikhomirov.
+\newblock Findel: Secure derivative contracts for ethereum.
+\newblock In {\em WTSC}, Cham, 2017. Springer International Publishing.
+
+\bibitem{BKT18}
+A.~Biryukov, D.~Khovratovich, and S.~Tikhomirov.
+\newblock Privacy-preserving kyc on ethereum.
+\newblock In {\em ERCIM Blockchain Workshop}, 2018.
+
+\bibitem{Bje17}
+O.~Bjerg.
+\newblock Designing {New} {Money} - {The} {Policy} {Trilemma} of {Central}
+  {Bank} {Digital} {Currency}.
+\newblock Technical report, Copenhagen Business School, CBS, 2017.
+
+\bibitem{BS73}
+F.~Black and M.~Scholes.
+\newblock The pricing of options and corporate liabilities.
+\newblock {\em Journal of Political Economy}, 81(3), 1973.
+
+\bibitem{BB95}
+M.~Blaze and S.~M. Bellovin.
+\newblock Session-layer encryption.
+\newblock In {\em USENIX Security}, 1995.
+
+\bibitem{BCE+07}
+M.~Blaze, A.~Cordero, S.~Engle, C.~Karlof, N.~Sastry, M.~Sherr, T.~Stegers, and
+  K.-P. Yee.
+\newblock Source code review of the sequoia voting system.
+\newblock In {\em State of California's Top to Bottom Review}, 2007.
+
+\bibitem{BIK01}
+M.~Blaze, J.~Ioannidis, and A.~D. Keromytis.
+\newblock Trust management for {IPsec}.
+\newblock In {\em NDSS}, 2001.
+
+\bibitem{BIK02}
+M.~Blaze, J.~Ioannidis, and A.~D. Keromytis.
+\newblock Trust management for {IPsec}.
+\newblock {\em ACM TISSEC}, 5(2), 2002.
+
+\bibitem{Ble98}
+D.~Bleichenbacher.
+\newblock Chosen ciphertext attacks against protocols based on the {RSA}
+  encryption standard {PKCS \#1}.
+\newblock In {\em CRYPTO}, 1998.
+
+\bibitem{BBS86}
+L.~Blum, M.~Blum, and M.~Shub.
+\newblock A simple unpredictable pseudo random number generator.
+\newblock {\em SIAM J. Comput.}, 15(2):364--383, 1986.
+
+\bibitem{BHW20}
+C.~Boar, H.~Holden, and A.~Wadsworth.
+\newblock Impending arrival -- a sequel to the survey on central bank digital
+  currency.
+\newblock BIS Papers 107, Bank for International Settlements, 2020.
+
+\bibitem{BMR07}
+J.~M. Bohli, J.~{Mueller-Quade}, and S.~Roehrich.
+\newblock Bingo voting: Secure and coercion-free voting using a trusted random
+  number generator.
+\newblock In {\em VOTE-ID}, pages 111--124, 2007.
+
+\bibitem{BDTW01}
+D.~Boneh, X.~Ding, G.~Tsudik, and C.~M. Wong.
+\newblock A method for fast revocation of public key certificates and security
+  capabilities.
+\newblock In {\em USENIX Security}, 2001.
+
+\bibitem{BF01}
+D.~Boneh and M.~Franklin.
+\newblock Identity-based encryption from the weil pairing.
+\newblock In {\em CRYPTO}, 2005.
+
+\bibitem{BGN05}
+D.~Boneh, E.-J. Goh, and K.~Nissam.
+\newblock Evaluating {2-DNF} formulas on ciphertexts.
+\newblock In {\em TCC}, 2005.
+
+\bibitem{BG02}
+D.~Boneh and P.~Golle.
+\newblock Almost entirely correct mixing with applications to voting.
+\newblock In {\em ACM CCS}, 2002.
+
+\bibitem{bonneau2016ethiks}
+J.~Bonneau.
+\newblock Ethiks: Using ethereum to audit a coniks key transparency log.
+\newblock In {\em Financial Cryptography}, pages 95--105. Springer, 2016.
+
+\bibitem{BCG15}
+J.~Bonneau, J.~Clark, and S.~Goldfeder.
+\newblock On bitcoin as a public randomness source.
+\newblock Cryptology ePrint Archive, Report 2015/1015, 2015.
+\newblock \url{https://eprint.iacr.org/2015/1015}.
+
+\bibitem{BHOS12}
+J.~Bonneau, C.~Herley, P.~C. van Oorschot, and F.~Stajano.
+\newblock The quest to replace passwords: a framework for comparative
+  evaluation of web authentication schemes.
+\newblock In {\em IEEE Symp. Security \& Privacy}, 2012.
+
+\bibitem{BMC+15}
+J.~Bonneau, A.~Miller, J.~Clark, A.~Narayanan, J.~Kroll, and E.~Felten.
+\newblock Bitcoin and second-generation cryptocurrencies.
+\newblock In {\em {IEEE Symposium on Security and Privacy}}, 2015.
+
+\bibitem{BNMC+14}
+J.~Bonneau, A.~Narayanan, A.~Miller, J.~Clark, J.~A. Kroll, and E.~W. Felten.
+\newblock Mixcoin: Anonymity for bitcoin with accountable mixes.
+\newblock In {\em Financial Cryptography}, 2014.
+
+\bibitem{Bor07}
+B.~Borchert.
+\newblock Segment-based visual cryptography.
+\newblock Technical Report WSI-2007-04, WSI, 2007.
+
+\bibitem{Bos92}
+J.~Bos.
+\newblock {\em Practical Privacy}.
+\newblock PhD thesis, Technische Universiteit Eindhoven, 1992.
+
+\bibitem{BCP92}
+J.~Bos, D.~Chaum, and G.~Purdy.
+\newblock A voting scheme.
+\newblock Preliminary draft, 1992.
+
+\bibitem{BLST20}
+M.~Bouchaud, T.~Lyons, M.~S. Olive, and K.~Timsit.
+\newblock Central banks and the future of digital money.
+\newblock Technical report, ConsenSys Solutions, 2020.
+
+\bibitem{Bou00}
+F.~Boudot.
+\newblock Efficient proofs that a committed number lies in an interval.
+\newblock In {\em EUROCRYPT}, 2000.
+
+\bibitem{Boy90}
+C.~Boyd.
+\newblock A new multiple key cipher and an improved voting scheme.
+\newblock In {\em EUROCRYPT}, 1989.
+
+\bibitem{Bra97}
+S.~Brands.
+\newblock Rapid demonstration of linear relations connected by boolean
+  operators.
+\newblock In {\em EUROCRYPT}, 1997.
+
+\bibitem{BCC88}
+G.~Brassard, D.~Chaum, and C.~Cr\'{e}peau.
+\newblock Minimum disclosure proofs of knowledge.
+\newblock {\em J. Comput. Syst. Sci.}, 37(2):156--189, 1988.
+
+\bibitem{Bre20}
+J.~Brett.
+\newblock How project libra and covid-19 drove digital dollar idea in congress.
+\newblock {\em Forbes}, 2020.
+
+\bibitem{BT08}
+A.~Broadbent and A.~Tapp.
+\newblock Information-theoretically secure voting without an honest majority.
+\newblock In {\em WOTE}, 2008.
+
+\bibitem{Bro16}
+B.~Broadbent.
+\newblock Central banks and digital currencies.
+\newblock Speech, Bank of England, 2016.
+
+\bibitem{Bro13}
+J.~Brown.
+\newblock {Betting Markets with Decentralized Resolution and Persistent
+  Reputation using Electronic Cash}.
+\newblock private communication, Dec. 2013.
+
+\bibitem{Bro97}
+R.~Brown.
+\newblock Anderson: The unmaking of mondex.
+\newblock {\em Computerworld News Wire}, 1997.
+
+\bibitem{BT11}
+B.~B. Brumley and N.~Tuveri.
+\newblock Remote timing attacks are still practical.
+\newblock In {\em ESORICS}, 2011.
+
+\bibitem{BB03}
+D.~Brumley and D.~Boneh.
+\newblock Remote timing attacks are practical.
+\newblock In {\em USENIX Security}, 2003.
+
+\bibitem{BESW00}
+P.~Buhler, T.~Eirich, M.~Steiner, and M.~Waidner.
+\newblock Secure password-based cipher suite for {TLS}.
+\newblock In {\em NDSS}, 2000.
+
+\bibitem{BBB+18}
+B.~{B{\"u}nz}, J.~{Bootle}, D.~{Boneh}, A.~{Poelstra}, P.~{Wuille}, and
+  G.~{Maxwell}.
+\newblock Bulletproofs: Short proofs for confidential transactions and more.
+\newblock In {\em {IEEE Symposium on Security and Privacy}}, 2018.
+
+\bibitem{BEH+08}
+K.~Butler, W.~Enck, H.~Hursti, S.~McLaughlin, P.~Traynor, and P.~McDaniel.
+\newblock Systemic issues in the hart intercivic and premier voting systems:
+  Reflections on project everest.
+\newblock In {\em EVT}, 2008.
+
+\bibitem{CFH+07}
+J.~A. Calandrino, A.~J. Feldman, J.~A. Halderman, D.~Wagner, H.~Yu, and W.~P.
+  Zeller.
+\newblock Source code review of the {D}iebold voting system.
+\newblock In {\em State of California's Top to Bottom Review}, 2007.
+
+\bibitem{CHF08}
+J.~A. Calandrino, J.~A. Halderman, and E.~W. Felten.
+\newblock In defense of pseudorandom sample selection.
+\newblock In {\em EVT}, 2008.
+
+\bibitem{CDD17}
+J.~Camenisch, M.~Drijvers, and M.~Dubovitskaya.
+\newblock Practical uc-secure delegatable credentials with attributes and their
+  application to blockchain.
+\newblock In {\em ACM CCS}, CCS '17, pages 683--699, New York, NY, USA, 2017.
+  ACM.
+
+\bibitem{CHK+06}
+J.~Camenisch, S.~Hohenberger, M.~Kohlweiss, A.~Lysyanskaya, and M.~Meyerovich.
+\newblock How to win the clone wars: efficient periodic n-times anonymous
+  authentication.
+\newblock In {\em ACM CCS}, 2006.
+
+\bibitem{CL04}
+J.~Camenisch and A.~Lysyanskaya.
+\newblock Signature schemes and anonymous credentials from bilinear maps.
+\newblock In {\em CRYPTO}, 2004.
+
+\bibitem{CS97}
+J.~Camenisch and M.~Stadler.
+\newblock Proof systems for general statements about discrete logarithms.
+\newblock Technical report, ETH Zurich, 1997.
+
+\bibitem{CG96}
+R.~Canetti and R.~Gennaro.
+\newblock Incoercible multiparty computation.
+\newblock In {\em IEEE FOCS}, 1996.
+
+\bibitem{CHVV03}
+B.~Canvel, A.~Hiltgen, S.~Vaudenay, and M.~Vuagnoux.
+\newblock Password interception in a {SSL/TSL} channel.
+\newblock In {\em CRYPTO}, 2003.
+
+\bibitem{CYC+20}
+S.~Cao, Y.~Yuan, A.~D. Caro, K.~Nandakumar, K.~Elkhiyaoui, and Y.~Hu.
+\newblock Decentralized privacy-preserving netting protocol on blockchain for
+  payment systems.
+\newblock In {\em Financial Cryptography}, 2020.
+
+\bibitem{+Rick}
+R.~T. Carback.
+\newblock Private Communications, 2008.
+
+\bibitem{CCC+10}
+R.~T. Carback, D.~Chaum, J.~Clark, J.~Conway, A.~Essex, P.~S. Hernson,
+  T.~Mayberry, S.~Popoveniuc, R.~L. Rivest, E.~Shen, A.~T. Sherman, and P.~L.
+  Vora.
+\newblock Scantegrity {II} municipal election at {T}akoma {P}ark: the first
+  {E2E} binding governmental election with ballot privacy.
+\newblock In {\em USENIX Security Symposium}, 2010.
+
+\bibitem{CCEP07}
+R.~T. Carback, J.~Clark, A.~Essex, and S.~Popoveniuc.
+\newblock On the independent verification of a {P}unchscan election.
+\newblock In {\em Proc. VoComp}, 2007.
+
+\bibitem{Car18}
+M.~Carney.
+\newblock The growing challenges for monetary policy in the current
+  international monetary and financial system.
+\newblock Speach, 2019.
+
+\bibitem{CGR+17}
+J.~Chapman, R.~Garratt, S.~Hendry, A.~McCormack, and W.~McMahon.
+\newblock Project jasper: {Are} {Distributed} {Wholesale} {Payment} {Systems}
+  {Feasible} {Yet}?
+\newblock Financial systems review, Bank of Canada, 2017.
+
+\bibitem{Cha81}
+D.~Chaum.
+\newblock Untraceable electronic mail, return addresses, and digital
+  pseudonyms.
+\newblock {\em Communications of the ACM}, 24(2):84--90, 1981.
+
+\bibitem{Cha83}
+D.~Chaum.
+\newblock Blind signatures for untraceable payments.
+\newblock In {\em CRYPTO}, 1982.
+
+\bibitem{Cha82}
+D.~Chaum.
+\newblock {Blind signatures for untraceable payments}.
+\newblock In {\em {CRYPTO}}, 1982.
+
+\bibitem{Cha88}
+D.~Chaum.
+\newblock Elections with unconditionally-secure ballots and disruption
+  equivalent to breaking rsa.
+\newblock In {\em EUROCRYPT}, 1988.
+
+\bibitem{Cha92}
+D.~Chaum.
+\newblock Achieving electronic privacy.
+\newblock {\em Scientific American}, pages 96--101, 1992.
+
+\bibitem{Cha01}
+D.~Chaum.
+\newblock Surevote: Technical overview.
+\newblock In {\em WOTE}, 2001.
+
+\bibitem{Cha02}
+D.~Chaum.
+\newblock Secret-ballot receipts and transparent integrity: Better and
+  less-costly electronic voting at polling places.
+\newblock Technical report, VReceipt, 2002.
+
+\bibitem{Cha04}
+D.~Chaum.
+\newblock Secret-ballot receipts: True voter-verifiable elections.
+\newblock {\em IEEE Security and Privacy}, 2(1):38--47, 2004.
+
+\bibitem{Cha12}
+D.~Chaum.
+\newblock Random-sample voting.
+\newblock Online, 2012.
+
+\bibitem{CCC+08}
+D.~Chaum, R.~Carback, J.~Clark, A.~Essex, S.~Popoveniuc, R.~L. Rivest, P.~Y.~A.
+  Ryan, E.~Shen, and A.~T. Sherman.
+\newblock Scantegrity {II}: end-to-end verifiability for optical scan election
+  systems using invisible ink confirmation codes.
+\newblock In {\em EVT}, 2008.
+
+\bibitem{CCC+09}
+D.~Chaum, R.~Carback, J.~Clark, A.~Essex, S.~Popoveniuc, R.~L. Rivest, P.~Y.~A.
+  Ryan, E.~Shen, A.~T. Sherman, and P.~L. Vora.
+\newblock Scantegrity ii: end-to-end verifiability by voters of optical scan
+  elections through confirmation codes.
+\newblock {\em IEEE Transactions on Information Forensics and Security},
+  4(4):611--627, 2009.
+
+\bibitem{CDG87}
+D.~Chaum, I.~Damg\r{a}rd, and J.~v. Graaf.
+\newblock Multiparty computations ensuring privacy of each party's input and
+  correctness of the result.
+\newblock In {\em CRYPTO}, 1987.
+
+\bibitem{CEC+08}
+D.~Chaum, A.~Essex, R.~Carback, J.~Clark, S.~Popoveniuc, A.~T. Sherman, and
+  P.~Vora.
+\newblock Scantegrity: End-to-end voter verifiable optical-scan voting.
+\newblock {\em IEEE Security and Privacy}, 6(3):40--46, May/June 2008.
+
+\bibitem{CP92}
+D.~Chaum and T.~P. Pedersen.
+\newblock Wallet databases with observers.
+\newblock In {\em CRYPTO}, 1992.
+
+\bibitem{CRS05}
+D.~Chaum, P.~Y.~A. Ryan, and S.~Schneider.
+\newblock A practical voter-verifiable election scheme.
+\newblock In {\em ESORICS}, 2005.
+
+\bibitem{CMWZ09}
+S.~Chen, Z.~Mao, Y.-M. Wang, and M.~Zhang.
+\newblock Pretty-bad-proxy: An overlooked adversary in browsers' {HTTPS}
+  deployments.
+\newblock In {\em IEEE Symposium on Security and Privacy}, 2009.
+
+\bibitem{CP10}
+Y.~Chen and D.~M. Pennock.
+\newblock Designing markets for prediction.
+\newblock {\em AI Magazine}, 2010.
+
+\bibitem{CZK+18}
+R.~Cheng, F.~Zhang, J.~Kos, W.~He, N.~Hynes, N.~M. Johnson, A.~Juels,
+  A.~Miller, and D.~Song.
+\newblock Ekiden: A platform for confidentiality-preserving, trustworthy, and
+  performant smart contract execution.
+\newblock Technical report, CoRR, 2018.
+
+\bibitem{CJY97}
+M.~Chesney, M.~Jeanblanc-Picque, and M.~Yor.
+\newblock Brownian excursions and {P}arisian barrier options.
+\newblock {\em Advances in Applied Probability}, 29, 1997.
+
+\bibitem{COB07}
+S.~Chiasson, P.~C.~v. Oorschot, and R.~Biddle.
+\newblock Graphical password authentication using cued click points.
+\newblock In {\em ESORICS}, 2007.
+
+\bibitem{CLW07}
+S.~S.~M. Chow, J.~K. Liu, and D.~S. Wong.
+\newblock Robust receipt-free election system with ballot secrecy and
+  verifiability.
+\newblock In {\em NDSS}, 2007.
+
+\bibitem{Cla11}
+J.~Clark.
+\newblock {\em Democracy Enhancing Technologies: Toward deployable and
+  incoercible E2E elections}.
+\newblock PhD thesis, University of Waterloo, 2011.
+
+\bibitem{CBN+14}
+J.~Clark, J.~Bonneau, A.~Miller, J.~A. Kroll, E.~W. Felten, and A.~Narayanan.
+\newblock On decentralizing prediction markets and order books.
+\newblock In {\em WEIS}, 2014.
+
+\bibitem{CDM20}
+J.~Clark, D.~Demirag, and S.~Moosavi.
+\newblock Demystifying stablecoins.
+\newblock In {\em Communications of the ACM}, volume~63, July 2020.
+
+\bibitem{CE12}
+J.~Clark and A.~Essex.
+\newblock Commitcoin: Carbon dating commitments with bitcoin.
+\newblock In {\em Financial Cryptography}, 2012.
+
+\bibitem{CEA07}
+J.~Clark, A.~Essex, and C.~Adams.
+\newblock Secure and observable auditing of electronic voting systems using
+  stock indices.
+\newblock In {\em IEEE Canadian Conference on Electrical and Computer
+  Engineering}, 2007.
+
+\bibitem{CH08}
+J.~Clark and U.~Hengartner.
+\newblock Panic passwords: Authenticating under duress.
+\newblock In {\em USENIX HotSec}, 2008.
+
+\bibitem{CH10}
+J.~Clark and U.~Hengartner.
+\newblock On the use of financial data as a random beacon.
+\newblock In {\em EVT/WOTE}, 2010.
+
+\bibitem{CH11}
+J.~Clark and U.~Hengartner.
+\newblock Selections: Internet voting with over-the-shoulder
+  coercion-resistance.
+\newblock In {\em FC}, 2011.
+
+\bibitem{CHL09}
+J.~Clark, U.~Hengartner, and K.~Larson.
+\newblock Not-so-hidden information: optimal contracts for undue influence in
+  {E2E} voting systems.
+\newblock In {\em VOTE-ID}, 2009.
+
+\bibitem{CO13}
+J.~Clark and P.~v. Oorschot.
+\newblock {SSL} and {HTTPS}: Revisiting past challenges and evaluating
+  certificate trust model enhancements.
+\newblock In {\em IEEE Symposium on Security and Privacy}, 2013.
+
+\bibitem{COA07}
+J.~Clark, P.~C. van Oorschot, and C.~Adams.
+\newblock Usability of anonymous web browsing: an examination of tor interfaces
+  and deployability.
+\newblock In {\em SOUPS}, 2007.
+
+\bibitem{CVRSZ20}
+J.~Clark, P.~C. van Oorschot, S.~Ruoti, K.~Seamons, and D.~Zappala.
+\newblock Securing email: A stakeholder-based analysis.
+\newblock Under Submission.
+
+\bibitem{CCM08}
+M.~R. Clarkson, S.~Chong, and A.~C. Myers.
+\newblock Civitas: Toward a secure voting system.
+\newblock In {\em IEEE Symposium on Security and Privacy}, pages 354--368,
+  2008.
+
+\bibitem{CWF+09}
+W.~Clarkson, T.~Weyrich, A.~Finkelstein, N.~Heninger, J.~A. Halderman, and
+  E.~W. Felten.
+\newblock Fingerprinting blank paper using commodity scanners.
+\newblock In {\em IEEE Symposium on Security and Privacy}, 2009.
+
+\bibitem{CDW06}
+C.~Coarfa, P.~Druschel, and D.~S. Wallach.
+\newblock Performance analysis of {TLS} web servers.
+\newblock {\em ACM TOCS}, 24(1), 2006.
+
+\bibitem{CL18}
+B.~C\oe~ur{\'e} and J.~Loh.
+\newblock Central bank digital currencies.
+\newblock Technical report, {Bank for International Settlements} and {Committee
+  on Payments and Market Infrastructures}, 2018.
+
+\bibitem{Coo99}
+D.~A. Cooper.
+\newblock A model of certificate revocation.
+\newblock In {\em ACSAC}, 1999.
+
+\bibitem{CWD06}
+A.~Cordero, D.~Wagner, and D.~Dill.
+\newblock The role of dice in election audits --- extended abstract.
+\newblock In {\em WOTE}, 2006.
+
+\bibitem{CDN00}
+R.~Cramer, I.~Damg{\aa}rd, and J.~B. Nielsen.
+\newblock Multiparty computation from threshold homomorphic encryption.
+\newblock In {\em EUROCRYPT}, 2001.
+
+\bibitem{CDM00}
+R.~Cramer, I.~Damg\r{a}rd, and P.~MacKenzie.
+\newblock Efficient zero-knowledge proofs of knowledge without intractability
+  assumptions.
+\newblock In {\em PKC}, 2000.
+
+\bibitem{CDS94}
+R.~Cramer, I.~Damg\r{a}rd, and B.~Schoenmakers.
+\newblock Proofs of partial knowledge and simplified design of witness hiding
+  protocols.
+\newblock In {\em CRYPTO}, 1994.
+
+\bibitem{CFSY96}
+R.~Cramer, M.~Franklin, B.~Schoenmakers, and M.~Yung.
+\newblock Multi-authority secret-ballot elections with linear work.
+\newblock In {\em EUROCRYPT}, 1996.
+
+\bibitem{CGS97}
+R.~Cramer, R.~Gennaro, and B.~Schoenmakers.
+\newblock A secure and optimally efficient multi-authority election scheme.
+\newblock In {\em EUROCRYPT}, 1997.
+
+\bibitem{CS98}
+R.~Cramer and V.~Shoup.
+\newblock A practical public key cryptosystem provavly secure against adaptive
+  chosen ciphertext attack.
+\newblock In {\em CRYPTO}, 1998.
+
+\bibitem{CC97}
+L.~F. Cranor and R.~K. Cytron.
+\newblock Sensus: A security-conscious electronic polling system for the
+  internet.
+\newblock In {\em Hawaii International Conference on System Sciences}, 1997.
+
+\bibitem{CDE+16}
+K.~Croman, C.~Decker, I.~Eyal, A.~E. Gencer, A.~Juels, A.~Kosba, A.~Miller,
+  P.~Saxena, E.~Shi, E.~G{\"u}n~Sirer, D.~Song, and R.~Wattenhofer.
+\newblock On scaling decentralized blockchains.
+\newblock In {\em Bitcoin Workshop}, 2016.
+
+\bibitem{Cus01}
+R.~F. Custodio.
+\newblock {F}arnel: um protocolo de votacao papel com verificabilidade parcial.
+\newblock In {\em Simposio Seguranca em Informatica}, 2001.
+
+\bibitem{DAT12}
+I.~Dacosta, M.~Ahamad, and P.~Traynor.
+\newblock Trust no one else: Detecting {MITM} attacks against {SSL/TLS} without
+  third-parties.
+\newblock In {\em ESORICS}, 2012.
+
+\bibitem{DBBCB15}
+G.~G. Dagher, B.~Buenz, J.~Bonneau, J.~Clark, and D.~Boneh.
+\newblock {Provisions: Privacy-preserving proofs of solvency for Bitcoin
+  exchanges}.
+\newblock In {\em CCS}, October 2015.
+
+\bibitem{DGS03}
+I.~Damg\r{a}rd, J.~Groth, and G.~Salomonsen.
+\newblock The theory and implementation of an electronic voting system.
+\newblock In {\em Secure Electronic Voting}, 2003.
+
+\bibitem{DJ01}
+I.~Damg\r{a}rd and M.~Jurik.
+\newblock A generalisation, a simplification and some applications of
+  {P}aillier's probabilistic public-key system.
+\newblock In {\em PKC}, pages 119--136, 2001.
+
+\bibitem{DJ02}
+I.~Damg\r{a}rd and M.~Jurik.
+\newblock Client/server tradeoffs for online elections.
+\newblock In {\em PKC}, pages 125--140, 2002.
+
+\bibitem{DaMe16}
+G.~Danezis and S.~Meiklejohn.
+\newblock Centrally banked cryptocurrencies.
+\newblock In {\em NDSS}, 2016.
+
+\bibitem{Den17}
+Central bank digital currency in denmark?
+\newblock Technical report, Danmarks Nationalbank, 2017.
+
+\bibitem{DaAr20}
+S.~Darbha and R.~Arora.
+\newblock Privacy in cbdc technology.
+\newblock Technical Report~9, Bank of Canda, 2020.
+
+\bibitem{DNW96}
+B.~Davenport, A.~Newberger, and J.~Woodward.
+\newblock Creating a secure digital voting protocol for campus elections.
+\newblock Technical report, Princeton, 1996.
+
+\bibitem{DS01}
+D.~Dean and A.~Stubblefield.
+\newblock Using client puzzles to protect {TLS}.
+\newblock In {\em USENIX Security}, 2001.
+
+\bibitem{DP07}
+J.~P. Degabriele and K.~G. Paterson.
+\newblock Attacking the {IPsec} standards in encryption-only configurations.
+\newblock In {\em IEEE Symposium on Security and Privacy}, 2007.
+
+\bibitem{DPW11}
+J.~P. Degabriele, K.~G. Paterson, and G.~J. Watson.
+\newblock Provable security in the real world.
+\newblock {\em IEEE Security and Privacy}, 9(3), 2011.
+
+\bibitem{DKR06}
+S.~Delaune, S.~Kremer, and M.~Ryan.
+\newblock Coercion-resistance and receipt-freeness in electronic voting.
+\newblock In {\em CSFW}, 2006.
+
+\bibitem{Ubin1}
+The future is here {Project} {Ubin}: {SGD} on {Distributed} {Ledger}.
+\newblock Technical report, {Deloitte} and {Monetary Authority of Singapore},
+  2017.
+
+\bibitem{DLM82}
+R.~DeMillo, N.~Lynch, and M.~J. Merritt.
+\newblock Cryptographic protocols.
+\newblock In {\em ACM STOC}, 1982.
+
+\bibitem{DF89}
+Y.~Desmedt and Y.~Frankel.
+\newblock Threshold cryptosystems.
+\newblock In {\em CRYPTO}, 1989.
+
+\bibitem{DT05}
+R.~Dhamija and J.~Tygar.
+\newblock The battle against phishing: Dynamic security skins.
+\newblock In {\em SOUPS}, 2005.
+
+\bibitem{DTH06}
+R.~Dhamija, J.~D. Tygar, and M.~Hearst.
+\newblock Why phishing works.
+\newblock In {\em CHI}, 2006.
+
+\bibitem{Cre01}
+G.~Di~Crescenzo.
+\newblock Privacy for the stock market.
+\newblock In {\em Financial Cryptography}, 2001.
+
+\bibitem{Dia08}
+L.~Diamond.
+\newblock {\em The Spirit of Democracy: The Struggle to Build Free Societies
+  Throughout the World}.
+\newblock Times Books, first edition, 2008.
+
+\bibitem{DCBW12}
+M.~Dietz, A.~Czeskis, D.~Balfanz, and D.~S. Wallach.
+\newblock Origin-bound certificates: A fresh approach to strong client
+  authentication for the web.
+\newblock In {\em USENIX Security}, 2012.
+
+\bibitem{DMS04}
+R.~Dingledine, N.~Mathewson, and P.~Syverson.
+\newblock Tor: the second-generation onion router.
+\newblock In {\em USENIX Security}, 2004.
+
+\bibitem{DSS06}
+R.~Dingledine, A.~Serjantov, and P.~Syverson.
+\newblock Blending different latency traffic with alpha-mixing.
+\newblock In {\em Privacy Enhancing Technologies}, pages 245--257. Springer,
+  2006.
+
+\bibitem{Dob96}
+H.~Dobbertin.
+\newblock Crytanalysis of {MD5} compress.
+\newblock In {\em EUROCRYPT (Rump Session Talk)}, 1996.
+
+\bibitem{DGH+04}
+Y.~Dodis, R.~Gennaro, J.~Hastad, H.~Krawczyk, and T.~Rabin.
+\newblock Randomness extraction and key derivation using the {CBC}, {C}ascade
+  and {HMAC} modes.
+\newblock In {\em CRYPTO}, 2004.
+
+\bibitem{DY05}
+Y.~Dodis and A.~Yampolskiy.
+\newblock A verifiable random function with short proofs and keys.
+\newblock In {\em PKC}, 2005.
+
+\bibitem{DDWY93}
+D.~Dolev, C.~Dwork, O.~Waarts, and M.~Yung.
+\newblock Perfectly secure message transmission.
+\newblock {\em Journal of the ACM}, 40(1):17--47, 1993.
+
+\bibitem{DR11}
+T.~Duong and J.~Rizzo.
+\newblock Here come the {$\oplus$} ninjas.
+\newblock In {\em Ekoparty}, 2011.
+
+\bibitem{Dur64}
+R.~Durstenfeld.
+\newblock Algorithm 235: Random permutation.
+\newblock {\em Communications of the ACM}, 7(7):420, 1964.
+
+\bibitem{DKBH13}
+Z.~Durumeric, J.~Kasten, M.~Bailey, and J.~A. Halderman.
+\newblock Analysis of the https certificate ecosystem.
+\newblock In {\em IMC}, 2013.
+
+\bibitem{DN93}
+C.~Dwork and M.~Naor.
+\newblock Pricing via processing or combatting junk mail.
+\newblock In {\em CRYPTO}, 1992.
+
+\bibitem{RFC3797}
+D.~Eastlake.
+\newblock Publicly verifiable nominations committee (nomcom) random selection.
+\newblock RFC 3797, IETF, 2004.
+
+\bibitem{RFC2777}
+D.~Eastlake.
+\newblock Publicly verifiable nomcom random selection.
+\newblock RFC 2777, IETF, 2006.
+
+\bibitem{EB10b}
+P.~Eckersley and J.~Burns.
+\newblock Is the {SSLiverse} a safe place?
+\newblock In {\em Chaos Communication Congress}, 2010.
+
+\bibitem{EB10a}
+P.~Eckersley and J.~Burns.
+\newblock An observatory for the {SSLiverse}.
+\newblock In {\em DEFCON 18}, 2010.
+
+\bibitem{+EDS}
+{Election Data Services Inc.}
+\newblock Voting equipment summary by type as of 11/07/2006, 2006.
+
+\bibitem{Elg84}
+T.~Elgamal.
+\newblock A publick key cryptosystem and a signature scheme based on discrete
+  logarithms.
+\newblock In {\em CRYPTO}, 1984.
+
+\bibitem{EAHM+01}
+Y.~Elley, A.~Anderson, S.~Hanna, S.~Mullan, R.~Perlman, and S.~Proctor.
+\newblock Building certification paths: Forward vs. reverse.
+\newblock In {\em NDSS}, 2001.
+
+\bibitem{Ell07}
+C.~Ellison.
+\newblock Ceremony design and analysis.
+\newblock Technical Report 2007/399, IACR ePrint, 2007.
+
+\bibitem{Ell96}
+C.~M. Ellison.
+\newblock Establishing identity without certification authorities.
+\newblock In {\em USENIX Security}, 1996.
+
+\bibitem{EnFu17}
+W.~Engert and B.~S.~C. Fung.
+\newblock Central bank digital currency: Motivations and implications.
+\newblock Technical report, Bank of Canada, 2017.
+
+\bibitem{EBSC15}
+S.~Eskandari, D.~Barrera, E.~Stobert, and J.~Clark.
+\newblock A first look at the usability of {B}itcoin key management.
+\newblock In {\em USEC}, 2015.
+
+\bibitem{ECSA17}
+S.~Eskandari, J.~Clark, V.~Sundaresan, and M.~Adham.
+\newblock On the feasibility of decentralized derivatives markets.
+\newblock In {\em WTSC}, 2017.
+
+\bibitem{EMC19}
+S.~Eskandari, S.~Moosavi, and J.~Clark.
+\newblock Sok: Transparent dishonesty: front-running attacks on blockchain.
+\newblock In {\em International Conference on Financial Cryptography and Data
+  Security}, pages 170--189. Springer, 2019.
+
+\bibitem{ECA08}
+A.~Essex, J.~Clark, and C.~Adams.
+\newblock Aperio: High integrity elections for developing countries.
+\newblock In {\em WOTE}, 2008.
+
+\bibitem{ECA10}
+A.~Essex, J.~Clark, and C.~Adams.
+\newblock Aperio: High integrity elections for developing countries.
+\newblock In {\em Towards Trustworthy Elections}, volume 6000 of {\em LNCS}.
+  Springer, 2010.
+
+\bibitem{ECCP07}
+A.~Essex, J.~Clark, R.~T. Carback, and S.~Popoveniuc.
+\newblock Punchscan in practice: an e2e election case study.
+\newblock In {\em WOTE}, 2007.
+
+\bibitem{ECCP07b}
+A.~Essex, J.~Clark, R.~T. Carback, and S.~Popoveniuc.
+\newblock The {P}unchscan voting system.
+\newblock Technical report, Submission to the {\it University Voting Systems
+  Competition (VoComp)}, 2007.
+
+\bibitem{ECH12}
+A.~Essex, J.~Clark, and U.~Hengartner.
+\newblock Cobra: Toward concurrent ballot authorization for internet voting.
+\newblock In {\em EVT/WOTE}, 2012.
+
+\bibitem{ECHA09}
+A.~Essex, J.~Clark, U.~Hengartner, and C.~Adams.
+\newblock How to print a secret.
+\newblock In {\em HotSec}, 2009.
+
+\bibitem{ECHA10}
+A.~Essex, J.~Clark, U.~Hengartner, and C.~Adams.
+\newblock Eperio: Mitigating technical complexity in cryptographic election
+  verification.
+\newblock In {\em EVT/WOTE}, 2010.
+
+\bibitem{EGL85}
+S.~Even, O.~Goldreich, and A.~Lempel.
+\newblock A randomized protocol for signing contracts.
+\newblock {\em Communications of the ACM}, 26(6), 1985.
+
+\bibitem{FHM+12}
+S.~Fahl, M.~Harbach, T.~Muders, L.~Baumgartner, B.~Freisleben, and M.~Smith.
+\newblock Why {Eve} and {Mallory} love {Android}: An analysis of {Android}
+  {SSL} (in)security.
+\newblock In {\em CCS}, 2012.
+
+\bibitem{FPS08}
+R.~Farashahi, R.~Pellikaan, and A.~Sidorenko.
+\newblock Extractors for binary elliptic curves.
+\newblock {\em Designs, Codes, and Cryptography}, 49, 2008.
+
+\bibitem{+German}
+{Federal constitutional court of Germany (Bundesverfassungsgericht)}.
+\newblock {Judgement of 3 March 2009 -- 2 BvC 3/07, 2 BvC 4/07 -- Verfahren
+  \"{u}ber die Wahlpr\"{u}fungsbeschwerden}, 2009.
+
+\bibitem{FB09}
+A.~J. Feldman and J.~Benaloh.
+\newblock On subliminal channels in encrypt-on-cast voting systems.
+\newblock In {\em EVT/WOTE}, 2009.
+
+\bibitem{FW07}
+A.~P. Felt and D.~Wagner.
+\newblock Phishing on mobile devices.
+\newblock In {\em USEC}, 2007.
+
+\bibitem{FBDW97}
+E.~Felten, D.~Balfanz, D.~Dean, and D.~S. Wallach.
+\newblock Web spoofing: An internet con game.
+\newblock In {\em NISSC}, 1997.
+
+\bibitem{FS86}
+A.~Fiat and A.~Shamir.
+\newblock How to prove yourself: practical solutions to identification and
+  signature problems.
+\newblock In {\em CRYPTO}, pages 186--194, 1986.
+
+\bibitem{FS90}
+A.~Fiat and A.~Shamir.
+\newblock Witness indistinguishable and witness hiding protocols.
+\newblock In {\em ACM STOC}, 1990.
+
+\bibitem{FSB20}
+Addressing the regulatory, supervisory and oversight challenges raised by
+  ``global stablecoin'' arrangements.
+\newblock Technical report, Financial Stability Board, 2020.
+
+\bibitem{+FIPR}
+FIPR.
+\newblock Consultation on the draft code of practice for the investigation of
+  protected electronic information -- part {III} of the regulation of
+  investigatory powers act 2000.
+\newblock FIPR Response to the Home Office, 2006.
+
+\bibitem{FCS06}
+K.~Fisher, R.~T. Carback, and A.~T. Sherman.
+\newblock Punchscan system definition.
+\newblock In {\em WOTE}, 2006.
+
+\bibitem{For18}
+B.~Ford.
+\newblock A liquid perspective on democratic choice.
+\newblock cs.CY 2003.12393, arXiv, 2018.
+
+\bibitem{FPS00}
+P.-A. Fouque, G.~Poupard, and J.~Stern.
+\newblock Sharing decryption in the context of voting or lotteries.
+\newblock In {\em FC}, 2000.
+
+\bibitem{FL98}
+B.~Fox and B.~{LaMacchia}.
+\newblock Certificate revocation: Mechanics and meaning.
+\newblock In {\em Financial Cryptography}, 1997.
+
+\bibitem{FHH+02}
+B.~Friedman, D.~Hurley, D.~C. Howe, E.~Felten, and H.~Nissenbaum.
+\newblock Users' conceptions of web security: A comparative study (short talk).
+\newblock In {\em CHI}, 2002.
+
+\bibitem{FSSF01}
+K.~Fu, E.~Sit, K.~Smith, and N.~Feamster.
+\newblock Dos and don'ts of client authentication on the web.
+\newblock In {\em USENIX Security}, 2001.
+
+\bibitem{FOO92}
+A.~Fujioka, T.~Okamoto, and K.~Ohta.
+\newblock A practical secret voting scheme for large scale elections.
+\newblock In {\em ASIACRYPT}, pages 244--251, 1992.
+
+\bibitem{FO98}
+E.~Fujisaki and T.~Okamoto.
+\newblock A practical and provably secure scheme for publicly verifiable secret
+  sharing and its applications.
+\newblock In {\em EUROCRYPT}, 1998.
+
+\bibitem{FMM+02}
+J.~Furukawa, H.~Miyauchi, K.~Mori, S.~Obana, and K.~Sako.
+\newblock An implementation of a universally verifiable electronic voting
+  scheme based on shuffling.
+\newblock In {\em FC}, 2002.
+
+\bibitem{FMS10}
+J.~Furukawa, K.~Mori, and K.~Sako.
+\newblock An implementation of a mix-net based network voting scheme and its
+  use in a private organization.
+\newblock In {\em Towards Trustworthy Elections}, volume 6000 of {\em LNCS}.
+  Springer, 2010.
+
+\bibitem{G719}
+Investigating the impact of global stablecoins.
+\newblock Technical report, G7 Working Group on Stablecoins, 2019.
+
+\bibitem{GJMM98}
+E.~Gabber, M.~Jakobsson, Y.~Matias, and A.~Mayer.
+\newblock Curbing junk e-mail via secure classification.
+\newblock In {\em Financial Cryptography}, 1998.
+
+\bibitem{GG02}
+E.~Gabrilovich and A.~Gontmakher.
+\newblock The homograph attack.
+\newblock {\em Communications of the ACM}, 45(2), 2002.
+
+\bibitem{GMP+08}
+S.~Gajek, M.~Manulis, O.~Pereira, A.-R. Sadeghi, and J.~Schwenk.
+\newblock Universally composable security analysis of {TLS}.
+\newblock In {\em ProvSec}, 2008.
+
+\bibitem{GMSS08}
+S.~Gajek, M.~Manulis, A.-R. Sadeghi, and J.~Schwenk.
+\newblock Provably secure browser-based user-aware mutual authentication over
+  {TLS}.
+\newblock In {\em ASIACCS}, 2008.
+
+\bibitem{Gal96}
+J.~M. Galvin.
+\newblock Public key distribution with secure {DNS}.
+\newblock In {\em USENIX Security}, 1996.
+
+\bibitem{GJK+08}
+F.~D. Garcia, G.~de~Koning~Gans, R.~Muijrers, P.~van Rossum, R.~Verdult, R.~W.
+  Schreur, and B.~Jacobs.
+\newblock Dismantling mifare classic.
+\newblock In {\em ESORICS}, 2008.
+
+\bibitem{GRSV09}
+F.~D. {Garcia}, P.~v.~{Rossum}, R.~{Verdult}, and R.~W. {Schreur}.
+\newblock Wirelessly pickpocketing a mifare classic card.
+\newblock In {\em IEEE Symposium on Security and Privacy}, 2009.
+
+\bibitem{GGR09}
+R.~W. Gardner, S.~Garera, and A.~D. Rubin.
+\newblock Coercion resistant end-to-end voting.
+\newblock In {\em FC}, 2009.
+
+\bibitem{Gee01}
+D.~Geer.
+\newblock Technical maturity, reliability, implicit taxes, and wealth creation.
+\newblock {\em login: The magazine of Usenix \& Sage}, 26(8), 2001.
+
+\bibitem{Gen95}
+R.~Gennaro.
+\newblock Achieving independence efficiently and securely.
+\newblock In {\em ACM PODC}, 1995.
+
+\bibitem{GJKR99}
+R.~Gennaro, S.~Jarecki, H.~Krawczyk, and T.~Rabin.
+\newblock Secure distributed key generation for discrete-log based
+  cryptosystems.
+\newblock In {\em EUROCRYPT}, 1999.
+
+\bibitem{GIJ+12}
+M.~Georgiev, S.~Iyengar, S.~Jana, R.~Anubhai, V.~Shmatikov, and D.~Boneh.
+\newblock The most dangerous code in the world: validating {SSL} certificates
+  in non-browser software.
+\newblock In {\em CCS}, 2012.
+
+\bibitem{GCKG14}
+A.~Gervais, S.~Capkun, G.~O. Karame, and D.~Gruber.
+\newblock On the privacy provisions of bloom filters in lightweight bitcoin
+  clients.
+\newblock In {\em ACSAC}, 2014.
+
+\bibitem{GKS12}
+F.~Giesen, F.~Kohlar, and D.~Stebila.
+\newblock On the security of {TLS} renegotiation.
+\newblock Technical Report 2012/630, IACR ePrint, 2012.
+
+\bibitem{GHM+17}
+Y.~Gilad, R.~Hemo, S.~Micali, G.~Vlachos, and N.~Zeldovich.
+\newblock Algorand: Scaling byzantine agreements for cryptocurrencies.
+\newblock In {\em SOSP}, pages 51--68, 2017.
+
+\bibitem{GW96}
+I.~Goldberg and D.~Wagner.
+\newblock Randomness and the {N}etscape browser.
+\newblock {\em Dr. Dobb's Journal}, 1996.
+
+\bibitem{GK03}
+S.~Goldwasser and Y.~Kalaj.
+\newblock On the (in)security of the {F}iat-{S}hamir paradigm.
+\newblock In {\em IEEE FOCS}, 2003.
+
+\bibitem{GS86}
+S.~Goldwasser and M.~Sipser.
+\newblock Private coins versus public coins in interactive proof systems.
+\newblock In {\em ACM STOC}, 1986.
+
+\bibitem{GHH+09}
+R.~Gonggrijp, W.-J. Hengeveld, E.~Hotting, S.~Schmidt, and F.~Weidemann.
+\newblock {RIES}---{R}ijnland internet election system: A cursory study of
+  published source code.
+\newblock In {\em VOTE-ID}, 2009.
+
+\bibitem{GRBR13}
+G.~S. Grewal, M.~D. Ryan, S.~Bursuc, and P.~Y.~A. Ryan.
+\newblock Caveat coercitor: Coercion-evidence in electronic voting.
+\newblock In {\em IEEE Symposium on Security and Privacy}, 2013.
+
+\bibitem{Gri08}
+I.~Grigg.
+\newblock An open audit of an open certification authority.
+\newblock In {\em LISA (invited talk)}, 2008.
+
+\bibitem{Gro04}
+J.~Groth.
+\newblock Efficient maximal privacy in boardroom voting and anonymous
+  broadcast.
+\newblock In {\em FC}, 2004.
+
+\bibitem{Gro04b}
+J.~Groth.
+\newblock Review of {RIES}.
+\newblock Technical report, Cryptomathic, 2004.
+
+\bibitem{GS08}
+J.~Groth and A.~Sahai.
+\newblock Efficient non-interactive proof systems for bilinear groups.
+\newblock In {\em EUROCRYPT}, 2008.
+
+\bibitem{GS04}
+J.~Groth and G.~Salomonsen.
+\newblock Strong privacy protection in electronic voting.
+\newblock Technical Report RS-04-13, BRICS, 2004.
+
+\bibitem{GRB20}
+W.~Gu, A.~Raghuvanshi, and D.~Boneh.
+\newblock Empirical measurements on pricing oracles and decentralized
+  governance for stablecoins.
+\newblock In {\em Cryptoeconomic Systems}, 2020.
+
+\bibitem{GMR+20}
+L.~Gudgeon, P.~Moreno-Sanchez, S.~Roos, P.~McCorry, and A.~Gervais.
+\newblock Sok: Layer-two blockchain protocols.
+\newblock In {\em Financial Cryptography}, 2020.
+
+\bibitem{GPH+20}
+L.~Gudgeon, D.~Perez, D.~Harz, B.~Livshits, and A.~Gervais.
+\newblock The decentralized financial crisis.
+\newblock In {\em CVCBT}, 2020.
+
+\bibitem{GWPK20}
+L.~Gudgeon, S.~M. Werner, D.~Perez, and W.~J. Knottenbelt.
+\newblock Defi protocols for loanable funds: Interest rates, liquidity and
+  market efficiency.
+\newblock Technical report, arXiv, 2020.
+
+\bibitem{GSFS+04}
+V.~Gupta, D.~Steblia, S.~Fung, S.~C. Shantz, N.~Gura, and H.~Eberle.
+\newblock Speeding up secure web transactions using elliptic curve
+  cryptography.
+\newblock In {\em NDSS}, 2004.
+
+\bibitem{Gut03}
+P.~Gutmann.
+\newblock Plug-and-play {PKI}: A {PKI} your mother can use.
+\newblock In {\em USENIX Security}, 2003.
+
+\bibitem{HS90}
+S.~Haber and W.~S. Stornetta.
+\newblock How to time-stamp a digital document.
+\newblock In {\em CRYPTO}, 1990.
+
+\bibitem{HS97}
+S.~A. Haber and W.~S. Stornetta.
+\newblock Secure names for bit-strings.
+\newblock In {\em CCS}, 1997.
+
+\bibitem{HW07}
+J.~A. Halderman and B.~Waters.
+\newblock Harvesting verifiable challenges from oblivious online sources.
+\newblock In {\em ACM CCS}, 2007.
+
+\bibitem{Hal08}
+J.~L. Hall.
+\newblock On improving the uniformity of randomness with alameda county's
+  random selection process.
+\newblock Technical report, UC Berkeley, 2008.
+
+\bibitem{HS10b}
+R.~Hansen and J.~Sokol.
+\newblock {HTTPS} can byte me.
+\newblock In {\em Black Hat USA}, 2010.
+
+\bibitem{Han03}
+R.~Hanson.
+\newblock Combinatorial information market design.
+\newblock {\em Information Systems Frontiers}, 5(1), 2003.
+
+\bibitem{Har03}
+L.~Harris.
+\newblock {\em Trading and exchanges: market microstructure for practitioners}.
+\newblock Oxford, 2003.
+
+\bibitem{Hay98}
+J.~M. Hayes.
+\newblock The problem with multiple roots in web browswers - certificate
+  masquerading.
+\newblock In {\em IEEE WETICE}, 1998.
+
+\bibitem{HL10}
+C.~Hazay and Y.~Lindell.
+\newblock {\em Efficient Secure Two-Party Protocols}.
+\newblock Springer, 2010.
+
+\bibitem{HSDDM05}
+C.~He, M.~Sundararajan, A.~Datta, A.~Derek, and J.~C. Mitchell.
+\newblock A modular correctness proof of {IEEE} 802.11i and {TLS}.
+\newblock In {\em CCS}, 2005.
+
+\bibitem{HL08}
+J.~Heather and D.~Lundin.
+\newblock The append-only web bulletin board.
+\newblock In {\em FAST}, 2008.
+
+\bibitem{HRT10}
+J.~Heather, P.~Y.~A. Ryan, and V.~Teague.
+\newblock Pretty good democracy for more expressive voting schemes.
+\newblock In {\em ESORICS}, 2010.
+
+\bibitem{HLL10}
+S.~Heiberg, H.~Lipmaa, and F.~v. Laenen.
+\newblock On e-vote integrity in the case of malicious voter computers.
+\newblock In {\em ESORICS}, 2010.
+
+\bibitem{HS07}
+J.~Helbach and J.~Schwenk.
+\newblock Secure internet voting with code sheets.
+\newblock In {\em VOTE-ID}, 2007.
+
+\bibitem{HSS08}
+J.~Helbach, J.~Schwenk, and S.~Schage.
+\newblock Code voting with linkable group signatures.
+\newblock In {\em EVOTE}, 2008.
+
+\bibitem{HDWH12}
+N.~Heninger, Z.~Durumeric, E.~Wustrow, and J.~A. Halderman.
+\newblock Mining your {P}s and {Q}s: {D}etection of widespread weak keys in
+  network devices.
+\newblock In {\em USENIX Security}, 2012.
+
+\bibitem{HSS09}
+K.~Henry, D.~R. Stinson, and J.~Sui.
+\newblock The effectiveness of receipt-based attacks on threeballot.
+\newblock {\em IEEE TIFS}, 4(4):699--707, 2009.
+
+\bibitem{Her97}
+M.~A. Herschberg.
+\newblock Secure electronic voting over the world wide web.
+\newblock Master's thesis, MIT, 1997.
+
+\bibitem{HJKY95}
+A.~Herzberg, S.~Jarecki, H.~Krawczyk, and M.~Yung.
+\newblock Proactive secret sharing or: how to cope with perpetual leakage.
+\newblock In {\em CRYPTO}, 1995.
+
+\bibitem{HS10}
+A.~Herzberg and H.~Shulman.
+\newblock Stealth {DoS} attacks on secure channels.
+\newblock In {\em NDSS}, 2010.
+
+\bibitem{HJMW+02}
+A.~Hess, J.~Jacobson, H.~Mills, R.~Wamsley, K.~E. Seamons, and B.~Smith.
+\newblock Advanced client/server authentication in {TLS}.
+\newblock In {\em NDSS}, 2002.
+
+\bibitem{Hir01}
+M.~Hirt.
+\newblock {\em Multi-Party Computation: Efficient Protocols, General
+  Adversaries and Voting}.
+\newblock PhD thesis, ETH Zurich, 2001.
+
+\bibitem{Hir10}
+M.~Hirt.
+\newblock Receipt-free {$K$-out-of-$L$} voting based on {ElGamal} encryption.
+\newblock In {\em Towards Trustworthy Elections}, volume 6000 of {\em LNCS}.
+  Springer, 2010.
+
+\bibitem{HS00}
+M.~Hirt and K.~Sako.
+\newblock Efficient receipt-free voting based on homomorphic encryption.
+\newblock In {\em EUROCRYPT}, 2000.
+
+\bibitem{HBKC11}
+R.~Holz, L.~Braun, N.~Kammenhuber, and G.~Carle.
+\newblock The {SSL} landscape: A thorough analysis of the {X.509} {PKI} using
+  active and passive measurements.
+\newblock In {\em IMC}, 2011.
+
+\bibitem{HMP95}
+P.~Horster, M.~Michels, and H.~Petersen.
+\newblock Blind multisignature schemes and their relevance to electronic
+  voting.
+\newblock In {\em ACSAC}, 1995.
+
+\bibitem{HCBRJ11}
+L.-S. Huang, E.~Y. Chen, A.~Barth, E.~Rescorla, and C.~Jackson.
+\newblock Talking to yourself for fun and profit.
+\newblock In {\em W2SP}, 2011.
+
+\bibitem{HT88}
+M.~A. Huang and S.~Teng.
+\newblock Secure and verifiable schemes for election and general distributed
+  computing problems.
+\newblock In {\em ACM PODC}, 1988.
+
+\bibitem{HJP05}
+E.~Hubbers, B.~Jacobs, and W.~Pieters.
+\newblock Ries: Internet voting in action.
+\newblock In {\em Computer Software and Applications Conference (COMPSAC)},
+  pages 417--424, 2005.
+
+\bibitem{HJS+08}
+E.~Hubbers, B.~Jacobs, B.~Schoenmakers, H.~van Tilborg, and B.~de~Weger.
+\newblock Description and analysis of the {RIES} internet voting system.
+\newblock Technical report, Eindhoven Institute for the Protection of Systems
+  and Information (EiPSI), 2008.
+
+\bibitem{IRSW07}
+S.~Inguva, E.~Rescorla, H.~Shacham, , and D.~S. Wallach.
+\newblock Source code review of the {H}art {I}nter{C}ivic voting system.
+\newblock In {\em State of California's Top to Bottom Review}, 2007.
+
+\bibitem{JB08b}
+C.~Jackson and A.~Barth.
+\newblock Beware of finer-grained origins.
+\newblock In {\em W2SP}, 2008.
+
+\bibitem{JB08}
+C.~Jackson and A.~Barth.
+\newblock {ForceHTTPS}: Protecting high-security web sites from network
+  attacks.
+\newblock In {\em WWW}, 2008.
+
+\bibitem{JBBSB07}
+C.~Jackson, A.~Barth, A.~Bortz, W.~Shao, and D.~Boneh.
+\newblock Protecting browsers from dns rebinding attacks.
+\newblock In {\em CCS}, 2007.
+
+\bibitem{JSTB07}
+C.~Jackson, D.~R. Simon, D.~S. Tan, and A.~Barth.
+\newblock An evaluation of extended validation and picture-in-picture phishing
+  attacks.
+\newblock In {\em USEC}, 2007.
+
+\bibitem{JJR02}
+M.~Jacobsson, A.~Juels, and R.~L. Rivest.
+\newblock Making mix nets robust for electronic voting by randomized partial
+  checking.
+\newblock In {\em USENIX Security Symposium}, pages 339--353, 2002.
+
+\bibitem{JKSS12}
+T.~Jager, F.~Kohlar, S.~Sch{\"a}ge, and J.~Schwenk.
+\newblock On the security of {TLS-DHE} in the standard model.
+\newblock In {\em CRYPTO}, 2012.
+
+\bibitem{JJ99}
+M.~Jakobsson and A.~Juels.
+\newblock Proofs of work and bread pudding protocols.
+\newblock In {\em Communications and Multimedia Security}, 1999.
+
+\bibitem{JJ00}
+M.~Jakobsson and A.~Juels.
+\newblock Mix and match: Secure function evaluation via ciphertexts.
+\newblock In {\em ASIACRYPT}, 2000.
+
+\bibitem{JSI96}
+M.~Jakobsson, K.~Sako, and R.~Impagliazzo.
+\newblock Designated verifier proofs and their applications.
+\newblock In {\em EUROCRYPT}, 1996.
+
+\bibitem{JSWY08}
+M.~Jakobsson, E.~Stolterman, S.~Wetzel, and L.~Yang.
+\newblock {Love and authentication}.
+\newblock In {\em CHI}, 2008.
+
+\bibitem{Jar12}
+J.~Jarmoc.
+\newblock {SSL/TLS} interception proxies and transitive trust.
+\newblock In {\em Black Hat Europe}, 2012.
+
+\bibitem{WGR07}
+D.~Jefferson, E.~Ginnold, K.~Midstokke, K.~Alexander, P.~Stark, and
+  A.~Lehmkuhl.
+\newblock Evaluation of audit sampling models and options for strengthening
+  {C}alifornia's manual count.
+\newblock Technical report, State of California's Post-Election Audit Standards
+  Working Group, 2007.
+
+\bibitem{Jim01}
+T.~Jim.
+\newblock {SD3}: a trust management system with certified evaluation.
+\newblock In {\em IEEE Symposium on Security and Privacy}, 2001.
+
+\bibitem{JR07}
+R.~Joaquim and C.~Ribeiro.
+\newblock Codevoting: protection against automatic vote manipulation in an
+  uncontrolled environment.
+\newblock In {\em VOTE-ID}, 2007.
+
+\bibitem{JRF09}
+R.~Joaquim, C.~Ribeiro, and P.~Ferreira.
+\newblock Veryvote: A voter verifiable code voting system.
+\newblock In {\em VOTE-ID}, 2009.
+
+\bibitem{JRF10}
+R.~Joaquim, C.~Ribeiro, and P.~Ferreira.
+\newblock Improving remote voting security with {C}ode{V}oting.
+\newblock In {\em Towards Trustworthy Elections}, volume 6000 of {\em LNCS}.
+  Springer, 2010.
+
+\bibitem{JBR05}
+J.~P. Jones, D.~F. Berger, and C.~V. Ravishankar.
+\newblock Layering public key distribution over secure {DNS} using
+  authenticated delegation.
+\newblock In {\em ACSAC}, 2005.
+
+\bibitem{JK20}
+J.~Jonsson and B.~S. {Kaliski Jr.}
+\newblock On the security of {RSA} encryption in {TLS}.
+\newblock In {\em CRYPTO}, 2002.
+
+\bibitem{JT07}
+M.~Joye and M.~Tunstall.
+\newblock Securing {OpenSSL} against micro-architectural attacks.
+\newblock In {\em SECRYPT}, 2007.
+
+\bibitem{JPM19}
+J.p. morgan creates digital coin for payments.
+\newblock Technical report, J.P. Morgan, 2019.
+
+\bibitem{JB99}
+A.~Juels and J.~Brainard.
+\newblock Client puzzles: A cryptographic defense against connection depletion
+  attacks.
+\newblock In {\em NDSS}, 1999.
+
+\bibitem{JCJ05}
+A.~Juels, D.~Catalano, and M.~Jacobsson.
+\newblock Coercion-resistant electronic elections.
+\newblock In {\em ACM WPES}, 2005.
+
+\bibitem{JJ02}
+A.~Juels and M.~Jakobsson.
+\newblock Coercion-resistant electronic elections.
+\newblock Technical report, Citeseer, 2002.
+
+\bibitem{JJSH00}
+A.~Juels, M.~Jakobsson, E.~Shriver, and B.~Hillyer.
+\newblock How to turn loaded dice into fair coins.
+\newblock {\em IEEE Transactions on Information Theory}, 46(3), 2000.
+
+\bibitem{Lit19}
+A.~Ju{\v s}kait{\.e}, S.~{\v S}iaudinis, and T.~Reichenbachas.
+\newblock {CBDC} --- in a whirlpool of discussion.
+\newblock Occasional paper series, Lietuvos bankas, 2019.
+
+\bibitem{+PKCS}
+B.~Kaliski.
+\newblock Pkcs \#5: Password-based cryptography specification.
+\newblock RFC 2898, 2000.
+\newblock http://tools.ietf.org/html/rfc2898.
+
+\bibitem{KGCWF18}
+H.~Kalodner, S.~Goldfeder, X.~Chen, S.~M. Weinberg, and E.~W. Felten.
+\newblock Arbitrum: Scalable, private smart contracts.
+\newblock In {\em USENIX Security}, 2018.
+
+\bibitem{KCEBN15}
+H.~A. Kalodner, M.~Carlsten, P.~Ellenbogen, J.~Bonneau, and A.~Narayanan.
+\newblock An empirical study of namecoin and lessons for decentralized
+  namespace design.
+\newblock In {\em WEIS}. Citeseer, 2015.
+
+\bibitem{Kam08}
+D.~Kaminsky.
+\newblock {B}lack {O}ps 2008: it's the end of the cache as we know it.
+\newblock In {\em Black Hat USA}, 2008.
+
+\bibitem{KPS10}
+D.~Kaminsky, M.~L. Patterson, and L.~Sassaman.
+\newblock {PKI} layer cake: New collision attacks against the global {X}.509
+  infrastructure.
+\newblock In {\em Financial Cryptography}, 2010.
+
+\bibitem{Kane10}
+C.~Kane.
+\newblock Voting and verifiability: interview with {R}on {R}ivest.
+\newblock {\em RSA Vantage Magazine}, 7(1), 2010.
+
+\bibitem{KYMM18}
+G.~Kappos, H.~Yousaf, M.~Maller, and S.~Meiklejohn.
+\newblock An empirical analysis of anonymity in zcash.
+\newblock In {\em USENIX Security}, 2018.
+
+\bibitem{KSW05}
+C.~Karlof, N.~Sastry, and D.~Wagner.
+\newblock Cryptographic voting protocols: A systems perspective.
+\newblock In {\em USENIX Security Symposium}, 2005.
+
+\bibitem{KSW05b}
+C.~Karlof, N.~Sastry, and D.~Wagner.
+\newblock The promise of cryptographic voting protocols.
+\newblock Technical report, Berkeley, 2005.
+
+\bibitem{KTW09}
+C.~Karlof, J.~Tygar, and D.~Wagner.
+\newblock Conditioned-safe ceremonies and a user study of an appplication to
+  web authentication.
+\newblock In {\em NDSS}, 2009.
+
+\bibitem{KSC09}
+A.~H. Karp, M.~Stiegler, and T.~Close.
+\newblock Not one click for security.
+\newblock Technical Report HPL-2009-53, HP Labs, 2009.
+
+\bibitem{KPSS10}
+T.~Kasper, M.~Silbermann, and C.~Paar.
+\newblock All you can eat or breaking a real-world contactless payment system.
+\newblock In {\em Financial Cryptography}, 2010.
+
+\bibitem{Kat03}
+J.~Katz.
+\newblock Efficient and non-malleable proofs of plaintext knowledge and
+  applications.
+\newblock In {\em EUROCRYPT}, 2003.
+
+\bibitem{Kat07}
+J.~Katz.
+\newblock Universally composable multi-party computation using tamper-proof
+  hardware.
+\newblock In {\em EUROCRYPT}, pages 115--128, 2007.
+
+\bibitem{KK08}
+J.~Keller and J.~Kilian.
+\newblock A linked-list approach to cryptographically secure elections using
+  instant runoff voting.
+\newblock In {\em ASIACRYPT}, 2008.
+
+\bibitem{Kel02}
+J.~Kelsey.
+\newblock Compression and information leakage of plaintext.
+\newblock In {\em FSE}, 2002.
+
+\bibitem{KRMC10}
+J.~Kelsey, A.~Regenscheid, T.~Moran, and D.~Chaum.
+\newblock Attacking paper-based {E2E} voting systems.
+\newblock In {\em Towards Trustworthy Elections}, volume 6000 of {\em LNCS},
+  pages 370--387. Springer, 2010.
+
+\bibitem{KY02}
+A.~Kiayias and M.~Yung.
+\newblock Self-tallying elections and perfect ballot secrecy.
+\newblock In {\em PKC}, pages 141--158, 2002.
+
+\bibitem{KY04}
+A.~Kiayias and M.~Yung.
+\newblock The vector-ballot e-voting approach.
+\newblock In {\em FC}, 2004.
+
+\bibitem{KY10}
+A.~Kiayias and M.~Yung.
+\newblock The vector-ballot approach for online voting procedures.
+\newblock In {\em Towards Trustworthy Elections}, volume 6000 of {\em LNCS},
+  pages 155--174. Springer, 2010.
+
+\bibitem{Kim02}
+K.~Kim.
+\newblock Killer application of pki to internet voting.
+\newblock In {\em International Workshop for Asia Public Key Infrastructures},
+  2002.
+
+\bibitem{KMM20}
+A.~Klages-Mundt and A.~Minca.
+\newblock While stability lasts: A stochastic model of stablecoins.
+\newblock Technical report, arXiv, 2020.
+
+\bibitem{KHF11}
+R.~Koenig, R.~Haenni, and S.~Fischli.
+\newblock Preventing board flooding attacks in coercion-resistant electronic
+  voting schemes.
+\newblock In {\em SEC}, 2011.
+
+\bibitem{KSRW04}
+T.~Kohno, A.~Stubblefield, A.~D. Rubin, and D.~S. Wallach.
+\newblock Analysis of an electronic voting system.
+\newblock In {\em IEEE Symposium on Security and Privacy}, 2004.
+
+\bibitem{Kon16}
+J.~Koning.
+\newblock Fedcoin: A central bankissued cryptocurrency.
+\newblock Technical report, R3 Reports, 2016.
+
+\bibitem{KS04}
+J.~G. Koppella and J.~A. Steena.
+\newblock The effects of ballot position on election outcomes.
+\newblock {\em The Journal of Politics}, 66(1):267--281, 2004.
+
+\bibitem{KKM14}
+P.~Koshy, D.~Koshy, and P.~McDaniel.
+\newblock An analysis of anonymity in bitcoin using p2p network traffic.
+\newblock In {\em Financial Cryptography}, 2014.
+
+\bibitem{Kra01}
+H.~Krawczyk.
+\newblock The order of encryption and authentication for protecting
+  communications (or: how secure is {SSL}?).
+\newblock In {\em CRYPTO}, 2001.
+
+\bibitem{Kra10}
+H.~Krawczyk.
+\newblock Cryptographic extraction and key derivation: The {HKDF} scheme.
+\newblock In {\em CRYPTO}, 2010.
+
+\bibitem{Kri07}
+T.~Krivoruchko.
+\newblock Robust coercion-resistant registration for remove e-voting.
+\newblock In {\em WOTE}, 2007.
+
+\bibitem{KNMJ+17}
+O.~Kulyk, S.~Neumann, K.~Marky, J.~Budurushi, and M.~Volkamer.
+\newblock Coercion-resistant proxy voting.
+\newblock {\em Computers \& Security}, 71, 2017.
+
+\bibitem{KFTS17}
+A.~Kumar, C.~Fischer, S.~Tople, and P.~Saxena.
+\newblock A traceability analysis of monero's blockchain.
+\newblock In {\em ESORICS}, 2017.
+
+\bibitem{KT09}
+R.~Kusters and T.~Truderung.
+\newblock An epistemic approach to coercion-resistance for electronic voting
+  protocols.
+\newblock In {\em IEEE Symposium on Security and Privacy}, 2009.
+
+\bibitem{KTV09}
+R.~Kusters, T.~Truderung, and A.~Vogt.
+\newblock Improving and simplifying a variant of pret a voter.
+\newblock In {\em VOTE-ID}, 2009.
+
+\bibitem{KTV10b}
+R.~Kusters, T.~Truderung, and A.~Vogt.
+\newblock Accountability: Definition and relationship to verifiability.
+\newblock In {\em ACM CCS}, 2010.
+
+\bibitem{KTV10}
+R.~Kusters, T.~Truderung, and A.~Vogt.
+\newblock A game-based definition of coercion- resistance and its application.
+\newblock In {\em CSF}, 2010.
+
+\bibitem{KTV10c}
+R.~Kusters, T.~Truderung, and A.~Vogt.
+\newblock Proving coercion-resistance of {Scantegrity II}.
+\newblock In {\em ICICS}, 2010.
+
+\bibitem{KZ07}
+M.~Kutylowski and F.~Zagorski.
+\newblock Verifiable internet voting solving secure platform problem.
+\newblock In {\em IWSEC}, 2007.
+
+\bibitem{Lan20}
+T.~Lane.
+\newblock Money and payments in the digital age.
+\newblock Technical report, Bank of Canada, 2020.
+
+\bibitem{Lan11}
+A.~Langley.
+\newblock Beyond the basics of {HTTPS} serving.
+\newblock {\em USENIX ;Login:}, Dec 2011.
+
+\bibitem{Lat96}
+T.~Latter.
+\newblock The choice of exchange rate regime.
+\newblock Handbooks in central banking, Centre for Central Banking Studies,
+  Bank of England, 1996.
+
+\bibitem{LBD+04}
+B.~Lee, C.~Boyd, E.~Dawson, K.~Kim, J.~Yang, and S.~Yoo.
+\newblock Providing receipt-freeness in mixnet-based voting protocols.
+\newblock In {\em ICISC}, 2003.
+
+\bibitem{LK00}
+B.~Lee and K.~Kim.
+\newblock Receipt-free electronic voting through collaboration of voter and
+  honest verifier.
+\newblock In {\em JS-ISC}, 2000.
+
+\bibitem{LK02}
+B.~Lee and K.~Kim.
+\newblock Receipt-free electronic voting scheme with a tamper-resistant
+  randomizer.
+\newblock In {\em ICISC}, 2002.
+
+\bibitem{LMN07}
+H.~K. Lee, T.~Malkin, and E.~Nahum.
+\newblock Cryptographic strength of {SSL/TLS} servers: Current and recent
+  practices.
+\newblock In {\em IMC}, 2007.
+
+\bibitem{LN02}
+S.~Lefranc and D.~Naccache.
+\newblock Cut-\&-paste attacks with {JAVA}.
+\newblock In {\em ICISC}, 2002.
+
+\bibitem{LHA+12}
+A.~K. Lenstra, J.~P. Hughes, M.~Augier, J.~W. Bos, T.~Kleinjung, and
+  C.~Wachter.
+\newblock Public keys.
+\newblock In {\em CRYPTO}, 2012.
+
+\bibitem{LeHa18}
+R.~Leshner and G.~Hayes.
+\newblock Compound: The money market protocol.
+\newblock Technical report, Compound Finance, 2018.
+
+\bibitem{LK03}
+C.~Lesniewski-Laas and M.~F. Kaashoek.
+\newblock {SSL} splitting: securely serving data from untrusted caches.
+\newblock In {\em USENIX Security}, 2003.
+
+\bibitem{LK05}
+J.~Li and X.~Kang.
+\newblock {mSSL}: Extending {SSL} to support data sharing among collaborative
+  clients.
+\newblock In {\em ACSAC}, 2005.
+
+\bibitem{LL06}
+M.~Liberatore and B.~N. Levine.
+\newblock Inferring the source of encrypted {HTTP} connections.
+\newblock In {\em CCS}, 2006.
+
+\bibitem{Lip10}
+H.~Lipmaa.
+\newblock On the {CCA1}-security of {E}lgamal and {D}amg\r{a}rd's {E}lgamal.
+\newblock In {\em Inscrypt}, 2010.
+
+\bibitem{LWL09}
+F.~Liu, C.~K. Wu, and X.~J. Lin.
+\newblock The alignment problem of visual cryptography schemes.
+\newblock {\em Designs, Codes and Cryptography}, 50(2), 2009.
+
+\bibitem{LSRW99}
+A.~Lysyanskaya, R.~L. Rivest, A.~Sahai, and S.~Wolf.
+\newblock Pseudonym systems.
+\newblock In {\em Selected Areas in Cryptography}, 1999.
+
+\bibitem{MBC01}
+E.~Magkos, M.~Burmester, and V.~Chrissikopoulos.
+\newblock Receipt-freeness in large- scale elections without untappable
+  channels.
+\newblock In {\em I3E}, 2001.
+
+\bibitem{MMP02}
+D.~Malkhi, O.~Margo, and E.~Pavlov.
+\newblock E-voting without `cryptography'.
+\newblock In {\em FC}, 2002.
+
+\bibitem{IMF19}
+T.~Mancini~Griffoli, M.~S. Martinez~Peria, I.~Agur, A.~Ari, J.~Kiff,
+  A.~Popescu, and C.~Rochon.
+\newblock Casting light on central bank digital currencies.
+\newblock IMF Staff Discussion Notes 18/08, International Monetary Fund, 2018.
+
+\bibitem{Mar09b}
+M.~Marlinspike.
+\newblock More tricks for defeating {SSL} in practice.
+\newblock In {\em DEFCON 17}, 2009.
+
+\bibitem{Mar09a}
+M.~Marlinspike.
+\newblock New tricks for defeating {SSL} in practice.
+\newblock In {\em Black Hat DC}, 2009.
+
+\bibitem{Mar11}
+M.~Marlinspike.
+\newblock {SSL} and the future of authenticity.
+\newblock In {\em Black Hat USA}, 2011.
+
+\bibitem{MPQ07}
+O.~d. Marneffe, O.~Pereira, and J.-J. Quisquater.
+\newblock Simulation-based analysis of e2e voting systems.
+\newblock In {\em VOTE-ID}, 2007.
+
+\bibitem{+Pat2}
+R.~J. Massa, T.~R. Ellis, and R.~G. LePage.
+\newblock Intelligent surveillance alarm system and method.
+\newblock United States Patent, 4589081, 1986.
+
+\bibitem{MNNVW18}
+F.~{Massacci}, C.~N. {Ngo}, J.~{Nie}, D.~{Venturi}, and J.~{Williams}.
+\newblock Futuresmex: Secure, distributed futures market exchange.
+\newblock In {\em 2018 IEEE Symposium on Security and Privacy (SP)}, 2018.
+
+\bibitem{MVVP12}
+N.~Mavrogiannopoulos, F.~Vercauteren, V.~Velichkov, and B.~Preneel.
+\newblock A cross-protocol attack on the {TLS} protocol.
+\newblock In {\em CCS}, 2012.
+
+\bibitem{MBC+12}
+D.~McCarney, D.~Barrera, J.~Clark, S.~Chiasson, and P.~C. van Oorschot.
+\newblock Tapas: design, implementation, and usability evaluation of a password
+  manager.
+\newblock In {\em ACSAC}, 2012.
+
+\bibitem{MHM17}
+P.~McCorry, E.~Heilman, and A.~Miller.
+\newblock Atomically trading with roger: Gambling on the success of a hardfork.
+\newblock In {\em CBT}, pages 334--353, Cham, 2017. Springer International
+  Publishing.
+
+\bibitem{MSH17}
+P.~McCorry, S.~F. Shahandashti, and F.~Hao.
+\newblock A smart contract for boardroom voting with maximum voter privacy.
+\newblock In {\em Financial Cryptography}, 2017.
+
+\bibitem{MPJL+13}
+S.~Meiklejohn, M.~Pomarole, G.~Jordan, K.~Levchenko, D.~McCoy, G.~M. Voelker,
+  and S.~Savage.
+\newblock {A fistful of bitcoins: characterizing payments among men with no
+  names}.
+\newblock In {\em {IMC}}, 2013.
+
+\bibitem{Men07}
+B.~Meng.
+\newblock A coercion-resistant internet voting protocol.
+\newblock In {\em ICSNC}, 2007.
+
+\bibitem{Mer73}
+R.~Merton.
+\newblock Theory of rational option pricing.
+\newblock {\em Journal of Economics and Management Sciences}, 4(1), 1973.
+
+\bibitem{MH96}
+M.~Michels and P.~Horster.
+\newblock Some remarks on a receipt-free and universally verifiable mix-type
+  voting scheme.
+\newblock In {\em ASIACRYPT}, 1996.
+
+\bibitem{MGGR13}
+I.~Miers, C.~Garman, M.~Green, and A.~D. Rubin.
+\newblock {Zerocoin: Anonymous Distributed E-Cash from Bitcoin}.
+\newblock In {\em {IEEE Symposium on Security and Privacy}}, 2013.
+
+\bibitem{MM55}
+G.~Miller.
+\newblock Note on the bias of information estimates.
+\newblock In {\em Information Theory in Psychology II-B}. Free Press, 1955.
+
+\bibitem{MSS98}
+J.~C. Mitchell, V.~Shmatikov, and U.~Stern.
+\newblock Finite-state analysis of {SSL} 3.0.
+\newblock In {\em USENIX Security}, 1998.
+
+\bibitem{MR04}
+N.~Modadugu and E.~Rescorla.
+\newblock The design and implementation of datagram {TLS}.
+\newblock In {\em NDSS}, 2004.
+
+\bibitem{MSS20}
+A.~Moin, K.~Sekniqi, and E.~G. Sirer.
+\newblock Sok: A classification framework for stablecoin designs.
+\newblock In {\em Financial Cryptography}, 2020.
+
+\bibitem{MC18}
+S.~Moosavi and J.~Clark.
+\newblock Ghazal: toward truly authoritative web certificates using ethereum.
+\newblock In {\em WTSC}, 2018.
+
+\bibitem{MN06}
+T.~Moran and M.~Naor.
+\newblock Receipt-free universally-verifiable voting with everlasting privacy.
+\newblock In {\em CRYPTO}, 2006.
+
+\bibitem{MN07}
+T.~Moran and M.~Naor.
+\newblock Split-ballot voting: Everlasting privacy with distributed trust.
+\newblock In {\em ACM CCS}, 2007.
+
+\bibitem{MS08}
+T.~Moran and G.~Segev.
+\newblock David and goliath commitments: Uc computation for asymmetric parties
+  using tamper-proof hardware.
+\newblock In {\em EUROCRYPT}, 2008.
+
+\bibitem{MSW08}
+P.~Morrissey, N.~P. Smart, and B.~Warinschi.
+\newblock A modular security analysis of the {TLS} handshake protocol.
+\newblock In {\em ASIACRYPT}, 2008.
+
+\bibitem{MBS+09}
+T.~Moyer, K.~Butler, J.~Schiffman, P.~McDaniel, and T.~Jaeger.
+\newblock Scalable web content attestation.
+\newblock In {\em ACSAC}, 2009.
+
+\bibitem{Mra01}
+R.~Mraz.
+\newblock Secure blue: An architecture for a scalable, reliable high volume
+  {SSL} internet server.
+\newblock In {\em ACSAC}, 2001.
+
+\bibitem{+Pat3}
+A.~Munje and T.~Plestid.
+\newblock Password methods and systems for use on a mobile device.
+\newblock United States Patent (Pending), 11181522, 2007.
+
+\bibitem{MCC08}
+A.~C. Myers, M.~Clarkson, and S.~Chong.
+\newblock Civitas: Toward a secure voting system.
+\newblock In {\em IEEE Symposium on Security and Privacy}, pages 354--368,
+  2008.
+
+\bibitem{Mye98}
+M.~Myers.
+\newblock Revocation: Options and challenges.
+\newblock In {\em Financial Cryptography}, 1998.
+
+\bibitem{Nak08}
+S.~Nakamoto.
+\newblock Bitcoin: A peer-to-peer electionic cash system.
+\newblock Unpublished, 2008.
+
+\bibitem{Nao89}
+M.~Naor.
+\newblock Bit commitment using pseudo-randomness (extended abstract).
+\newblock In {\em CRYPTO}, pages 128--136, 1989.
+
+\bibitem{NN98}
+M.~Naor and K.~Nissim.
+\newblock Certificate revocation and certificate update.
+\newblock In {\em USENIX Security}, 1998.
+
+\bibitem{NS94}
+M.~Naor and A.~Shamir.
+\newblock Visual cryptography.
+\newblock In {\em EUROCRYPT}, 94.
+
+\bibitem{NBFMG16}
+A.~Narayanan, J.~Bonneau, E.~W. Felten, A.~Miller, and S.~Goldfeder.
+\newblock {\em Bitcoin and Cryptocurrency Technologies}.
+\newblock Princeton, 2016.
+
+\bibitem{NaCl17}
+A.~Narayanan and J.~Clark.
+\newblock Bitcoin's academic pedigree.
+\newblock {\em Communications of the ACM}, 60(12), 2017.
+
+\bibitem{NVV18}
+N.~Narula, W.~Vasquez, and M.~Virza.
+\newblock zkledger: Privacy-preserving auditing for distributed ledgers.
+\newblock In {\em USENIX NSDI}, 2018.
+
+\bibitem{WaPo20}
+N.~Narula and L.~H. White.
+\newblock Does the u.s. need a national digital currency?
+\newblock {\em Washington Post}, 2020.
+
+\bibitem{Linq15}
+Nasdaq linq enables first-ever private securities issuance documented with
+  blockchain technology.
+\newblock Technical report, NASDAQ, 2015.
+
+\bibitem{NOCR17}
+Y.~Nasser, C.~Okoye, J.~Clark, and P.~Y.~A. Ryan.
+\newblock Blockchains and voting: Somewhere between hype and a panacea.
+\newblock Online, 2017.
+
+\bibitem{Nef01}
+C.~A. Neff.
+\newblock A verifiable secret shuffle and its application to e-voting.
+\newblock In {\em ACM CCS}, 2001.
+
+\bibitem{Nef04}
+C.~A. Neff.
+\newblock Practical high certainty intent verification for encrypted votes.
+\newblock Technical report, VoteHere Whitepaper, 2004.
+
+\bibitem{NR94}
+V.~Niemi and A.~Rendall.
+\newblock How to prevent buying of votes in computer elections.
+\newblock In {\em ASIACRYPT}, 1994.
+
+\bibitem{NSS91}
+H.~Nurmi, A.~Salomaa, and L.~Santean.
+\newblock Secret ballot elections in computer networks.
+\newblock {\em Computers \& Security}, 36(10):553--560, 1991.
+
+\bibitem{OMA+99}
+M.~Ohkubo, F.~Miura, M.~Abe, A.~Fujioka, and T.~Okamoto.
+\newblock An improvement on a practical secret voting scheme.
+\newblock In {\em ISW}, 1999.
+
+\bibitem{Oht88}
+K.~Ohta.
+\newblock An electrical voting scheme using a single administrator.
+\newblock Technical report, Spring National Convention Record, 1998.
+
+\bibitem{Oka92}
+T.~Okamoto.
+\newblock Provably secure and practical indentification schemes and
+  corresponding signature schemes.
+\newblock In {\em CRYPTO}, 1992.
+
+\bibitem{Oka96}
+T.~Okamoto.
+\newblock An electronic voting scheme.
+\newblock In {\em IFIP}, 1996.
+
+\bibitem{Oka97}
+T.~Okamoto.
+\newblock Receipt-free electronic voting schemes for large scale elections.
+\newblock In {\em Workshop on Security Protocols}, 1997.
+
+\bibitem{OC18}
+M.~C. Okoye and J.~Clark.
+\newblock Ugwo: Toward cryptocurrency lending.
+\newblock In {\em WTSC}, 2018.
+
+\bibitem{OHB06}
+R.~Oppliger, R.~Hauser, and D.~Basin.
+\newblock {SSL/TLS} session-aware user authentication.
+\newblock {\em Computer Communications}, 29(12), 2006.
+
+\bibitem{OSL08}
+R.~Oppliger, J.~Schwenk, and C.~Lohr.
+\newblock Captcha-based code voting.
+\newblock In {\em EVOTE}, 2008.
+
+\bibitem{Orc19}
+M.~Orcutt.
+\newblock The world bank is still loving its blockchain-powered bonds.
+\newblock {\em MIT Technology Review}, 2019.
+
+\bibitem{+OASIS}
+{Organization for the Advancement of Structured Information Standards (OASIS)}.
+\newblock Open document format for office applications (opendocument) v1.1,
+  February 2007.
+\newblock http://docs.oasis-open.org/office/v1.1/OS/OpenDocument-v1.1.pdf.
+
+\bibitem{OV03}
+A.~Ornaghi and M.~Valleri.
+\newblock Man in the middle attacks: demos.
+\newblock In {\em Black Hat USA}, 2003.
+
+\bibitem{Osb03}
+M.~J. Osbourne.
+\newblock {\em An introduction to game theory}.
+\newblock Oxford University Press, 2003.
+
+\bibitem{OMZ09}
+E.~Osterweil, D.~Massey, and L.~Zhang.
+\newblock Deploying and monitoring {DNS} security ({DNSSEC}).
+\newblock In {\em ACSAC}, 2009.
+
+\bibitem{OI10}
+A.~Otsuka and H.~Imai.
+\newblock Unconditionally secure electronic voting.
+\newblock In {\em Towards Trustworthy Elections}, volume 6000 of {\em LNCS},
+  pages 107--123. Springer, 2010.
+
+\bibitem{OSD06}
+A.~Ozment, S.~E. Schecter, and R.~Dhamija.
+\newblock Web sites should not need to rely on users to secure communications.
+\newblock In {\em W3C Workshop on Usability and Transparency of Web
+  Authentication}, 2006.
+
+\bibitem{Pai99}
+P.~Paillier.
+\newblock Public-key cryptosystems based on composite degree residuosity
+  classes.
+\newblock In {\em EUROCRYPT}, 1999.
+
+\bibitem{Pal11}
+C.~Palmer.
+\newblock It's time to fix {HTTPS}.
+\newblock Online, 2011.
+
+\bibitem{Pan03}
+L.~Paninski.
+\newblock Estimation of entropy and mutual information.
+\newblock {\em Neural Computation}, 15, 2003.
+
+\bibitem{PIK93}
+C.~Park, K.~Itoh, and K.~Kurosawa.
+\newblock Efficient anonymous channel and all/nothing election scheme.
+\newblock In {\em EUROCRYPT}, 1993.
+
+\bibitem{PSNR20}
+S.~Park, M.~Specter, N.~Narula, and R.~L. Rivest.
+\newblock Going from bad to worse: From internet voting to blockchain voting.
+\newblock Online, 2020.
+
+\bibitem{PKP06}
+B.~Parno, C.~Kuo, and A.~Perrig.
+\newblock Phoolproof phishing prevention.
+\newblock In {\em Financial Cryptography}, 2006.
+
+\bibitem{Pau99}
+L.~C. Paulson.
+\newblock Inductive analysis of the internet protocol {TLS}.
+\newblock {\em ACM TISSEC}, 1999.
+
+\bibitem{Jas1}
+Project {Jasper}: {A} {Canadian} {Experiment} with {Distributed} {Ledger}
+  {Technology} for {Domestic} {Interbank} {Payments} {Settlement}.
+\newblock Technical report, Payments Canada, Bank of Canada and R3, 2017.
+
+\bibitem{Ped91a}
+T.~P. Pedersen.
+\newblock A threshold cryptosystem without a trusted party.
+\newblock In {\em EUROCRYPT}, 1991.
+
+\bibitem{Ped91b}
+T.~P. Pedersen.
+\newblock Non-interactive and information-theoretic secure verifiable secret
+  sharing.
+\newblock In {\em CRYPTO}, pages 129--140, 1992.
+
+\bibitem{PAB+04}
+K.~Peng, R.~Aditya, C.~Boyd, E.~Dawson, and B.~Lee.
+\newblock Multiplicative homomorphic e-voting.
+\newblock In {\em INDOCRYPT}, 2004.
+
+\bibitem{PK11}
+N.~J. Percoco and P.~Kehrer.
+\newblock Getting {SSLizzard}.
+\newblock In {\em DEFCON 19}, 2011.
+
+\bibitem{PWXL20}
+D.~Perez, S.~M. Werner, J.~Xu, and B.~Livshits.
+\newblock Liquidations: Defi on a knife-edge.
+\newblock Technical report, arXiv, 2020.
+
+\bibitem{PHP+19}
+I.~G.~A. Pernice, S.~Henningsen, R.~Proskalovich, M.~Florian, and H.~Elendner.
+\newblock Monetary stabilization in cryptocurrencies: Design approaches and
+  open questions.
+\newblock In {\em CVCBT}, 2019.
+
+\bibitem{Per08}
+M.~Perry.
+\newblock 365-day: {HTTPS} cookie stealing.
+\newblock In {\em DEFCON 16}, 2008.
+
+\bibitem{Pet05}
+R.~A. Peters.
+\newblock A secure bulletin board.
+\newblock Master's thesis, Technische Universiteit Eindhoven, 2005.
+
+\bibitem{Pfi94}
+B.~Pfitzmann.
+\newblock Breaking an efficient anonymous channel.
+\newblock In {\em EUROCRYPT}, 1994.
+
+\bibitem{PW92}
+B.~Pfitzmann and M.~Waidner.
+\newblock Unconditionally untraceable and fault-tolerant broadcast and secret
+  ballot election.
+\newblock Technical report, Institut fur Informatik, Universiat Hildesheim,
+  1992.
+
+\bibitem{PW18}
+C.~Pierrot and B.~Wesolowski.
+\newblock Malleability of the blockchain's entropy.
+\newblock {\em Cryptography and Communications}, 10(1):211--233, Jan 2018.
+
+\bibitem{PK08}
+A.~Pilosov and T.~Kapela.
+\newblock Stealing the internet: An internet-scale man-in-the-middle attack.
+\newblock In {\em DEFCON 16}, 2008.
+
+\bibitem{Pop10}
+S.~Popoveniuc.
+\newblock Speakup: remote unsupervised voting.
+\newblock In {\em ACNS}, 2010.
+
+\bibitem{PCE+10}
+S.~Popoveniuc, J.~Clark, A.~Essex, R.~T. Carback, and D.~Chaum.
+\newblock Securing optical-scan voting.
+\newblock In {\em Towards Trustworthy Elections}, volume 6000 of {\em LNCS}.
+  Springer, 2010.
+
+\bibitem{PH06}
+S.~Popoveniuc and B.~Hosp.
+\newblock An introduction to punchscan.
+\newblock In {\em WOTE}, 2006.
+
+\bibitem{PV09}
+S.~Popoveniuc and P.~L. Vora.
+\newblock A framework for secure electronic voting.
+\newblock {\em Cryptologia}, To appear.
+
+\bibitem{PR07}
+M.~Prabhakaran and M.~Rosulek.
+\newblock Rerandomizable {RCCA} encryption.
+\newblock In {\em CRYPTO}, 2007.
+
+\bibitem{Pra99}
+M.~Prandini.
+\newblock Efficient certificate status handling within {PKI}s: an application
+  to public administration services.
+\newblock In {\em ACSAC}, 1999.
+
+\bibitem{Pro04}
+N.~Provos.
+\newblock A virtual honeypot framework.
+\newblock In {\em USENIX Security Symposium}, 2004.
+
+\bibitem{QZLG20}
+K.~Qin, L.~Zhou, B.~Livshits, and A.~Gervais.
+\newblock Attacking the defi ecosystem with flash loans for fun and profit.
+\newblock Technical Report 2003.03810v2, arXiv, 2020.
+
+\bibitem{Rab83}
+M.~Rabin.
+\newblock Transaction protection by beacons.
+\newblock {\em Journal of Computer and System Sciences}, 27(2), 1983.
+
+\bibitem{RBNB11}
+K.~Radke, C.~Boyd, J.~G. Nieto, and M.~Brereton.
+\newblock Ceremony analysis: Strengths and weaknesses.
+\newblock In {\em IFIP SEC}, 2011.
+
+\bibitem{RH13}
+F.~Reid and M.~Harrigan.
+\newblock {An analysis of anonymity in the bitcoin system}.
+\newblock In {\em {Security and Privacy in Social Networks}}, 2013.
+
+\bibitem{Res01}
+E.~Rescorla.
+\newblock {\em {SSL} and {TLS}: Designing and Building Secure Systems}.
+\newblock Addison-Wesley, 2001.
+
+\bibitem{Res03b}
+E.~Rescorla.
+\newblock The internet is too secure already.
+\newblock In {\em USENIX Security (invited talk)}, 2003.
+
+\bibitem{Res03}
+E.~Rescorla.
+\newblock Security holes... who cares?
+\newblock In {\em USENIX Security}, 2003.
+
+\bibitem{Res11}
+E.~Rescorla.
+\newblock Stone knives and bear skins: Why does the internet still run on
+  pre-historic cryptography?
+\newblock In {\em INDOCRYPT (Invited talk)}, 2006.
+
+\bibitem{Res09}
+E.~Rescorla.
+\newblock On the security of election audits with low entropy randomness.
+\newblock In {\em EVT/WOTE}, 2009.
+
+\bibitem{RCK02}
+E.~Rescorla, A.~Cain, and B.~Korver.
+\newblock {SSLACC}: A clustered {SSL} accelerator.
+\newblock In {\em USENIX Security}, 2002.
+
+\bibitem{Ris10}
+I.~Ristic.
+\newblock Internet {SSL} survey 2010.
+\newblock In {\em Black Hat USA}, 2010.
+
+\bibitem{RS11}
+I.~Ristic and M.~Small.
+\newblock A study of what really breaks {SSL}.
+\newblock In {\em Hack in the Box}, 2011.
+
+\bibitem{RT07}
+B.~Riva and A.~{Ta-Shma}.
+\newblock Bare-handed electronic voting with pre-processing.
+\newblock In {\em EVT}, 2007.
+
+\bibitem{Riv98}
+R.~Rivest.
+\newblock Can we eliminate certificate revocation lists?
+\newblock In {\em Financial Cryptography}, 1998.
+
+\bibitem{RS96}
+R.~L. Rivest and A.~Shamir.
+\newblock {PayWord} and {MicroMint}: two simple micropayment schemes.
+\newblock In {\em Security Protocols}, 1996.
+
+\bibitem{RSW96}
+R.~L. Rivest, A.~Shamir, and D.~A. Wagner.
+\newblock Time-lock puzzles and timed-release crypto.
+\newblock Technical Report TR-684, MIT, 1996.
+
+\bibitem{RS07}
+R.~L. Rivest and W.~D. Smith.
+\newblock Three voting protocols: threeballot, {VAV}, and twin.
+\newblock In {\em EVT}, 2007.
+
+\bibitem{RD12}
+J.~Rizzo and T.~Duong.
+\newblock The crime attack.
+\newblock In {\em Ekoparty}, 2012.
+
+\bibitem{RoNi20}
+D.~Robinson and A.~Niemerg.
+\newblock The yield protocol: On-chain lending with interest rate discovery.
+\newblock Technical report, Yield.is, Apr 2020.
+
+\bibitem{Rog17}
+K.~S. Rogoff.
+\newblock {\em The Curse of Cash: How Large-Denomination Bills Aid Crime and
+  Tax Evasion and Constrain Monetary Policy}.
+\newblock Princeton University Press, 2017.
+
+\bibitem{RS13}
+D.~Ron and A.~Shamir.
+\newblock {Quantitative Analysis of the Full Bitcoin Transaction Graph}.
+\newblock In {\em Financial Cryptography}, 2013.
+
+\bibitem{Ros10}
+B.~Rosenberg, editor.
+\newblock {\em Handbook of Financial Cryptography and Security}.
+\newblock Chapman and Hall/CRC, 2010.
+
+\bibitem{Rul15}
+G.~Rule.
+\newblock Understanding the central bank balance sheet.
+\newblock Handbooks in Central Banking~32, Centre for Central Banking Studies,
+  2015.
+
+\bibitem{RKYCC19}
+S.~Ruoti, B.~Kaiser, A.~Yerukhimovich, J.~Clark, and R.~Cunningham.
+\newblock Blockchain technology: What is it good for?
+\newblock {\em Communications of the ACM}, 63(1):46--53, 2020.
+
+\bibitem{RKYCC20}
+S.~Ruoti, B.~Kaiser, A.~Yerukhimovich, J.~Clark, and R.~Cunningham.
+\newblock Blockchain technology: What is it good for?
+\newblock {\em Communications of the ACM}, 63(1), 2020.
+
+\bibitem{Rus99}
+S.~Russell.
+\newblock Fast checking of individual certificate revocation on small systems.
+\newblock In {\em ACSAC}, 1999.
+
+\bibitem{+Pat4}
+R.~K. Russikoff.
+\newblock Computerized password verification system and method for atm
+  transactions.
+\newblock United States Patent, 6871288, 2005.
+
+\bibitem{Rya04}
+P.~Y.~A. Ryan.
+\newblock A variant of the chaum voter-verifiable scheme.
+\newblock Technical Report CS-TR 864, University of Newcastle, 2004.
+
+\bibitem{RBH+09}
+P.~Y.~A. Ryan, D.~Bismark, J.~Heather, S.~Schneider, and Z.~Xia.
+\newblock Pret a voter: a voter-verifiable voting system.
+\newblock {\em IEEE TIFS}, 4(4), 2009.
+
+\bibitem{RS06}
+P.~Y.~A. Ryan and S.~A. Schneider.
+\newblock Pret a voter with re-encryption mixes.
+\newblock In {\em ESORICS}, 2006.
+
+\bibitem{RT09a}
+P.~Y.~A. Ryan and V.~Teague.
+\newblock Ballot permutations in pret a voter.
+\newblock In {\em EVT/WOTE}, 2009.
+
+\bibitem{RT09b}
+P.~Y.~A. Ryan and V.~Teague.
+\newblock Pretty good democracy.
+\newblock In {\em Workshop on Security Protocols}, 2009.
+
+\bibitem{RAC08}
+R.~Ryan, Z.~Anderson, and A.~Cheisa.
+\newblock Anatomy of a subway hack.
+\newblock In {\em DEFCON}, 2008.
+
+\bibitem{SK94}
+K.~Sako and J.~Kilian.
+\newblock Secure voting using partially compatible homomorphisms.
+\newblock In {\em CRYPTO}, 1994.
+
+\bibitem{SK95}
+K.~Sako and J.~Kilian.
+\newblock Receipt-free mix-type voting scheme - a practical solution to the
+  implementation of a voting booth.
+\newblock In {\em EUROCRYPT}, pages 393--403, 1995.
+
+\bibitem{SP06}
+K.~Sampigethaya and R.~Poovendran.
+\newblock A framework and taxonomy for comparison of electronic voting schemes.
+\newblock {\em Computers \& Security}, 25, 2006.
+
+\bibitem{Sam15}
+R.~Sams.
+\newblock A note on cryptocurrency stabilisation: Seigniorage shares.
+\newblock [Online], 2015.
+
+\bibitem{SDW08}
+D.~R. Sandler, K.~Derr, and D.~S. Wallach.
+\newblock {VoteBox:} a tamper-evident, verifiable electronic voting system.
+\newblock In {\em USENIX Security Symposium}, 2008.
+
+\bibitem{Say06}
+Sayke.
+\newblock Liquid democracy is not delegative democracy.
+\newblock Blog post, 2006.
+
+\bibitem{SDOF07}
+S.~E. Schecter, R.~Dhamija, A.~Ozment, and I.~Fischer.
+\newblock The emperor's new security indicators: An evaluation of website
+  authentication and the effect of role playing on usability studies.
+\newblock In {\em IEEE Symposium on Security and Privacy}, 2007.
+
+\bibitem{Sch91}
+C.~P. Schnorr.
+\newblock Efficient signature generation by smart cards.
+\newblock {\em Journal of Cryptography}, 4, 1991.
+
+\bibitem{Sch99}
+B.~Schoenmakers.
+\newblock A simple publicly verifiable secret sharing scheme and its
+  applications to electronic voting.
+\newblock In {\em CRYPTO}, 1999.
+
+\bibitem{Sch00}
+B.~Schoenmakers.
+\newblock Fully auditable electronic secret-ballot elections.
+\newblock {\em Xootic Magazine}, July 2000.
+
+\bibitem{ST04}
+B.~Schoenmakers and P.~Tuyls.
+\newblock Practical two-party computation based on the conditional gate.
+\newblock In {\em ASIACRYPT}, 2004.
+
+\bibitem{Sch03}
+M.~Schroder.
+\newblock Brownian excursions and {P}arisian barrier options: a note.
+\newblock {\em Advances in Applied Probability}, 40(4), 2003.
+
+\bibitem{Sch06}
+J.~Schweisgut.
+\newblock Coercion-resistant electronic elections with observer.
+\newblock In {\em EVOTE}, 2006.
+
+\bibitem{SD03a}
+A.~Serjantov and G.~Danezis.
+\newblock Towards an information theoretic metric for anonymity.
+\newblock In {\em Privacy Enhancing Technologies}, pages 41--53. Springer,
+  2003.
+
+\bibitem{SDS03}
+A.~Serjantov, R.~Dingledine, and P.~Syverson.
+\newblock From a trickle to a flood: Active attacks on several mix types.
+\newblock In {\em Information Hiding}, pages 36--52. Springer, 2003.
+
+\bibitem{Sey09}
+R.~U. Seydel.
+\newblock {\em Tools for computational finance}.
+\newblock Springer, fourth edition, 2009.
+
+\bibitem{SFB20}
+Marshall islands to power world's first national digital currency with algorand
+  and sfb technologies`a.
+\newblock Technical report, SFB Technologies, 2020.
+
+\bibitem{SB02}
+H.~Shacham and D.~Boneh.
+\newblock Fast-track session establishment for {TLS}.
+\newblock In {\em NDSS}, 2002.
+
+\bibitem{SCC+10}
+A.~T. Sherman, R.~T. Carback, D.~Chaum, J.~Clark, A.~Essex, P.~S. Hernson,
+  T.~Mayberry, S.~Popoveniuc, R.~L. Rivest, E.~Shen, B.~Sinha, and P.~L. Vora.
+\newblock Scantegrity mock election at {T}akoma {P}ark.
+\newblock In {\em EVOTE}, 2010.
+
+\bibitem{SL11}
+D.~Shin and R.~Lopes.
+\newblock An empirical study of visual security cues to prevent the
+  {SSLstripping} attack.
+\newblock In {\em ACSAC}, 2011.
+
+\bibitem{SS04}
+A.~M. Shubina and S.~W. Smith.
+\newblock Design and prototype of a coercion-resistant, voter verifiable
+  electronic voting system.
+\newblock In {\em PST}, 2004.
+
+\bibitem{OMFIF20}
+S.~Sinha, N.~Gaur, M.~Martin, M.~Perelman, B.~Patel, P.~Middleton, P.~Ortlieb,
+  K.~Lucke, W.~Coningsby-Brown, J.~Frazer, and J.~Bulgin.
+\newblock Retail cbdcs: the next payments frontier.
+\newblock Technical report, OMFIF and IBM, 2020.
+
+\bibitem{SR09}
+M.~Smart and E.~Ritter.
+\newblock Remote electronic voting with revocable anonymity.
+\newblock In {\em ISS}, 2009.
+
+\bibitem{SD03b}
+D.~K. Smetters and G.~Durfee.
+\newblock Domain-based administration of identity-based cryptosystems for
+  secure email and {IPsec}.
+\newblock In {\em USENIX Security}, 2003.
+
+\bibitem{Smi05}
+W.~D. Smith.
+\newblock New cryptographic election protocol with best-known theoretical
+  properties.
+\newblock In {\em Frontiers in Electronic Elections}, 2005.
+
+\bibitem{SBOP08}
+J.~Sobey, R.~Biddle, P.~van Oorschot, and A.~S. Patrick.
+\newblock Exploring user reactions to new browser cues for extended validation
+  certificates.
+\newblock In {\em ESORICS}, 2008.
+
+\bibitem{SS11}
+C.~Soghoian and S.~Stamm.
+\newblock Certified lies: Detecting and defeating government interception
+  attacks against {SSL}.
+\newblock In {\em Financial Cryptography}, 2011.
+
+\bibitem{SS10}
+S.~Son and V.~Shmatikov.
+\newblock The hitchhiker's guide to {DNS} cache poisoning.
+\newblock In {\em SECURECOMM}, 2010.
+
+\bibitem{SWT01}
+D.~X. Song, D.~Wagner, and X.~Tian.
+\newblock Timing analysis of keystrokes and timing attacks on {SSH}.
+\newblock In {\em USENIX Security}, 2001.
+
+\bibitem{SHB11}
+A.~Sotirakopoulos, K.~Hawkey, and K.~Beznosov.
+\newblock On the challenges in usable security lab studies: Lessons learned
+  from replicating a study on {SSL} warnings.
+\newblock In {\em SOUPS}, 2011.
+
+\bibitem{SZ09}
+A.~Sotirov and M.~Zusman.
+\newblock Breaking the security myths of extended validation {SSL}
+  certificates.
+\newblock In {\em Black Hat USA}, 2009.
+
+\bibitem{SHD10}
+O.~Spycher, R.~Haenni, and E.~Dubuis.
+\newblock Coercion-resistant hybrid voting systems.
+\newblock In {\em EVOTE}, 2010.
+
+\bibitem{SKHS11}
+O.~Spycher, R.~Koenig, R.~Haenni, and M.~Schlapfer.
+\newblock A new approach towards coercion-resistant remote e-voting in linear
+  time.
+\newblock In {\em FC}, 2011.
+
+\bibitem{StCl99}
+F.~Stalder and A.~Clement.
+\newblock Exploring policy issues of electronic cash: The mondex case.
+\newblock {\em Canadian Journal of Communication}, 24(2), 1999.
+
+\bibitem{Ste10}
+D.~Stebila.
+\newblock Reinforcing bad behaviour: the misuse of security indicators on
+  popular websites.
+\newblock In {\em OZCHI}, 2010.
+
+\bibitem{SLW07}
+M.~Stevens, A.~Lenstra, and B.~de~Weger.
+\newblock Chosen-prefix collisions for {MD5} and colliding {X.509} certificates
+  for different identities.
+\newblock In {\em EUROCRYPT}, 2007.
+
+\bibitem{SSAL+09}
+M.~Stevens, A.~Sotirov, J.~Appelbaum, A.~Lenstra, D.~Molnar, D.~A. Osvik, and
+  B.~de~Weger.
+\newblock Short chosen-prefix collisions for {MD5} and the creation of a rogue
+  {CA} certificate.
+\newblock In {\em CRYPTO}, 2009.
+
+\bibitem{Ste08}
+C.~Stewart.
+\newblock Election technology and the voting experience in 2008.
+\newblock Technical report, VTP Working Paper 71, 2008.
+
+\bibitem{SHJJ09}
+H.~Story, B.~Harbulot, I.~Jacobi, and M.~Jones.
+\newblock {FOAF}+{SSL}: {REST}ful authentication for the social web.
+\newblock In {\em ESWC}, 2009.
+
+\bibitem{SSWR+02}
+Q.~Sun, D.~R. Simon, Y.-M. Wang, W.~Russell, V.~N. Padmanabhan, and L.~Qiu.
+\newblock Statistical identification of encrypted web browsing traffic.
+\newblock In {\em IEEE Symposium on Security and Privacy}, 2002.
+
+\bibitem{SEAAC09}
+J.~Sunshine, S.~Egelman, H.~Almuhimedi, N.~Atri, and L.~F. Cranor.
+\newblock Crying wolf: An empirical study of {SSL} warning effectiveness.
+\newblock In {\em USENIX Security}, 2009.
+
+\bibitem{Sur13}
+J.~Surowiecki.
+\newblock Why did criminals trust liberty reserve?
+\newblock {\em The New Yorker}, 2013.
+
+\bibitem{Swe17}
+The riksbank's e-krona project: Report 1.
+\newblock Technical report, Sveriges Riksbank, Sep 2017.
+
+\bibitem{Swe18}
+The riksbank's e-krona project: Report 2.
+\newblock Technical report, Sveriges Riksbank, Oct 2018.
+
+\bibitem{syta2016keeping}
+E.~Syta, I.~Tamas, D.~Visher, D.~I. Wolinsky, P.~Jovanovic, L.~Gasser,
+  N.~Gailly, I.~Khoffi, and B.~Ford.
+\newblock Keeping authorities" honest or bust" with decentralized witness
+  cosigning.
+\newblock In {\em IEEE Symposium on Security and Privacy}, pages 526--545.
+  Ieee, 2016.
+
+\bibitem{TRN08}
+V.~Teague, K.~Ramchen, and L.~Naish.
+\newblock Coercion resistant tallying for {STV} voting.
+\newblock In {\em EVT}, 2008.
+
+\bibitem{TP07}
+C.~Thorpe and D.~C. Parkes.
+\newblock Cryptographic securities exchanges.
+\newblock In {\em Financial Cryptography}, 2007.
+
+\bibitem{TW12}
+C.~Thorpe and S.~R. Willis.
+\newblock Cryptographic rule-based trading.
+\newblock In {\em Financial Cryptography}, 2012.
+
+\bibitem{Jas3}
+Jasper phase {III}: Securities settlement using distributed ledger technology.
+\newblock Technical report, TMX, R3, Payments Canada, Bank of Canada and
+  Accenture, Oct. 2018.
+
+\bibitem{Tob87}
+J.~Tobin.
+\newblock A case for preserving regulatory distinctions.
+\newblock {\em Challenge}, 30(5):10--17, 1987.
+
+\bibitem{TSHJB12}
+E.~Topalovic, B.~Saeta, L.-S. Huang, C.~Jackson, and D.~Boneh.
+\newblock Toward short-lived certificates.
+\newblock In {\em W2SP}, 2012.
+
+\bibitem{TY98}
+Y.~Tsiounis and M.~Yung.
+\newblock On the security of {ElGamal} based encryption.
+\newblock In {\em PKC}, pages 117--134, 1998.
+
+\bibitem{Tze04}
+W.~G. Tzeng.
+\newblock Efficient 1-out-of-n oblivious transfer schemes with universally
+  usable parameters.
+\newblock {\em IEEE Transactions on Computers}, 53(2), 2004.
+
+\bibitem{+VVSG}
+{United States Election Assistance Commission}.
+\newblock The 2008 voluntary voting system guidelines, v1.1), 2009.
+
+\bibitem{UM10}
+D.~Unruh and J.~{Muller-Quade}.
+\newblock Universally composable incoercibility.
+\newblock In {\em CRYPTO}, 2010.
+
+\bibitem{OW99}
+P.~C. van Oorschot and M.~J. Wiener.
+\newblock Parallel collision search with cryptanalytic applications.
+\newblock {\em J. Cryptology}, 12:1--28, 1999.
+
+\bibitem{Var04}
+H.~R. Varian.
+\newblock System reliability and free riding.
+\newblock In {\em Economics of Information Security}, volume Advances in
+  Information Security, Volume 12, pages 1--15, 2004.
+
+\bibitem{Vau02}
+S.~Vaudenay.
+\newblock Security flaws induced by {CBC} padding: applications to {SSL},
+  {IPSEC}, {WTLS}, \ldots.
+\newblock In {\em EUROCRYPT}, 2002.
+
+\bibitem{VG07}
+M.~Volkamer and R.~Grimm.
+\newblock Multiple casts in online voting: Analyzing chances.
+\newblock In {\em EVOTE}, 2006.
+
+\bibitem{VFBH11}
+N.~Vratonjic, J.~Freudiger, V.~Bindschaedler, and J.-P. Hubaux.
+\newblock The inconvenient truth about web certificates.
+\newblock In {\em WEIS}, 2011.
+
+\bibitem{WS96}
+D.~Wagner and B.~Schneier.
+\newblock Analysis of the {SSL} 3.0 protocol.
+\newblock In {\em USENIX Workshop on Electronic Commerce}, 1996.
+
+\bibitem{WGMK+09}
+H.~J. Wang, C.~Grier, A.~Moshchuk, S.~T. King, P.~Choudhury, and H.~Venter.
+\newblock The multi-principal {OS} construction of the {G}azelle web browser.
+\newblock In {\em USENIX Security}, 2009.
+
+\bibitem{WXF+18}
+X.~{Wang}, X.~{Xu}, L.~{Feagan}, S.~{Huang}, L.~{Jiao}, and W.~{Zhao}.
+\newblock Inter-bank payment system on enterprise blockchain platform.
+\newblock In {\em CLOUD}, 2018.
+
+\bibitem{WJHF04}
+B.~Waters, A.~Juels, J.~A. Halderman, and E.~W. Felten.
+\newblock New client puzzle outsourcing techniques for dos resistance.
+\newblock In {\em ACM CCS}, pages 246--256, 2004.
+
+\bibitem{WAB07}
+S.~G. Weber, R.~S.~d. Araujo, and J.~Buchmann.
+\newblock On coercion-resistant electronic elections with linear work.
+\newblock In {\em ARES}, 2007.
+
+\bibitem{WB09}
+R.~Wen and R.~Buckland.
+\newblock Masked ballot voting for receipt-free online elections.
+\newblock In {\em VOTE-ID}, 2009.
+
+\bibitem{WB09b}
+R.~Wen and R.~Buckland.
+\newblock Minimum disclosure counting for the alternative vote.
+\newblock In {\em VOTE-ID}, 2009.
+
+\bibitem{WAP08}
+D.~Wendlandt, D.~G. Andersen, and A.~Perrig.
+\newblock Perspectives: Improving {SSH}-style host authentication with
+  multi-path probing.
+\newblock In {\em USENIX Annual Tech}, 2008.
+
+\bibitem{WI05}
+T.~Whalen and K.~M. Inkpen.
+\newblock Gathering evidence: Use of visual security cues in web browsers.
+\newblock In {\em Graphics Interface}, 2005.
+
+\bibitem{WWB+05}
+S.~Wiedenbeck, J.~Waters, J.-C. Birget, A.~Brodskiy, and N.~Memon.
+\newblock Passpoints: design and longitudinal evaluation of a graphical
+  password system.
+\newblock {\em Int. J. Hum.-Comput. Stud.}, 63(1-2):102--127, 2005.
+
+\bibitem{WZ04}
+J.~Wolfers and E.~Zitzewitz.
+\newblock Prediction markets.
+\newblock {\em Journal of Economic Perspective}, 2004.
+
+\bibitem{WZ06}
+J.~Wolfers and E.~Zitzewitz.
+\newblock Interpreting prediction market prices as probabilities.
+\newblock Technical Report 12200, NBER Working Paper, 2006.
+
+\bibitem{NKS}
+S.~Wolfram.
+\newblock {\em A new kind of science}.
+\newblock Wolfram Media, first edition, 2001.
+
+\bibitem{Wu05}
+H.~Wu.
+\newblock The misuse of {RC4} in microsoft word and excel.
+\newblock Cryptology ePrint Archive, Report 2005/007, 2005.
+
+\bibitem{WKCC18}
+K.~W{\"u}st, K.~Kostiainen, V.~Capkun, and S.~Capkun.
+\newblock Prcash: Fast, private and regulated transactions for digital
+  currencies.
+\newblock In {\em Financial Cryptography}, 2018.
+
+\bibitem{XS06}
+Z.~Xia and S.~Schneider.
+\newblock A new receipt-free e-voting scheme based on blind signatures.
+\newblock In {\em WOTE}, 2006.
+
+\bibitem{XSH08}
+Z.~Xia, S.~A. Schneider, and J.~Heather.
+\newblock Analysis, improvement and simplification of pret a voter with
+  paillier encryption.
+\newblock In {\em EVT}, 2008.
+
+\bibitem{YaCl17}
+N.~Yang and J.~Clark.
+\newblock Practical governmental voting with unconditional integrity and
+  privacy.
+\newblock In {\em Financial Cryptography and Data Security}, 2017.
+
+\bibitem{Yao82}
+A.~C. Yao.
+\newblock Protocols for secure computations.
+\newblock In {\em IEEE FOCS}, 1982.
+
+\bibitem{YSA05}
+Z.~Ye, S.~Smith, and D.~Anthony.
+\newblock Trusted paths for browsers.
+\newblock {\em ACM TISSEC}, 8(2), 2005.
+
+\bibitem{Yeh06}
+P.~F. Yeh.
+\newblock Using prediction markets to enhance us intelligence capabilities: A
+  ``standard \& poors 500 index'' for intelligence.
+\newblock {\em Studies in Intelligence}, 50(4), 2006.
+
+\bibitem{YRSES09}
+S.~Yilek, E.~Rescorla, H.~Shacham, B.~Enright, and S.~Savage.
+\newblock When private keys are public: Results from the 2008 {D}ebian
+  {OpenSSL} vulnerability.
+\newblock In {\em IMC}, 2009.
+
+\bibitem{YSLT10}
+W.~Yuen, P.~Syverson, Z.~Liu, and C.~Thorpe.
+\newblock Intention-disguised algorithmic trading.
+\newblock In {\em Financial Cryptography}, 2010.
+
+\bibitem{ZCC+13}
+F.~Zag{\'o}rski, R.~Carback, D.~Chaum, J.~Clark, A.~Essex, and P.~L. Vora.
+\newblock Remotegrity: Design and use of an end-to-end verifiable remote voting
+  system.
+\newblock In {\em ACNS}, 2013.
+
+\bibitem{ZZ17}
+B.~Zhang and H.-S. Zhou.
+\newblock Statement voting.
+\newblock In {\em Financial Cryptography}, 2019.
+
+\bibitem{ZCCJ+16}
+F.~Zhang, E.~Cecchetti, K.~Croman, A.~Juels, and E.~Shi.
+\newblock Town crier: An authenticated data feed for smart contracts.
+\newblock In {\em ACM CCS}, CCS '16, pages 270--282, New York, NY, USA, 2016.
+  ACM.
+
+\bibitem{ZBC+19}
+L.~Zhao, J.~I. Choi, D.~Demirag, K.~R.~B. Butler, M.~Mannan, E.~Ayday, and
+  J.~Clark.
+\newblock One-time programs made practical.
+\newblock In {\em Financial Cryptography}, 2019.
+
+\bibitem{Zus08}
+M.~Zusman.
+\newblock Leveraging the edge: abusing {SSL} {VPN}s.
+\newblock In {\em Black Hat USA}, 2008.
+
+\bibitem{Zus09}
+M.~Zusman.
+\newblock Criminal charges are not pursued: Hacking {PKI}.
+\newblock In {\em DEFCON 17}, 2009.
+
+\bibitem{ZS09}
+M.~Zusman and A.~Sotirov.
+\newblock Sub-prime {PKI}: Attacking extended validation {SSL}.
+\newblock Technical report, Black Hat Security Briefings, 2009.
+
+\end{thebibliography}
