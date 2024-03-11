@@ -7,34 +7,71 @@ what is a proof of solvency, and some of its evolution and current state.
 \section{Bitcoin}
 
 Bitcoin is recognized as the world's first successful cryptocurrency and decentralized digital currency. 
+The goal of Bitcoin is to allow financial transactions to be settled without the need of a financial institution.
+Transactions can occur within 2 participants of the network in realtime, without any middleman. 
+All transactions are settled on a public blockchain, which means that everything can be verified by everyone. 
+
+\subsection{Transactions}
+For every participant of the network, there is a public key,  a private key and a wallet address.
+The public key is derived from the private key using elliptic curve multiplication, and the wallet address is derived from the public key using a hashing function.
+Both are one way function, meaning you cannot derived the other way around.
+The wallet address can be sean as a bank account number. When you send bitcoin to someone, you send it to their wallet address.
+To be able to send some bitcoin, you need to sign your transaction. 
+Since transactions are sent on the network, we need to make sure a transaction originates from the sender.
+The way to do that is to sign your transaction. The digital signature is created from the transaction data and the private key, which is only known by the owner of the address.
+The public key is then used to make sure that the signature originates from the right private key.
+Sending a transaction is the easiest problem to solve. The real challenge is to keep track of who owns what, and to avoid the double spending problem.
+The way to do that is to keep the history of every single transactions. 
+Bitcoin is a blockchain. The blockchain is made of blocks, and the transactions are filling these blocks.
 
 
-\subsection{What is Bitcoin}
-Bitcoin represents multiple different concepts. Bitcoin is a unit of currency used to store and transmit value among participants of the bitcoin network.
-Users communicate with eachother via the bitcoin protocol. 
+\subsection{Network}
+->
+The bitcoin network
 
-Andreas M. Antonopoulos describes bitcoin as 4 different innovations:
-\begin{enumerate}
+We define an electronic coin as a chain of digital signatures. Each owner transfers the coin to the
+next by digitally signing a hash of the previous transaction and the public key of the next owner
+and adding these to the end of the coin. A payee can verify the signatures to verify the chain of
+ownership.
 
-    \item A decentralized peer-to-peer newtork (the bitcoin protocol)
+
+A purely peer-to-peer version of electronic cash would allow online
+payments to be sent directly from one party to another without going through a
+financial institution. Digital signatures provide part of the solution, but the main
+benefits are lost if a trusted third party is still required to prevent double-spending.
+We propose a solution to the double-spending problem using a peer-to-peer network.
+The network timestamps transactions by hashing them into an ongoing chain of
+hash-based proof-of-work, forming a record that cannot be changed without redoing
+the proof-of-work. The longest chain not only serves as proof of the sequence of
+events witnessed, but proof that it came from the largest pool of CPU power. As
+long as a majority of CPU power is controlled by nodes that are not cooperating to
+attack the network, they'll generate the longest chain and outpace attackers. The
+network itself requires minimal structure. Messages are broadcast on a best effort
+basis, and nodes can leave and rejoin the network at will, accepting the longest
+proof-of-work chain as proof of what happened while they were gone
+
+
+%Andreas M. Antonopoulos
+
+%    \item A decentralized peer-to-peer newtork (the bitcoin protocol)
     
-    \item A public transaction ledger (the blockchain)
+%    \item A public transaction ledger (the blockchain)
     
-    \item A set of rules for independent transaction validation and currency issuance (consensus rules) 
+%    \item A set of rules for independent transaction validation and currency issuance (consensus rules) 
 
-    \item A mechanism for reaching global decentralized concensus on the valid blockchain (Proof-of-Work algorithm)
+%    \item A mechanism for reaching global decentralized concensus on the valid blockchain (Proof-of-Work algorithm)
     
-    \end{enumerate}
+%    \end{enumerate}
 
 
 
 \subsection{Why do we need Bitcoin}
 
-\subsection{How does Bitcoin works}
-
-\section{Cryptocurrency}
+%\section{Cryptocurrency}
 
 \section{Marketplaces}
+
+\section{Zero Knowledge}
 
 \section{Proof of solvency}
 
