@@ -11,7 +11,8 @@ The goal of Bitcoin is to allow financial transactions to be settled without the
 Transactions can occur within 2 participants of the network in realtime, without any middleman. 
 All transactions are settled on a public blockchain, which means that everything can be verified by everyone. 
 
-\subsection{Transactions}
+\subsection{How does Bitcoin works}
+\subsubsection{Transactions}
 For every participant of the network, there is a public key,  a private key and a wallet address.
 The public key is derived from the private key using elliptic curve multiplication, and the wallet address is derived from the public key using a hashing function.
 Both are one way function, meaning you cannot derived the other way around.
@@ -25,33 +26,34 @@ The way to do that is to keep the history of every single transactions.
 Bitcoin is a blockchain. The blockchain is made of blocks, and the transactions are filling these blocks.
 
 
-\subsection{Network}
-->
-The bitcoin network
+\subsubsection{Network}
+The challenge of the network, is to have every single node agree on the transaction history. Nodes are computers connected to the network,
+working on publishing new blocks. The nodes work together to agree on the order of transactions. Every new transaction is broadcaseed to all nodes.
+The nodes puts the transactions into a block, and try to publish that block. In order to publish a block, each node need to solve a proof-of-work challenge.
+When a node solves the challenge, it broadcasts the block to every nodes. The nodes accepts the block if all transactions are valid. Their is no formal
+way of approving a new block. A node show its acceptance by starting to work on a new block using the hash of the accepted block as previous hash.
+Some nodes might accept different blocks, depending on what time they received new blocks. To solve the issue of multiple chains, the longest chain is consideredto be the correct one. 
+If two chains have the same length, nodes keep working on their respective chains untill one of the chains receive a new block, breaking the tie.
 
-We define an electronic coin as a chain of digital signatures. Each owner transfers the coin to the
-next by digitally signing a hash of the previous transaction and the public key of the next owner
-and adding these to the end of the coin. A payee can verify the signatures to verify the chain of
-ownership.
+
+\subsubsection{Proof-of-work}
+In order to submit a new block, a node have to find a hash with x number of leading 0 bits.
+It is exponentially more difficult every time you add a zero. The way to have different hash values, is to change the block timestamp, and the nonce value.
+The nonce value is there solely for that purpose. Once a block is published, you cannot change any value inside of it because the hash value would change.
+You would need to redo all the work to find a new good hash. Older blocks are even more secured, because in order to change the 2nd to last block, you would need to redo the work
+for the 2 latest blocks. This is the same for every block down the road. The longest chanin is determined by the greatest proof-of-work invest in it. If their is a majority of honest nodes,
+that chain will grow up the fastest. The difficulty of the new block is determined by an average, in order to generate blocks at a steady pace.
 
 
-A purely peer-to-peer version of electronic cash would allow online
-payments to be sent directly from one party to another without going through a
-financial institution. Digital signatures provide part of the solution, but the main
-benefits are lost if a trusted third party is still required to prevent double-spending.
-We propose a solution to the double-spending problem using a peer-to-peer network.
-The network timestamps transactions by hashing them into an ongoing chain of
-hash-based proof-of-work, forming a record that cannot be changed without redoing
-the proof-of-work. The longest chain not only serves as proof of the sequence of
-events witnessed, but proof that it came from the largest pool of CPU power. As
-long as a majority of CPU power is controlled by nodes that are not cooperating to
-attack the network, they'll generate the longest chain and outpace attackers. The
-network itself requires minimal structure. Messages are broadcast on a best effort
-basis, and nodes can leave and rejoin the network at will, accepting the longest
-proof-of-work chain as proof of what happened while they were gone
+\subsubsection{Merkle Tree}
+Only the merkle root is stored in the block header. When a block is enough in the past, nodes start to only keep block headers in memory.
+They do not keep the rest of the block. This is why the hash of a block is the hash of the block header, and not the whole block. To keep the integrity of the chain.
+The merkle root is the top of the Merkle Tree. A merkle tree is a tree where the parent node is the hash of the child nodes.
 
 
 %Andreas M. Antonopoulos
+%whitepaper
+%add figure of merkle tree, bitcoin block, 
 
 %    \item A decentralized peer-to-peer newtork (the bitcoin protocol)
     
