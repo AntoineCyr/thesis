@@ -1,5 +1,10 @@
 \begin{thebibliography}{100}
 
+\bibitem{N08}
+S. Nakamoto.
+\newblock Bitcoin: A Peer-to-Peer Electronic Cash System.
+\newblock Technical report, Bitcoin.org, 2008.
+
 \bibitem{ASK05}
 O.~Acii\c{c}mez, W.~Schindler, and \c{C}. K.~Ko\c{c}.
 \newblock Improving {B}rumley and {B}oneh timing attack on unprotected {SSL}
