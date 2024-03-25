@@ -10,6 +10,12 @@ Binance.
 \newblock Proof of Reserves.
 \newblock \url{https://www.binance.com/en/proof-of-reserves}.
 
+
+\bibitem{BPS}
+Binance.
+\newblock Proof of solvency.
+\newblock \url{https://gusty-radon-13b.notion.site/Proof-of-solvency-61414c3f7c1e46c5baec32b9491b2b3d}.
+
 \bibitem{LZK}
 Boaz Barak.
 \newblock Lecture 14: Zero knowledge proofs.
@@ -48,6 +54,28 @@ Dan Boneh, Shafi Goldwasser, Dawn Song, Justin Thaler, Yupeng Zhang.
 Nitulescu, Anca.
 \newblock \emph{zk-SNARKs: A Gentle Introduction}.
 \newblock 2020.
+
+\bibitem{DBBBCC15}
+Dagher, Gaby G., Bunz, Benedikt, Bonneau, Joseph, Clark, Jeremy, and Boneh, Dan.
+\newblock Provisions: Privacy-preserving proofs of solvency for Bitcoin exchanges.
+\newblock October 26, 2015.
+
+\bibitem{chainlink_blog}
+Malkhi, Dahlia.
+\newblock Exploring Proof of Solvency and Liability Verification Systems.
+\newblock Published January 5, 2023. Updated November 27, 2023.
+\newblock \url{https://blog.chain.link/proof-of-solvency/}.
+
+\bibitem{CC22}
+Mazars.
+\newblock Proof of Reserve Report.
+\newblock December 9, 2022.
+\newblock \url{https://www.crypto.com/proof-of-reserve}.
+
+\bibitem{KK23}
+Kraken.
+\newblock Proof of Reserves.
+\newblock \url{https://www.kraken.com/proof-of-reserves}.
 
 
 

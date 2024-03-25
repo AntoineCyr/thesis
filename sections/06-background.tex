@@ -1,54 +1,72 @@
 % !TEX root = ../main.tex
 
 \chapter{Background}
-This chapter introduces to bitcoin, the world of cryptocurrency and marketplaces. It describes as well 
-what is a proof of solvency, and some of its evolution and current state.
+
+%Rework intro
+In the rapidly evolving landscape of cryptocurrency exchanges, ensuring transparency, accountability, and financial stability
+ is paramount for fostering user trust and confidence. This section provides an overview of the foundational concepts and mechanisms 
+ underpinning solvency verification in the cryptocurrency ecosystem. We explore the various approaches adopted by leading exchanges, such as
+  Binance, Crypto.com, and Kraken, to demonstrate their financial health through proof of reserves or solvency mechanisms. Additionally, we 
+  highlight the shortcomings and challenges associated with current solvency verification practices, paving the way for a deeper examination
+   of potential solutions and advancements in the subsequent sections.
 
 \section{Bitcoin}
+
 %Andreas M. Antonopoulos somewhere
 Bitcoin is recognized as the world's first successful cryptocurrency and decentralized digital currency. 
-The goal of Bitcoin is to allow financial transactions to be settled without the need of a financial institution.
-Transactions can occur within 2 participants of the network in realtime, without any middleman. 
-All transactions are settled on a public blockchain, which means that everything can be verified by everyone. 
+The goal of Bitcoin is to allow financial transactions to be settled on its own, without the need of a middleman, typically financial institutions.
+Bitcoin is built on a peer-to-peer network, which means that every participant helps in safe keeping the transactions history, and propagating the new transactions.
+There is no single point of failure. This allows for transactions to occur in real time, in contrast to the delays encountered in the traditional finance world.
+Bitcoin defines two different concepts: Bitcoin the cryptocurrency, and Bitcoin the blockchain. The cryptocurrency resides on the blockchain.
+The Bitcoin blockchain is a decentralized ledger that records all Bitcoin (the cryptocurrency) transactions immutably and transparently. 
+This blockchain serves as a verifiable record of all Bitcoin transactions, accessible to every participant in the network. 
+The transparency afforded by the public blockchain engenders trust and accountability.
 
 
 \subsection{Transactions}
-For every participant of the network, there is a public key,  a private key and a wallet address.
+For every participant of the network, there is a public key, a private key and a wallet address associated with the participant.
 The public key is derived from the private key using elliptic curve multiplication, and the wallet address is derived from the public key using a hashing function.
 Both are one way function, meaning you cannot derived the other way around.
+The public key serves as the unique identifier in the network, but it is the wallet address that typically defines a participant.
 The wallet address can be seen as a bank account number. When you send bitcoin to someone, you send it to their wallet address.
-To be able to send some bitcoin, you need to sign your transaction. 
-Since transactions are sent on the network, we need to make sure a transaction originates from the sender.
-The way to do that is to sign your transaction. The digital signature is created from the transaction data and the private key, which is only known by the owner of the address.
-The public key is then used to make sure that the signature originates from the right private key.
+To be able to send some bitcoin, you need to create a transaction and send it to the network. 
+When transactions are sent on the network, there is no way of knowing who propagaded the transaction first.
+We need to make sure a transaction originates from the sender. The way to do that is to sign your transaction. The digital signature is created from the transaction data and the private key, which is only known by the owner of the address.
+The public key is then used to verify the authenticity of the signature.
 Sending a transaction is the easiest problem to solve. The real challenge is to keep track of who owns what, and to avoid the double spending problem.
-The way to do that is to keep the history of every single transactions. 
-Bitcoin is a blockchain. The blockchain is made of blocks, and the transactions are filling these blocks.
+The methodology for managing this is to keep the history of every single transactions. The transactions are bundled up into blocks, and the chain of blocks create the blockchain.
 
 
 \subsection{Network}
-The challenge of the network, is to have every single node agree on the transaction history. Nodes are computers connected to the network,
-working on publishing new blocks. The nodes work together to agree on the order of transactions. Every new transaction is broadcaseed to all nodes.
-The nodes puts the transactions into a block, and try to publish that block. In order to publish a block, each node need to solve a proof-of-work challenge.
-When a node solves the challenge, it broadcasts the block to every nodes. The nodes accepts the block if all transactions are valid. Their is no formal
+The challenge of the network, is to have every single node achieve consensus on the transaction history. Nodes are computers connected to the network,
+working on publishing new blocks. The nodes work collectively to establish order of transactions (sequencing). Every new transaction is broadcasted to all nodes.
+The nodes puts the transactions into a block, and try to publish that block. In order to publish a block, each node needs to solve a proof-of-work challenge.
+When a node solves the challenge, it broadcasts the block to every nodes. The nodes accepts the block if all transactions are valid. There is no formal
 way of approving a new block. A node show its acceptance by starting to work on a new block using the hash of the accepted block as previous hash.
-Some nodes might accept different blocks, depending on what time they received new blocks. To solve the issue of multiple chains, the longest chain is consideredto be the correct one. 
-If two chains have the same length, nodes keep working on their respective chains untill one of the chains receive a new block, breaking the tie.
+Some nodes might accept different blocks, if multiple blocks are propagaded at the same time. This would create multiple chains. To solve this issue, the longest chain is considered to be the correct one. 
+If two chains have the same length, nodes keep working on their respective chains untill one of the chains receives a new block, breaking the tie.
 
 
 \subsection{Proof-of-work}
-In order to submit a new block, a node have to find a hash with x number of leading 0 bits.
-It is exponentially more difficult every time you add a zero. The way to have different hash values, is to change the block timestamp, and the nonce value.
+In order to submit a new block, a node have to find a hash with a specific number of leading zero bits.
+It is exponentially more difficult for every zero bit. 
+This cryptographic puzzle serves as a barrier to entry, ensuring that a lot of computational power was spent on creating the block.
+The way to test different hash values, is to change the block timestamp, and the nonce value.
 The nonce value is there solely for that purpose. Once a block is published, you cannot change any value inside of it because the hash value would change.
-You would need to redo all the work to find a new good hash. Older blocks are even more secured, because in order to change the 2nd to last block, you would need to redo the work
-for the 2 latest blocks. This is the same for every block down the road. The longest chanin is determined by the greatest proof-of-work invest in it. If their is a majority of honest nodes,
-that chain will grow up the fastest. The difficulty of the new block is determined by an average, in order to generate blocks at a steady pace.
+The immutability of the older blocks is what makes Bitcoin secure. To modify a block in the middle of the chain, you would need to redo the work of every single blocks made after that.
+The longest chain is determined by the cumulative proof-of-work invest in it. This is why we say that Bitcoin is secured as long as 51 pourcent of the nodes are honest.
+The chain with the majority of nodes working on it will grow up the fastest, thus will be the accepted chain.
+The difficulty of the new block is determined by an average, in order to generate blocks at a steady pace. There is also a bitcoin reward associated with mining (publishing) a block.
+
 
 
 \subsection{Merkle Tree}
-Only the merkle root is stored in the block header. When a block is enough in the past, nodes start to only keep block headers in memory.
-They do not keep the rest of the block. This is why the hash of a block is the hash of the block header, and not the whole block. To keep the integrity of the chain.
-The merkle root is the top of the Merkle Tree. A merkle tree is a tree where the parent node is the hash of the child nodes.
+In the architecture of the blockchain, only the merkle root is stored in the block header. Nodes only keep the recent blocks in memory. For the older blocks, they keep only the block header in memory.
+This storage ensures the integrity of the blockchain, while decreasing the memory required to have the full blockchain history.
+Since the hash of a block is the hash of the block header, this strategy does not impact the integrity checks of the blockchain.
+The merkle root is the top of the Merkle Tree, and is a unique identifier of the full tree. A merkle tree is a tree where the parent node is the hash of the child nodes.
+The tree is immutable because changing a single node would have an impact on the merkle root. For instance, in figure 2.1 changing the transaction 0 would change the hash 0,
+which in turn would change the hash 01, subsequently changing the root hash.
 
 \begin{figure}[ht!]
 \centering
@@ -59,24 +77,27 @@ The merkle root is the top of the Merkle Tree. A merkle tree is a tree where the
 
 
 \section{Marketplaces}
-The best way to buy bitcoin for the first time is thourgh marketplaces. Marketplaces allow you to exchange money for bitcoin, but the bitcoin
-you acquire in the process is not linked to a wallet address you own. It is in custody of the marketplace. In order to have possession of the bitcoins,
-you need to enter a transfer request, where the bitcoin you own is sent to your wallet. Once you have bitcoins, you can transact on the network without needing
-a 3rd party, unless you are running a node, you will need to trust a 3rd party, wheter it is a marketplace, or over the counter.
+The best way to buy bitcoin for the first time is through marketplaces. Marketplaces facilitate the exchange of traditional currency for bitcoin.
+However, it is crucial to understand that the Bitcoin obtained remain into the custody of the platform, rather than being deposited to a personal wallet address.
+In order to gain custody of your bitcoins in your wallet, you need to enter a transfer request. This is similar to traditional finance, where you trust the bank (marketplace), to
+go ahead with your transaction. Once you have bitcoins in your wallet, you can transact on the network without needing a 3rd party.
+Unless you are running a node, you will need to trust a 3rd party, whether it is a marketplace, or over the counter, to first acquire bitcoin.
 
-While the bitcoin you own is in custody of the marketplace, there is no way to see your bitcoin onchain. Marketplaces have many wallets, some are made public and some are not.
-This is an inherent contradiction. Bitcoin was built to be transparent and public, without the need of a 3rd party to do a transaction.
-The problem with no being able to track your bitcoin in a marketplace, is that you have no proof that the marketplace has enough bitcoin to reimburse
-every client who has bitcoin in the marketplace.
-However, this problem is being actively worked on. Marketplaces have begin to use proof of solvency (or proof of reserve) to show that they are solvent, but there is still a long way to go \cite{BPR}.
+When the bitcoin you own is in custody of the marketplace, there is no way to see your bitcoin onchain. Marketplaces have many wallets, some are made public and some are not.
+While this allo for the privacy of your marketplace deposits and withdraws, it represent an fondamental contradiction. Bitcoin was designed to be transparent and public, without the need of a 3rd party to do a transaction.
+Not being able to track your bitcoin in the marketplace pauses a significant challenge. A user has no proof that the marketplace solvency to reimburse
+every client. 
+However, this problem is being actively worked on. Marketplaces have begin to use proof of solvency (or proof of reserve) to demonstrate that they are solvent.
+While this is a step in the right direction, the current proof of solvency used by the marketplaces have many default, and they are not sufficient to prove that they are solvent.
 %Talk about FTX?
 
 
 \section{Zero Knowledge}
-Zero knowledge proofs is a proof that something is known, without revealing any informations. For instance,
-the classic way of proving that you know the solution to an equation f(x), is to give the x that solves the equation.
-However, with zero knoledge you are able to prove that you know the solution, without giving x. 
-To construct a zero knowledge proof, you need to construct a proof that is sound and compelte. You also need your proof to be zero knowledge\cite{LZK}.
+
+Zero-knowledge proofs is a cryptographic technique to prove some knowledge without divulging any informations.For instance,
+the classic way of proving that you know the solution to an equation, is to reveal the solution to the equation itself.
+However, with zero knowledge you are able to prove that you know the solution, without discolsing the solution. 
+To construct a zero knowledge proof, you need to construct a proof that is sound and complete. You also need your proof to be zero knowledge\cite{LZK}.
 
 \begin{itemize}
 
@@ -88,13 +109,15 @@ To construct a zero knowledge proof, you need to construct a proof that is sound
     
     \end{itemize}
 
-
     \subsection{Non interactive proofs} 
 
-Zero knowledge proofs were originaly designed as interactive, that is multiple rounds of interaction between the prover and the verifier \cite{GMR89}.
- leading to what are called interactive zero-knowledge proofs. An alternative model was then proposed where the verifier and prover use a 
- reference string that is shared during a trusted setup. Once we have the reference string, a single message is needed between the prover and the verifier.
- No rounds of interactions are needed. These are called noninteractive zero knowledge proofs.  \cite{BFM88} \cite{GMW91}
+
+
+Zero knowledge proofs were originally designed as interactive, that is multiple rounds of interaction between the prover and the verifier \cite{GMR89}.
+ leading to what are called interactive zero-knowledge proofs. This interaction allows the prover to demonstrate knowledge of the solution without revealing any additional information.
+ An alternative model was then proposed where the verifier and prover use a reference string that is shared during a trusted setup. Once we have the reference string, a single message is needed between the prover and the verifier.
+ The elimination of multiple rounds of interaction simplifies the verification process and reduces the computational power required. 
+ Therefore, noninteractive zero-knowledge proofs offer enhanced efficiency and scalability, which will be needed later on.  \cite{BFM88} \cite{GMW91}
 
 
  \subsection{SNARKS} 
@@ -112,11 +135,15 @@ This means a proof that is:
     
     \end{itemize}
 
-A SNARK can also be zero-knowedge. We call such proof a zk-SNARK.
+Moreover, a SNARK can also be zero-knowedge, where the prover demonstrate knowledge without revealing any additional information about the witness. We call such proof a zk-SNARK.
 
 \subsection{Arithmetic circuit} 
-SNARKs use arithmetic circuits. An arithmetic circuit is a set gates, each assigned a distinct set of inputs corresponding to the numbers to be processed. 
+
+
+
+Arithmetic circuits are a core component of SNARKS. An arithmetic circuit is a set gates, each assigned a distinct set of inputs corresponding to the numbers to be processed in the operation. 
 These gates are configured to execute arithmetic operations such as addition, subtraction, multiplication, or division. The outputs of the gate circuit represent the digits of the resulting computation.
+This structure allows SNARKs to efficiently verify complex mathematical computations while preserving succinctness and scalability.
 
 \begin{figure}[H]
     \centering
@@ -125,9 +152,10 @@ These gates are configured to execute arithmetic operations such as addition, su
     \label{overflow}
     \end{figure}
 
-For SNARKs, the prover can create a proof, using the setup parameter, a private witness, and public input,
-showing that the arithmetic circuit is equal to 0. That proof can be verified by the verifier using the stup parameter
-and the public input.
+
+
+The prover's process in SNARKs is to create a proof using the setup parameter, a private witness, and public input. The proof shows that the arithmetic circuit is equal to 0. 
+Using the same setup parameter and the public input, the verifier confirms the accuracy of the proof by making sure it aligns with the parameters.
 
 \begin{figure}[H]
     \centering
@@ -157,9 +185,61 @@ and the public input.
 
 
 \section{Proof of solvency}
-%What is a proof of solvency
-%History of papers
-%What is wrong with Binance proof of solvency
+
+A proof of solvency is a system where we prove that an entity, in most cases an exchange, hold enough assets to cover
+the balance of every customers. In traditional finance, this would be done thourgh an audit. While an audit can be usefell,
+it has many limitations. Obviously it requires the trust of another 3rd party, but it poses also a time constraint. Thus, it is impractical, even impossible
+to hold an audit every single day, and in the bitcoin world things move fast. It is essential to be able to fill a prove of solvency every single day.
+The implementation of a mechanism to produce daily proofs of solvency is therefore of the utmost importance.
+
+A proof of solvency is composed by a proof of assets, where we verify what assets the marketplace as control over, and the proof of liabilities,
+where we confirm that the total amount of user deposits is smaller than the marketplaces assets. 
+
+
+The first paper about a proof of solvency focuses only on the proof of liabilities. In his paper Gregory Maxwell addresses the issue of verifying 
+the solvency of Bitcoin exchanges. \cite{chainlink_blog}
+Maxwell's system ensures user privacy by maintaining confidentiality of individual account balances, while only revealing aggregate information in the proof of liabilities. 
+This is achieved through the application of Merkle trees. 
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=130mm]{MerkleTreeLiabilities.png}
+    \caption{Merkle tree for proof of liabilities}
+    \label{overflow}
+    \end{figure}
+
+In the Merkle tree, every node contains a user's balance along with a hash-based commitment incorporating the customer ID and a nonce. The root of the tree is the sum of the balances. 
+To verify their inclusion in the total liabilities, users receive a subset of the hash tree from the exchange. This subset includes the user's nonce and the sibling nodes along the unique path from the user's leaf node to the root. 
+By comparing the received information to the exchange's broadcasted root node, users can confirm the inclusion of their balance.
+While elegant, the protocol does have privacy implications. The exact value of the exchange's total liabilities, published in the root node, may be sensitive data. 
+Additionally, the proof of inclusion reveals the neighbor's balance, and the subtree's balance along the Merkle path. 
+
+The proof of liabilities is only part of the proof of solvency. A complete proof of solvency needs a proof of asset as well.
+Provision describes the first preserving privacy proof of asset \cite{DBBBCC15}.
+
+In Provisions, the focus shifts towards preserving privacy while still proving ownership of assets. 
+Instead of publicly demonstrating control over specific addresses, Provisions enables exchanges to prove ownership of an anonymous subset of addresses sourced from the blockchain.
+
+Since these 2 papers, a lot of work was done to make the proof of solvency evolve. However, marketplaces still do not implement a proof of solvency, or a flawed and limited version of it.
+
+
+\subsection{Real world proof of solvency} 
+In recent years, several major cryptocurrency exchanges, including Binance, Crypto.com, and Kraken, have taken steps to enhance transparency by provinding various proof of reserves.
+Binance has implemented a proof of reserves system where they publish a monthly Merkle tree as their proof of liabilities, and disclose a list of their assets \cite{BPR}. 
+Crypto.com published a one-time audit \cite{CC22}. 
+Kraken is also publishing a proof of liabilities every few months, without a proof of assets. \cite{KK23}.
+
+Although these proof of reserves may seem promising initially, they are primarily superficial.
+The proofs have many shortcomings, they are not sufficient to prove that the marketplaces are solvent.
+The first concern is the lack of proof of assets, or in Binance's case the lack of evidence demonstrating control over the wallets.
+Without a reliable proof of assets, the proof of liabilities is worthless because it has nothing to compare against.
+
+Moreover, the frequency of reporting is another area of concern. Given the dynamic nature of cryptocurrencies, a monthly report is not sufficient at all.
+Binance is the only marketplace describing their proof of solvancy, and we can see that it is not built with recurrence in mind.
+The proof is created from scrach every time. They would need 150 servers to produce a daily proof \cite{BPS}.
+
+
+
 
  
 
