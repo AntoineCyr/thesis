@@ -2,3 +2,30 @@
 
 \chapter{Recursion proofs}
 
+This chapter serves as an intermediary background exploration, 
+diving into more advanced concepts beyond last chapters concepts. 
+The realm of zero knowledge is dynamic and continuously evolving, 
+marked by ongoing advancements and active research endeavors. Among these advancements, 
+recursion proofs is one of the most important and active subject. Recursion proofs are created to accelerate
+ the generation of multiple zero-knowledge proofs. 
+ Not all recursion proofs are created equal, they can vary significantly and serve different use cases. 
+ In this section, we will examine these variations, distinguishing between them. 
+ We aim to identify the most suitable method for our daily proof of liabilities and proof of inclusion.
+
+
+ \cite{Nova23} for aggrgation, recusrion and folding
+
+ \section{Aggregation}
+ The simplest form of recursion technique is called aggregation. 
+ It comes in two parts. In the first part, you do a proof for multiple blocks of something. 
+ The proof of the second part is an aggregation of all part 1 proofs. 
+ The first part proofs can be calculated in parallel, which decreases the proving time. 
+ However, with this technique the proving time and verifying time still grows linearly.
+
+ \section{Accumulation}
+
+ \section{Recursion scheme} 
+The next technique is the recursion scheme. Like the aggregation, the proof is separated into blocks. However, in this case each block proves that it is valid, and that the previous proof is valid. The number of constraints will always stay the same because it is only proving 2 things of fixed sizes. It is an improvement from the previous technique, but every block still has to verify the previous block, which can take some time.
+
+\section{Folding scheme} 
+There is a new technique implemented by Nova, which is called the Folding Scheme. The setup is similar to the recursion scheme, but instead of computing the proof of the previous block, the R1CS are folded together at every block. Instead of having X set of R1CS, we are left with 1 set. The new R1CS are called relaxed R1CS, and are used to compute a single proof at the end of the folding.
