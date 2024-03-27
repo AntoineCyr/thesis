@@ -2,13 +2,12 @@
 
 \chapter{Background}
 
-%Rework intro
-In the rapidly evolving landscape of cryptocurrency exchanges, ensuring transparency, accountability, and financial stability
- is paramount for fostering user trust and confidence. This section provides an overview of the foundational concepts and mechanisms 
- underpinning solvency verification in the cryptocurrency ecosystem. We explore the various approaches adopted by leading exchanges, such as
-  Binance, Crypto.com, and Kraken, to demonstrate their financial health through proof of reserves or solvency mechanisms. Additionally, we 
-  highlight the shortcomings and challenges associated with current solvency verification practices, paving the way for a deeper examination
-   of potential solutions and advancements in the subsequent sections.
+In the dynamic landscape of cryptocurrencies, ensuring transparency, accountability, and financial stability
+ is paramount for marketplaces. This section provides an overview of the concepts and mechanisms 
+ necessary to follow along the conception of a daily proof of liabilities. We explore the various approaches adopted by leading exchanges
+  to demonstrate their financial health through proof of reserves or solvency mechanisms. Additionally, we 
+  highlight the shortcomings and challenges associated with current solvency verification practices, mainly the lack of recurrent proof of reserves,
+   paving the way for a daily proof in the subsequent sections.
 
 \section{Bitcoin}
 
@@ -30,7 +29,7 @@ Both are one way function, meaning you cannot derived the other way around.
 The public key serves as the unique identifier in the network, but it is the wallet address that typically defines a participant.
 The wallet address can be seen as a bank account number. When you send bitcoin to someone, you send it to their wallet address.
 To be able to send some bitcoin, you need to create a transaction and send it to the network. 
-When transactions are sent on the network, there is no way of knowing who propagaded the transaction first.
+When transactions are sent on the network, there is no way of knowing who propagated the transaction first.
 We need to make sure a transaction originates from the sender. The way to do that is to sign your transaction. The digital signature is created from the transaction data and the private key, which is only known by the owner of the address.
 The public key is then used to verify the authenticity of the signature.
 Sending a transaction is the easiest problem to solve. The real challenge is to keep track of who owns what, and to avoid the double spending problem.
@@ -43,7 +42,7 @@ working on publishing new blocks. The nodes work collectively to establish order
 The nodes puts the transactions into a block, and try to publish that block. In order to publish a block, each node needs to solve a proof-of-work challenge.
 When a node solves the challenge, it broadcasts the block to every nodes. The nodes accepts the block if all transactions are valid. There is no formal
 way of approving a new block. A node show its acceptance by starting to work on a new block using the hash of the accepted block as previous hash.
-Some nodes might accept different blocks, if multiple blocks are propagaded at the same time. This would create multiple chains. To solve this issue, the longest chain is considered to be the correct one. 
+Some nodes might accept different blocks, if multiple blocks are propagated at the same time. This would create multiple chains. To solve this issue, the longest chain is considered to be the correct one. 
 If two chains have the same length, nodes keep working on their respective chains untill one of the chains receives a new block, breaking the tie.
 
 
@@ -89,7 +88,7 @@ Not being able to track your bitcoin in the marketplace pauses a significant cha
 every client. 
 However, this problem is being actively worked on. Marketplaces have begin to use proof of solvency (or proof of reserve) to demonstrate that they are solvent.
 While this is a step in the right direction, the current proof of solvency used by the marketplaces have many default, and they are not sufficient to prove that they are solvent.
-%Talk about FTX?
+%Talk about FTX
 
 
 \section{Zero Knowledge}
