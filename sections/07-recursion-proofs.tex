@@ -76,9 +76,9 @@ Polynomial commitments are essentials to SNARKs. Verifying opening claims of pol
 
 The concept of deferring the polynomial commitment opening checks, and consolidating them into a single operation, was introduced by Bowe, Grigg, and Hopwood Halo.\cite{BGH23}
 The task of checking an opening claim for a polynomial commitment is defined in two steps.
-The first part is fast, where you just output a pair of a polynomial and its commitment. The second part is expensive, where we verify the pair (f1, C1) of polynomial f1 and its commitment C1.
+The first part is fast, where you just output a pair of a polynomial and its commitment. The second part is expensive, where we verify the pair $(f_1, c_1)$ of polynomial $f_1$ and its commitment $c_1$.
 The second part can be accumulated if the commitment scheme is additively homomorphic. 
-Instead of verifying each pair (C1 is a commitment for f1, C2 is a commitment for f2, etc.), we can verify the linear combination of every pairs (c1+c2+... is a commitment for f1+f2+...). \cite{VR23}
+Instead of verifying each pair ($c_1$ is a commitment for $f_1$, $c_2$ is a commitment for $f_2$, etc.), we can verify the linear combination of every pairs ($c_1+c_2+...$ is a commitment for $f_1+f_2+...$). \cite{VR23}
 
 
 %-- decribre R1CS earlier
@@ -93,37 +93,41 @@ Instead of having $n$ set of R1CS, we are left with a single set. The new R1CS a
 Going back on the previous section, we saw the definition of an airthmetic circuit. (section arithmetic circuit)
 R1CS is simply a representation of an arithmetic circuit.
 A R1CS constraint has the form $a*b=y$, where $a$,$b$ and $y$ are a combinations of variables.
-Lets define our previous circuit as a R1CS:
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=60mm]{ArithmeticCircuit.png}
-    \caption{General Arithmetic circuit \cite{ZKM2}}
-    \label{overflow}
-    \end{figure}
-    
-    w1 = x1+x2+1
-    w2 = x2 -1
-    x = x1*w1*w2
+Lets define our previous \hyperref[subsec:ac]{circuit} as a R1CS:    
+
+    \begin{quote}
+    $w_1 = x_1+x_2+1
+    \\
+    w_2 = x_2 -1
+    \\
+    x = x_1*w_1*w_2$
+    \end{quote}
 
     Now the 3rd constraint does not follow the rules, because there are 3 variables being multiplied.
     We need to change it using an intermediary value:
     
-    w1 = x1+x2+1
-    w2 = x2 -1
-    w3 = w1*w2
-    x = x1*w3
+    \begin{quote}
+    $w_1 = x_1+x_2+1
+    \\
+    w_2 = x_2 -1
+    \\
+    w_3 = w_1*w_2
+    \\
+    x = x_1*w_3$
+    \end{quote}
     \cite{ZKM3}
 
-    If we define z=(x,w), we can express the arithmetic circuit as $ Az \circ Bz = Dz$
-    Where $\circ$ can be define as: $(x1, x2) \circ y1, y2 = (x1y1, x2y2)$
+    If we define $z=(x,w)$, we can express the arithmetic circuit as $ Az \circ Bz = Dz$
+    where $\circ$ can be define as: $(x_1, x_2) \circ y_1, y_2 = (x_1y_1, x_2y_2)$
 \cite{ZKM10}
 
 \subsection{Relaxed R1CS}
 The goal is to combine 2 R1CS and obtain another R1CS. If we are able to do that, we can fold every R1CS together and be left with only one.
-
+\\
+\\
+If we \textbf{define our R1CS}:
 \begin{quote}
-
-Example: fix an R1CS program $A,B,D \in \mathbb{F}^{u \times v}_p $
+\textbf{fix an R1CS} program $A,B,D \in \mathbb{F}^{u \times v}_p $
 \\
 instance 1: public $ x_1 \in \mathbb{F}^n_p $, witness $ z_1 = (x_1, u_1) \in \mathbb{F}^v_p$
 \\
@@ -132,28 +136,38 @@ instance 2: public $x_2 \in \mathbb{F}^n_p $, witness $ z_2 = (x_2, u_2) \in \ma
 We know $Az_i \circ Bz_i = Dz_i$ for $ i = 1,2$
 \end{quote}
 
-\textbf{First attempt}: Lets define r as a random variable: $r \leftarrow \mathbb{F}_p, x \leftarrow x_1+rx_2$ 
+\textbf{First attempt}: 
 \\
-and $z \leftarrow z_1 + rz_2 = (x_1+rx_2, w_1 + rw_2)$
+Lets define r as a random variable:
+\begin{quote}
+$r \leftarrow \mathbb{F}_p, x \leftarrow x_1+rx_2$ 
+\\
+$z \leftarrow z_1 + rz_2 = (x_1+rx_2, w_1 + rw_2)$
+\end{quote}
+
 Then:
 \begin{quote}
     $Az \circ Bz = A(z_1 + r z_2) \circ B(z_1 + rz_2)$
     \\
     $= (Az_1) \circ (Bz1) + r^2 (Az_2) \circ (Bz2) + (r(Az_2) \circ (Bz_1) + r(Az_1) \circ (Bz_2))$
     \\
-    $=Dz_1 + r^2Dz_2 + E$ Where $E$ is a combination of the remaining values.
+    $=Dz_1 + r^2Dz_2 + E$ 
+    \\
+    Where $E$ is a combination of the remaining values.
     \\
 \end{quote}
-This is not quite an R1CS, because it is not of the form $Az_i \circ Bz_i = Dz_i$ 
-
-We need to modify the R1CS so that it can be folded. Let's define a relaxed R1CS: 
+This is not quite an R1CS, because it is not of the form $Az_i \circ Bz_i = Dz_i$.
+We need to modify the R1CS so that it can be folded. 
+\\
+\\
+Let's \textbf{define a relaxed R1CS}: 
 \begin{quote}
 $A, B,D \in \mathbb{F}^{u \times v}_p, (x \i  \mathbb{F}^n_p, c \in \mathbb{F}_p, E \in \mathbb{F}^u_p) $
 \\
 Witness: $ z = (x,w) \in \mathbb{F}^v_p s.t. (Az) \circ (Bz) = c(Dz) + E$
-\\
-Lets fix the R1CS program once again:
-\\
+\end{quote}
+Lets \textbf{fix the R1CS} program once again:
+\begin{quote}
 $A,B,D \in \mathbb{F}^{u \times v}_p $
 \\
 instance 1: public $ (x_1,c_1,E_1), $witness$ z_1 = (x_1, w_1) \in \mathbb{F}^v_p$
