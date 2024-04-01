@@ -16,6 +16,7 @@ recursion proofs is one of the most important and active subject. Recursion proo
  \cite{Nova23} for aggregation, recusrion and folding
 
  \section{Aggregation}
+  %-- Expend on this using \cite{VRS23}, talk about proof composition
  Aggregation is the first and simples type of recursion for zk proofs. It comprises of 2 different phases.
  Initially, you create a standard individual proof for multiple blocks. In the second phase, a proof of proof is created.
  You could either merge all proofs into a single one, or do tree like structure where each parent node proove its child nodes.
@@ -32,7 +33,15 @@ However, there are still some issues with aggregation. The most important issue 
     \end{figure}
 
  \section{Recursion scheme} 
-The next technique is the recursion scheme. Like the aggregation, the proof is separated into blocks. However, in this case each block proves that it is valid, and that the previous proof is valid. The number of constraints will always stay the same because it is only proving 2 things of fixed sizes. It is an improvement from the previous technique, but every block still has to verify the previous block, which can take some time.
+The next technique is the recursion scheme, or Incrementally Verifiable Computation (IVC). Like the aggregation, the proof is separated into blocks.
+ However, in this case each block serves two purposes. Provings that the block itself is valid, and that the previous proof is valid. 
+ The number of constraints will always stay the same because it is only proving 2 things of fixed sizes. This creates 
+ a chain structure, where veryfing the latest block is the equivalent of veryfing every block in the chain.
+ It is an improvement from the previous technique, because this allows to maintain a constant number of constraints in the curcuit.
+ This implies that the latest does not take longer to verify thant the second block.
+ However, each block block still has to verify the previous block, which takes additionnal. \cite{Nova23} 
+
+ %-- Expend on this using \cite{VRS23}, talk about IVC
 
 \section{Accumulation}
 To mitigate the exponential growth of recursion proofs, the new scheme created by nova defers every computationnaly heavy tasks to the end. 
@@ -72,5 +81,104 @@ The second part can be accumulated if the commitment scheme is additively homomo
 Instead of verifying each pair (C1 is a commitment for f1, C2 is a commitment for f2, etc.), we can verify the linear combination of every pairs (c1+c2+... is a commitment for f1+f2+...). \cite{VR23}
 
 
+%-- decribre R1CS earlier
 \section{Folding scheme} 
-There is a new technique implemented by Nova, which is called the Folding Scheme. The setup is similar to the recursion scheme, but instead of computing the proof of the previous block, the R1CS are folded together at every block. Instead of having X set of R1CS, we are left with 1 set. The new R1CS are called relaxed R1CS, and are used to compute a single proof at the end of the folding.
+Nova takes accumulation a setp further. Instead of accumulating the hard part at the end, the folding scheme accumulates everything up untill the end.
+The setup is similar to the recursion scheme, but instead of computing the proof of the previous block, the R1CS are folded together at every block.
+Instead of having $n$ set of R1CS, we are left with a single set. The new R1CS are called relaxed R1CS, and are used to compute a single proof at the end of the folding.
+\cite{Nova23}  \cite{ASI23} 
+
+
+\subsection{R1CS} 
+Going back on the previous section, we saw the definition of an airthmetic circuit. (section arithmetic circuit)
+R1CS is simply a representation of an arithmetic circuit.
+A R1CS constraint has the form $a*b=y$, where $a$,$b$ and $y$ are a combinations of variables.
+Lets define our previous circuit as a R1CS:
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=60mm]{ArithmeticCircuit.png}
+    \caption{General Arithmetic circuit \cite{ZKM2}}
+    \label{overflow}
+    \end{figure}
+    
+    w1 = x1+x2+1
+    w2 = x2 -1
+    x = x1*w1*w2
+
+    Now the 3rd constraint does not follow the rules, because there are 3 variables being multiplied.
+    We need to change it using an intermediary value:
+    
+    w1 = x1+x2+1
+    w2 = x2 -1
+    w3 = w1*w2
+    x = x1*w3
+    \cite{ZKM3}
+
+    If we define z=(x,w), we can express the arithmetic circuit as $ Az \circ Bz = Dz$
+    Where $\circ$ can be define as: $(x1, x2) \circ y1, y2 = (x1y1, x2y2)$
+\cite{ZKM10}
+
+\subsection{Relaxed R1CS}
+The goal is to combine 2 R1CS and obtain another R1CS. If we are able to do that, we can fold every R1CS together and be left with only one.
+
+\begin{quote}
+
+Example: fix an R1CS program $A,B,D \in \mathbb{F}^{u \times v}_p $
+\\
+instance 1: public $ x_1 \in \mathbb{F}^n_p $, witness $ z_1 = (x_1, u_1) \in \mathbb{F}^v_p$
+\\
+instance 2: public $x_2 \in \mathbb{F}^n_p $, witness $ z_2 = (x_2, u_2) \in \mathbb{F}^v_p$
+\\
+We know $Az_i \circ Bz_i = Dz_i$ for $ i = 1,2$
+\end{quote}
+
+\textbf{First attempt}: Lets define r as a random variable: $r \leftarrow \mathbb{F}_p, x \leftarrow x_1+rx_2$ 
+\\
+and $z \leftarrow z_1 + rz_2 = (x_1+rx_2, w_1 + rw_2)$
+Then:
+\begin{quote}
+    $Az \circ Bz = A(z_1 + r z_2) \circ B(z_1 + rz_2)$
+    \\
+    $= (Az_1) \circ (Bz1) + r^2 (Az_2) \circ (Bz2) + (r(Az_2) \circ (Bz_1) + r(Az_1) \circ (Bz_2))$
+    \\
+    $=Dz_1 + r^2Dz_2 + E$ Where $E$ is a combination of the remaining values.
+    \\
+\end{quote}
+This is not quite an R1CS, because it is not of the form $Az_i \circ Bz_i = Dz_i$ 
+
+We need to modify the R1CS so that it can be folded. Let's define a relaxed R1CS: 
+\begin{quote}
+$A, B,D \in \mathbb{F}^{u \times v}_p, (x \i  \mathbb{F}^n_p, c \in \mathbb{F}_p, E \in \mathbb{F}^u_p) $
+\\
+Witness: $ z = (x,w) \in \mathbb{F}^v_p s.t. (Az) \circ (Bz) = c(Dz) + E$
+\\
+Lets fix the R1CS program once again:
+\\
+$A,B,D \in \mathbb{F}^{u \times v}_p $
+\\
+instance 1: public $ (x_1,c_1,E_1), $witness$ z_1 = (x_1, w_1) \in \mathbb{F}^v_p$
+\\
+instance 2: public $(x_2,c_2,E_2), $witness$  z_2 = (x_2, w_2) \in \mathbb{F}^v_p$
+\\
+We know $(Az_i) \circ (Bz_i) = c_i(Dz_i) + E_i$ for $ i = 1,2$
+\end{quote}
+
+\textbf{Second attempt}:
+\begin{quote}
+$T \leftarrow (Az_2) \circ (Bz_1) + (Az_1) \circ (Bz_2) - c_1(Dz_2) - c_2(Dz_1)$
+\\
+$x \leftarrow x_1 + rx_2, c \leftarrow c_1 + rc_2, E \leftarrow E_1 + rT +r^2E_2$
+\\
+$z \leftarrow z_1 + rz_2 = (x_1 +rx_2, w_1 + rw_2)$
+\\
+$Az \circ Bz = $
+\\
+$=A(z_1) \circ rB(z_1) +r^2(Az_2) \circ (Bz_2) + r(Az_2) \circ (Bz_1) + r(Az_1) \circ (Bz_2)$
+\\
+$=c_1(Dz_1) + E_1 + r^2c_2(Dz_2) + r^2E_2+r((Az_2) \circ (Bz_1) + (Az_1) \circ (Bz_2))$
+\\
+$=(c_+rc_2)(Dz_1+rDz_2)+E_1+r^2E_2+rT$
+\\
+$=c(Dz) + E$
+\end{quote}
+We have a valid relaxed R1CS.\cite{ZKM10} \cite{FG23}

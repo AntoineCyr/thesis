@@ -1,9 +1,10 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {2.1}{\ignorespaces Bitcoin Merkle Tree \cite {N08}}}{6}{figure.2.1}%
-\contentsline {figure}{\numberline {2.2}{\ignorespaces General Arithmetic circuit \cite {ZKP23}}}{10}{figure.2.2}%
-\contentsline {figure}{\numberline {2.3}{\ignorespaces Arithmetic circuit for SNARK \cite {ZKP23}}}{11}{figure.2.3}%
+\contentsline {figure}{\numberline {2.2}{\ignorespaces General Arithmetic circuit \cite {ZKM2}}}{10}{figure.2.2}%
+\contentsline {figure}{\numberline {2.3}{\ignorespaces Arithmetic circuit for SNARK \cite {ZKM2}}}{11}{figure.2.3}%
 \contentsline {figure}{\numberline {2.4}{\ignorespaces Merkle tree for proof of liabilities}}{12}{figure.2.4}%
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {3.1}{\ignorespaces Aggregation Proof \cite {TP24}}}{17}{figure.3.1}%
+\contentsline {figure}{\numberline {3.2}{\ignorespaces General Arithmetic circuit \cite {ZKM2}}}{21}{figure.3.2}%
 \addvspace {10\p@ }
