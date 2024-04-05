@@ -1,8 +1,63 @@
 % !TEX root = ../main.tex
 
-\chapter{Proof of liabilities}
+\chapter{Proof construction}
+We will be using Circom to generate an airthmetic circuit, and SnarkJS for the proof generation.
+
+\paragraph{Circom}
+Circom is a domain-specific language for creating arithmetic circuits, which are used in zk-SNARKs.
+The circuit code can be written to specify the desired constraints.
+Circom allows expressing the circuit's arithmetic operations, constraints, input and output in a concise and readable manner.
+Once the circuit is designed, it needs to be compiled into a format suitable for zk-SNARKs.
 
 
-%-- Proof of liabilities for a day, proof of inclusion
-%-- Proof of liabilities everyday, proof of inclusion everyday
+\paragraph{SnarkJS}
+SnarkJS is a JavaScript library that provides tools for working with zk-SNARKs, including circuit compilation.
+After compilation, SnarkJS facilitates generating zk-SNARK proofs for specific instances of the circuit.
+SnarkJS also provides utilities for verifying the proofs.
+
+\section{Proof of liabilities}
+The proof of liabilities operates on a list of balances and a list of email hashes as private inputs.
+The first purpose of the circuit is to validate that all values are non-negative and that all balances fall within a specified range. 
+These verifications are crucial to prevent overflow or underflow issues, given that the operations occur within a finite field. 
+
+Subsequently, the proof of liabilities constructs a Merkle tree and provides outputs the total balance sum and the root hash of the Merkle tree.
+
+Inputs:
+\begin{enumerate}
+
+    \item List of balance (private)
+    
+    \item List of email hash (private)
+    
+    \end{enumerate}
+
+Outputs:
+\begin{enumerate}
+    Balance Sum (public)
+    Root hash (public)
+    No negative values (private) - boolean
+    All small range (private) - boolean
+    \end{enumerate}
+
+This proof of liabilities operates as intended because it returns the sum of the liabilities, which is exact because of the checks. 
+It also returns the root hash, insuring you cannot alter any values insiside the merkle tree. The merkle tree is hidden so that we do not
+give any information about users and their balances.
+The root hash will be used to verify the inclusion of the balances.
+
+
+In a complete proof of reserves, the balance sum would be a private output. We would have another circuit proving that the sum of liabilities is smaller
+than the sum of assets, without revelaing the balance.
+
+
+\section{Proof of inclusion} 
+
+
+\section{Daily proof of liabilities} 
+
+\section{Daily proof of inclusion} 
+
+
+
+
+
 %Mina proof of recursion

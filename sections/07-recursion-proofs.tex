@@ -81,7 +81,6 @@ The second part can be accumulated if the commitment scheme is additively homomo
 Instead of verifying each pair ($c_1$ is a commitment for $f_1$, $c_2$ is a commitment for $f_2$, etc.), we can verify the linear combination of every pairs ($c_1+c_2+...$ is a commitment for $f_1+f_2+...$). \cite{VR23}
 
 
-%-- decribre R1CS earlier
 \section{Folding scheme} 
 Nova takes accumulation a setp further. Instead of accumulating the hard part at the end, the folding scheme accumulates everything up untill the end.
 The setup is similar to the recursion scheme, but instead of computing the proof of the previous block, the R1CS are folded together at every block.
@@ -90,7 +89,9 @@ Instead of having $n$ set of R1CS, we are left with a single set. The new R1CS a
 
 
 \subsection{R1CS} 
-Going back on the previous section, we saw the definition of an airthmetic circuit. (section arithmetic circuit)
+%-- define the different part of a proof (including R1CS)
+%-- explain why folding the R1CS is enough for folding the proof
+Going back on the previous section, we saw the definition of an airthmetic circuit. 
 R1CS is simply a representation of an arithmetic circuit.
 A R1CS constraint has the form $a*b=y$, where $a$,$b$ and $y$ are a combinations of variables.
 Lets define our previous \hyperref[subsec:ac]{circuit} as a R1CS:    
