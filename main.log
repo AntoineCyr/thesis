@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.3.5)  1 APR 2024 11:13
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.3.5)  9 APR 2024 19:47
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -398,6 +398,9 @@ LaTeX Warning: Label `overflow' multiply defined.
 
 LaTeX Warning: Label `overflow' multiply defined.
 
+
+LaTeX Warning: Label `overflow' multiply defined.
+
 )
 \openout1 = `main.aux'.
 
@@ -538,6 +541,9 @@ LaTeX Warning: Citation `ZKM2' on page vii undefined on input line 4.
 
 LaTeX Warning: Citation `ZKM2' on page vii undefined on input line 5.
 
+
+LaTeX Warning: Citation `BM22' on page vii undefined on input line 10.
+
 )
 \tf@lof=\write5
 \openout5 = `main.lof'.
@@ -559,7 +565,7 @@ Chapter 2.
 [2
 
 ] [3] [4] [5]
-<MerkleTree.png, id=223, 245.91875pt x 233.87375pt>
+<MerkleTree.png, id=245, 245.91875pt x 233.87375pt>
 File: MerkleTree.png Graphic file (type png)
 <use MerkleTree.png>
 Package pdftex.def Info: MerkleTree.png  used on input line 72.
@@ -571,7 +577,7 @@ has been already used, duplicate ignored
                                                   \__shipout_drop_firstpage_...
 l.84 
       <./MerkleTree.png>] [7] [8] [9]
-<ArithmeticCircuit.png, id=256, 264.99pt x 276.03125pt>
+<ArithmeticCircuit.png, id=278, 264.99pt x 276.03125pt>
 File: ArithmeticCircuit.png Graphic file (type png)
 <use ArithmeticCircuit.png>
 Package pdftex.def Info: ArithmeticCircuit.png  used on input line 149.
@@ -580,7 +586,7 @@ Package pdftex.def Info: ArithmeticCircuit.png  used on input line 149.
 
 LaTeX Warning: Citation `ZKM2' on page 10 undefined on input line 150.
 
-<Circuit.png, id=257, 936.49875pt x 423.5825pt>
+<Circuit.png, id=279, 936.49875pt x 423.5825pt>
 File: Circuit.png Graphic file (type png)
 <use Circuit.png>
 Package pdftex.def Info: Circuit.png  used on input line 161.
@@ -601,7 +607,7 @@ has been already used, duplicate ignored
                                                   \__shipout_drop_firstpage_...
 l.193 
        <./Circuit.png>]
-<MerkleTreeLiabilities.png, id=271, 560.0925pt x 291.0875pt>
+<MerkleTreeLiabilities.png, id=293, 560.0925pt x 291.0875pt>
 File: MerkleTreeLiabilities.png Graphic file (type png)
 <use MerkleTreeLiabilities.png>
 Package pdftex.def Info: MerkleTreeLiabilities.png  used on input line 205.
@@ -623,7 +629,7 @@ Chapter 3.
 [15
 
 ]
-<AggregationProof.png, id=304, 711.65875pt x 397.485pt>
+<AggregationProof.png, id=326, 711.65875pt x 397.485pt>
 File: AggregationProof.png Graphic file (type png)
 <use AggregationProof.png>
 Package pdftex.def Info: AggregationProof.png  used on input line 30.
@@ -646,45 +652,61 @@ LaTeX Warning: Citation `VR23' on page 19 undefined on input line 81.
 
 [19]
 
-LaTeX Warning: Citation `ASI23' on page 20 undefined on input line 89.
+LaTeX Warning: Citation `ASI23' on page 20 undefined on input line 88.
 
 [20]
 
-LaTeX Warning: Citation `ZKM3' on page 21 undefined on input line 118.
+LaTeX Warning: Citation `ZKM3' on page 21 undefined on input line 119.
 
 
-LaTeX Warning: Citation `ZKM10' on page 21 undefined on input line 122.
+LaTeX Warning: Citation `ZKM10' on page 21 undefined on input line 123.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 125--129
+Underfull \hbox (badness 10000) in paragraph at lines 126--130
 
  []
 
 [21]
-Underfull \hbox (badness 10000) in paragraph at lines 150--158
+Underfull \hbox (badness 10000) in paragraph at lines 151--159
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 159--164
+Underfull \hbox (badness 10000) in paragraph at lines 160--165
 
  []
 
 
-LaTeX Warning: Command \i invalid in math mode on input line 165.
+LaTeX Warning: Command \i invalid in math mode on input line 166.
 
 [22]
 
-LaTeX Warning: Citation `ZKM10' on page 23 undefined on input line 198.
+LaTeX Warning: Citation `ZKM10' on page 23 undefined on input line 199.
 
 
-LaTeX Warning: Citation `FG23' on page 23 undefined on input line 198.
+LaTeX Warning: Citation `FG23' on page 23 undefined on input line 199.
 
 ) (./sections/08-proof-of-liabilities.tex [23]
 Chapter 4.
-) (./main.bbl [24
+[24
 
-] [25
+] [25]
+<MerklePath.png, id=388, 1501.61pt x 768.8725pt>
+File: MerklePath.png Graphic file (type png)
+<use MerklePath.png>
+Package pdftex.def Info: MerklePath.png  used on input line 62.
+(pdftex.def)             Requested size: 369.88582pt x 189.39023pt.
+
+
+LaTeX Warning: Citation `BM22' on page 26 undefined on input line 63.
+
+[26] [27
+pdfTeX warning (ext4): destination with the same identifier (name{figure.4.1}) 
+has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.94 
+      <./MerklePath.png>]) (./main.bbl [28] [29
 
 ]
 Underfull \hbox (badness 1231) in paragraph at lines 81--85
@@ -704,7 +726,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 81--85
 ] aggregation -[] recursion -[]
  []
 
-) [26] (./main.aux)
+) [30] (./main.aux)
 
 LaTeX Warning: There were undefined references.
 
@@ -712,13 +734,13 @@ LaTeX Warning: There were undefined references.
 LaTeX Warning: There were multiply-defined labels.
 
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: FA60E016CC8BCB8CFF3B822A47452498;3424.
+(rerunfilecheck)             Checksum: 4B361EE98C452D958DE421E330A3D8AF;4103.
  ) 
 Here is how much of TeX's memory you used:
- 11847 strings out of 476025
- 188953 string characters out of 5790018
+ 11888 strings out of 476025
+ 189384 string characters out of 5790018
  1860388 words of memory out of 5000000
- 31988 multiletter control sequences out of 15000+600000
+ 31998 multiletter control sequences out of 15000+600000
  521168 words of font info for 65 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  80i,7n,79p,581b,556s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -736,10 +758,10 @@ exlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/te
 xlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb></usr/local/tex
 live/2023/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local
 /texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb>
-Output written on main.pdf (34 pages, 1321431 bytes).
+Output written on main.pdf (38 pages, 3502528 bytes).
 PDF statistics:
- 464 PDF objects out of 1000 (max. 8388607)
- 386 compressed objects within 4 object streams
- 91 named destinations out of 1000 (max. 500000)
- 242 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 535 PDF objects out of 1000 (max. 8388607)
+ 450 compressed objects within 5 object streams
+ 121 named destinations out of 1000 (max. 500000)
+ 279 words of extra memory for PDF output out of 10000 (max. 10000000)
 

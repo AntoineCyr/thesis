@@ -25,5 +25,16 @@
 \contentsline {section}{\numberline {3.4}Folding scheme}{20}{section.3.4}%
 \contentsline {subsection}{\numberline {3.4.1}R1CS}{20}{subsection.3.4.1}%
 \contentsline {subsection}{\numberline {3.4.2}Relaxed R1CS}{21}{subsection.3.4.2}%
-\contentsline {chapter}{\numberline {4}Proof of liabilities}{24}{chapter.4}%
-\contentsline {chapter}{Bibliography}{24}{chapter.4}%
+\contentsline {chapter}{\numberline {4}Proof construction}{24}{chapter.4}%
+\contentsline {paragraph}{Circom}{24}{section*.8}%
+\contentsline {paragraph}{SnarkJS}{24}{section*.9}%
+\contentsline {section}{\numberline {4.1}Proof of liabilities}{25}{section.4.1}%
+\contentsline {paragraph}{Inputs}{25}{section*.10}%
+\contentsline {paragraph}{Outputs}{25}{section*.11}%
+\contentsline {section}{\numberline {4.2}Proof of inclusion}{26}{section.4.2}%
+\contentsline {paragraph}{Inputs}{27}{section*.12}%
+\contentsline {paragraph}{Outputs}{27}{section*.13}%
+\contentsline {paragraph}{}{28}{section*.14}%
+\contentsline {section}{\numberline {4.3}Daily proof of liabilities}{28}{section.4.3}%
+\contentsline {section}{\numberline {4.4}Daily proof of inclusion}{28}{section.4.4}%
+\contentsline {chapter}{Bibliography}{28}{section.4.4}%
