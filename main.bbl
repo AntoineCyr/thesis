@@ -1,93 +1,144 @@
-\begin{thebibliography}{100}
+\begin{thebibliography}{10}
 
-\bibitem{N08}
-S. Nakamoto.
-\newblock Bitcoin: A Peer-to-Peer Electronic Cash System.
-\newblock Technical report, Bitcoin.org, 2008.
+\bibitem{ZKM2}
+Zero knowledge proofs.
+\newblock MOOC, 2023.
+\newblock Dan Boneh, Shafi Goldwasser, Dawn Song, Justin Thaler, Yupeng Zhang.
+
+\bibitem{ZKM3}
+Zero knowledge proofs.
+\newblock MOOC, 2023.
+\newblock Dan Boneh, Shafi Goldwasser, Dawn Song, Justin Thaler, Yupeng Zhang.
+
+\bibitem{ZKM10}
+Zero knowledge proofs.
+\newblock MOOC, 2023.
+\newblock Dan Boneh, Shafi Goldwasser, Dawn Song, Justin Thaler, Yupeng Zhang.
+
+\bibitem{FG23}
+L.~A.
+\newblock An incomplete guide to folding: Nova, sangria, supernova, hypernova,
+  protostar.
+\newblock
+  \url{https://taiko.mirror.xyz/tk8LoE-rC2w0MJ4wCWwaJwbq8-Ih8DXnLUf7aJX1FbU},
+  August 2023.
+
+\bibitem{BM22}
+Bake.
+\newblock Merkle tree proof of reserves and liabilities: Raising the bar for
+  enhanced transparency, Dec 2022.
+
+\bibitem{LZK}
+B.~Barak.
+\newblock Lecture 14: Zero knowledge proofs.
+\newblock {\em Boaz Barak's Blog}.
 
 \bibitem{BPR}
 Binance.
-\newblock Proof of Reserves.
-\newblock \url{https://www.binance.com/en/proof-of-reserves}.
-
+\newblock Proof of reserves.
+\newblock {\em Binance}.
 
 \bibitem{BPS}
 Binance.
 \newblock Proof of solvency.
-\newblock \url{https://gusty-radon-13b.notion.site/Proof-of-solvency-61414c3f7c1e46c5baec32b9491b2b3d}.
-
-\bibitem{LZK}
-Boaz Barak.
-\newblock Lecture 14: Zero knowledge proofs.
-\newblock \url{https://www.boazbarak.org/cs127spring16/chap14_zero_knowledge.html}.
-
-\bibitem{LC23}
-LCX Team.
-\newblock Introduction to Zero-Knowledge Proofs.
-\newblock November 3, 2023.
-\newblock \url{https://www.lcx.com/introduction-to-zero-knowledge-proofs/}.
-
-\bibitem{GMR89}
-Goldwasser, S., Micali, S., Rackoff, C.
-\newblock The Knowledge Complexity of Interactive Proof Systems.
-\newblock \emph{SIAM Journal on Computing}, 18(1), 186–208.
-\newblock 1989.
+\newblock {\em Binance}.
 
 \bibitem{BFM88}
-Blum, M., Feldman, P., Micali, S.
-\newblock Non-Interactive Zero-Knowledge and Its Applications.
-\newblock \emph{STOC '88: Proceedings of the twentieth annual ACM symposium on Theory of computing}, 103–112.
-\newblock 1988.
+M.~Blum, P.~Feldman, and S.~Micali.
+\newblock Non-interactive zero-knowledge and its applications.
+\newblock page 103–112, 1988.
 
-\bibitem{GMW91}
-Goldreich, O., Micali, S., Wigderson, A.
-\newblock Interactive and Noninteractive Zero Knowledge are Equivalent in the Help Model?
-\newblock \emph{STOC '91: Proceedings of the twenty-third annual ACM symposium on Theory of computing}, 113–131.
-\newblock 1991.
+\bibitem{NS23}
+E.~Bottazzi.
+\newblock Zk10: Incremental proof of solvency with nova.
+\newblock Presentation at ZK10 Summit, September 30 2023.
+\newblock Video: \url{https://www.youtube.com/watch?v=sRAA1RYYHEs}.
 
-\bibitem{ZKP23}
-Dan Boneh, Shafi Goldwasser, Dawn Song, Justin Thaler, Yupeng Zhang.
-\newblock Zero Knowledge Proofs: Introduction to Modern SNARKs.
-\newblock 2023.
-
-\bibitem{NZ20}
-Nitulescu, Anca.
-\newblock \emph{zk-SNARKs: A Gentle Introduction}.
-\newblock 2020.
+\bibitem{BGH23}
+S.~Bowe, J.~Grigg, and D.~Hopwood.
+\newblock Recursive proof composition without a trusted setup.
+\newblock {\em Electric Coin Company}, 2023.
 
 \bibitem{DBBBCC15}
-Dagher, Gaby G., Bunz, Benedikt, Bonneau, Joseph, Clark, Jeremy, and Boneh, Dan.
-\newblock Provisions: Privacy-preserving proofs of solvency for Bitcoin exchanges.
-\newblock October 26, 2015.
+G.~G. Dagher, B.~Bunz, J.~Bonneau, J.~Clark, and D.~Boneh.
+\newblock Provisions: Privacy-preserving proofs of solvency for bitcoin
+  exchanges.
+\newblock 2015.
 
-\bibitem{chainlink_blog}
-Malkhi, Dahlia.
-\newblock Exploring Proof of Solvency and Liability Verification Systems.
-\newblock Published January 5, 2023. Updated November 27, 2023.
-\newblock \url{https://blog.chain.link/proof-of-solvency/}.
+\bibitem{GMW91}
+O.~Goldreich, S.~Micali, and A.~Wigderson.
+\newblock Interactive and noninteractive zero knowledge are equivalent in the
+  help model?
+\newblock page 113–131, 1991.
 
-\bibitem{CC22}
-Mazars.
-\newblock Proof of Reserve Report.
-\newblock December 9, 2022.
-\newblock \url{https://www.crypto.com/proof-of-reserve}.
+\bibitem{GMR89}
+S.~Goldwasser, S.~Micali, and C.~Rackoff.
+\newblock The knowledge complexity of interactive proof systems.
+\newblock {\em SIAM Journal on Computing}, 18(1):186–208, 1989.
+
+\bibitem{GP21}
+Y.~Ji and K.~Chalkias.
+\newblock Generalized proof of liabilities, 2021.
+
+\bibitem{Nova23}
+z.~L. Jim.ZK.
+\newblock Nova studies i: Exploring aggregation, recursion, and folding.
+\newblock {\em zkLinkBlog}, Nov 2023.
+
+\bibitem{ASI23}
+A.~Kothapalli, S.~Setty, and I.~Tzialla.
+\newblock Nova: Recursive zero-knowledge arguments from folding schemes.
+\newblock 2021.
 
 \bibitem{KK23}
 Kraken.
-\newblock Proof of Reserves.
-\newblock \url{https://www.kraken.com/proof-of-reserves}.
+\newblock Proof of reserves.
 
-\bibitem{Nova23}
-Jim.ZK, zkLink Labs.
-\newblock Nova Studies I: Exploring Aggregation, Recursion, and Folding.
-\newblock Published in zkLinkBlog, Nov 6, 2023. 
-\newblock \url{https://blog.zk.link/nova-studies-i-exploring-aggregation-recursion-and-folding-23b9a67000cd}.
+\bibitem{chainlink_blog}
+D.~Malkhi.
+\newblock Exploring proof of solvency and liability verification systems.
+\newblock 2023.
+
+\bibitem{CC22}
+Mazars.
+\newblock Proof of reserve report.
+\newblock 2022.
+
+\bibitem{N08}
+S.~Nakamoto.
+\newblock Bitcoin: A peer-to-peer electronic cash system.
+\newblock {\em Bitcoin.org}, 2008.
+\newblock Technical report.
+
+\bibitem{NZ20}
+A.~Nitulescu.
+\newblock zk-snarks: A gentle introduction.
+\newblock 2020.
+
+\bibitem{LC23}
+L.~Team.
+\newblock Introduction to zero-knowledge proofs.
+\newblock {\em LCX}, November 2023.
 
 \bibitem{TP24}
 Trace.
-\newblock The Proof Supply Chain.
-\newblock Figment Capital, Jan.16, 2024.
-\newblock \url {https://figmentcapital.medium.com/}.
+\newblock The proof supply chain.
+\newblock {\em Figment Capital}, January 2024.
 
+\bibitem{VR23}
+Veridise.
+\newblock Halo and accumulation.
+\newblock {\em Veridise}, August 2023.
+
+\bibitem{VNF23}
+Veridise.
+\newblock Nova and folding (1/2).
+\newblock {\em Veridise}, September 2023.
+
+\bibitem{VRS23}
+Veridise.
+\newblock Recursive snarks and incrementally verifiable computation (ivc) part
+  i: Recursive snarks and incrementally verifiable computation.
+\newblock {\em Veridise}, July 2023.
 
 \end{thebibliography}

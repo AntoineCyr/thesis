@@ -36,5 +36,14 @@
 \contentsline {paragraph}{Outputs}{27}{section*.13}%
 \contentsline {paragraph}{}{28}{section*.14}%
 \contentsline {section}{\numberline {4.3}Daily proof of liabilities}{28}{section.4.3}%
-\contentsline {section}{\numberline {4.4}Daily proof of inclusion}{28}{section.4.4}%
-\contentsline {chapter}{Bibliography}{28}{section.4.4}%
+\contentsline {subsection}{\numberline {4.3.1}Aggregation proofs}{28}{subsection.4.3.1}%
+\contentsline {subsection}{\numberline {4.3.2}Other recursion proofs}{29}{subsection.4.3.2}%
+\contentsline {subsection}{\numberline {4.3.3}New circuit}{29}{subsection.4.3.3}%
+\contentsline {paragraph}{Inputs}{30}{section*.15}%
+\contentsline {paragraph}{Outputs}{31}{section*.16}%
+\contentsline {section}{\numberline {4.4}Daily proof of inclusion}{31}{section.4.4}%
+\contentsline {subsection}{\numberline {4.4.1}Circuit Design}{36}{subsection.4.4.1}%
+\contentsline {paragraph}{Inputs}{37}{section*.17}%
+\contentsline {paragraph}{Outputs}{38}{section*.18}%
+\contentsline {paragraph}{Steps}{38}{section*.19}%
+\contentsline {chapter}{Bibliography}{38}{Item.48}%

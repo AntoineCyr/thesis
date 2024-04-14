@@ -8,3 +8,8 @@
 \contentsline {figure}{\numberline {3.1}{\ignorespaces Aggregation Proof \cite {TP24}}}{17}{figure.3.1}%
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {4.1}{\ignorespaces Merkle Path \cite {BM22}}}{27}{figure.4.1}%
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Failure Probability \cite {GP21}}}{33}{figure.4.2}%
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Failure Probability Round 1 \cite {NS23}}}{34}{figure.4.3}%
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Failure Probability Round 1 After 2 Rounds\cite {NS23}}}{35}{figure.4.4}%
+\contentsline {figure}{\numberline {4.5}{\ignorespaces Failure Probability Round 1 after 3 Rounds \cite {NS23}}}{36}{figure.4.5}%
+\contentsline {figure}{\numberline {4.6}{\ignorespaces Folding \cite {VRS23}}}{37}{figure.4.6}%
