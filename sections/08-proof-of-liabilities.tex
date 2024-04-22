@@ -30,23 +30,23 @@ Subsequently, the proof of liabilities constructs a Merkle tree and outputs the 
 
 
 \paragraph{Inputs}
-\begin{enumerate}
+\begin{itemize}
 
 
    \item List of balance (private)
   
    \item List of email hash (private)
   
-   \end{enumerate}
+   \end{itemize}
 
 
 \paragraph{Outputs}
-\begin{enumerate}
+\begin{itemize}
    \item Balance Sum (public)
    \item Root hash (public)
    \item No negative values (private) - boolean
    \item All small range (private) - boolean
-   \end{enumerate}
+   \end{itemize}
 
 
 This proof of liabilities operates as intended because it returns the sum of the liabilities, which is exact because of the checks.
@@ -83,7 +83,7 @@ namely the binary (left or right), the sum and the hash.
 
 
 \paragraph{Inputs}
-\begin{enumerate}
+\begin{itemize}
 
 
    \item List of neighbors sum (private)
@@ -105,13 +105,13 @@ namely the binary (left or right), the sum and the hash.
 
    \item User email hash (public)
   
-   \end{enumerate}
+   \end{itemize}
 
 
 \paragraph{Outputs}
-\begin{enumerate}
+\begin{itemize}
    \item Balance included (public) - boolean
-   \end{enumerate}
+   \end{itemize}
 
 
 \paragraph{}
@@ -161,11 +161,12 @@ For every change, we send the corresponding Merkle Path which will be verified b
 The circuit will then compute a new Root Hash for each change and output the final Markle Hash.
 
 
+
 The standard verification will be applied to the new values (e.g., non-negative values, limited range).
 
 
 \paragraph{Inputs}
-\begin{enumerate}
+\begin{itemize}
 
 
    \item List of old email hash (private) - 1 per change
@@ -203,16 +204,16 @@ The standard verification will be applied to the new values (e.g., non-negative 
 
    \item List of neighbors binary (private) - 1 list per change
   
-   \end{enumerate}
+   \end{itemize}
 
 
    \paragraph{Outputs}
-   \begin{enumerate}
+   \begin{itemize}
        \item Valid hash
        \item Valid sum
        \item No negative values
        \item All small range
-       \end{enumerate}
+       \end{itemize}
 
 
 To recapitulate, for every change in the merkle tree, we have the merkle path with the old values, the new values, the temporary root hash and
@@ -220,13 +221,43 @@ the temporary root sum.
 The merkle path is used as an inclusion proof for the old value, and is used to verify the temporary root hash.
 The circuit is iterating over the changes and gives a final root hash. We verify that the final root hash and sum are the same as inputs.
 
+\subsection{Minimizing the number of changes}
+To minimize the number of constraints, we want to minimize the number of changes.
+We define a change as a hash change at the bottom level. Any new user, balance change or removal of old user is considered as a change.
+The naive change calculation would be $#change = #balance change + #new user + #deprecate user$.
+However, a new user can take the node of a deprecater user. So we would have the equation $#change = #balance change +max(#new user + #deprecate user)$
 
-%-- compare number of constraints needed between the circuits
+\subsection{Constraint analysis}
+Theorically, the new circuit makes sense. It should be quite faster than the old one, so let's analyze it.
+First, lets look at doing a daily proof where there is a change in the user's value.
+
+The first assumption we are gonna need to do, is to assume the number of balance change. A completely subjective number would be $1\%$.
+%--first graph
+Once you reach more than 128 users with $1\%$ change, it is not worth it to use the new circuit. This is not much practical.
+However, we can see that the number of constraints of the new circuit grows linearly for the number of change.
+Instead of looking at the changes daily, we could do it hourly.
+Going with the assumption that $1\%$ change daily, we will assume that $0.05\%$ of the balances changes hourly.
+Lets look at the number of constraints if $0.05\%$ of users change every hour.
+%--second graph
+Even with more than 1 million users, there is still 3 times less constraints with our new circuit.
+So if we want to do an hourly proof, it is less expensive with the new circuit than the old circuit.
+We can take this a step further, and do a proof at every new block. We could have a merkle tree up to date for the liabilities side at every single block.
+While the hourly proof and block proof is better with the new circuit, maybe a daily proof is sufficient for someone.
 
 
+\subsection{Folded proof of liabilities}
+With the old circuit, we saw how it was not usefull to use folding or any other recursion scheme.
+However, with the new circuit, we have multiple proof that we want to prove faster and verify faster.
+We can separate our proof of $n$ changes into $m$ proofs, where $m <= n$, and fold the circuits together.
+%--- minmax the number of fold we want (graph for 1 change, graph for 2 change, graph for 3 change)
+%--- change old circuit vs new circuit (1% change) vs new folded circuit (20*0.05%)
+%proof time, verifier time, proof size graph
 
 
-
+%describe the folded circuit
+%put in psuedocode of circuit
+%maybe a few snipplets of real code, explaining anything that was difficult to do
+%put code of proof of inclusion, proof of liabilities, and proof of liabilities change
 
 \section{Daily proof of inclusion}
 
@@ -314,7 +345,7 @@ We define S as $step_in$ and $step_out$ within our circuit.
 
 
 \paragraph{Inputs}
-\begin{enumerate}
+\begin{itemize}
 
 
    \item List of neighbors sum (private)
@@ -339,23 +370,23 @@ We define S as $step_in$ and $step_out$ within our circuit.
 
    \item Steps in (public)
   
-   \end{enumerate}
+   \end{itemize}
 
 
 \paragraph{Outputs}
-\begin{enumerate}
+\begin{itemize}
    \item Steps out (public)
-   \end{enumerate}
+   \end{itemize}
 
 
 \paragraph{Steps}
-\begin{enumerate}
+\begin{itemize}
    \item Balance included
    \item Root sum
    \item Root hash
    \item User balance
    \item User email hash
-   \end{enumerate}
+   \end{itemize}
 These steps encompass all the public values we initially had in the circuit.
 None of the variables of the steps are used in the circuit itself. They are used as a means to make a value public.
 The steps are all the public values we had in the first circuit.
@@ -369,4 +400,4 @@ At the end you only have to verify a single proof. You also need to compare the 
 %summa
 %https://summa.gitbook.io/summa/v/1/circuits/merkle-sum-tree-inclusion
 %https://www.youtube.com/watch?v=sRAA1RYYHEs
-
+%https://hackmd.io/@summa/HkGMF4Ovn#The-problem
