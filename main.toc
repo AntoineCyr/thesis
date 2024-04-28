@@ -1,5 +1,5 @@
-\contentsline {chapter}{List of Figures}{vii}{chapter*.3}%
-\contentsline {chapter}{List of Tables}{viii}{chapter*.4}%
+\contentsline {chapter}{List of Figures}{vi}{chapter*.3}%
+\contentsline {chapter}{List of Tables}{vii}{chapter*.4}%
 \contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}%
 \contentsline {paragraph}{Scope.}{1}{section*.6}%
 \contentsline {paragraph}{Contributions.}{1}{section*.7}%
@@ -29,21 +29,28 @@
 \contentsline {paragraph}{Circom}{24}{section*.8}%
 \contentsline {paragraph}{SnarkJS}{24}{section*.9}%
 \contentsline {section}{\numberline {4.1}Proof of liabilities}{25}{section.4.1}%
-\contentsline {paragraph}{Inputs}{25}{section*.10}%
-\contentsline {paragraph}{Outputs}{25}{section*.11}%
-\contentsline {section}{\numberline {4.2}Proof of inclusion}{26}{section.4.2}%
-\contentsline {paragraph}{Inputs}{27}{section*.12}%
-\contentsline {paragraph}{Outputs}{27}{section*.13}%
-\contentsline {paragraph}{}{28}{section*.14}%
-\contentsline {section}{\numberline {4.3}Daily proof of liabilities}{28}{section.4.3}%
-\contentsline {subsection}{\numberline {4.3.1}Aggregation proofs}{28}{subsection.4.3.1}%
-\contentsline {subsection}{\numberline {4.3.2}Other recursion proofs}{29}{subsection.4.3.2}%
-\contentsline {subsection}{\numberline {4.3.3}New circuit}{29}{subsection.4.3.3}%
-\contentsline {paragraph}{Inputs}{30}{section*.15}%
-\contentsline {paragraph}{Outputs}{31}{section*.16}%
-\contentsline {section}{\numberline {4.4}Daily proof of inclusion}{31}{section.4.4}%
-\contentsline {subsection}{\numberline {4.4.1}Circuit Design}{36}{subsection.4.4.1}%
-\contentsline {paragraph}{Inputs}{37}{section*.17}%
-\contentsline {paragraph}{Outputs}{38}{section*.18}%
-\contentsline {paragraph}{Steps}{38}{section*.19}%
-\contentsline {chapter}{Bibliography}{38}{section*.19}%
+\contentsline {paragraph}{Inputs}{28}{section*.10}%
+\contentsline {paragraph}{Outputs}{28}{section*.11}%
+\contentsline {section}{\numberline {4.2}Proof of inclusion}{29}{section.4.2}%
+\contentsline {paragraph}{Inputs}{30}{section*.12}%
+\contentsline {paragraph}{Outputs}{30}{section*.13}%
+\contentsline {paragraph}{}{31}{section*.14}%
+\contentsline {section}{\numberline {4.3}Daily proof of liabilities}{31}{section.4.3}%
+\contentsline {subsection}{\numberline {4.3.1}Aggregation proofs}{31}{subsection.4.3.1}%
+\contentsline {subsection}{\numberline {4.3.2}Other recursion proofs}{32}{subsection.4.3.2}%
+\contentsline {subsection}{\numberline {4.3.3}Change circuit}{32}{subsection.4.3.3}%
+\contentsline {paragraph}{Inputs}{33}{section*.15}%
+\contentsline {paragraph}{Outputs}{33}{section*.16}%
+\contentsline {subsubsection}{Minimizing the number of changes}{34}{section*.17}%
+\contentsline {subsubsection}{Constraint analysis}{34}{section*.18}%
+\contentsline {subsection}{\numberline {4.3.4}Folded proof of liabilities}{36}{subsection.4.3.4}%
+\contentsline {subsection}{\numberline {4.3.5}Folded change circuit}{38}{subsection.4.3.5}%
+\contentsline {paragraph}{Inputs}{39}{section*.19}%
+\contentsline {paragraph}{Outputs}{39}{section*.20}%
+\contentsline {paragraph}{Steps}{40}{section*.21}%
+\contentsline {section}{\numberline {4.4}Daily proof of inclusion}{40}{section.4.4}%
+\contentsline {subsection}{\numberline {4.4.1}Circuit Design}{45}{subsection.4.4.1}%
+\contentsline {paragraph}{Inputs}{46}{section*.22}%
+\contentsline {paragraph}{Outputs}{47}{section*.23}%
+\contentsline {paragraph}{Steps}{47}{section*.24}%
+\contentsline {chapter}{Bibliography}{47}{section*.24}%

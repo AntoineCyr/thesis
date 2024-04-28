@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.3.5)  14 APR 2024 22:46
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.3.5)  27 APR 2024 13:36
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -376,47 +376,41 @@ Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \@float@everytoks=\toks31
 \@floatcapt=\box56
 ))
+(/usr/local/texlive/2023/texmf-dist/tex/latex/listings/listings.sty
+\lst@mode=\count294
+\lst@gtempboxa=\box57
+\lst@token=\toks32
+\lst@length=\count295
+\lst@currlwidth=\dimen177
+\lst@column=\count296
+\lst@pos=\count297
+\lst@lostspace=\dimen178
+\lst@width=\dimen179
+\lst@newlines=\count298
+\lst@lineno=\count299
+\lst@maxwidth=\dimen180
+
+(/usr/local/texlive/2023/texmf-dist/tex/latex/listings/lstmisc.sty
+File: lstmisc.sty 2023/02/27 1.9 (Carsten Heinz)
+\c@lstnumber=\count300
+\lst@skipnumbers=\count301
+\lst@framebox=\box58
+)
+(/usr/local/texlive/2023/texmf-dist/tex/latex/listings/listings.cfg
+File: listings.cfg 2023/02/27 1.9 listings configuration
+))
+Package: listings 2023/02/27 1.9 (Carsten Heinz)
+
 (./setup/macros.tex
 (/usr/local/texlive/2023/texmf-dist/tex/latex/tools/xspace.sty
 Package: xspace 2014/10/28 v1.13 Space after command names (DPC,MH)
 ))
 (/usr/local/texlive/2023/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 File: l3backend-pdftex.def 2023-01-16 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count294
-\l__pdf_internal_box=\box57
+\l__color_backend_stack_int=\count302
+\l__pdf_internal_box=\box59
 )
-(./main.aux
-
-LaTeX Warning: Label `overflow' multiply defined.
-
-
-LaTeX Warning: Label `overflow' multiply defined.
-
-
-LaTeX Warning: Label `overflow' multiply defined.
-
-
-LaTeX Warning: Label `overflow' multiply defined.
-
-
-LaTeX Warning: Label `overflow' multiply defined.
-
-
-LaTeX Warning: Label `overflow' multiply defined.
-
-
-LaTeX Warning: Label `overflow' multiply defined.
-
-
-LaTeX Warning: Label `overflow' multiply defined.
-
-
-LaTeX Warning: Label `overflow' multiply defined.
-
-
-LaTeX Warning: Label `overflow' multiply defined.
-
-)
+No file main.aux.
 \openout1 = `main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 21.
@@ -437,7 +431,6 @@ LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 21.
 LaTeX Font Info:    ... okay on input line 21.
 LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 21.
 LaTeX Font Info:    ... okay on input line 21.
-
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
 *geometry* verbose mode - [ preamble ] result:
@@ -474,17 +467,17 @@ LaTeX Font Info:    ... okay on input line 21.
 
 (/usr/local/texlive/2023/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count295
-\scratchdimen=\dimen177
-\scratchbox=\box58
-\nofMPsegments=\count296
-\nofMParguments=\count297
-\everyMPshowfont=\toks32
-\MPscratchCnt=\count298
-\MPscratchDim=\dimen178
-\MPnumerator=\count299
-\makeMPintoPDFobject=\count300
-\everyMPtoPDFconversion=\toks33
+\scratchcounter=\count303
+\scratchdimen=\dimen181
+\scratchbox=\box60
+\nofMPsegments=\count304
+\nofMParguments=\count305
+\everyMPshowfont=\toks33
+\MPscratchCnt=\count306
+\MPscratchDim=\dimen182
+\MPnumerator=\count307
+\makeMPintoPDFobject=\count308
+\everyMPtoPDFconversion=\toks34
 ) (/usr/local/texlive/2023/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
@@ -498,12 +491,12 @@ Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: subfig package v1.3 is loaded.
 Package caption Info: End \AtBeginDocument code.
 Package hyperref Info: Link coloring OFF on input line 21.
-
-(./main.out) (./main.out)
 \@outlinefile=\write3
 \openout3 = `main.out'.
 
- (./sections/00-cover.tex) [1
+\c@lstlisting=\count309
+
+(./sections/00-cover.tex) [1
 
 {/usr/local/texlive/2023/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{/usr/loc
 al/texlive/2023/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}] (./secti
@@ -542,24 +535,26 @@ Underfull \hbox (badness 10000) in paragraph at lines 7--8
 
 ] (./sections/03-ack.tex) [4
 
-] (./sections/04-contents.tex (./main.toc
-[5
-
-])
+] (./sections/04-contents.tex
+No file main.toc.
 \tf@toc=\write4
 \openout4 = `main.toc'.
 
- [6] (./main.lof)
+[5
+
+]
+No file main.lof.
 \tf@lof=\write5
 \openout5 = `main.lof'.
 
- [7
+[6
 
-] (./main.lot)
+]
+No file main.lot.
 \tf@lot=\write6
 \openout6 = `main.lot'.
 
-) [8
+) [7
 
 ] (./sections/05-introduction.tex
 Chapter 1.
@@ -570,29 +565,61 @@ Chapter 2.
 [2
 
 ] [3] [4] [5]
-<MerkleTree.png, id=287, 245.91875pt x 233.87375pt>
+<MerkleTree.png, id=75, 245.91875pt x 233.87375pt>
 File: MerkleTree.png Graphic file (type png)
 <use MerkleTree.png>
 Package pdftex.def Info: MerkleTree.png  used on input line 86.
 (pdftex.def)             Requested size: 256.0748pt x 243.54411pt.
- [6
+
+
+LaTeX Warning: Citation `N08' on page 6 undefined on input line 87.
+
+[6
 pdfTeX warning (ext4): destination with the same identifier (name{figure.2.1}) 
 has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
 l.100 
-       <./MerkleTree.png>] [7] [8] [9]
-<ArithmeticCircuit.png, id=321, 264.99pt x 276.03125pt>
+       <./MerkleTree.png>]
+
+LaTeX Warning: Citation `LZK' on page 7 undefined on input line 119.
+
+[7]
+
+LaTeX Warning: Citation `LC23' on page 8 undefined on input line 129.
+
+
+LaTeX Warning: Citation `GMR89' on page 8 undefined on input line 141.
+
+
+LaTeX Warning: Citation `BFM88' on page 8 undefined on input line 145.
+
+
+LaTeX Warning: Citation `GMW91' on page 8 undefined on input line 145.
+
+[8]
+
+LaTeX Warning: Citation `NZ20' on page 9 undefined on input line 164.
+
+[9]
+<ArithmeticCircuit.png, id=102, 264.99pt x 276.03125pt>
 File: ArithmeticCircuit.png Graphic file (type png)
 <use ArithmeticCircuit.png>
 Package pdftex.def Info: ArithmeticCircuit.png  used on input line 185.
 (pdftex.def)             Requested size: 170.71652pt x 177.83029pt.
-<Circuit.png, id=323, 936.49875pt x 423.5825pt>
+
+
+LaTeX Warning: Citation `ZKM2' on page 10 undefined on input line 186.
+
+<Circuit.png, id=103, 936.49875pt x 423.5825pt>
 File: Circuit.png Graphic file (type png)
 <use Circuit.png>
 Package pdftex.def Info: Circuit.png  used on input line 201.
 (pdftex.def)             Requested size: 369.88582pt x 167.30356pt.
- [10
+
+LaTeX Warning: Citation `ZKM2' on page 10 undefined on input line 202.
+
+[10
 pdfTeX warning (ext4): destination with the same identifier (name{figure.2.2}) 
 has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
@@ -605,40 +632,102 @@ has been already used, duplicate ignored
                                                   \__shipout_drop_firstpage_...
 l.244 
        <./Circuit.png>]
-<MerkleTreeLiabilities.png, id=338, 560.0925pt x 291.0875pt>
+
+LaTeX Warning: Citation `chainlink_blog' on page 12 undefined on input line 253
+.
+
+<MerkleTreeLiabilities.png, id=119, 560.0925pt x 291.0875pt>
 File: MerkleTreeLiabilities.png Graphic file (type png)
 <use MerkleTreeLiabilities.png>
 Package pdftex.def Info: MerkleTreeLiabilities.png  used on input line 260.
 (pdftex.def)             Requested size: 369.88582pt x 192.24269pt.
- [12
+[12
 pdfTeX warning (ext4): destination with the same identifier (name{figure.2.4}) 
 has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
 l.271 
        <./MerkleTreeLiabilities.png>]
+
+LaTeX Warning: Citation `DBBBCC15' on page 13 undefined on input line 274.
+
+
+LaTeX Warning: Citation `BPR' on page 13 undefined on input line 288.
+
+
+LaTeX Warning: Citation `CC22' on page 13 undefined on input line 289.
+
+
+LaTeX Warning: Citation `KK23' on page 13 undefined on input line 290.
+
+
 Overfull \hbox (13.3587pt too wide) in paragraph at lines 287--291
 \OT1/cmr/m/n/12 In re-cent years, sev-eral ma-jor cryp-tocur-rency ex-changes, 
 in-clud-ing Bi-nance, Crypto.com,
  []
 
-[13]) (./sections/07-recursion-proofs.tex [14]
+[13]
+
+LaTeX Warning: Citation `BPS' on page 14 undefined on input line 301.
+
+) (./sections/07-recursion-proofs.tex [14]
 Chapter 3.
+
+LaTeX Warning: Citation `Nova23' on page 15 undefined on input line 20.
+
 [15
 
 ]
-<AggregationProof.png, id=370, 711.65875pt x 397.485pt>
+
+LaTeX Warning: Citation `Nova23' on page 16 undefined on input line 33.
+
+<AggregationProof.png, id=141, 711.65875pt x 397.485pt>
 File: AggregationProof.png Graphic file (type png)
 <use AggregationProof.png>
 Package pdftex.def Info: AggregationProof.png  used on input line 36.
 (pdftex.def)             Requested size: 369.88582pt x 206.59027pt.
- [16] [17
+
+LaTeX Warning: Citation `TP24' on page 16 undefined on input line 37.
+
+[16]
+
+LaTeX Warning: Citation `Nova23' on page 17 undefined on input line 49.
+
+[17
 pdfTeX warning (ext4): destination with the same identifier (name{figure.3.1}) 
 has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
 l.60 
-      <./AggregationProof.png>] [18] [19] [20]
+      <./AggregationProof.png>] [18]
+
+LaTeX Warning: Citation `VR23' on page 19 undefined on input line 88.
+
+
+LaTeX Warning: Citation `BGH23' on page 19 undefined on input line 96.
+
+
+LaTeX Warning: Citation `VR23' on page 19 undefined on input line 100.
+
+[19]
+
+LaTeX Warning: Citation `Nova23' on page 20 undefined on input line 109.
+
+
+LaTeX Warning: Citation `ASI23' on page 20 undefined on input line 109.
+
+
+LaTeX Warning: Hyper reference `subsec:ac' on page 20 undefined on input line 1
+20.
+
+[20]
+
+LaTeX Warning: Citation `ZKM3' on page 21 undefined on input line 144.
+
+
+LaTeX Warning: Citation `ZKM10' on page 21 undefined on input line 149.
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 153--157
 
  []
@@ -656,90 +745,212 @@ Underfull \hbox (badness 10000) in paragraph at lines 189--194
 
 LaTeX Warning: Command \i invalid in math mode on input line 195.
 
-[22]) (./sections/08-proof-of-liabilities.tex [23]
+[22]
+
+LaTeX Warning: Citation `ZKM10' on page 23 undefined on input line 229.
+
+
+LaTeX Warning: Citation `FG23' on page 23 undefined on input line 229.
+
+) (./sections/08-proof-of-liabilities.tex [23]
 Chapter 4.
 [24
 
-] [25]
-<MerklePath.png, id=441, 1501.61pt x 768.8725pt>
+] (/usr/local/texlive/2023/texmf-dist/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2023/02/27 1.9 listings language file
+)
+Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on i
+nput line 29.
+
+Overfull \hbox (10.52924pt too wide) in paragraph at lines 36--37
+[][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+[25]
+Overfull \hbox (31.6792pt too wide) in paragraph at lines 42--43
+[][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+LaTeX Font Info:    Trying to load font information for OML+cmr on input line 5
+9.
+(/usr/local/texlive/2023/texmf-dist/tex/latex/base/omlcmr.fd
+File: omlcmr.fd 2022/07/10 v2.5l Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OML/cmr/m/n' in size <12> not available
+(Font)              Font shape `OML/cmm/m/it' tried instead on input line 59.
+ [26]
+Overfull \hbox (24.62921pt too wide) in paragraph at lines 74--75
+[][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+[27]
+Overfull \hbox (31.6792pt too wide) in paragraph at lines 92--94
+[][][][][][][][][][][][][][][][] 
+ []
+
+[28]
+<MerklePath.png, id=284, 1501.61pt x 768.8725pt>
 File: MerklePath.png Graphic file (type png)
 <use MerklePath.png>
-Package pdftex.def Info: MerklePath.png  used on input line 79.
+Package pdftex.def Info: MerklePath.png  used on input line 131.
 (pdftex.def)             Requested size: 369.88582pt x 189.39023pt.
- [26] [27
+
+
+LaTeX Warning: Citation `BM22' on page 29 undefined on input line 132.
+
+[29] [30
 pdfTeX warning (ext4): destination with the same identifier (name{figure.4.1}) 
 has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.120 
-       <./MerklePath.png>] [28] [29] [30] [31]
-<FailureProbability.png, id=475, 702.625pt x 467.7475pt>
-File: FailureProbability.png Graphic file (type png)
-<use FailureProbability.png>
-Package pdftex.def Info: FailureProbability.png  used on input line 260.
-(pdftex.def)             Requested size: 369.88582pt x 246.242pt.
- [32]
-<FailureProbabilityRound1.png, id=481, 748.7975pt x 500.87125pt>
-File: FailureProbabilityRound1.png Graphic file (type png)
-<use FailureProbabilityRound1.png>
-Package pdftex.def Info: FailureProbabilityRound1.png  used on input line 272.
-(pdftex.def)             Requested size: 369.88582pt x 247.41614pt.
- [33
+l.157 
+       <./MerklePath.png>]
+
+LaTeX Warning: Hyper reference `subsec:pl' on page 31 undefined on input line 1
+59.
+
+[31] [32] [33] [34]
+<Number of constraints.png, id=324, 602.25pt x 372.39125pt>
+File: Number of constraints.png Graphic file (type png)
+<use Number of constraints.png>
+Package pdftex.def Info: Number of constraints.png  used on input line 231.
+(pdftex.def)             Requested size: 369.88582pt x 228.72093pt.
+<Number of constraints .05.png, id=325, 602.25pt x 372.39125pt>
+File: Number of constraints .05.png Graphic file (type png)
+<use Number of constraints .05.png>
+Package pdftex.def Info: Number of constraints .05.png  used on input line 244.
+
+(pdftex.def)             Requested size: 369.88582pt x 228.72093pt.
+ [35
 pdfTeX warning (ext4): destination with the same identifier (name{figure.4.2}) 
 has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.276 
-       <./FailureProbability.png>]
-<FailureProbabilityRound2.png, id=488, 736.7525pt x 496.85625pt>
-File: FailureProbabilityRound2.png Graphic file (type png)
-<use FailureProbabilityRound2.png>
-Package pdftex.def Info: FailureProbabilityRound2.png  used on input line 283.
-(pdftex.def)             Requested size: 369.88582pt x 249.44342pt.
- [34
+l.248 E
+       ven with more than 1 million users, there is still 3 times less const...
+ <./Number of constraints.png>]
+<Proof time.png, id=332, 602.25pt x 372.39125pt>
+File: Proof time.png Graphic file (type png)
+<use Proof time.png>
+Package pdftex.def Info: Proof time.png  used on input line 261.
+(pdftex.def)             Requested size: 369.88582pt x 228.72093pt.
+ [36
 pdfTeX warning (ext4): destination with the same identifier (name{figure.4.3}) 
 has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.287 
-       <./FailureProbabilityRound1.png>]
-<FailureProbabilityRound3.png, id=495, 721.69624pt x 483.8075pt>
-File: FailureProbabilityRound3.png Graphic file (type png)
-<use FailureProbabilityRound3.png>
-Package pdftex.def Info: FailureProbabilityRound3.png  used on input line 294.
-(pdftex.def)             Requested size: 369.88582pt x 247.96402pt.
- [35
+l.264    \end{figure}
+                      <./Number of constraints .05.png>]
+File: Proof time.png Graphic file (type png)
+<use Proof time.png>
+Package pdftex.def Info: Proof time.png  used on input line 275.
+(pdftex.def)             Requested size: 369.88582pt x 228.72093pt.
+ [37
 pdfTeX warning (ext4): destination with the same identifier (name{figure.4.4}) 
 has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.298 T
-       he key takeaway here is that without folding, you require $4\%$ of us...
- <./FailureProbabilityRound2.png>]
-<FoldingCircuit.png, id=504, 716.6775pt x 278.03876pt>
-File: FoldingCircuit.png Graphic file (type png)
-<use FoldingCircuit.png>
-Package pdftex.def Info: FoldingCircuit.png  used on input line 308.
-(pdftex.def)             Requested size: 369.88582pt x 143.49913pt.
- [36
+l.279 
+       <./Proof time.png>] [38
 pdfTeX warning (ext4): destination with the same identifier (name{figure.4.5}) 
 has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.312 I
-       n this chart, S represent the public input and output, which is passe...
- <./FailureProbabilityRound3.png>] [37
+l.289 
+      ] [39] [40]
+<FailureProbability.png, id=365, 702.625pt x 467.7475pt>
+File: FailureProbability.png Graphic file (type png)
+<use FailureProbability.png>
+Package pdftex.def Info: FailureProbability.png  used on input line 341.
+(pdftex.def)             Requested size: 369.88582pt x 246.242pt.
+
+
+LaTeX Warning: Citation `GP21' on page 41 undefined on input line 342.
+
+[41]
+<FailureProbabilityRound1.png, id=370, 748.7975pt x 500.87125pt>
+File: FailureProbabilityRound1.png Graphic file (type png)
+<use FailureProbabilityRound1.png>
+Package pdftex.def Info: FailureProbabilityRound1.png  used on input line 351.
+(pdftex.def)             Requested size: 369.88582pt x 247.41614pt.
+
+
+LaTeX Warning: Citation `NS23' on page 42 undefined on input line 352.
+
+[42
 pdfTeX warning (ext4): destination with the same identifier (name{figure.4.6}) 
 has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.347    \item S
-                teps out (public) <./FoldingCircuit.png>]) (./main.bbl [38]
-[39
+l.355 
+       <./FailureProbability.png>]
+<FailureProbabilityRound2.png, id=378, 736.7525pt x 496.85625pt>
+File: FailureProbabilityRound2.png Graphic file (type png)
+<use FailureProbabilityRound2.png>
+Package pdftex.def Info: FailureProbabilityRound2.png  used on input line 360.
+(pdftex.def)             Requested size: 369.88582pt x 249.44342pt.
 
-]) [40] (./main.aux)
 
-LaTeX Warning: There were multiply-defined labels.
+LaTeX Warning: Citation `NS23' on page 43 undefined on input line 361.
+
+[43
+pdfTeX warning (ext4): destination with the same identifier (name{figure.4.7}) 
+has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.364 
+       <./FailureProbabilityRound1.png>]
+<FailureProbabilityRound3.png, id=385, 721.69624pt x 483.8075pt>
+File: FailureProbabilityRound3.png Graphic file (type png)
+<use FailureProbabilityRound3.png>
+Package pdftex.def Info: FailureProbabilityRound3.png  used on input line 369.
+(pdftex.def)             Requested size: 369.88582pt x 247.96402pt.
+
+
+LaTeX Warning: Citation `NS23' on page 44 undefined on input line 370.
+
+[44
+pdfTeX warning (ext4): destination with the same identifier (name{figure.4.8}) 
+has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.373 T
+       he key takeaway here is that without folding, you require $4\%$ of us...
+ <./FailureProbabilityRound2.png>]
+
+LaTeX Warning: Hyper reference `subsec:pi' on page 45 undefined on input line 3
+78.
+
+<FoldingCircuit.png, id=392, 716.6775pt x 278.03876pt>
+File: FoldingCircuit.png Graphic file (type png)
+<use FoldingCircuit.png>
+Package pdftex.def Info: FoldingCircuit.png  used on input line 382.
+(pdftex.def)             Requested size: 369.88582pt x 143.49913pt.
+
+LaTeX Warning: Citation `VRS23' on page 45 undefined on input line 383.
+
+[45
+pdfTeX warning (ext4): destination with the same identifier (name{figure.4.9}) 
+has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.386 I
+       n this chart, S represent the public input and output, which is passe...
+ <./FailureProbabilityRound3.png>] [46
+pdfTeX warning (ext4): destination with the same identifier (name{figure.4.10})
+ has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.405    \item S
+                teps out (public) <./FoldingCircuit.png>]) (./main.bbl [47]
+[48
+
+]) [49] (./main.aux)
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
 
 Package rerunfilecheck Warning: File `main.out' has changed.
@@ -747,38 +958,35 @@ Package rerunfilecheck Warning: File `main.out' has changed.
 (rerunfilecheck)                or use package `bookmark'.
 
 Package rerunfilecheck Info: Checksums for `main.out':
-(rerunfilecheck)             Before: 1F242FC6ACA8C389055E232C6E109DCF;4687
-(rerunfilecheck)             After:  F0AAA046BDDEDAD0FAA1941B53D6BCEF;4691.
+(rerunfilecheck)             Before: <no file>
+(rerunfilecheck)             After:  CCABF5968FCD91157CCB830999A130DC;5085.
  ) 
 Here is how much of TeX's memory you used:
- 11963 strings out of 476025
- 190837 string characters out of 5790018
- 1858388 words of memory out of 5000000
- 32046 multiletter control sequences out of 15000+600000
- 521168 words of font info for 65 fonts, out of 8000000 for 9000
+ 13835 strings out of 476025
+ 216048 string characters out of 5790018
+ 1881388 words of memory out of 5000000
+ 33825 multiletter control sequences out of 15000+600000
+ 521545 words of font info for 66 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 80i,7n,79p,328b,552s stack positions out of 10000i,1000n,20000p,200000b,200000s
-
-pdfTeX warning (dest): name{Item.48} has been referenced but does not exist, re
-placed by a fixed one
-
-</usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><
-/usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><
-/usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></
-usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></us
-r/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/
-local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/lo
-cal/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local
-/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/
-texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/te
-xlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/tex
-live/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb></usr/local/texl
-ive/2023/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/
-texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb>
-Output written on main.pdf (48 pages, 5912139 bytes).
+ 80i,7n,79p,483b,2088s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb
+></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb
+></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb>
+</usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></
+usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></us
+r/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/
+local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/loc
+al/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/loca
+l/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/
+texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/t
+exlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb></usr/local/te
+xlive/2023/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/loca
+l/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/local/
+texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfti1200.pfb>
+Output written on main.pdf (56 pages, 5979964 bytes).
 PDF statistics:
- 630 PDF objects out of 1000 (max. 8388607)
- 526 compressed objects within 6 object streams
- 143 named destinations out of 1000 (max. 500000)
- 336 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 568 PDF objects out of 1000 (max. 8388607)
+ 449 compressed objects within 5 object streams
+ 225 named destinations out of 1000 (max. 500000)
+ 71 words of extra memory for PDF output out of 10000 (max. 10000000)
 
