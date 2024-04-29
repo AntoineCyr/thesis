@@ -1,19 +1,21 @@
 % !TEX root = ../main.tex
+% review everything
 
 \chapter{Proof construction}
 We will be using Circom to generate an arithmetic circuit, and SnarkJS for the proof generation.
 
 \paragraph{Circom} is a domain-specific language for creating arithmetic circuits, which are used in zk-SNARKs.
 The circuit code can be written to specify the desired constraints.
-Circom allows expressing the circuit's arithmetic operations, constraints, input and output in a concise and readable manner.
-Once the circuit is designed, it needs to be compiled into a format suitable for zk-SNARKs.
+The most significant differences from other languages is the use of signals and templates. 
+You can view templates as a sort of function that act as a circuit. 
+The main template takes signals as inputs, and outputs other signals. Signals can either be public or private.
+Any time you assign a value to a signal, you add to the constraint system and the witness calculation.
+When compiling your circuit, you generate your constraints in a r1cs format.
+A witness file is also created when compiling a circuit. The witness file contains the data necessary to verify the constrate and demonstrate that the circuit behave correctly.
 
-%how the langauge works
-%constraints -> r1cs (===), (<==) add constraints to the system,
-%when compile the circuit genereate r1cs file and witness file
 
 \paragraph{SnarkJS} is a JavaScript library that provides tools for working with zk-SNARKs, including circuit compilation.
-After compilation, SnarkJS facilitates generating zk-SNARK proofs for specific instances of the circuit.
+SnarkJS facilitates generating zk-SNARK proofs for specific instances of the circuit using the r1cs and witness file.
 SnarkJS also provides utilities for verifying the proofs.
 
 
@@ -327,7 +329,7 @@ The standard verification will be applied to the new values (e.g., non-negative 
       %figures side by side
       Here is an example of a change. In this case the change is a change in balance. So first we prove that the 10 BTC of user 1 are 
       included in the merkle tree. Then we prove that the 11 BTC of user 1 are included in the new merkle tree. After the last change we are left
-      with the new root balance and the new root hash.
+      with the new root balance and the new root hash. Not that for every change we only need 1 merkle path.
       \begin{figure}[H]
          \centering
          \includegraphics[width=130mm]{MerklePath.png}
@@ -419,6 +421,16 @@ The step in of a circuit is the step out of the previous one. There is 2 types o
 and the variables that are just there to be public. 
 Starting from the inputs of the regular change circuit, the old hash and old sum root are moved to the step in, while all the outputs are moved to step out.
 
+\begin{figure}[H]
+   \centering
+   \includegraphics[width=130mm]{FoldingCircuit.png}
+   \caption{Folding Circuit}
+   \label{overflow}
+   \end{figure}
+
+S0 is the step in of the first change, S1 is the step out of first change and step in of second change. F is the folded circuit
+and T is the number of time it is folded.
+
 \paragraph{Inputs}
 \begin{itemize}
    \item List of old email hash (private) - 1 per change
@@ -509,14 +521,6 @@ $4\%$  of users to participate in at least 1 round. This significantly reduces t
 The private inputs vary for each instance, whereas the public inputs are carried over from round to round.
 In order to implement folding, we need to slightly adjust our \hyperref[subsec:pi]{circuit}. While most of the circuit stays the same, we change the way we handle inputs and outputs.
 The private inputs vary for every instance, while the public inputs are carried over from round to round.
-\begin{figure}[H]
-   \centering
-   \includegraphics[width=130mm]{FoldingCircuit.png}
-   \caption{Folding \cite{VRS23}}
-   \label{overflow}
-   \end{figure}
-In this chart, S represent the public input and output, which is passed around from round to round. F is the round, while T is the private input.
-We define S as $step_in$ and $step_out$ within our circuit.
 
 \paragraph{Inputs}
 \begin{itemize}
@@ -557,7 +561,3 @@ At the end you only have to verify a single proof. You also need to compare the 
 %https://summa.gitbook.io/summa/v/1/circuits/merkle-sum-tree-inclusion
 %https://www.youtube.com/watch?v=sRAA1RYYHEs
 %https://hackmd.io/@summa/HkGMF4Ovn#The-problem
-
-
-%graph of circuits liabilities folded change, inclusion folded.
-%rework pseudocode of circuits
