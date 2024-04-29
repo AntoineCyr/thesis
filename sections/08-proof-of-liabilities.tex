@@ -119,7 +119,15 @@ which we define using the list of neighbors sum, hash and binary.
 The neighbors binary variable indicates whether the neighbor is on the left or the right.
 The root hash, root sum, user balance and user email hash are public because it needs to be shown which user is in which tree.
 
-%-proof of inclusion figure
+For the next figure, the blue are are the node value needed for our proof of inclusion.
+We would have $neighborsSum=[29,61],neigborsHash=[Hash(User1),Hash(L2,R2)],neighborsBinary=[0,1]$.
+\begin{figure}[H]
+   \centering
+   \includegraphics[width=130mm]{MerklePath.png}
+   \caption{Merkle Path}
+   \label{overflow}
+   \end{figure}
+
 \begin{lstlisting}[language=Python, caption=Inclusion circuit pseudocode]
    # Define a function for the inclusion proof circuit
    def inclusion(levels, neighborsSum, neighborsHash, neighborsBinary, step_in, sum, rootHash, userBalance, userEmailHash):
@@ -315,6 +323,24 @@ The standard verification will be applied to the new values (e.g., non-negative 
              return (notNegative,allSmallRange,validHash, validSum,newRootHash,newSum)
          
       \end{lstlisting}
+
+      %figures side by side
+      Here is an example of a change. In this case the change is a change in balance. So first we prove that the 10 BTC of user 1 are 
+      included in the merkle tree. Then we prove that the 11 BTC of user 1 are included in the new merkle tree. After the last change we are left
+      with the new root balance and the new root hash.
+      \begin{figure}[H]
+         \centering
+         \includegraphics[width=130mm]{MerklePath.png}
+         \caption{Pre change Merkle Path}
+         \label{overflow}
+         \end{figure}
+
+         \begin{figure}[H]
+            \centering
+            \includegraphics[width=130mm]{MerklePathTemp.png}
+            \caption{Post change Merkle Path}
+            \label{overflow}
+            \end{figure}
 
 To recapitulate, for every change in the merkle tree, we have the merkle path with the old values, the new values, the temporary root hash and
 the temporary root sum.
@@ -533,5 +559,5 @@ At the end you only have to verify a single proof. You also need to compare the 
 %https://hackmd.io/@summa/HkGMF4Ovn#The-problem
 
 
-%graph of circuits, explain that folded circuits are the same, but inputs and outputs format change
+%graph of circuits liabilities folded change, inclusion folded.
 %rework pseudocode of circuits
