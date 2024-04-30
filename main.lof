@@ -7,12 +7,16 @@
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {3.1}{\ignorespaces Aggregation Proof \cite {TP24}}}{17}{figure.3.1}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Number of constraints original circuit vs new circuit with 1\% change}}{39}{figure.4.1}%
-\contentsline {figure}{\numberline {4.2}{\ignorespaces Number of constraints original circuit vs new circuit with 0.05\% change}}{40}{figure.4.2}%
-\contentsline {figure}{\numberline {4.3}{\ignorespaces Proof time original circuit vs folded circuit with 1\% change, 1 change by fold}}{41}{figure.4.3}%
-\contentsline {figure}{\numberline {4.4}{\ignorespaces Optimization of the proof time and verifier time of the folded circuit with 1\% change and 1M users}}{42}{figure.4.4}%
-\contentsline {figure}{\numberline {4.5}{\ignorespaces Failure Probability \cite {GP21}}}{46}{figure.4.5}%
-\contentsline {figure}{\numberline {4.6}{\ignorespaces Failure Probability Round 1 \cite {NS23}}}{47}{figure.4.6}%
-\contentsline {figure}{\numberline {4.7}{\ignorespaces Failure Probability Round 1 After 2 Rounds\cite {NS23}}}{48}{figure.4.7}%
-\contentsline {figure}{\numberline {4.8}{\ignorespaces Failure Probability Round 1 after 3 Rounds \cite {NS23}}}{49}{figure.4.8}%
-\contentsline {figure}{\numberline {4.9}{\ignorespaces Folding \cite {VRS23}}}{50}{figure.4.9}%
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Merkle Path}}{30}{figure.4.1}%
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Merkle Tree change}}{40}{figure.4.2}%
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Pre change}}}{40}{subfigure.2.1}%
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Post change}}}{40}{subfigure.2.2}%
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Number of constraints original circuit vs new circuit with 1\% change}}{41}{figure.4.3}%
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Number of constraints original circuit vs new circuit with 0.05\% change}}{42}{figure.4.4}%
+\contentsline {figure}{\numberline {4.5}{\ignorespaces Failure Probability \cite {GP21}}}{44}{figure.4.5}%
+\contentsline {figure}{\numberline {4.6}{\ignorespaces Failure Probability Round 1 \cite {NS23}}}{45}{figure.4.6}%
+\contentsline {figure}{\numberline {4.7}{\ignorespaces Failure Probability Round 1 After 2 Rounds\cite {NS23}}}{46}{figure.4.7}%
+\contentsline {figure}{\numberline {4.8}{\ignorespaces Failure Probability Round 1 after 3 Rounds \cite {NS23}}}{47}{figure.4.8}%
+\contentsline {figure}{\numberline {4.9}{\ignorespaces Folding Circuit}}{49}{figure.4.9}%
+\contentsline {figure}{\numberline {4.10}{\ignorespaces Proof time original circuit vs folded circuit with 1\% change, 1 change by fold}}{50}{figure.4.10}%
+\contentsline {figure}{\numberline {4.11}{\ignorespaces Optimization of the proof time and verifier time of the folded circuit with 1\% change and 1M users}}{51}{figure.4.11}%

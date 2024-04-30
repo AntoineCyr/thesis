@@ -4,14 +4,12 @@
 \chapter{Proof construction}
 We will be using Circom to generate an arithmetic circuit, and SnarkJS for the proof generation.
 
-\paragraph{Circom} is a domain-specific language for creating arithmetic circuits, which are used in zk-SNARKs.
-The circuit code can be written to specify the desired constraints.
-The most significant differences from other languages is the use of signals and templates. 
-You can view templates as a sort of function that act as a circuit. 
-The main template takes signals as inputs, and outputs other signals. Signals can either be public or private.
-Any time you assign a value to a signal, you add to the constraint system and the witness calculation.
-When compiling your circuit, you generate your constraints in a r1cs format.
-A witness file is also created when compiling a circuit. The witness file contains the data necessary to verify the constrate and demonstrate that the circuit behave correctly.
+\paragraph{Circom} is a domain-specific language designed for creating arithmetic circuits, specifically utilized in zk-SNARKs.
+Within Circom, circuit code is written to define the desired constraints. One notable distinction from other languages is the utilization of signals and templates.
+Templates can be conceptualized as functions that operate as circuits. The primary template receives signals as inputs and produces other signals as outputs. Signals can be classified as either public or private.
+Assigning a value to a signal contributes to the constraint system and the witness calculation process.
+Input and outputs are signals, and you can have additionnal intermediate signals.
+During circuit compilation, constraints are generated in r1cs format. Additionally, compiling a circuit produces a witness file containing the data essential for verifying the constraints and demonstrating the correct behavior of the circuit.
 
 
 \paragraph{SnarkJS} is a JavaScript library that provides tools for working with zk-SNARKs, including circuit compilation.
@@ -28,68 +26,66 @@ These verifications are crucial to prevent overflow or underflow issues, given t
 Subsequently, the proof of liabilities constructs a Merkle tree and outputs the total balance sum and the root hash of the Merkle tree.
 
 \begin{lstlisting}[language=Python, caption=Liabilities circuit pseudocode]
-   # Define a function for the Merkle tree sum circuit
-   def sum_merkle_tree(levels, inputs):
-       # Input lists for balances and email hashes
-       balances = [0] * inputs
-       email_hashes = [0] * inputs
-   
-       # Outputs variables for sum, root hash, and range checks
-       root_sum = 0
-       root_hash = 0
-       not_negative = False
-       all_small_range = False
-   
-       # Define signals lists for sum and hash nodes at each level
-       sum_nodes = [[0] * inputs for _ in range(levels + 1)]
-       hash_nodes = [[0] * inputs for _ in range(levels + 1)]
-   
-       # Initialize variables
-       level_size = inputs
-       max_bits = 100
-       temp_not_big = 0
-       temp_not_negative = 0
-   
-       # Loop through each input
-       for i in range(inputs):
-           # Assign input values to hash and sum nodes
-           hash_nodes[0][i] = email_hashes[i]
-           sum_nodes[0][i] = balances[i]
-   
-           # Perform range check and negative check
-           if balances[i] < max_bits:
-               temp_not_big += 1
-           if balances[i] >= 0:
-               temp_not_negative += 1
-   
-       # Check if all balances are within a small range
-       if temp_not_big == inputs:
-           all_small_range = True
-   
-       # Check if all balances are non-negative
-       if temp_not_negative == inputs:
-           not_negative = True
-   
-       # Loop through each level
-       for i in range(levels):
-           # Loop through each pair of nodes at the current level
-           for j in range(0, level_size, 2):
-               # Store sum and root hash for the next level
-               sum_nodes[i + 1][nextLevelSize] = sum_nodes[i][j] + sum_nodes[i][j+1]
-               hash_nodes[i + 1][nextLevelSize] = hash_nodes[i][j] + hash_nodes[i][j+1]
-   
-           # Update the size of the current level
-            levelSize = nextLevelSize;
-            nextLevelSize = 0;
-   
-       # Assign final sum and root hash values
-       root_sum = sum_nodes[levels][0]
-       root_hash = hash_nodes[levels][0]
-   
-       return root_sum, root_hash, not_negative, all_small_range
-   
-\end{lstlisting}
+# Define a function for the Merkle tree sum circuit
+def sum_merkle_tree(levels, inputs, balances[inputs], 
+                     email_hashes[inputs]):
+   # Outputs variables for sum, root hash, and range checks
+   root_sum = 0
+   root_hash = 0
+   not_negative = False
+   all_small_range = False
 
+   # Define signals lists for sum and hash nodes at each level
+   sum_nodes = [[0] * inputs for _ in range(levels+1)]
+   hash_nodes = [[0] * inputs for _ in range(levels+1)]
+
+   # Initialize variables
+   level_size = inputs
+   max_bits = 100
+   temp_not_big = 0
+   temp_not_negative = 0
+
+   # Loop through each input
+   for i in range(inputs):
+      # Assign input values to hash and sum nodes
+      hash_nodes[0][i] = email_hashes[i]
+      sum_nodes[0][i] = balances[i]
+
+      # Perform range check and negative check
+      rangecheck = RangeCheck(maxBits,balances[i])
+      tempNotBig += rangecheck
+      negativecheck = NegativeCheck(newValues[i])
+      tempNotNegative += negativecheck
+
+   # Check if all balances are within a small range
+   if temp_not_big == inputs:
+      all_small_range = True
+
+   # Check if all balances are non-negative
+   if temp_not_negative == inputs:
+      not_negative = True
+
+   # Loop through each level
+   for i in range(levels):
+      # Loop through each pair of nodes at the current level
+      for j in range(0, level_size, 2):
+         # Store sum and root hash for the next level
+         sum_nodes[i+1][nextLevelSize] = 
+            sum_nodes[i][j] + sum_nodes[i][j+1]
+         hash_nodes[i+1][nextLevelSize] = 
+            hash_nodes[i][j] + hash_nodes[i][j+1]
+
+      # Update the size of the current level
+      levelSize = nextLevelSize;
+      nextLevelSize = 0;
+
+   # Assign final sum and root hash values
+   root_sum = sum_nodes[levels][0]
+   root_hash = hash_nodes[levels][0]
+
+   return root_sum, root_hash, not_negative, all_small_range
+
+\end{lstlisting}
 
 \paragraph{Inputs}
 \begin{itemize}
@@ -99,13 +95,13 @@ Subsequently, the proof of liabilities constructs a Merkle tree and outputs the 
 
 \paragraph{Outputs}
 \begin{itemize}
-   \item Balance Sum (public)
-   \item Root hash (public)
-   \item No negative values (private) - boolean
-   \item All small range (private) - boolean
+   \item Balance Sum 
+   \item Root hash
+   \item No negative values - boolean
+   \item All small range - boolean
    \end{itemize}
 
-This proof of liabilities operates as intended because it returns the sum of the liabilities, which is exact because of the checks.
+This proof of liabilities operates as intended because it returns the sum of the liabilities, which is exact because of the verifications.
 It also returns the root hash, ensuring you cannot alter any values inside the merkle tree. The merkle tree is hidden so that we do not
 give any information about users and their balances.
 The root hash will be used to verify the inclusion of the balances.
@@ -121,8 +117,8 @@ which we define using the list of neighbors sum, hash and binary.
 The neighbors binary variable indicates whether the neighbor is on the left or the right.
 The root hash, root sum, user balance and user email hash are public because it needs to be shown which user is in which tree.
 
-For the next figure, the blue are are the node value needed for our proof of inclusion.
-We would have $neighborsSum=[29,61],neigborsHash=[Hash(User1),Hash(L2,R2)],neighborsBinary=[0,1]$.
+For the next figure, the blue nodes represent the value of the merkle path.
+We would have $neighborsSum=[29,61]$, $neigborsHash=[Hash(User1),Hash(L2,R2)]$ and $neighborsBinary=[0,1]$.
 \begin{figure}[H]
    \centering
    \includegraphics[width=130mm]{MerklePath.png}
@@ -131,32 +127,34 @@ We would have $neighborsSum=[29,61],neigborsHash=[Hash(User1),Hash(L2,R2)],neigh
    \end{figure}
 
 \begin{lstlisting}[language=Python, caption=Inclusion circuit pseudocode]
-   # Define a function for the inclusion proof circuit
-   def inclusion(levels, neighborsSum, neighborsHash, neighborsBinary, step_in, sum, rootHash, userBalance, userEmailHash):
-   
-       # Initialize sum and hash nodes
-       sumNodes = [0] * (levels + 1)
-       hashNodes = [0] * (levels + 1)
-       sumNodes[0] = userBalance
-       hashNodes[0] = userEmailHash
-   
-       # Iterate through each level
-       for i in range(levels):
-           # Update hash node
-           if neighborsBinary[i]:
-               hashNodes[i + 1]=getHash(neighborsHash[i],neighborsSum[i],hashNodes[i],sumNode[i])
-           else:
-               hashNodes[i + 1]=getHash(hashNodes[i],sumNode[i],neighborsHash[i],neighborsSum[i])
-           # Update sum node
-           sumNodes[i + 1] = neighborsSum[i] + sumNodes[i]
-   
-       # Check validity of root hash
-       validHash = IsEqual([hashNodes[levels], rootHash])
-   
-       # Check validity of sum
-       validSum = IsEqual([sumNodes[levels], sum])
-   
-       return validSum,validHash
+# Define a function for the inclusion proof circuit
+def inclusion(levels, neighborsSum, neighborsHash, neighborsBinary, 
+               step_in, sum, rootHash, userBalance, userEmailHash):
+   # Initialize sum and hash nodes
+   sumNodes = [0] * (levels+1)
+   hashNodes = [0] * (levels+1)
+   sumNodes[0] = userBalance
+   hashNodes[0] = userEmailHash
+
+   # Iterate through each level
+   for i in range(levels):
+      # Update hash node
+      if neighborsBinary[i]:
+         hashNodes[i+1]=getHash(neighborsHash[i],
+         neighborsSum[i],hashNodes[i],sumNode[i])
+      else:
+         hashNodes[i+1]=getHash(hashNodes[i],sumNode[i],
+         neighborsHash[i],neighborsSum[i])
+      # Update sum node
+      sumNodes[i + 1] = neighborsSum[i] + sumNodes[i]
+
+   # Check validity of root hash
+   validHash = IsEqual([hashNodes[levels], rootHash])
+
+   # Check validity of sum
+   validSum = IsEqual([sumNodes[levels], sum])
+
+   return validSum,validHash
 \end{lstlisting}
 
 
@@ -174,7 +172,7 @@ We would have $neighborsSum=[29,61],neigborsHash=[Hash(User1),Hash(L2,R2)],neigh
 
 \paragraph{Outputs}
 \begin{itemize}
-   \item Balance included (public) - boolean
+   \item Balance included - boolean
    \end{itemize}
 
 \paragraph{}
@@ -224,142 +222,140 @@ The standard verification will be applied to the new values (e.g., non-negative 
    \item List of neighbors sum (private) - 1 list per change
    \item List of neighbors hash (private) - 1 list per change
    \item List of neighbors binary (private) - 1 list per change
+\end{itemize}
+
+\paragraph{Outputs}
+\begin{itemize}
+   \item Valid hash
+   \item Valid sum
+   \item No negative values
+   \item All small range
+   \item New root hash 
+   \item New root sum
    \end{itemize}
 
-   \paragraph{Outputs}
-   \begin{itemize}
-       \item Valid hash
-       \item Valid sum
-       \item No negative values
-       \item All small range
-       \item New root hash 
-       \item New root sum
-       \end{itemize}
+\begin{lstlisting}[language=Python, caption=Liabilities change circuit pseudocode]
+# Define a function for the liabilities change proof circuit
+def liabilities(levels, changes,oldEmailHash[changes],
+      oldValues[changes],newEmailHash[changes],newValues[changes],
+      tempHash[changes+1],tempSum[changes+1],
+      neighborsSum[changes][levels],neighborsHash[changes][levels],
+      neighborsBinary[changes][levels]):         
+   # Calculate newRootHash and newSum
+   newRootHash = tempHash[changes+1]
+   newSum = tempSum[changes+1]
+   oldSum = tempSum[0]
+   oldRootHash = tempHash[0]
+   currentSum = oldSum
 
-       \begin{lstlisting}[language=Python, caption=Liabilities change circuit pseudocode]
-         # Define a function for the liabilities change proof circuit
-         def liabilities(levels, changes,oldEmailHash[changes],oldValues[changes],newEmailHash[changes],newValues[changes],tempHash[changes+1],tempSum[changes+1],neighborsSum[changes][levels],neighborsHash[changes][levels],neighborsBinary[changes][levels]):         
-             # Calculate newRootHash and newSum
-             newRootHash = tempHash[changes+1]
-             newSum = tempSum[changes+1]
-             oldSum = tempSum[0]
-             oldRootHash = tempHash[0]
-             currentSum = oldSum
-         
-             # Part 1: Check validity of new values
-             tempNotBig = 0
-             tempNotNegative = 0
-             maxBits = 100
-         
-             # Iterate through each change
-             for i in range(changes):
-                 # Calculate currentSum
-                 currentSum += newValues[i] - oldValues[i]
-         
-                 # Perform range check and negative check
-                 rangecheck = RangeCheck(maxBits)
-                 rangecheck.in_ = newValues[i]
-                 tempNotBig += rangecheck.out
-                 negativecheck = NegativeCheck()
-                 negativecheck.in_ = newValues[i]
-                 tempNotNegative += negativecheck.out
-         
-             # Check if all new values are within range
-             allSmallRange = IsEqual([changes, tempNotBig]).out
-         
-             # Check if all new values are not negative
-             notNegative = IsEqual([changes, tempNotNegative]).out
-         
-             # Check if newSum equals currentSum
-             equalSum = IsEqual([newSum, currentSum]).out
-         
-             # Part 2: Check validity of old and new paths
-             # Ensure that old root + change = temp root
-             tempValidHash = [0] * (changes + 1)
-             tempValidSum = [0] * (changes + 1)
-             tempOldHashEqual = [0] * (changes + 1)
-             tempOldSumEqual = [0] * (changes + 1)
-             tempValidHash[0] = 1
-             tempValidSum[0] = 1
-         
-             #For each level, we checking the inclusion of the value changing, and the new value.
-             #hashNode[0] and sumNodes[0] is for the inclusion of the value changing
-             #hashNode[1] and sumNodes[1] is for the inclusion of the new value
+   # Part 1: Check validity of new values
+   tempNotBig = 0
+   tempNotNegative = 0
+   maxBits = 100
 
-             for j in range(changes):
-                 for i in range(levels):
-                  if neighborsBinary[j][i]:
-                     hashNodes[0][j][i+1]=getHash(neighborsHash[j][i],neighborsSum[j][i],hashNodes[0][j][i],sumNode[0][j][i])
-                     hashNodes[1][j][i+1]=getHash(neighborsHash[j][i],neighborsSum[j][i],hashNodes[1][j][i],sumNode[1][j][i])
-                  else:
-                     hashNodes[0][j][i+1]=getHash(hashNodes[0][j][i],sumNode[0][j][i],neighborsHash[j][i],neighborsSum[j][i])
-                     hashNodes[1][j][i+1]=getHash(hashNodes[1][j][i],sumNode[1][j][i],neighborsHash[j][i],neighborsSum[j][i])
+   # Iterate through each change
+   for i in range(changes):
+      # Calculate currentSum
+      currentSum += newValues[i] - oldValues[i]
 
-                  sumNodes[0][j][i+1] = sumNode[0][j][i] + neighborsSum[j][i]
-                  sumNodes[1][j][i+1] = sumNode[0][j][i] + neighborsSum[j][i]
-                     
-         
-                 # Old calculated old hash is in tempdHash
-                 hashEqual[0][j] = IsEqual()
-                 hashEqual[0][j].in_ = [hashNodes[0][j][levels], tempHash[j]].out
-                 tempOldHashEqual[j+1] = tempOldHashEqual[j] * hashEqual[0][j].out
-         
-                 # New temp hash is valid
-                 hashEqual[1][j] = IsEqual()
-                 hashEqual[1][j].in_ = [hashNodes[1][j][levels], tempHash[j+1]].out
-                 tempValidHash[j+1] = tempValidHash[j] * hashEqual[1][j].out
-         
-                 # Old calculated sum is in tempSum
-                 sumEqual[0][j] = IsEqual()
-                 sumEqual[0][j].in_ = [sumNodes[0][j][levels], tempSum[j]].out
-                 tempOldSumEqual[j+1] = tempOldSumEqual[j] * sumEqual[0][j].out
-                 
-                 # New temp sum is valid
-                 sumEqual[1][j] = IsEqual()
-                 sumEqual[1][j].in_ = [sumNodes[1][j][levels], tempSum[j+1]].out
-                 tempValidSum[j+1] = tempValidSum[j] * sumEqual[1][j].out
-         
-             validHash = tempValidHash[changes] * tempOldHashEqual[changes]
-             validSum = tempValidSum[changes] * tempOldSumEqual[changes]
-         
-             return (notNegative,allSmallRange,validHash, validSum,newRootHash,newSum)
-         
-      \end{lstlisting}
+      # Perform range check and negative check
+      rangecheck = RangeCheck(maxBits,newValues[i])
+      tempNotBig += rangecheck
+      negativecheck = NegativeCheck(newValues[i])
+      tempNotNegative += negativecheck
 
-      %figures side by side
-      Here is an example of a change. In this case the change is a change in balance. So first we prove that the 10 BTC of user 1 are 
-      included in the merkle tree. Then we prove that the 11 BTC of user 1 are included in the new merkle tree. After the last change we are left
-      with the new root balance and the new root hash. Not that for every change we only need 1 merkle path.
-      \begin{figure}[H]
-         \centering
-         \includegraphics[width=130mm]{MerklePath.png}
-         \caption{Pre change Merkle Path}
-         \label{overflow}
-         \end{figure}
+   # Check if all new values are within range
+   allSmallRange = IsEqual([changes, tempNotBig])
 
-         \begin{figure}[H]
-            \centering
-            \includegraphics[width=130mm]{MerklePathTemp.png}
-            \caption{Post change Merkle Path}
-            \label{overflow}
-            \end{figure}
+   # Check if all new values are not negative
+   notNegative = IsEqual([changes, tempNotNegative])
 
-To recapitulate, for every change in the merkle tree, we have the merkle path with the old values, the new values, the temporary root hash and
+   # Check if newSum equals currentSum
+   equalSum = IsEqual([newSum, currentSum])
+
+   # Part 2: Check validity of old and new paths
+   # Ensure that old root + change = temp root
+   tempValidHash = [0] * (changes + 1)
+   tempValidSum = [0] * (changes + 1)
+   tempOldHashEqual = [0] * (changes + 1)
+   tempOldSumEqual = [0] * (changes + 1)
+   tempValidHash[0] = 1
+   tempValidSum[0] = 1
+
+   #For each level, we are veryfing the inclusion of the value changing
+   #and the new value.
+   #hashNode[0] and sumNodes[0] is for the inclusion of the value changing
+   #hashNode[1] and sumNodes[1] is for the inclusion of the new value
+
+   for j in range(changes):
+      for i in range(levels):
+      if neighborsBinary[j][i]:
+         hashNodes[0][j][i+1]=getHash(neighborsHash[j][i],
+            neighborsSum[j][i],hashNodes[0][j][i],sumNode[0][j][i])
+         hashNodes[1][j][i+1]=getHash(neighborsHash[j][i],
+            neighborsSum[j][i],hashNodes[1][j][i],sumNode[1][j][i])
+      else:
+         hashNodes[0][j][i+1]=getHash(hashNodes[0][j][i],
+            sumNode[0][j][i],neighborsHash[j][i],neighborsSum[j][i])
+         hashNodes[1][j][i+1]=getHash(hashNodes[1][j][i],
+            sumNode[1][j][i],neighborsHash[j][i],neighborsSum[j][i])
+
+      sumNodes[0][j][i+1] = sumNode[0][j][i] + neighborsSum[j][i]
+      sumNodes[1][j][i+1] = sumNode[0][j][i] + neighborsSum[j][i]
+         
+
+      # Old calculated old hash is in tempHash
+      hashEqual = IsEqual(hashNodes[0][j][levels], tempHash[j])
+      tempOldHashEqual[j+1] = tempOldHashEqual[j] * hashEqual
+
+      # New temp hash is valid
+      hashEqual = IsEqual(hashNodes[1][j][levels], tempHash[j+1])
+      tempValidHash[j+1] = tempValidHash[j] * hashEqual
+
+      # Old calculated sum is in tempSum
+      sumEqual = IsEqual(sumNodes[0][j][levels], tempSum[j])
+      tempOldSumEqual[j+1] = tempOldSumEqual[j] * sumEqual
+      
+      # New temp sum is valid
+      sumEqual = IsEqual(sumNodes[1][j][levels], tempSum[j+1])
+      tempValidSum[j+1] = tempValidSum[j] * sumEqual
+
+   validHash = tempValidHash[changes] * tempOldHashEqual[changes]
+   validSum = tempValidSum[changes] * tempOldSumEqual[changes]
+
+   return (notNegative,allSmallRange,validHash, 
+            validSum,newRootHash,newSum)
+   
+\end{lstlisting}
+
+Here is an example of a change. In this case the change is a change in balance. First we prove that the 10 BTC of user 1 are 
+included in the merkle tree. Then we prove that the 11 BTC of user 1 are included in the new merkle tree. After the last change we are left
+with the new root balance and the new root hash. Not that for every change we only need 1 merkle path.
+
+\begin{figure}
+   \hfill
+   \subfloat[Pre change]{\includegraphics[width=70mm]{MerklePath.png}}
+   \hfill
+   \subfloat[Post change]{\includegraphics[width=70mm]{MerklePathTemp.png}}
+   \hfill
+   \caption{Merkle Tree change}
+   \end{figure}
+
+
+For every change in the merkle tree, we have the merkle path with the old values, the new values, the temporary root hash and
 the temporary root sum.
-The merkle path is used as an inclusion proof for the old value, and is used to verify the temporary root hash and the temporary root sum.
 The circuit is iterating over the changes and gives a final root hash and final root sum.
 
 \subsubsection{Minimizing the number of changes}
 To minimize the number of constraints, we want to minimize the number of changes.
 We define a change as a hash change at the leaf level. Any new user, balance change or removal of old user is considered as a change.
-The naive change calculation would be $change = balance change + new user + deprecate user$.
-However, a new user can take the node of a deprecater user. So we would have the equation $change = balance change +max(new user + deprecate user)$
+The naive change calculation would be $changes = balanceChanges + newUsers + deprecateUser$.
+However, a new user can take the node of a deprecater user. So we would have the equation $changes = balanceChanges +max(newUsers + deprecateUser)$.
 
 \subsubsection{Constraint analysis}
 Theorically, the new circuit makes sense. It should be quite faster than the original one, so let's analyze it.
-First, lets look at doing a daily proof where there is a change in the user's value.
-
-The first assumption we are gonna need to do, is to assume the number of balance change. A completely arbitrary value would be $1\%$.
+We want to compare the number of constaints for the original circuit with the number of constraints with the change circuit.
+The first assumption we are gonna need to do, is to assume the number of changes in a day. A completely arbitrary value would be $1\%$.
 \begin{figure}[H]
    \centering
    \includegraphics[width=130mm]{Number of constraints.png}
@@ -382,82 +378,9 @@ Lets look at the number of constraints if $0.05\%$ of users change every hour.
 Even with more than 1 million users, there is still 3 times less constraints with our new circuit.
 So if we want to do an hourly proof, it is less expensive with the new circuit than the old circuit.
 We can take this a step further, and do a proof at every new block. We could have a merkle tree up to date for the liabilities side at every single block.
+
 While the hourly proof and block proof is better with the new circuit, maybe a daily proof is sufficient for most use cases.
-
-\subsection{Folded proof of liabilities}
-With the original circuit, we saw how it was not usefull to use folding or any other recursion scheme.
-However, with the new circuit we saw that we were able to separate a big proof into multiple smaller ones.
-This aligns prefectly wth the recursions ideas.
-We can separate our new circuit of $n$ changes into $m$ circuits, where $m <= n$, and fold the circuits together.
-
-\begin{figure}[H]
-   \centering
-   \includegraphics[width=130mm]{Proof time.png}
-   \caption{Proof time original circuit vs folded circuit with 1\% change, 1 change by fold}
-   \label{overflow}
-   \end{figure}
-
-As we can see, after some time both circuits seems to be groing linearly, with the folded circuit doing much better. For instance,
-at 1M users, we have the old circuit taking 196608 seconds, and the new circuits taking 17188 seconds. This is more than 10 times better.
-We should take the number of seconds with a grain of salt, since these measurements were done on my mac, and there are much more performant computers out there.
-The data we should focus on is that it took 10x less time for the folded circuit, and it was not event optimized. We were doing 1 change by circuit, so at 1M users we folded 10k circuits.
-
-Now that we know that our circuit is better, we can optimize it.
-
-\begin{figure}[H]
-   \centering
-   \includegraphics[width=130mm]{Proof time.png}
-   \caption{Optimization of the proof time and verifier time of the folded circuit with 1\% change and 1M users}
-   \label{overflow}
-   \end{figure}
-
-As we can see, the optimize time for the proofer, is between 8 and 32 changes by fold, while the verifier time seems to be groing at a monotonic pace.
-Depending on the use case, you can decide the numbe of changes you should have for every fold. 
-
-\subsection{Folded change circuit}
-The folded change circuit is exactly the same as the regular change circuit, but the inputs works differently because some data is passed around the circuits.
-All the data that is passed around between the circuits is public and is called step in and step out, and the regular inputs are private.
-The step in of a circuit is the step out of the previous one. There is 2 types of step variables; the variables needed in the following circuit,
-and the variables that are just there to be public. 
-Starting from the inputs of the regular change circuit, the old hash and old sum root are moved to the step in, while all the outputs are moved to step out.
-
-\begin{figure}[H]
-   \centering
-   \includegraphics[width=130mm]{FoldingCircuit.png}
-   \caption{Folding Circuit}
-   \label{overflow}
-   \end{figure}
-
-S0 is the step in of the first change, S1 is the step out of first change and step in of second change. F is the folded circuit
-and T is the number of time it is folded.
-
-\paragraph{Inputs}
-\begin{itemize}
-   \item List of old email hash (private) - 1 per change
-   \item List of old values (private) - 1 per change
-   \item List of new email hash (private) - 1 per change
-   \item List of new values (private) - 1 per change
-   \item List of temporary root hash (private) - 1 per change
-   \item List of temporary root sum (private) - 1 per change
-   \item List of neighbors sum (private) - 1 list per change
-   \item List of neighbors hash (private) - 1 list per change
-   \item List of neighbors binary (private) - 1 list per change
-   \item Step in (public)
-   \end{itemize}
-
-\paragraph{Outputs}
-\begin{itemize}
-   \item Steps out (public)
-   \end{itemize}
-
-\paragraph{Steps}
-\begin{itemize}
-   \item Valid hash and valid sum
-   \item No negative value and all small range
-   \item Root hash
-   \item Root sum
-   \end{itemize}
-
+It is still less work to do the daily proof with the original circuit, than to do 24 hourly proof with the new circuit.
 
 \section{Daily proof of inclusion}
 
@@ -519,7 +442,7 @@ $4\%$  of users to participate in at least 1 round. This significantly reduces t
 
 \subsection{Circuit Design}
 The private inputs vary for each instance, whereas the public inputs are carried over from round to round.
-In order to implement folding, we need to slightly adjust our \hyperref[subsec:pi]{circuit}. While most of the circuit stays the same, we change the way we handle inputs and outputs.
+In order to implement folding, we need to slightly adjust our \hyperref[subsec:pi]{circuit}. Everything except the way we handle inputs and outputs stays the same.
 The private inputs vary for every instance, while the public inputs are carried over from round to round.
 
 \paragraph{Inputs}
@@ -549,12 +472,88 @@ The private inputs vary for every instance, while the public inputs are carried 
    \item User balance
    \item User email hash
    \end{itemize}
+
+   All the data that is passed around between the circuits is public and is called step in and step out, and the regular inputs are private.
+   The step in of a circuit is the step out of the previous one. 
+
+\begin{figure}[H]
+   \centering
+   \includegraphics[width=130mm]{FoldingCircuit.png}
+   \caption{Folding Circuit}
+   \label{overflow}
+   \end{figure}
+
+S0 is the step in of the first change, S1 is the step out of first change and step in of second change. F is the folded circuit
+and T is the number of time it is folded.
+
 These steps encompass all the public values we initially had in the circuit.
 None of the variables of the steps are used in the circuit itself. They are used as a means to make a value public.
-The steps are all the public values we had in the first circuit.
 
 The initial circuit takes meaningless values as inputs, while the following circuits take the public values of the previous circuit.
 At the end you only have to verify a single proof. You also need to compare the circuit output with the proof of liabilities outputs for every round.
+
+\section{Folded daily proof of liabilities}
+With the original circuit, we saw how it was not usefull to use folding or any other recursion scheme.
+However, with the new circuit we saw that we were able to separate a big proof into multiple smaller ones.
+This aligns prefectly wth the recursions ideas.
+We can separate our new circuit of $n$ changes into $m$ circuits, where $m <= n$, and fold the circuits together.
+
+\begin{figure}[H]
+   \centering
+   \includegraphics[width=130mm]{Proof time.png}
+   \caption{Proof time original circuit vs folded circuit with 1\% change, 1 change by fold}
+   \label{overflow}
+   \end{figure}
+
+As we can see, after 10 000 users, both circuits seems to be groing linearly, with the folded circuit doing much better. For instance,
+at 1M users, we have the old circuit taking 196608 seconds, and the new circuits taking 17188 seconds. This is more than 10 times better.
+We should take the number of seconds with a grain of salt, since these measurements were done on my mac, and there are much more performant computers out there.
+The data we should focus on is that it took 10x less time for the folded circuit, and it was not event optimized. We were doing 1 change by circuit, so at 1M users we folded 10k circuits.
+
+Now that we know that our circuit is better, we can optimize it.
+
+\begin{figure}[H]
+   \centering
+   \includegraphics[width=130mm]{Proof time vs verifier time.png}
+   \caption{Optimization of the proof time and verifier time of the folded circuit with 1\% change and 1M users}
+   \label{overflow}
+   \end{figure}
+
+As we can see, the optimize time for the proofer, is between 8 and 32 changes by fold, while the verifier time seems to be groing at a monotonic pace.
+Depending on the use case, you can decide the numbe of changes you should have for every fold. 
+
+\subsection{Circuit design}
+The folded change circuit is exactly the same as the regular change circuit, but the inputs works differently because some data is passed around the circuits.
+There is 2 types of step variables; the variables needed in the following circuit, and the variables that are just there to be public. 
+Starting from the inputs of the regular change circuit, the old hash and old sum root are moved to the step in, while all the outputs are moved to step out.
+
+\paragraph{Inputs}
+\begin{itemize}
+   \item List of old email hash (private) - 1 per change
+   \item List of old values (private) - 1 per change
+   \item List of new email hash (private) - 1 per change
+   \item List of new values (private) - 1 per change
+   \item List of temporary root hash (private) - 1 per change
+   \item List of temporary root sum (private) - 1 per change
+   \item List of neighbors sum (private) - 1 list per change
+   \item List of neighbors hash (private) - 1 list per change
+   \item List of neighbors binary (private) - 1 list per change
+   \item Step in (public)
+   \end{itemize}
+
+\paragraph{Outputs}
+\begin{itemize}
+   \item Steps out
+   \end{itemize}
+
+\paragraph{Steps}
+\begin{itemize}
+   \item Valid hash and valid sum
+   \item No negative value and all small range
+   \item Root hash
+   \item Root sum
+   \end{itemize}
+
 
 %Mina proof of recursion
 %summa

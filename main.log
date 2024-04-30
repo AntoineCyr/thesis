@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.3.5)  28 APR 2024 16:20
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.3.5)  30 APR 2024 16:34
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -609,7 +609,7 @@ Chapter 2.
 [2
 
 ] [3] [4] [5]
-<MerkleTree.png, id=316, 245.91875pt x 233.87375pt>
+<MerkleTree.png, id=313, 245.91875pt x 233.87375pt>
 File: MerkleTree.png Graphic file (type png)
 <use MerkleTree.png>
 Package pdftex.def Info: MerkleTree.png  used on input line 86.
@@ -621,12 +621,12 @@ has been already used, duplicate ignored
                                                   \__shipout_drop_firstpage_...
 l.100 
        <./MerkleTree.png>] [7] [8] [9]
-<ArithmeticCircuit.png, id=350, 264.99pt x 276.03125pt>
+<ArithmeticCircuit.png, id=348, 264.99pt x 276.03125pt>
 File: ArithmeticCircuit.png Graphic file (type png)
 <use ArithmeticCircuit.png>
 Package pdftex.def Info: ArithmeticCircuit.png  used on input line 185.
 (pdftex.def)             Requested size: 170.71652pt x 177.83029pt.
-<Circuit.png, id=352, 936.49875pt x 423.5825pt>
+<Circuit.png, id=350, 936.49875pt x 423.5825pt>
 File: Circuit.png Graphic file (type png)
 <use Circuit.png>
 Package pdftex.def Info: Circuit.png  used on input line 201.
@@ -644,7 +644,7 @@ has been already used, duplicate ignored
                                                   \__shipout_drop_firstpage_...
 l.244 
        <./Circuit.png>]
-<MerkleTreeLiabilities.png, id=366, 560.0925pt x 291.0875pt>
+<MerkleTreeLiabilities.png, id=364, 560.0925pt x 291.0875pt>
 File: MerkleTreeLiabilities.png Graphic file (type png)
 <use MerkleTreeLiabilities.png>
 Package pdftex.def Info: MerkleTreeLiabilities.png  used on input line 260.
@@ -666,7 +666,7 @@ Chapter 3.
 [15
 
 ]
-<AggregationProof.png, id=399, 711.65875pt x 397.485pt>
+<AggregationProof.png, id=397, 711.65875pt x 397.485pt>
 File: AggregationProof.png Graphic file (type png)
 <use AggregationProof.png>
 Package pdftex.def Info: AggregationProof.png  used on input line 36.
@@ -705,314 +705,272 @@ File: lstlang1.sty 2023/02/27 1.9 listings language file
 Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on i
 nput line 28.
 
-Overfull \hbox (10.52924pt too wide) in paragraph at lines 35--36
-[][][][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (31.6792pt too wide) in paragraph at lines 41--42
+[25]
+Overfull \hbox (3.47925pt too wide) in paragraph at lines 38--39
 [][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
-[25]
-LaTeX Font Info:    Trying to load font information for OML+cmr on input line 5
-8.
- (/usr/local/texlive/2023/texmf-dist/tex/latex/base/omlcmr.fd
-File: omlcmr.fd 2022/07/10 v2.5l Standard LaTeX font definitions
-)
-LaTeX Font Info:    Font shape `OML/cmr/m/n' in size <12> not available
-(Font)              Font shape `OML/cmm/m/it' tried instead on input line 58.
- [26]
-Overfull \hbox (24.62921pt too wide) in paragraph at lines 73--74
-[][][][][][][][][][][][][][][][][][][][][][][][][] 
- []
+[26] [27] [28]
+<MerklePath.png, id=541, 722.7pt x 542.025pt>
+File: MerklePath.png Graphic file (type png)
+<use MerklePath.png>
+Package pdftex.def Info: MerklePath.png  used on input line 124.
+(pdftex.def)             Requested size: 369.88582pt x 277.41328pt.
 
-
-Overfull \hbox (158.57898pt too wide) in paragraph at lines 76--77
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (179.72894pt too wide) in paragraph at lines 77--79
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-[27]
-Overfull \hbox (17.57922pt too wide) in paragraph at lines 87--89
-[][][][][][][][][][][][][][][][] 
- []
-
-[28]
-Overfull \hbox (433.5285pt too wide) in paragraph at lines 125--127
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+Overfull \hbox (1.68867pt too wide) in paragraph at lines 120--127
+\OT1/cmr/m/n/12 would have $\OML/cmm/m/it/12 neighborsSum \OT1/cmr/m/n/12 = [29
+\OML/cmm/m/it/12 ; \OT1/cmr/m/n/12 61]$, $\OML/cmm/m/it/12 neigborsHash \OT1/cm
+r/m/n/12 = [\OML/cmm/m/it/12 Hash\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 User\OT1/cmr
+/m/n/12 1)\OML/cmm/m/it/12 ; Hash\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 L\OT1/cmr/m/
+n/12 2\OML/cmm/m/it/12 ; R\OT1/cmr/m/n/12 2)]$
  []
 
 [29]
-Overfull \hbox (250.22882pt too wide) in paragraph at lines 137--138
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+Overfull \hbox (38.72919pt too wide) in paragraph at lines 131--132
+[][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (250.22882pt too wide) in paragraph at lines 139--140
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+Overfull \hbox (38.72919pt too wide) in paragraph at lines 132--133
+[][][][][][][][][][][][][][][][][][] 
  []
 
-[30] [31] [32] [33]
-Overfull \hbox (52.82916pt too wide) in paragraph at lines 230--231
-[][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (1378.22687pt too wide) in paragraph at lines 231--232
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][][][][][][][][][][] 
- []
-
-[34]
-Overfull \hbox (10.52924pt too wide) in paragraph at lines 258--260
-[][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (31.6792pt too wide) in paragraph at lines 261--263
-[][][][][][][][][][][][][][][][] 
- []
-
-[35]
-Overfull \hbox (250.22882pt too wide) in paragraph at lines 275--276
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (158.57898pt too wide) in paragraph at lines 276--277
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (123.32904pt too wide) in paragraph at lines 277--279
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (447.62848pt too wide) in paragraph at lines 282--283
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (447.62848pt too wide) in paragraph at lines 283--284
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (447.62848pt too wide) in paragraph at lines 285--286
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-[36]
-Overfull \hbox (447.62848pt too wide) in paragraph at lines 286--288
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (109.22906pt too wide) in paragraph at lines 288--289
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (109.22906pt too wide) in paragraph at lines 289--292
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (137.42902pt too wide) in paragraph at lines 294--295
-[][][][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (144.479pt too wide) in paragraph at lines 295--297
-[][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (151.52899pt too wide) in paragraph at lines 299--300
-[][][][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (102.17908pt too wide) in paragraph at lines 300--302
-[][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (116.27905pt too wide) in paragraph at lines 304--305
-[][][][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (123.32904pt too wide) in paragraph at lines 305--307
-[][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-[37]
-Overfull \hbox (130.37903pt too wide) in paragraph at lines 309--310
-[][][][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (81.02911pt too wide) in paragraph at lines 310--312
-[][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (95.12909pt too wide) in paragraph at lines 312--313
-[][][][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (73.97913pt too wide) in paragraph at lines 313--315
-[][][][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (172.67896pt too wide) in paragraph at lines 315--317
-[][][][][][][][][][][][][][][][][][][][] 
- []
-
-[38]
-<Number of constraints.png, id=708, 602.25pt x 372.39125pt>
-File: Number of constraints.png Graphic file (type png)
-<use Number of constraints.png>
-Package pdftex.def Info: Number of constraints.png  used on input line 337.
-(pdftex.def)             Requested size: 369.88582pt x 228.72093pt.
-<Number of constraints .05.png, id=709, 602.25pt x 372.39125pt>
-File: Number of constraints .05.png Graphic file (type png)
-<use Number of constraints .05.png>
-Package pdftex.def Info: Number of constraints .05.png  used on input line 350.
-
-(pdftex.def)             Requested size: 369.88582pt x 228.72093pt.
- [39
+[30
 pdfTeX warning (ext4): destination with the same identifier (name{figure.4.1}) 
 has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.353    \end{figure}
-                      <./Number of constraints.png>] [40
+l.140    for 
+             i in range(levels): <./MerklePath.png (PNG copy)>] [31] [32]
+[33] [34]
+Overfull \hbox (31.6792pt too wide) in paragraph at lines 240--241
+[][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (38.72919pt too wide) in paragraph at lines 242--243
+[][][][][][][][][][][][][][][][] 
+ []
+
+[35] [36]
+Overfull \hbox (66.92914pt too wide) in paragraph at lines 285--286
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+[37]
+Overfull \hbox (88.0791pt too wide) in paragraph at lines 287--288
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (52.82916pt too wide) in paragraph at lines 288--290
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (38.72919pt too wide) in paragraph at lines 294--295
+[][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (38.72919pt too wide) in paragraph at lines 296--297
+[][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (45.77917pt too wide) in paragraph at lines 299--300
+[][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (45.77917pt too wide) in paragraph at lines 301--303
+[][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (24.62921pt too wide) in paragraph at lines 303--304
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (24.62921pt too wide) in paragraph at lines 304--307
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (10.52924pt too wide) in paragraph at lines 308--309
+[][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+[38]
+Overfull \hbox (24.62921pt too wide) in paragraph at lines 312--313
+[][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (3.47925pt too wide) in paragraph at lines 320--321
+[][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (24.62921pt too wide) in paragraph at lines 323--324
+[][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (3.47925pt too wide) in paragraph at lines 324--326
+[][][][][][][][][][][][][][][][][][][] 
+ []
+
+[39]
+File: MerklePath.png Graphic file (type png)
+<use MerklePath.png>
+Package pdftex.def Info: MerklePath.png  used on input line 337.
+(pdftex.def)             Requested size: 199.16928pt x 149.37575pt.
+<MerklePathTemp.png, id=716, 722.7pt x 542.025pt>
+File: MerklePathTemp.png Graphic file (type png)
+<use MerklePathTemp.png>
+Package pdftex.def Info: MerklePathTemp.png  used on input line 339.
+(pdftex.def)             Requested size: 199.16928pt x 149.37575pt.
+<Number of constraints.png, id=717, 602.25pt x 372.39125pt>
+File: Number of constraints.png Graphic file (type png)
+<use Number of constraints.png>
+Package pdftex.def Info: Number of constraints.png  used on input line 361.
+(pdftex.def)             Requested size: 369.88582pt x 228.72093pt.
+ [40
 pdfTeX warning (ext4): destination with the same identifier (name{figure.4.2}) 
 has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.364 
-       <./Number of constraints .05.png>]
-<Proof time.png, id=722, 602.25pt x 372.39125pt>
-File: Proof time.png Graphic file (type png)
-<use Proof time.png>
-Package pdftex.def Info: Proof time.png  used on input line 367.
+l.364    \end{figure}
+                      <./MerklePathTemp.png (PNG copy)>]
+<Number of constraints .05.png, id=726, 602.25pt x 372.39125pt>
+File: Number of constraints .05.png Graphic file (type png)
+<use Number of constraints .05.png>
+Package pdftex.def Info: Number of constraints .05.png  used on input line 374.
+
 (pdftex.def)             Requested size: 369.88582pt x 228.72093pt.
  [41
 pdfTeX warning (ext4): destination with the same identifier (name{figure.4.3}) 
 has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.376 
-       <./Proof time.png>]
-File: Proof time.png Graphic file (type png)
-<use Proof time.png>
-Package pdftex.def Info: Proof time.png  used on input line 381.
-(pdftex.def)             Requested size: 369.88582pt x 228.72093pt.
- [42
+l.377    \end{figure}
+                      <./Number of constraints.png>] [42
 pdfTeX warning (ext4): destination with the same identifier (name{figure.4.4}) 
 has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.395 
-      ] [43] [44]
-<FailureProbability.png, id=743, 702.625pt x 467.7475pt>
+l.389 
+       <./Number of constraints .05.png>] [43]
+<FailureProbability.png, id=742, 702.625pt x 467.7475pt>
 File: FailureProbability.png Graphic file (type png)
 <use FailureProbability.png>
-Package pdftex.def Info: FailureProbability.png  used on input line 447.
+Package pdftex.def Info: FailureProbability.png  used on input line 408.
 (pdftex.def)             Requested size: 369.88582pt x 246.242pt.
- [45]
-<FailureProbabilityRound1.png, id=750, 748.7975pt x 500.87125pt>
+<FailureProbabilityRound1.png, id=744, 748.7975pt x 500.87125pt>
 File: FailureProbabilityRound1.png Graphic file (type png)
 <use FailureProbabilityRound1.png>
-Package pdftex.def Info: FailureProbabilityRound1.png  used on input line 457.
+Package pdftex.def Info: FailureProbabilityRound1.png  used on input line 418.
 (pdftex.def)             Requested size: 369.88582pt x 247.41614pt.
- [46
+ [44
 pdfTeX warning (ext4): destination with the same identifier (name{figure.4.5}) 
 has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.461 
+l.422 
        <./FailureProbability.png>]
-<FailureProbabilityRound2.png, id=757, 736.7525pt x 496.85625pt>
+<FailureProbabilityRound2.png, id=751, 736.7525pt x 496.85625pt>
 File: FailureProbabilityRound2.png Graphic file (type png)
 <use FailureProbabilityRound2.png>
-Package pdftex.def Info: FailureProbabilityRound2.png  used on input line 466.
+Package pdftex.def Info: FailureProbabilityRound2.png  used on input line 427.
 (pdftex.def)             Requested size: 369.88582pt x 249.44342pt.
- [47
+ [45
 pdfTeX warning (ext4): destination with the same identifier (name{figure.4.6}) 
 has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.470 
+l.431 
        <./FailureProbabilityRound1.png>]
-<FailureProbabilityRound3.png, id=764, 721.69624pt x 483.8075pt>
+<FailureProbabilityRound3.png, id=759, 721.69624pt x 483.8075pt>
 File: FailureProbabilityRound3.png Graphic file (type png)
 <use FailureProbabilityRound3.png>
-Package pdftex.def Info: FailureProbabilityRound3.png  used on input line 475.
+Package pdftex.def Info: FailureProbabilityRound3.png  used on input line 436.
 (pdftex.def)             Requested size: 369.88582pt x 247.96402pt.
- [48
+ [46
 pdfTeX warning (ext4): destination with the same identifier (name{figure.4.7}) 
 has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.479 T
+l.440 T
        he key takeaway here is that without folding, you require $4\%$ of us...
- <./FailureProbabilityRound2.png>]
-<FoldingCircuit.png, id=772, 716.6775pt x 278.03876pt>
-File: FoldingCircuit.png Graphic file (type png)
-<use FoldingCircuit.png>
-Package pdftex.def Info: FoldingCircuit.png  used on input line 488.
-(pdftex.def)             Requested size: 369.88582pt x 143.49913pt.
- [49
+ <./FailureProbabilityRound2.png>] [47
 pdfTeX warning (ext4): destination with the same identifier (name{figure.4.8}) 
 has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.492 I
-       n this chart, S represent the public input and output, which is passe...
- <./FailureProbabilityRound3.png>] [50
+l.451    \item L
+                ist of neighbors sum (private) <./FailureProbabilityRound3.png>
+] [48]
+<FoldingCircuit.png, id=779, 803.0pt x 602.25pt>
+File: FoldingCircuit.png Graphic file (type png)
+<use FoldingCircuit.png>
+Package pdftex.def Info: FoldingCircuit.png  used on input line 481.
+(pdftex.def)             Requested size: 369.88582pt x 277.42432pt.
+ [49
 pdfTeX warning (ext4): destination with the same identifier (name{figure.4.9}) 
 has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.511    \item S
-                teps out (public) <./FoldingCircuit.png>]) (./main.bbl [51]
-[52
+l.494 
+       <./FoldingCircuit.png (PNG copy)>]
+<Proof time.png, id=785, 602.25pt x 372.39125pt>
+File: Proof time.png Graphic file (type png)
+<use Proof time.png>
+Package pdftex.def Info: Proof time.png  used on input line 503.
+(pdftex.def)             Requested size: 369.88582pt x 228.72093pt.
+ [50
+pdfTeX warning (ext4): destination with the same identifier (name{figure.4.10})
+ has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.512 
+       <./Proof time.png>]
+<Proof time vs verifier time.png, id=791, 602.25pt x 372.39125pt>
+File: Proof time vs verifier time.png Graphic file (type png)
+<use Proof time vs verifier time.png>
+Package pdftex.def Info: Proof time vs verifier time.png  used on input line 51
+7.
+(pdftex.def)             Requested size: 369.88582pt x 228.72093pt.
+ [51
+pdfTeX warning (ext4): destination with the same identifier (name{figure.4.11})
+ has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.525 \subsection
+                 {Circuit design} <./Proof time vs verifier time.png>] [52])
+(./main.bbl [53] [54
 
-]) [53] (./main.aux)
+]) [55] (./main.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: CCABF5968FCD91157CCB830999A130DC;5085.
+(rerunfilecheck)             Checksum: 0FD5159359D2623B024E789CD13698CF;5073.
  ) 
 Here is how much of TeX's memory you used:
- 14040 strings out of 476025
- 219060 string characters out of 5790018
- 1887388 words of memory out of 5000000
- 33902 multiletter control sequences out of 15000+600000
+ 14053 strings out of 476025
+ 219445 string characters out of 5790018
+ 1884388 words of memory out of 5000000
+ 33905 multiletter control sequences out of 15000+600000
  521545 words of font info for 66 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 80i,7n,79p,499b,2088s stack positions out of 10000i,1000n,20000p,200000b,200000s
-
-pdfTeX warning (dest): name{figure.4.10} has been referenced but does not exist
-, replaced by a fixed one
-
-</usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><
-/usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><
-/usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></
-usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></us
+ 80i,10n,79p,499b,2088s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb
+></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb
+></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb>
+</usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></
+usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></us
 r/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/
 local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/lo
 cal/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local
@@ -1023,10 +981,10 @@ live/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb></usr/local/texl
 ive/2023/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/
 texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/local/te
 xlive/2023/texmf-dist/fonts/type1/public/cm-super/sfti1200.pfb>
-Output written on main.pdf (63 pages, 3828692 bytes).
+Output written on main.pdf (65 pages, 3768874 bytes).
 PDF statistics:
- 943 PDF objects out of 1000 (max. 8388607)
- 815 compressed objects within 9 object streams
- 342 named destinations out of 1000 (max. 500000)
- 362 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 967 PDF objects out of 1000 (max. 8388607)
+ 832 compressed objects within 9 object streams
+ 352 named destinations out of 1000 (max. 500000)
+ 377 words of extra memory for PDF output out of 10000 (max. 10000000)
 
