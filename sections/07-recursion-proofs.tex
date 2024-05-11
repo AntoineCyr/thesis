@@ -3,7 +3,6 @@
 
 \chapter{Recursion proofs}
 
-
 This chapter serves as an intermediary background exploration,
 diving into more advanced concepts beyond last chapters concepts.
 The realm of zero knowledge is dynamic and continuously evolving,
@@ -15,29 +14,24 @@ In this section, we will examine these variations, distinguishing between them.
 We aim to identify the most suitable method for our daily proof of liabilities and proof of inclusion.
 
 
-
-
-\cite{Nova23} for aggregation, recursion and folding
-
-
 \section{Aggregation}
- %-- Expend on this using \cite{VRS23}, talk about proof composition
+ %-- Can expend on this using \cite{VRS23}, talk about proof composition
 Aggregation is the first and simplest type of recursion for zk proofs. It comprises 2 different phases.
 Initially, you create a standard individual proof for multiple blocks. In the second phase, a proof of proof is created.
 You could either merge all proofs into a single one, or do a tree-like structure where each parent node proves its child nodes.
-
 
 This is a quite simple process. Each block as its own proof, and then you prove that the other proofs are valid, giving you only one prove
 to verify at the end. Since there are 2 different phases, 2 different circuits need to be constructed.
 On the surface, you can parallelize the initial proofs, which decrease the proving time, and you only have one proof to verify, which decreases the verifying time.
 However, there are still some issues with aggregation. The most important issue is that the proof time of the second circuit grows linearly with the number of blocks to verify, making it less scalable. \cite{Nova23}
+\iffalse
 \begin{figure}[H]
    \centering
    \includegraphics[width=130mm]{AggregationProof.png}
    \caption{Aggregation Proof \cite{TP24}}
    \label{overflow}
    \end{figure}
-
+\fi
 
 \section{Recursion scheme}
 The next technique is the recursion scheme, or Incrementally Verifiable Computation (IVC). Like the aggregation, the proof is separated into blocks.
@@ -47,9 +41,7 @@ a chain structure, where verifying the latest block is the equivalent of verifyi
 It is an improvement from the previous technique, because this allows to maintain a constant number of constraints in the circuit.
 This implies that the latest does not take longer to verify than the second block.
 However, each block still has to verify the previous block, which takes additional. \cite{Nova23}
-
-
-%-- Expend on this using \cite{VRS23}, talk about IVC
+%-- Can Expend on this using \cite{VRS23}, talk about IVC
 
 
 \section{Accumulation}
@@ -60,38 +52,27 @@ The heavy part of the verification step in most SNARKS is found when opening the
 
 
 \subsection{Polynomial Commitments}
-
-
 A polynomial commitment is a cryptographic technique that allows to commit (lock) data, and reveal (unlock) it later.
-
 
 The commitments are binding, meaning there is no way to alter data once it is committed. They are also significantly shorter than
 the data committed. Collisions are inevitable given the vastness of potential data sets mapped onto compact commitments (pigeonhole principle).
 However, it is computationally infeasible to find a second dataset matching the same commitment.
 
-
 The commitments can also be hidden. This means that no information is shared to the receiving party.
 An example of a commitment scheme would be to hash a dataset with a collision-resistant hash function such as SHA256, and the hash value is shared.
 To add the hiding property, a random string could be added at the beginning of the dataset.
-
 
 Instead of commiting to a dataset, we could be committing to a polynomial. While a commitment to the coefficient would work, we would be revealing the polynomial
 when opening the commitment. We would like to be able to open the commitment only to a certain point of the polynomial.
 We are also interested in keeping the polynomial secret. An interesting property of polynomials is that it is evaluable at specific points.
 A polynomial commitment is proving to another party that we have a commitment to a polynomial that evaluates to a certain value at a certain point.
 
-
 Polynomials support linear operations like addition or multiplication. A commitment can be additively homomorphic if the sum of the commitment values
 is equal to the sum of the polynomials.
 
-
 Polynomial commitments are essentials to SNARKs. Verifying opening claims of polynomial commitments constitutes the computationally intensive task we mentioned earlier. \cite{VR23}
 
-
-
-
 \subsection{Halo accumulation}
-
 
 The concept of deferring the polynomial commitment opening checks, and consolidating them into a single operation, was introduced by Bowe, Grigg, and Hopwood Halo.\cite{BGH23}
 The task of checking an opening claim for a polynomial commitment is defined in two steps.
@@ -99,17 +80,11 @@ The first part is fast, where you just output a pair of a polynomial and its com
 The second part can be accumulated if the commitment scheme is additively homomorphic.
 Instead of verifying each pair ($c_1$ is a commitment for $f_1$, $c_2$ is a commitment for $f_2$, etc.), we can verify the linear combination of every pairs ($c_1+c_2+...$ is a commitment for $f_1+f_2+...$). \cite{VR23}
 
-
-
-
 \section{Folding scheme}
 Nova takes accumulation a step further. Instead of accumulating the hard part at the end, the folding scheme accumulates everything up until the end.
 The setup is similar to the recursion scheme, but instead of computing the proof of the previous block, the R1CS are folded together at every block.
 Instead of having $n$ set of R1CS, we are left with a single set. The new R1CS are called relaxed R1CS, and are used to compute a single proof at the end of the folding.
 \cite{Nova23}  \cite{ASI23}
-
-
-
 
 \subsection{R1CS}
 %-- define the different part of a proof (including R1CS)
@@ -119,35 +94,30 @@ R1CS is simply a representation of an arithmetic circuit.
 A R1CS constraint has the form $a*b=y$, where $a$,$b$ and $y$ are combinations of variables.
 Lets define our previous \hyperref[subsec:ac]{circuit} as a R1CS:   
 
+\begin{quote}
+$w_1 = x_1+x_2+1
+\\
+w_2 = x_2 -1
+\\
+x = x_1*w_1*w_2$
+\end{quote}
 
-   \begin{quote}
-   $w_1 = x_1+x_2+1
-   \\
-   w_2 = x_2 -1
-   \\
-   x = x_1*w_1*w_2$
-   \end{quote}
+Now the 3rd constraint does not follow the rules, because there are 3 variables being multiplied.
+We need to change it using an intermediary value:
 
-
-   Now the 3rd constraint does not follow the rules, because there are 3 variables being multiplied.
-   We need to change it using an intermediary value:
-  
-   \begin{quote}
-   $w_1 = x_1+x_2+1
-   \\
-   w_2 = x_2 -1
-   \\
-   w_3 = w_1*w_2
-   \\
-   x = x_1*w_3$
-   \end{quote}
-   \cite{ZKM3}
-
-
-   If we define $z=(x,w)$, we can express the arithmetic circuit as $ Az \circ Bz = Dz$
-   where $\circ$ can be define as: $(x_1, x_2) \circ y_1, y_2 = (x_1y_1, x_2y_2)$
+\begin{quote}
+$w_1 = x_1+x_2+1
+\\
+w_2 = x_2 -1
+\\
+w_3 = w_1*w_2
+\\
+x = x_1*w_3$
+\end{quote}
+\cite{ZKM3}
+If we define $z=(x,w)$, we can express the arithmetic circuit as $ Az \circ Bz = Dz$
+where $\circ$ can be define as: $(x_1, x_2) \circ y_1, y_2 = (x_1y_1, x_2y_2)$
 \cite{ZKM10}
-
 
 \subsection{Relaxed R1CS}
 The goal is to combine 2 R1CS and obtain another R1CS. If we are able to do that, we can fold every R1CS together and be left with only one.

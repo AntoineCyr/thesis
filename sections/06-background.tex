@@ -7,14 +7,12 @@
 In the dynamic landscape of cryptocurrencies, ensuring transparency, accountability, and financial stability
 is paramount for marketplaces. This section provides an overview of the concepts and mechanisms
 necessary to follow along the conception of a daily proof of liabilities. We explore the various approaches adopted by leading exchanges
- to demonstrate their financial health through proof of reserves or solvency mechanisms. Additionally, we
- highlight the shortcomings and challenges associated with current solvency verification practices, mainly the lack of recurrent proof of reserves,
-  paving the way for a daily proof in the subsequent sections.
+to demonstrate their financial health through proof of reserves or solvency mechanisms. Additionally, we
+highlight the shortcomings and challenges associated with current solvency verification practices, mainly the lack of recurrent proof of reserves,
+paving the way for a daily proof in the subsequent sections.
 
 
 \section{Bitcoin}
-
-
 %Andreas M. Antonopoulos somewhere
 Bitcoin is recognized as the world's first successful cryptocurrency and decentralized digital currency.
 The goal of Bitcoin is to allow financial transactions to be settled on its own, without the need of a middleman, typically financial institutions.
@@ -24,8 +22,6 @@ Bitcoin defines two different concepts: Bitcoin the cryptocurrency, and Bitcoin 
 The Bitcoin blockchain is a decentralized ledger that records all Bitcoin (the cryptocurrency) transactions immutably and transparently.
 This blockchain serves as a verifiable record of all Bitcoin transactions, accessible to every participant in the network.
 The transparency afforded by the public blockchain engenders trust and accountability.
-
-
 
 
 \subsection{Transactions}
@@ -41,9 +37,6 @@ The public key is then used to verify the authenticity of the signature.
 Sending a transaction is the easiest problem to solve. The real challenge is to keep track of who owns what, and to avoid the double spending problem.
 The methodology for managing this is to keep the history of every single transaction. The transactions are bundled up into blocks, and the chain of blocks creates the blockchain.
 
-
-
-
 \subsection{Network}
 The challenge of the network is to have every single node achieve consensus on the transaction history. Nodes are computers connected to the network,
 working on publishing new blocks. The nodes work collectively to establish order of transactions (sequencing). Every new transaction is broadcasted to all nodes.
@@ -52,8 +45,6 @@ When a node solves the challenge, it broadcasts the block to every node. The nod
 way of approving a new block. A node shows its acceptance by starting to work on a new block using the hash of the accepted block as previous hash.
 Some nodes might accept different blocks, if multiple blocks are propagated at the same time. This would create multiple chains. To solve this issue, the longest chain is considered to be the correct one.
 If two chains have the same length, nodes keep working on their respective chains until one of the chains receives a new block, breaking the tie.
-
-
 
 
 \subsection{Proof-of-work}
@@ -68,29 +59,22 @@ The chain with the majority of nodes working on it will grow up the fastest, thu
 The difficulty of the new block is determined by an average, in order to generate blocks at a steady pace. There is also a bitcoin reward associated with mining (publishing) a block.
 
 
-
-
-
-
 \subsection{Merkle Tree}
 In the architecture of the blockchain, only the merkle root is stored in the block header. Nodes only keep the recent blocks in memory. For the older blocks, they keep only the block header in memory.
 This storage ensures the integrity of the blockchain, while decreasing the memory required to have the full blockchain history.
 Since the hash of a block is the hash of the block header, this strategy does not impact the integrity checks of the blockchain.
 The merkle root is the top of the Merkle Tree, and is a unique identifier of the full tree. A merkle tree is a tree where the parent node is the hash of the child nodes.
-The tree is immutable because changing a single node would have an impact on the merkle root. For instance, in figure 2.1 changing the transaction 0 would change the hash 0,
-which in turn would change the hash 01, subsequently changing the root hash.
+The tree is immutable because changing a single node would have an impact on the merkle root.
 
 
+\iffalse
 \begin{figure}[ht!]
-\centering
-\includegraphics[width=90mm]{MerkleTree.png}
-\caption{Bitcoin Merkle Tree \cite{N08}}
-\label{overflow}
-\end{figure}
-
-
-
-
+   \centering
+   \includegraphics[width=90mm]{MerkleTree.png}
+   \caption{Bitcoin Merkle Tree \cite{N08}}
+   \label{overflow}
+   \end{figure}
+\fi
 \section{Marketplaces}
 The best way to buy bitcoin for the first time is through marketplaces. Marketplaces facilitate the exchange of traditional currency for bitcoin.
 However, it is crucial to understand that the Bitcoin obtained remains in the custody of the platform, rather than being deposited to a personal wallet address.
@@ -108,11 +92,7 @@ While this is a step in the right direction, the current proof of solvency used 
 %Talk about FTX
 
 
-
-
 \section{Zero Knowledge}
-
-
 Zero-knowledge proofs is a cryptographic technique to prove some knowledge without divulging any informations.For instance,
 the classic way of proving that you know the solution to an equation, is to reveal the solution to the equation itself.
 However, with zero knowledge you are able to prove that you know the solution, without disclosing the solution.
@@ -120,23 +100,13 @@ To construct a zero knowledge proof, you need to construct a proof that is sound
 
 
 \begin{itemize}
+\item \textbf{Completeness}: If the statement is true, an honest verifier will be convinced by an honest prover.
+\item \textbf{Soundness}: If the statement is false, no dishonest prover can convince the honest verifier (except with some infinitesimal probability).
+\item \textbf{Zero-Knowledge}: If the statement is true,  a verifier learns nothing other than the fact that the statement is true. \cite{LC23}
+\end{itemize}
 
 
-   \item \textbf{Completeness}: If the statement is true, an honest verifier will be convinced by an honest prover.
-  
-   \item \textbf{Soundness}: If the statement is false, no dishonest prover can convince the honest verifier (except with some infinitesimal probability).
-  
-   \item \textbf{Zero-Knowledge}: If the statement is true,  a verifier learns nothing other than the fact that the statement is true. \cite{LC23}
-  
-   \end{itemize}
-
-
-   \subsection{Non interactive proofs}
-
-
-
-
-
+\subsection{Non interactive proofs}
 
 Zero knowledge proofs were originally designed as interactive, that is, multiple rounds of interaction between the prover and the verifier \cite{GMR89}.
 leading to what are called interactive zero-knowledge proofs. This interaction allows the prover to demonstrate knowledge of the solution without revealing any additional information.
@@ -145,57 +115,36 @@ The elimination of multiple rounds of interaction simplifies the verification pr
 Therefore, noninteractive zero-knowledge proofs offer enhanced efficiency and scalability, which will be needed later on.  \cite{BFM88} \cite{GMW91}
 
 
-
-
 \subsection{SNARKS}
 One of the recent advances for non-interactive proofs is what is known as SNARK (non-interactive argument of knowledge).
 This means a proof that is:
 \begin{itemize}
-
-
-   \item \textbf{Succinct}: the size of the proof is very small compared to the size of the witness.
-  
-   \item \textbf{Non-interactive}: No rounds of interactions between the prover and the verifier.
-
-
-   \item \textbf{Argument}: Secured only for provers with bounded computational resources, that is a dishonest prover with unlimited computational power could prove a wrong statement.
-
-
-   \item \textbf{Knowledge-sound}: If the statement is true,  a verifier learns nothing other than the fact that the statement is true. \cite{NZ20}
-  
-   \end{itemize}
-
+\item \textbf{Succinct}: the size of the proof is very small compared to the size of the witness.
+\item \textbf{Non-interactive}: No rounds of interactions between the prover and the verifier.
+\item \textbf{Argument}: Secured only for provers with bounded computational resources, that is a dishonest prover with unlimited computational power could prove a wrong statement.
+\item \textbf{Knowledge-sound}: If the statement is true,  a verifier learns nothing other than the fact that the statement is true. \cite{NZ20}
+\end{itemize}
 
 Moreover, a SNARK can also be zero-knowledge, where the prover demonstrates knowledge without revealing any additional information about the witness. We call such proof a zk-SNARK.
 
 
 \subsection{Arithmetic circuit}
 \label{subsec:ac}
-
-
-
-
 Arithmetic circuits are a core component of SNARKS. An arithmetic circuit is a set of gates, each assigned a distinct set of inputs corresponding to the numbers to be processed in the operation.
 These gates are configured to execute arithmetic operations such as addition, subtraction, multiplication, or division. The outputs of the gate circuit represent the digits of the resulting computation.
 This structure allows SNARKs to efficiently verify complex mathematical computations while preserving succinctness and scalability.
 
-
 \begin{figure}[H]
    \centering
    \includegraphics[width=60mm]{ArithmeticCircuit.png}
-   \caption{General Arithmetic circuit \cite{ZKM2}}
+   \caption{General Arithmetic circuit}
    \label{overflow}
    \end{figure}
-
-
-
-
-
 
 The prover's process in SNARKs is to create a proof using the setup parameter, a private witness, and public input. The proof shows that the arithmetic circuit is equal to 0.
 Using the same setup parameter and the public input, the verifier confirms the accuracy of the proof by making sure it aligns with the parameters.
 
-
+%-- here
 \begin{figure}[H]
    \centering
    \includegraphics[width=130mm]{Circuit.png}
@@ -205,36 +154,16 @@ Using the same setup parameter and the public input, the verifier confirms the a
 
 
 \begin{itemize}
-
-
-   \item \textbf{S(C)}: Public parameters (pp,vp) for prover and verifier
-  
-   \item \textbf{P(pp,x,w)}: Proof $\pi$
-
-
-   \item \textbf{V(vp,x,$\pi$)}: Accept or reject
-
-
-   \item \textbf{C(x,w)}: Arithmetic circuit
-
-
-   \item \textbf{w}: Private witness
-
-
-   \item \textbf{x}: Public input
-  
-   \end{itemize}
-
-
-%If STARK is mentioned later, define it here
-
-
-
-
+\item \textbf{S(C)}: Public parameters (pp,vp) for prover and verifier
+\item \textbf{P(pp,x,w)}: Proof $\pi$
+\item \textbf{V(vp,x,$\pi$)}: Accept or reject
+\item \textbf{C(x,w)}: Arithmetic circuit
+\item \textbf{w}: Private witness
+\item \textbf{x}: Public input
+\end{itemize}
 
 
 \section{Proof of solvency}
-
 
 A proof of solvency is a system where we prove that an entity, in most cases an exchange, hold enough assets to cover
 the balance of every customer. In traditional finance, this would be done through an audit. While an audit can be useful,
@@ -242,12 +171,8 @@ it has many limitations. Obviously it requires the trust of another 3rd party, b
 to hold an audit every single day, and in the bitcoin world things move fast. It is essential to be able to fill a proof of solvency every single day.
 The implementation of a mechanism to produce daily proofs of solvency is therefore of the utmost importance.
 
-
 A proof of solvency is composed by a proof of assets, where we verify what assets the marketplace as control over, and the proof of liabilities,
 where we confirm that the total amount of user deposits is smaller than the marketplaces assets.
-
-
-
 
 The first paper about a proof of solvency focuses only on the proof of liabilities. In his paper Gregory Maxwell addresses the issue of verifying
 the solvency of Bitcoin exchanges. \cite{chainlink_blog}
@@ -269,18 +194,13 @@ By comparing the received information to the exchange's broadcasted root node, u
 While elegant, the protocol does have privacy implications. The exact value of the exchange's total liabilities, published in the root node, may be sensitive data.
 Additionally, the proof of inclusion reveals the neighbor's balance, and the subtree's balance along the Merkle path.
 
-
 The proof of liabilities is only part of the proof of solvency. A complete proof of solvency needs a proof of asset as well.
 Provision describes the first preserving privacy proof of asset \cite{DBBBCC15}.
-
 
 In Provisions, the focus shifts towards preserving privacy while still proving ownership of assets.
 Instead of publicly demonstrating control over specific addresses, Provisions enables exchanges to prove ownership of an anonymous subset of addresses sourced from the blockchain.
 
-
 Since these 2 papers, a lot of work was done to make the proof of solvency evolve. However, marketplaces still do not implement a proof of solvency, or a flawed and limited version of it.
-
-
 
 
 \subsection{Real world proof of solvency}
@@ -289,12 +209,10 @@ Binance has implemented a proof of reserves system where they publish a monthly 
 Crypto.com published a one-time audit \cite{CC22}.
 Kraken is also publishing a proof of liabilities every few months, without a proof of assets. \cite{KK23}.
 
-
 Although these proof of reserves may seem promising initially, they are primarily superficial.
 The proofs have many shortcomings, they are not sufficient to prove that the marketplaces are solvent.
 The first concern is the lack of proof of assets, or in Binance's case the lack of evidence demonstrating control over the wallets.
 Without a reliable proof of assets, the proof of liabilities is worthless because it has nothing to compare against.
-
 
 Moreover, the frequency of reporting is another area of concern. Given the dynamic nature of cryptocurrencies, a monthly report is not sufficient at all.
 Binance is the only marketplace describing their proof of solvency, and we can see that it is not built with recurrence in mind.
