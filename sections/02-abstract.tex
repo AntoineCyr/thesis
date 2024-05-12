@@ -6,18 +6,8 @@
 Name: 	\tab \textbf{Antoine Cur} \\
 Title: 	\tab \textbf{Daily Proof of Liabilities}\\
 
-In the context of cryptocurrencies, the trust between marketplaces and users is at an all time low. 
-Following the recent bankruptcy and mishandling of customer funds by marketplaces like FTX, 
-users want and need to know that marketplaces have all the funds in their possession. 
-Audits are not a scalable solution because the funds can be moved around more quickly than in the traditional finance world. 
-A proof of solvency's goal is to demonstrate that a cryptocurrency exchange possesses sufficient funds to satisfy client withdrawals. 
-In this thesis, we introduce an improvement to the proof of liabilities. 
-We use the novel way of proving that a balance is included in the proof of liabilities, 
-and apply it to the proof of liabilities itself.
-We use the circuit designed to show the proof of inclusion of a Merkle Tree, 
-and modify it to prove a list of balance changes in the Merkle Tree. While this is slower than producing the whole 
-Merkle Tree when you have many changes, this new circuit design enables the use of the Nova folding scheme. 
-The folding of arithmetics circuits reduces the computation needed for a daily proof of liabilities, 
-enabling the possibility of obtaining this proof at a higher frequency, potentially as frequently as every block.
+A proof of solvency's goal is to demonstrate that a cryptocurrency exchange possesses sufficient funds to satisfy client withdrawals. In this thesis, we introduce an improvement to the prevailing way of building a proof of liabilities. We use the novel way of proving that a balance is included in the proof of liabilities (i.e. proof of inclusion), and apply it to the proof of liabilities itself.
+We use the circuit designed to show the proof of inclusion of a Merkle Tree, and modify it to prove a list of balance changes in the Merkle Tree. While this is slower than producing the whole Merkle Tree when you have many changes, this new circuit design enables to separate the proof into multiple smaller proofs, enabling the use of the Nova folding scheme. The folding of arithmetics circuits reduces the computation needed for a daily proof of liabilities, enabling the possibility of obtaining this proof at a higher frequency, potentially as frequently as every block.
+
 
 
