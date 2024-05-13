@@ -1,0 +1,198 @@
+% !TEX root = ../main.tex
+
+\appendix
+\section{\\Sample Code}
+This section contains the pseudocode for the circuits used in both the proof of liabilities, and proof of inclusion.
+
+\subsection{Proof of liabilities}
+\label{subsec:plc}
+\begin{lstlisting}[language=Python, caption=Liabilities circuit pseudocode]
+# Define a function for the Merkle tree sum circuit
+def sum_merkle_tree(levels, inputs, balances[inputs], 
+                        email_hashes[inputs]):
+    # Outputs variables for sum, root hash, and range checks
+    root_sum = 0
+    root_hash = 0
+    not_negative = False
+    all_small_range = False
+
+    # Define signals lists for sum and hash nodes at each level
+    sum_nodes = [[0] * inputs for _ in range(levels+1)]
+    hash_nodes = [[0] * inputs for _ in range(levels+1)]
+
+    # Initialize variables
+    level_size = inputs
+    max_bits = 100
+    temp_not_big = 0
+    temp_not_negative = 0
+
+    # Loop through each input
+    for i in range(inputs):
+        # Assign input values to hash and sum nodes
+        hash_nodes[0][i] = email_hashes[i]
+        sum_nodes[0][i] = balances[i]
+
+        # Perform range check and negative check
+        rangecheck = RangeCheck(maxBits,balances[i])
+        tempNotBig += rangecheck
+        negativecheck = NegativeCheck(newValues[i])
+        tempNotNegative += negativecheck
+
+    # Check if all balances are within a small range
+    if temp_not_big == inputs:
+        all_small_range = True
+
+    # Check if all balances are non-negative
+    if temp_not_negative == inputs:
+        not_negative = True
+
+    # Loop through each level
+    for i in range(levels):
+        # Loop through each pair of nodes at the current level
+        for j in range(0, level_size, 2):
+            # Store sum and root hash for the next level
+            sum_nodes[i+1][nextLevelSize] = 
+            sum_nodes[i][j] + sum_nodes[i][j+1]
+            hash_nodes[i+1][nextLevelSize] = 
+            hash_nodes[i][j] + hash_nodes[i][j+1]
+
+        # Update the size of the current level
+        levelSize = nextLevelSize;
+        nextLevelSize = 0;
+
+    # Assign final sum and root hash values
+    root_sum = sum_nodes[levels][0]
+    root_hash = hash_nodes[levels][0]
+
+    return root_sum, root_hash, not_negative, all_small_range
+
+\end{lstlisting}
+
+\subsection{Proof of inclusion}
+\label{subsec:pic}
+\begin{lstlisting}[language=Python, caption=Inclusion circuit pseudocode]
+# Define a function for the inclusion proof circuit
+def inclusion(levels, neighborsSum, neighborsHash, neighborsBinary, 
+                step_in, sum, rootHash, userBalance, userEmailHash):
+    # Initialize sum and hash nodes
+    sumNodes = [0] * (levels+1)
+    hashNodes = [0] * (levels+1)
+    sumNodes[0] = userBalance
+    hashNodes[0] = userEmailHash
+
+    # Iterate through each level
+    for i in range(levels):
+        # Update hash node
+        if neighborsBinary[i]:
+            hashNodes[i+1]=getHash(neighborsHash[i],
+            neighborsSum[i],hashNodes[i],sumNode[i])
+        else:
+            hashNodes[i+1]=getHash(hashNodes[i],sumNode[i],
+            neighborsHash[i],neighborsSum[i])
+        # Update sum node
+        sumNodes[i + 1] = neighborsSum[i] + sumNodes[i]
+
+    # Check validity of root hash
+    validHash = IsEqual([hashNodes[levels], rootHash])
+
+    # Check validity of sum
+    validSum = IsEqual([sumNodes[levels], sum])
+
+    return validSum,validHash
+\end{lstlisting}
+
+\subsection{Change circuit}
+\label{subsec:plcc}
+\begin{lstlisting}[language=Python, caption=Liabilities change circuit pseudocode]
+# Define a function for the liabilities change proof circuit
+def liabilities(levels, changes,oldEmailHash[changes],
+        oldValues[changes],newEmailHash[changes],newValues[changes],
+        tempHash[changes+1],tempSum[changes+1],
+        neighborsSum[changes][levels],neighborsHash[changes][levels],
+        neighborsBinary[changes][levels]):         
+    # Calculate newRootHash and newSum
+    newRootHash = tempHash[changes+1]
+    newSum = tempSum[changes+1]
+    oldSum = tempSum[0]
+    oldRootHash = tempHash[0]
+    currentSum = oldSum
+
+    # Part 1: Check validity of new values
+    tempNotBig = 0
+    tempNotNegative = 0
+    maxBits = 100
+
+    # Iterate through each change
+    for i in range(changes):
+        # Calculate currentSum
+        currentSum += newValues[i] - oldValues[i]
+
+        # Perform range check and negative check
+        rangecheck = RangeCheck(maxBits,newValues[i])
+        tempNotBig += rangecheck
+        negativecheck = NegativeCheck(newValues[i])
+        tempNotNegative += negativecheck
+
+    # Check if all new values are within range
+    allSmallRange = IsEqual([changes, tempNotBig])
+
+    # Check if all new values are not negative
+    notNegative = IsEqual([changes, tempNotNegative])
+
+    # Check if newSum equals currentSum
+    equalSum = IsEqual([newSum, currentSum])
+
+    # Part 2: Check validity of old and new paths
+    # Ensure that old root + change = temp root
+    tempValidHash = [0] * (changes + 1)
+    tempValidSum = [0] * (changes + 1)
+    tempOldHashEqual = [0] * (changes + 1)
+    tempOldSumEqual = [0] * (changes + 1)
+    tempValidHash[0] = 1
+    tempValidSum[0] = 1
+
+    #For each level, we are veryfing the inclusion of the value changing
+    #and the new value.
+    #hashNode[0] and sumNodes[0] is for the inclusion of the value changing
+    #hashNode[1] and sumNodes[1] is for the inclusion of the new value
+
+    for j in range(changes):
+        for i in range(levels):
+        if neighborsBinary[j][i]:
+            hashNodes[0][j][i+1]=getHash(neighborsHash[j][i],
+            neighborsSum[j][i],hashNodes[0][j][i],sumNode[0][j][i])
+            hashNodes[1][j][i+1]=getHash(neighborsHash[j][i],
+            neighborsSum[j][i],hashNodes[1][j][i],sumNode[1][j][i])
+        else:
+            hashNodes[0][j][i+1]=getHash(hashNodes[0][j][i],
+            sumNode[0][j][i],neighborsHash[j][i],neighborsSum[j][i])
+            hashNodes[1][j][i+1]=getHash(hashNodes[1][j][i],
+            sumNode[1][j][i],neighborsHash[j][i],neighborsSum[j][i])
+
+        sumNodes[0][j][i+1] = sumNode[0][j][i] + neighborsSum[j][i]
+        sumNodes[1][j][i+1] = sumNode[0][j][i] + neighborsSum[j][i]
+            
+
+        # Old calculated old hash is in tempHash
+        hashEqual = IsEqual(hashNodes[0][j][levels], tempHash[j])
+        tempOldHashEqual[j+1] = tempOldHashEqual[j] * hashEqual
+
+        # New temp hash is valid
+        hashEqual = IsEqual(hashNodes[1][j][levels], tempHash[j+1])
+        tempValidHash[j+1] = tempValidHash[j] * hashEqual
+
+        # Old calculated sum is in tempSum
+        sumEqual = IsEqual(sumNodes[0][j][levels], tempSum[j])
+        tempOldSumEqual[j+1] = tempOldSumEqual[j] * sumEqual
+        
+        # New temp sum is valid
+        sumEqual = IsEqual(sumNodes[1][j][levels], tempSum[j+1])
+        tempValidSum[j+1] = tempValidSum[j] * sumEqual
+
+    validHash = tempValidHash[changes] * tempOldHashEqual[changes]
+    validSum = tempValidSum[changes] * tempOldSumEqual[changes]
+
+    return (notNegative,allSmallRange,validHash, 
+            validSum,newRootHash,newSum)
+    
+\end{lstlisting}
