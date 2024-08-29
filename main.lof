@@ -1,20 +1,22 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {2.1}{\ignorespaces General Arithmetic circuit}}{11}{figure.2.1}%
-\contentsline {figure}{\numberline {2.2}{\ignorespaces Arithmetic circuit for SNARK \cite {ZKM2}}}{11}{figure.2.2}%
-\contentsline {figure}{\numberline {2.3}{\ignorespaces Merkle tree for proof of liabilities}}{13}{figure.2.3}%
+\contentsline {figure}{\numberline {2.1}{\ignorespaces General Arithmetic circuit}}{13}{figure.2.1}%
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Arithmetic circuit for SNARK \cite {ZKM2}}}{14}{figure.2.2}%
+\contentsline {figure}{\numberline {2.3}{\ignorespaces Merkle tree for proof of liabilities}}{15}{figure.2.3}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Merkle Path}}{30}{figure.4.1}%
-\contentsline {figure}{\numberline {4.2}{\ignorespaces Merkle Tree change}}{40}{figure.4.2}%
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Pre change}}}{40}{subfigure.2.1}%
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Post change}}}{40}{subfigure.2.2}%
-\contentsline {figure}{\numberline {4.3}{\ignorespaces Number of constraints original circuit vs new circuit with 1\% change}}{41}{figure.4.3}%
-\contentsline {figure}{\numberline {4.4}{\ignorespaces Number of constraints original circuit vs new circuit with 0.05\% change}}{42}{figure.4.4}%
-\contentsline {figure}{\numberline {4.5}{\ignorespaces Failure Probability \cite {GP21}}}{44}{figure.4.5}%
-\contentsline {figure}{\numberline {4.6}{\ignorespaces Failure Probability Round 1 \cite {NS23}}}{45}{figure.4.6}%
-\contentsline {figure}{\numberline {4.7}{\ignorespaces Failure Probability Round 1 After 2 Rounds\cite {NS23}}}{46}{figure.4.7}%
-\contentsline {figure}{\numberline {4.8}{\ignorespaces Failure Probability Round 1 after 3 Rounds \cite {NS23}}}{47}{figure.4.8}%
-\contentsline {figure}{\numberline {4.9}{\ignorespaces Folding Circuit}}{49}{figure.4.9}%
-\contentsline {figure}{\numberline {4.10}{\ignorespaces Proof time original circuit vs folded circuit with 1\% change, 1 change by fold}}{50}{figure.4.10}%
-\contentsline {figure}{\numberline {4.11}{\ignorespaces Optimization of the proof time and verifier time of the folded circuit with 1\% change and 1M users}}{51}{figure.4.11}%
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Merkle Path}}{29}{figure.4.1}%
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Merkle Tree change}}{34}{figure.4.2}%
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Pre change}}}{34}{subfigure.2.1}%
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Post change}}}{34}{subfigure.2.2}%
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Number of constraints original circuit vs new circuit with 1\% change}}{35}{figure.4.3}%
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Number of constraints original circuit vs new circuit with 0.05\% change}}{36}{figure.4.4}%
+\contentsline {figure}{\numberline {4.5}{\ignorespaces Failure Probability \cite {GP21}}}{38}{figure.4.5}%
+\contentsline {figure}{\numberline {4.6}{\ignorespaces Failure Probability Round 1 \cite {NS23}}}{39}{figure.4.6}%
+\contentsline {figure}{\numberline {4.7}{\ignorespaces Failure Probability Round 1 After 2 Rounds\cite {NS23}}}{40}{figure.4.7}%
+\contentsline {figure}{\numberline {4.8}{\ignorespaces Failure Probability Round 1 after 3 Rounds \cite {NS23}}}{41}{figure.4.8}%
+\contentsline {figure}{\numberline {4.9}{\ignorespaces Folding Circuit}}{43}{figure.4.9}%
+\contentsline {figure}{\numberline {4.10}{\ignorespaces Proof time original circuit vs folded circuit with 1\% change, 1 change by fold}}{44}{figure.4.10}%
+\contentsline {figure}{\numberline {4.11}{\ignorespaces Optimization of the proof time and verifier time of the folded circuit with 1\% change and 1M users}}{45}{figure.4.11}%
+\addvspace {10\p@ }
+\addvspace {10\p@ }

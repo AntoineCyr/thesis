@@ -1,10 +1,10 @@
 % !TEX root = ../main.tex
 
 \appendix
-\section{\\Sample Code}
+\chapter{Sample Code}
 This section contains the pseudocode for the circuits used in both the proof of liabilities, and proof of inclusion.
 
-\subsection{Proof of liabilities}
+\section{Proof of liabilities}
 \label{subsec:plc}
 \begin{lstlisting}[language=Python, caption=Liabilities circuit pseudocode]
 # Define a function for the Merkle tree sum circuit
@@ -68,7 +68,7 @@ def sum_merkle_tree(levels, inputs, balances[inputs],
 
 \end{lstlisting}
 
-\subsection{Proof of inclusion}
+\section{Proof of inclusion}
 \label{subsec:pic}
 \begin{lstlisting}[language=Python, caption=Inclusion circuit pseudocode]
 # Define a function for the inclusion proof circuit
@@ -101,7 +101,7 @@ def inclusion(levels, neighborsSum, neighborsHash, neighborsBinary,
     return validSum,validHash
 \end{lstlisting}
 
-\subsection{Change circuit}
+\section{Change circuit}
 \label{subsec:plcc}
 \begin{lstlisting}[language=Python, caption=Liabilities change circuit pseudocode]
 # Define a function for the liabilities change proof circuit
@@ -151,10 +151,10 @@ def liabilities(levels, changes,oldEmailHash[changes],
     tempValidHash[0] = 1
     tempValidSum[0] = 1
 
-    #For each level, we are veryfing the inclusion of the value changing
-    #and the new value.
-    #hashNode[0] and sumNodes[0] is for the inclusion of the value changing
-    #hashNode[1] and sumNodes[1] is for the inclusion of the new value
+#For each level, we are veryfing the inclusion of the value changing
+#and the new value.
+#hashNode[0] and sumNodes[0] is for the inclusion of the value changing
+#hashNode[1] and sumNodes[1] is for the inclusion of the new value
 
     for j in range(changes):
         for i in range(levels):
