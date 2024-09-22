@@ -49,7 +49,7 @@ than the sum of assets, without revealing the balance.
 
 \section{Proof of inclusion}
 \label{subsec:pi}
-The proof of inclusion aims to prove that the balance of a user is included in the Merkle Tree created in the proof of liabilities.
+The proof of inclusion aims to prove that the balance of a user is included in the Merkle tree created in the proof of liabilities.
 To prove that a balance is included, it is sufficient to show that you know the Merkle path of a user balance,
 which we define using the list of neighbors sum, hash and binary.
 The neighbors binary variable indicates whether the neighbor is on the left or the right.
@@ -107,10 +107,10 @@ This approach is not aligned with our objectives. We are interested in working o
 
 \subsection{Change circuit}
 If we cannot use any recursion schemes, we need an alternative approach to reduce the complexity of subsequent rounds.
-Our solution is to reutilize the same Merkle Tree as the previous rounds, modify  and adapt it to include the changes.
-The key challenge is that the Merkle Tree was built inside the circuit, and is therefore not accessible.
+Our solution is to reutilize the same Merkle tree as the previous rounds, modify  and adapt it to include the changes.
+The key challenge is that the Merkle tree was built inside the circuit, and is therefore not accessible.
 
-What we will be doing, in our modified circuit, is adjust the Merkle Tree inside the circuit.
+What we will be doing, in our modified circuit, is adjust the Merkle tree inside the circuit.
 For every change, we send the corresponding Merkle Path which will be verified by the circuit.
 The circuit will then compute a new Root Hash for each change and output the final Markle Hash.
 
@@ -151,7 +151,7 @@ with the new root balance and the new root hash. Not that for every change we on
    \hfill
    \subfloat[Post change]{\includegraphics[width=70mm]{MerklePathTemp.png}}
    \hfill
-   \caption{Merkle Tree change}
+   \caption{Merkle tree change}
    \end{figure}
 
 

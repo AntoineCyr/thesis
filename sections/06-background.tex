@@ -75,7 +75,7 @@ The difficulty of the new block is determined by an average, in order to generat
 In the architecture of the blockchain, only the Merkle root is stored in the block header. Nodes only keep the recent blocks in memory. For the older blocks, they keep only the block header in memory.
 This storage ensures the integrity of the blockchain, while decreasing the memory required to have the full blockchain history.
 Since the hash of a block is the hash of the block header, this strategy does not impact the integrity checks of the blockchain.
-The Merkle root is the top of the Merkle Tree, and is a unique identifier of the full tree. A Merkle tree is a tree where the parent node is the hash of the child nodes.
+The Merkle root is the top of the Merkle tree, and is a unique identifier of the full tree. A Merkle tree is a tree where the parent node is the hash of the child nodes.
 The tree is immutable because changing a single node would have an impact on the Merkle root.
 
 
@@ -138,13 +138,21 @@ This means a proof that is:
 \end{itemize}
 
 Moreover, a SNARK can also be zero-knowledge, where the prover demonstrates knowledge without revealing any additional information about the witness. We call such proof a zk-SNARK.
-To be able to construct a SNARK, we need to transform the code we want to prove in a quadratic arithmetic program (QAP).
+There are many techniques to construct a SNARK, but all of them follow the same guideline:
+\begin{itemize}
+   \item Express your problem as an arithmetic circuit
+   \item Transform the circuit in a polynomial
+   \item Commit the polynomial
+   \item Interaction between the Prover and the Verifier to show that the polynomial solves the the problem
+ \end{itemize}
+ We will show an example of a SNARK using the technique known as Groth16\cite{GR16}.
+To be able to construct the SNARK, we need to transform the code we want to prove in a quadratic arithmetic program (QAP).
 
 
 \subsubsection{Arithmetic circuit}
 \label{subsec:ac}
 
-Let's say we want to prove $x3+x+5=35$.
+Let's say we want to prove $x^3+x+5=35$.
 The Prover as to convince the Verifier that he knows the solution whitout revelaing it to him.
 
 The first step of transforming a problem in the QAP form is to express a problem in the form of an arithmetic circuit.
@@ -152,193 +160,202 @@ An arithmetic circuit is a set of gates, each assigned a distinct set of inputs 
 These gates are configured to execute arithmetic operations such as addition, subtraction, multiplication, or division. The outputs of the gate circuit represent the digits of the resulting computation.
 
 \begin{figure}[H]
-   \centering
-   \includegraphics[width=130mm]{ArithmeticCircuit.png}
-   \caption{General Arithmetic circuit}
-   \label{overflow}
-   \end{figure}
+\centering
+\includegraphics[width=130mm]{ArithmeticCircuit.png}
+\caption{General Arithmetic circuit for }
+\label{overflow}
+\end{figure}
 
-   \subsubsection{R1CS}
-   The first step is to express our circuit as a set of constraint where each constraint contains only one arithmetic operation.
-   \begin{quote}
-   $s_1 = x * x$
-   $s_2 = s_1 * x$
-   $s_3 = s_2 * x$
-   $~out = s_3 + 5$
-   \end{quote}
+\subsubsection{R1CS}
+\label{subsec:r1cs}
+The first step is to express our circuit as a set of constraint where each constraint contains only one arithmetic operation.
+\begin{quote}
+$s_1 = x * x$
+\\
+$s_2 = s_1 * x$
+\\
+$s_3 = s_2 * x$
+\\
+$~out = s_3 + 5$
+\end{quote}
 
-   We can now convert this into an R1CS.
-   An R1CS is a sequence of groups of three vectors $(a, b, c)$, where the solution to the R1CS is a vector $s$, and $s$ must satisfy the equation $s . a * s . b - s . c = 0$, where $.$ represents the dot product.
-   The length of each vector is the length of the total number of variables for the system, including a variable $~one$ at the beginning, the variable $~out$, and all intermediate variables.
-   The standard way of representing the three vectors $(a, b, c)$ is to create a mapping with the variables.
-   Here is the mapping we will use:
-   $'~one', '~out', 'x','s_1','s_2','s_3'$
-   This gives us for the first gate:
-   \begin{quote}
-      $a = [0,0,1,0,0,0]$
-      $b = [0,0,1,0,0,0]$
-      $c = [0,0,0,1,0,0]$
-   \end{quote}
-   We are checking here that $x*x=s_1$.
-   $a$ and $b$ both represents $x$, while $c$ represents $s_1$.
+We can now convert this into an R1CS.
+An R1CS is a sequence of groups of three vectors $(a, b, c)$, where the solution to the R1CS is a vector $s$, and $s$ must satisfy the equation $s \cdot a * s \cdot b - s \cdot c = 0$, where $\cdot$ represents the dot product.
+The length of each vector is the length of the total number of variables for the system. This includes a variable $one$ at the beginning, the variable $out$ at the end, and all intermediate variables.
+The standard way of representing the three vectors $(a, b, c)$ is to create a mapping with the variables.
+Here is the mapping we will use:
+\\ 
+$[one,out,x,s_1,s_2,s_3]$
+\\
+This gives us for the first gate:
+\begin{quote}
+   $a = [0,0,1,0,0,0]$
+   \\
+   $b = [0,0,1,0,0,0]$
+   \\
+   $c = [0,0,0,1,0,0]$
+\end{quote}
+We are checking here that $x*x=s_1$.
+$a$ and $b$ both represents $x$, while $c$ represents $s_1$.
 
    Let's verify that our first gate satisfies the solution equation:
-   $s . a * s . b - s . c = 0$
+   \\
+   $s \cdot a * s \cdot b - s \cdot c = 0$
+   \\
    We know that the solution to the equation is $ x = 3 $, so given that our $s$ vector
    would be: 
    \begin{quote}
    $s=[1,out,x,s_1,s_2,s_3]$
+   \\
    $s=[1,35,3,9,27,30]$
 \end{quote}
 
 Now if we do the dot product:
 \begin{quote}
-   $s . a =  [1,35,3,9,27,30] . [0,0,1,0,0,0] = 0*1+0*35+1*3+0*9+0*27+0*30= 3$ 
-   $s . b = [1,35,3,9,27,30] . [0,0,1,0,0,0] = 3$ 
-   $s . c = [1,35,3,9,27,30] . [0,0,0,1,0,0] = 9$ 
-$s . a * s . b - s . c =  3 * 3 - 9 = 0$
+   $s \cdot a =  [1,35,3,9,27,30] \cdot [0,0,1,0,0,0] = 0*1+0*35+1*3+0*9+0*27+0*30= 3$ 
+   $s \cdot b = [1,35,3,9,27,30] \cdot [0,0,1,0,0,0] = 3$ 
+   $s \cdot c = [1,35,3,9,27,30] \cdot [0,0,0,1,0,0] = 9$ 
+$s \cdot a * s \cdot b - s \cdot c =  3 * 3 - 9 = 0$
 
 This shows that our solution vector satisfies the first gate.
 \end{quote}
 
-   Following these rules, our second gate for $s_1*x=s_2$ is:
-   \begin{quote}
-      $a = [0,0,0,1,0,0]$
-      $b = [0,0,1,0,0,0]$
-      $c = [0,0,0,0,1,0]$
-   \end{quote}
+Following these rules, our second gate for $s_1*x=s_2$ is:
+\begin{quote}
+   $a = [0,0,0,1,0,0]$
+   \\
+   $b = [0,0,1,0,0,0]$
+   \\
+   $c = [0,0,0,0,1,0]$
+\end{quote}
 
-   The third gate for $s_2+x=s_3$:
-   \begin{quote}
-      $a = [0,0,1,0,1,0]$ ($s_2+x$)
-      $b = [1,0,0,0,0,0]$ ($1$)
-      $c = [0,0,0,0,0,1]$ ($s_3$)
-   \end{quote}
+The third gate for $s_2+x=s_3$:
+\begin{quote}
+   $a = [0,0,1,0,1,0]$ ($s_2+x$)
+   \\
+   $b = [1,0,0,0,0,0]$ ($1$)
+   \\
+   $c = [0,0,0,0,0,1]$ ($s_3$)
+\end{quote}
 
-   4th gate for $s_3+5=~out$:
-   \begin{quote}
-      $a = [5,0,0,0,0,1]$
-      $b = [1,0,0,0,0,0]$
-      $c = [0,1,0,0,0,0]$
+Fourth gate for $s_3+5=out$:
+\begin{quote}
+   $a = [5,0,0,0,0,1]$
+   \\
+   $b = [1,0,0,0,0,0]$
+   \\
+   $c = [0,1,0,0,0,0]$
+\end{quote}
+
+The R1CS put together:
+\begin{quote}
+   \[
+   A =
+   \begin{bmatrix}
+      0 & 0 & 1 & 0 & 0 & 0 \\
+      0 & 0 & 0 & 1 & 0 & 0 \\
+      0 & 0 & 1 & 0 & 1 & 0 \\
+      5 & 0 & 0 & 0 & 0 & 1
+   \end{bmatrix}
+   \]
+   \[
+   B =
+   \begin{bmatrix}
+      0 & 0 & 1 & 0 & 0 & 0 \\
+      0 & 0 & 1 & 0 & 0 & 0 \\
+      1 & 0 & 0 & 0 & 0 & 0 \\
+      1 & 0 & 0 & 0 & 0 & 0
+   \end{bmatrix}
+   \]
+   \[
+   C =
+   \begin{bmatrix}
+      0 & 0 & 0 & 1 & 0 & 0 \\
+      0 & 0 & 0 & 0 & 1 & 0 \\
+      0 & 0 & 0 & 0 & 0 & 1 \\
+      0 & 1 & 0 & 0 & 0 & 0
+   \end{bmatrix}
+   \]
    \end{quote}
    
-   The R1CS put together:
-   \begin{quote}
-      $
-      A
-      [0,0,1,0,0,0]
-      [0,0,0,1,0,0]
-      [0,0,1,0,1,0]
-      [5,0,0,0,0,1]
+\cite{RC23}
 
-      B 
-      [0,0,1,0,0,0]
-      [0,0,1,0,0,0]
-      [1,0,0,0,0,0]
-      [1,0,0,0,0,0]
 
-      C 
-      [0,0,0,1,0,0]
-      [0,0,0,0,1,0]
-      [0,0,0,0,0,1]
-      [0,1,0,0,0,0]
-      $
+\subsubsection{QAP}
+Next step is converting our R1CS into QAP form, which uses polynomials instead of dot products.
+We do this by using polynomials instead of dot product.
+In order to get a polynomial, we need to do a Lagrange interpolation on a set of points.
+For a polynomial of degree $n$, we need $n+1$ set points for the interpolation to give the polynomial.
+We need a polynomial of degree $n$, where $n$ is the number of row - 1. (Same thing as number of gate -1). 
+Therefore we need a set of 4 points to have a polynomial.
+Doing the transpose of our matrices, we can get 18 ($3x6$) polynomials.
+For instance, the first column of $A^T$ is our first polynomial $[0,0,0,5]$.
+This gives us the set of points $[(1,0),(2,0),(3,0),(4,5)]$.
+The polynomial interpretation of this set of points is $f(x) = 535x^3+636x^2+116x+636$
+Doing the same for every column of $A$, $B$ and $C$, we get the matrices:
+\begin{quote}
+   \[
+   A_m =
+   \begin{bmatrix}
+      636 & 116 & 636 & 535 \\
+      0   & 0   & 0   & 0   \\
+      8   & 416 & 5   & 213 \\
+      635 & 330 & 637 & 321 \\
+      4   & 634 & 324 & 320 \\
+      640 & 536 & 640 & 107
+   \end{bmatrix}
+   \]
+   \[
+   B_m =
+   \begin{bmatrix}
+      3   & 529 & 323 & 427 \\
+      0   & 0   & 0   & 0   \\
+      639 & 112 & 318 & 214 \\
+      0   & 0   & 0   & 0   \\
+      0   & 0   & 0   & 0   \\
+      0   & 0   & 0   & 0
+   \end{bmatrix}
+   \]
+   \[
+   C_m =
+   \begin{bmatrix}
+      0   & 0   & 0   & 0   \\
+      640 & 536 & 640 & 107 \\
+      0   & 0   & 0   & 0   \\
+      4   & 423 & 322 & 534 \\
+      635 & 330 & 637 & 321 \\
+      4   & 634 & 324 & 320
+   \end{bmatrix}
+   \]
    \end{quote}
-   \cite{RC23}
-
-   \cite{VB16}
    
-   
-   \subsubsection{QAP}
-   Next step is converting our R1CS into QAP form, which uses polynomials instead of dot products.
-   We do this by using polynomials instead of dot product.
-   In order to get a polynomial, we need to do a Lagrange interpolation on a set of points.
-   For a polynomial of degree n, we need n+1 set points for the interpolation to give the polynomial.
-   We need a polynomial of degree n, where n is the number of row - 1. (Same thing as number of gate -1). 
-   Therefore we need a set of 4 points to have a polynomial.
-   Doing the transpose of our matrices, we can get 18 (3x6) polynomials.
-   For instance, the first column of A^T is our first polynomial [0,0,0,5].
-   This gives us the set of points [(1,0),(2,0),(3,0),(4,5)]
-   The polynomial interpretation of this set of points is $f(x) = 535x^3+636x^2+116x+636$
-   Doing the same for every column of A, B and C, we get the matrices:
-   \begin{quote}
-      $
-      Am
-      [636,116,636,535]
-      [  0,  0,  0,  0]
-      [  8,416,  5,213]
-      [635,330,637,321]
-      [  4,634,324,320]
-      [640,536,640,107]
-
-      Bm
-      [  3,529,323,427]
-      [  0,  0,  0,  0]
-      [639,112,318,214]
-      [  0,  0,  0,  0]
-      [  0,  0,  0,  0]
-      [  0,  0,  0,  0]
-
-      Cm
-      [  0,  0,  0,  0]
-      [640,536,640,107]
-      [  0,  0,  0,  0]
-      [  4,423,322,534]
-      [635,330,637,321]
-      [  4,634,324,320]
-      $
-   The polynomial that we got from the first column of A appears in the first row of Am. Each row is obtained in a similar way.
+The polynomial that we got from the first column of $A$ appears in the first row of $A_m$. Each row is obtained in a similar way.
 
 The point of doing this transformation, is that now the dot product is a series of additions and multiplications of polynomials, and the result will be a polynomial.
 
-The resulting polynomial need to equal 0 at all the x coordinates we used previously.
+The resulting polynomial need to equal $0$ at all the $x$ coordinates we used previously.
 If it does, it means that the checks pass.
 To check correctness, we do not need to evaluate our polynomial at every point. 
-We can instead divide our polynomial t by another polynomial z, and verify that the division leaves no remainder.
-We define Z as (x - 1) * (x - 2) * (x - 3) ... - the simplest polynomial that is equal to zero at all points that correspond to logic gates. 
+We can instead divide our polynomial $t$ by another polynomial $z$, and verify that the division leaves no remainder.
+We define $Z$ as $(x - 1) * (x - 2) * (x - 3) * ...$, the simplest polynomial that is equal to zero at all points that correspond to logic gates. 
 
 In this case, computing T:
 \begin{quote}
-   $T(x) = S . Am * S . Bm - S . Cm  $
-   $T(x) = 139*x^6 + 372*x^5 + 275*x^4 + 58*x^3 + 147*x^2 + 379*x + 553$
+$T(x) = S \cdot Am * S \cdot Bm - S \cdot Cm  $
+$T(x) = 139*x^6 + 372*x^5 + 275*x^4 + 58*x^3 + 147*x^2 + 379*x + 553$
 \end{quote}
 
 In this case, we use $Z = (x-1)(x-2)(x-3)(x-4)$
-To show that $T$ is divided by $Z$, it is sufficient to verify $T(x) = 0$ at 1,2,3 and 4.
+To show that $T$ is divided by $Z$, it is sufficient to verify $T(x) = 0$ at $1,2,3$ and $4$.
 
-More formally, we have shown that there exist a Polynomial $H$ such that $T(x)=H(x)⋅Z(x)$
-(i.e. if T is divided by Z, then it will be perfectly divisible & will leave no remainder)
+More formally, we have shown that there exist a Polynomial $H$ such that $T(x)=H(x) \cdot Z(x)$
+(i.e. if $T$ is divided by $Z$, then it will be perfectly divisible and will leave no remainder)
 
-In a zkSNARK, the prover demonstrates that a polynomial Z exactly divides another polynomial
-T using Polynomial Commitments, such as KZG, Bulletproofs, or FRI, and Elliptic Curve Cryptography. 
-The purpose of this step is to reveal only certain evaluations of the polynomial, without disclosing the entire polynomial itself. 
-We will cover elliptic curve cryptography and polynomial commitment schemes in more detail in Section 5.
-   \iffalse
-   When describing circom, circom creates the witness and r1cs file.
-   Setup is created for the polynomial commitment scheme. Proof is evaluated in in the setup.
-
-The prover's process in SNARKs is to create a proof using the setup parameter, a private witness, and public input. The proof shows that the arithmetic circuit is equal to 0.
-Using the same setup parameter and the public input, the verifier confirms the accuracy of the proof by making sure it aligns with the parameters.
-
-\begin{figure}[H]
-   \centering
-   \includegraphics[width=130mm]{Circuit.png}
-   \caption{Arithmetic circuit for SNARK \cite{ZKM2}}
-   \label{overflow}
-   \end{figure}
+In a zkSNARK, the prover demonstrates that a polynomial $Z$ exactly divides another polynomial
+$T$ using Polynomial Commitments, such as KZG, Bulletproofs, or FRI. 
+The purpose of this step is to reveal only certain evaluations of the polynomial, without disclosing the entire polynomial itself.\cite{VB16}
 
 
-\begin{itemize}
-\item \textbf{S(C)}: Public parameters (pp,vp) for prover and verifier
-\item \textbf{P(pp,x,w)}: Proof $\pi$
-\item \textbf{V(vp,x,$\pi$)}: Accept or reject
-\item \textbf{C(x,w)}: Arithmetic circuit
-\item \textbf{w}: Private witness
-\item \textbf{x}: Public input
-\end{itemize}
-\fi
-
-%-- TO REVIEW
 \section{Proof of solvency}
 
 A proof of solvency is a system where we prove that an entity, in most cases an exchange, holds enough assets to cover
@@ -357,11 +374,11 @@ This is achieved through the application of Merkle trees.
 
 
 \begin{figure}[H]
-   \centering
-   \includegraphics[width=130mm]{MerkleTreeLiabilities.png}
-   \caption{Merkle tree for proof of liabilities}
-   \label{overflow}
-   \end{figure}
+\centering
+\includegraphics[width=130mm]{MerkleTreeLiabilities.png}
+\caption{Merkle tree for proof of liabilities}
+\label{overflow}
+\end{figure}
 
 
 In the Merkle tree, every node contains a user's balance along with a hash-based commitment incorporating the customer ID and a nonce. The root of the tree is the sum of the balances.

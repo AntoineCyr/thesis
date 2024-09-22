@@ -10,18 +10,18 @@ Another challenge pertains to trust in the third party, which must be mutual. Th
 
 The proof of solvency uses zero-knowledge to demonstrate, without revealing any information, that the assets in control are greater than the liabilities. The proof of solvency is made up of a proof of asset and a proof of liabilities, a structure that is self-explanatory.
 
-This paper extends the work done on proof of liabilities only. The most prevalent way to implement a proof of liabilities is by using a Merkle Sum Tree. 
+This paper extends the work done on proof of liabilities only. The most prevalent way to implement a proof of liabilities is by using a Merkle Sum tree. 
 In a Merkle tree, every parent node represents the hash of its child nodes. In the Merkle Sum tree, each node additionally holds the balance information. The leaf nodes consist of user IDs along with their respective balances, while the root node contains the hash of the entire tree, summarizing the total balance.
 
 Alongside the proof of liabilities, there is a proof of inclusion, where you demonstrate that for each customer, their balance is included in the tree. This is achieved by proving the Merkle path, which is sufficient for validation.
 
-This paper explores a way to minimize the cost of doing these proofs everyday, while maintaining complete privacy (i.e the Merkle Tree is kept private).
+This paper explores a way to minimize the cost of doing these proofs everyday, while maintaining complete privacy (i.e the Merkle tree is kept private).
 
 
 \section{Outline}
 
 Chapter 2 gives the background information needed to understand this paper.
-It elaborates on Bitcoin, including its transactions, the network, proof-of-work, and Merkle Tree. Marketplaces are also discussed. 
+It elaborates on Bitcoin, including its transactions, the network, proof-of-work, and Merkle tree. Marketplaces are also discussed. 
 Additionally, the chapter delves into Zero Knowledge, covering non-interactive proofs, SNARKs, and arithmetic circuits.
 The concept of proof of solvency, with a focus on real-world applications, is introduced. 
 

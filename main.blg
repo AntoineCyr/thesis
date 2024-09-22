@@ -1,0 +1,65 @@
+This is BibTeX, Version 0.99d (TeX Live 2023)
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: main.aux
+The style file: abbrv.bst
+Database file #1: bib/pulp.bib
+Warning--to sort, need author or key in ZKM2
+Warning--to sort, need author or key in ZKM10
+Warning--to sort, need author or key in ZKM3
+Warning--empty year in LZK
+Warning--empty journal in FRI
+Warning--empty year in BPR
+Warning--empty year in BPS
+Warning--empty journal in BFM88
+Warning--empty journal in BP18
+Warning--empty journal in DBBBCC15
+Warning--empty journal in GMW91
+Warning--empty journal in KZG
+Warning--empty journal in ASI23
+Warning--empty journal in KK23
+Warning--empty year in KK23
+Warning--empty journal in chainlink_blog
+Warning--empty journal in CC22
+Warning--empty journal in NZ20
+You've used 34 entries,
+            2118 wiz_defined-function locations,
+            681 strings with 7388 characters,
+and the built_in function-call counts, 8634 in all, are:
+= -- 838
+> -- 350
+< -- 4
++ -- 147
+- -- 110
+* -- 436
+:= -- 1457
+add.period$ -- 105
+call.type$ -- 34
+change.case$ -- 157
+chr.to.int$ -- 0
+cite$ -- 52
+duplicate$ -- 377
+empty$ -- 702
+format.name$ -- 110
+if$ -- 1816
+int.to.chr$ -- 0
+int.to.str$ -- 34
+missing$ -- 25
+newline$ -- 175
+num.names$ -- 62
+pop$ -- 227
+preamble$ -- 1
+purify$ -- 123
+quote$ -- 0
+skip$ -- 309
+stack$ -- 0
+substring$ -- 300
+swap$ -- 80
+text.length$ -- 4
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 136
+warning$ -- 18
+while$ -- 71
+width$ -- 36
+write$ -- 338
+(There were 18 warnings)

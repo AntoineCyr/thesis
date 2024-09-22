@@ -5,6 +5,15 @@ Zero knowledge proofs.
 \newblock MOOC, 2023.
 \newblock Dan Boneh, Shafi Goldwasser, Dawn Song, Justin Thaler, Yupeng Zhang.
 
+\bibitem{ZKM10}
+Zero knowledge proofs.
+\newblock MOOC, 2023.
+\newblock Dan Boneh, Shafi Goldwasser, Dawn Song, Justin Thaler, Yupeng Zhang.
+
+\bibitem{ZKM3}
+Zero knowledge proofs.
+\newblock MOOC, 2023.
+\newblock Dan Boneh, Shafi Goldwasser, Dawn Song, Justin Thaler, Yupeng Zhang.
 
 \bibitem{FG23}
 L.~A.
@@ -13,6 +22,12 @@ L.~A.
 \newblock
   \url{https://taiko.mirror.xyz/tk8LoE-rC2w0MJ4wCWwaJwbq8-Ih8DXnLUf7aJX1FbU},
   August 2023.
+
+\bibitem{MB17}
+A.~M. Antonopoulos.
+\newblock Mastering bitcoin: Unlocking digital cryptocurrencies.
+\newblock O'Reilly Media, 2017.
+\newblock 2nd edition.
 
 \bibitem{BM22}
 Bake.
@@ -23,6 +38,12 @@ Bake.
 B.~Barak.
 \newblock Lecture 14: Zero knowledge proofs.
 \newblock {\em Boaz Barak's Blog}.
+
+\bibitem{FRI}
+E.~Ben-Sasson, I.~Bentov, Y.~Horesh, and M.~Riabzev.
+\newblock Fast reed-solomon interactive oracle proofs of proximity.
+\newblock 2023.
+\newblock Technion, Haifa, Israel and Cornell University, Ithaca, NY, USA.
 
 \bibitem{BPR}
 Binance.
@@ -50,6 +71,17 @@ S.~Bowe, J.~Grigg, and D.~Hopwood.
 \newblock Recursive proof composition without a trusted setup.
 \newblock {\em Electric Coin Company}, 2023.
 
+\bibitem{VB16}
+V.~Buterin.
+\newblock Quadratic arithmetic programs: From zero to hero.
+\newblock {\em Medium}, December 2016.
+
+\bibitem{BP18}
+B.~Bünz, J.~Bootle, D.~Boneh, A.~Poelstra, P.~Wuille, and G.~Maxwell.
+\newblock Bulletproofs: Short proofs for confidential transactions and more.
+\newblock pages 319--334, 2018.
+\newblock Accessed: 2024-09-08.
+
 \bibitem{DBBBCC15}
 G.~G. Dagher, B.~Bunz, J.~Bonneau, J.~Clark, and D.~Boneh.
 \newblock Provisions: Privacy-preserving proofs of solvency for bitcoin
@@ -67,6 +99,12 @@ S.~Goldwasser, S.~Micali, and C.~Rackoff.
 \newblock The knowledge complexity of interactive proof systems.
 \newblock {\em SIAM Journal on Computing}, 18(1):186–208, 1989.
 
+\bibitem{GR16}
+J.~Groth.
+\newblock On the size of pairing-based non-interactive zero-knowledge proofs.
+\newblock In {\em Proceedings of the 2016 ACM Conference on Computer and
+  Communications Security (CCS)}, pages 480--491. ACM, 2016.
+
 \bibitem{GP21}
 Y.~Ji and K.~Chalkias.
 \newblock Generalized proof of liabilities, 2021.
@@ -75,6 +113,12 @@ Y.~Ji and K.~Chalkias.
 z.~L. Jim.ZK.
 \newblock Nova studies i: Exploring aggregation, recursion, and folding.
 \newblock {\em zkLinkBlog}, Nov 2023.
+
+\bibitem{KZG}
+A.~Kate and G.~M. Zaverucha.
+\newblock Polynomial commitments.
+\newblock December 2010.
+\newblock Accessed: 2024-09-08.
 
 \bibitem{ASI23}
 A.~Kothapalli, S.~Setty, and I.~Tzialla.
@@ -105,6 +149,10 @@ S.~Nakamoto.
 A.~Nitulescu.
 \newblock zk-snarks: A gentle introduction.
 \newblock 2020.
+
+\bibitem{RC23}
+RisenCrypto.
+\newblock R1cs and qap, 2023.
 
 \bibitem{LC23}
 L.~Team.
