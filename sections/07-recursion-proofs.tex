@@ -1,6 +1,7 @@
 % !TEX root = ../main.tex
 
 
+
 \chapter{Recursion proofs}
 
 This chapter serves as an intermediary background exploration,
@@ -14,14 +15,31 @@ In this section, we will examine these variations, distinguishing between them.
 We aim to identify the most suitable method for our daily proof of liabilities and proof of inclusion. \cite{Nova23}
 
 
-
 The prover's process in SNARKs is to create a proof using the setup parameters, a private witness, and public input. 
 As discussed in the previous section, the proof begins by transforming the code into an arithmetic circuit, 
-which is then represented as a polynomial. This polynomial is created using the witness (private input).
+which is then represented as a polynomial. The polynomial encodes a trace of the circuit (every wire value from inputs to intermediary values to output).
+This polynomial is created using the witness (private input).
 
 The objective is to demonstrate that the polynomial satisfies the solution without revealing the polynomial itself. 
-This is where the \hyperref[subsec]{polynomial commitment scheme} becomes essential. 
+This is where the \hyperref[subsec:pc]{polynomial commitment scheme} becomes essential. 
 The setup phase generates public parameters that assist in creating and verifying the proof without disclosing the polynomial.
+
+\begin{table}[H]
+   \centering
+   \caption{Definitions of Symbols in SNARK Circuit}
+   \label{tab:snark_symbols}
+   \begin{tabular}{|c|p{12cm}|}
+   \hline
+   \textbf{Symbol} & \textbf{Definition} \\ \hline
+   \( S(C) \) & Setup phase that generates the public parameters (\( \text{pp} \) and \( \text{vp} \)) for the prover and verifier. \\ \hline
+   \( P(\text{pp}, x, w) \) & Prover function that generates the proof \( \pi \) using the public parameters, public input \( x \), and private witness \( w \). \\ \hline
+   \( V(\text{vp}, x, \pi) \) & Verifier function that uses the verification parameters \( \text{vp} \), public input \( x \), and proof \( \pi \) to decide whether to accept or reject. \\ \hline
+   \( C(x, w) \) & Arithmetic circuit to generate the polynomial, taking public input \( x \) and private witness \( w \). \\ \hline
+   \( w \) & Private witness, representing the prover's secret input. \\ \hline
+   \( x \) & Public input, accessible to both the prover and verifier. \\ \hline
+   \end{tabular}
+   \end{table}
+   
 
 \begin{figure}[H]
 \centering
@@ -31,29 +49,28 @@ The setup phase generates public parameters that assist in creating and verifyin
 \end{figure}
 
 
-\begin{itemize}
-\item \textbf{S(C)}: Public parameters (pp,vp) for prover and verifier
-\item \textbf{P(pp,x,w)}: Proof $\pi$
-\item \textbf{V(vp,x,$\pi$)}: Accept or reject
-\item \textbf{C(x,w)}: Arithmetic circuit
-\item \textbf{w}: Private witness
-\item \textbf{x}: Public input
-\end{itemize}
-
-
 
 \section{Aggregation}
  %-- Can expend on this using \cite{VRS23}, talk about proof composition
- Aggregation is the simplest form of recursion for zk proofs. Its purpose is to reduce the number of proofs that need to be verified. The process involves two phases.
-
- In the first phase, you create individual proofs for multiple blocks. In the second phase, these proofs are combined into a single "proof of proof". It takes multiple proof as input,
- and outputs a new proof validating the input proofs.
- This can be done either by merging all proofs into one or by creating a tree-like structure where each parent node verifies its child nodes.
-
-This is a simple process. Each block has its own proof, and then you prove that the other proofs are valid, giving you only one prove
-to verify at the end. Since there are 2 different phases, 2 different circuits need to be constructed.
-On the surface, you can parallelize the initial proofs, which decrease the proving time, and you only have one proof to verify, which decreases the verifying time.
-However, there are still some issues with aggregation. The most important issue is that the proof time of the second circuit grows linearly with the number of blocks to verify, making it less scalable. \cite{Nova23}
+ Aggregation is the simplest form of recursion for zk proofs. Its purpose is to reduce the number of proofs that must be verified. 
+ It takes a list of proofs as input and outputs a single proof.
+ The process involves two phases.
+ 
+  In the first phase, you create your initial proofs.
+  In the second phase, these proofs are combined into "proof of proofs". 
+  The second phase can be viewed as a tree, with the initial proofs being the leaves. Each parent node proves the proof of the child nodes.
+  The tree can have any number of degrees. You can go from a tree of 2 levels to a binary tree with as many levels as needed.
+ 
+ This is a simple process. Each node has its proof, and then you prove that the other proofs are valid, giving you only one proof
+ to verify. Since there are two different phases, two different circuits need to be constructed.
+ On the surface, you can parallelize the initial proofs, which decreases the proving time, and you only have one proof to verify, which reduces the verifying time.
+ 
+ However, there are still some aggregation issues.
+ The main issue is that a verification circuit is more complex than a proof of transaction.
+ Verifying a proof involves constructing a circuit to represent the verification process itself, which is inherently complex. 
+ This circuit must perform cryptographic operations, including curve arithmetic and bilinear pairings, which must be implemented directly at the circuit level. 
+ As a result, the verification circuit is essentially the exponent of the cryptographic process.
+ This becomes a scaling issue since the proof time of the second circuit grows linearly with the number of proofs to verify. \cite{Nova23}
 \iffalse
 \begin{figure}[H]
    \centering
@@ -64,69 +81,63 @@ However, there are still some issues with aggregation. The most important issue 
 \fi
 
 \section{Recursion scheme}
-The next technique is the recursion scheme, or Incrementally Verifiable Computation (IVC). Like the aggregation, the proof is separated into blocks.
-However, in this case each block serves two purposes. Provings that the block itself is valid, and that the previous proof is valid.
-The number of constraints will always stay the same because it is only proving 2 things of fixed sizes. This creates
-a chain structure, where verifying the latest block is the equivalent of verifying every block in the chain.
-It is an improvement from the previous technique, because this allows to maintain a constant number of constraints in the circuit.
-This implies that the latest does not take longer to verify than the second block.
-However, each block still has to verify the previous block, which takes additional time. \cite{Nova23}
-%-- Can Expend on this using \cite{VRS23}, talk about IVC
+The following technique is the recursion scheme, or Incrementally Verifiable Computation (IVC). Like the aggregation, the proof is separated into nodes.
+However, in this case each node serves two purposes. Provings that the node itself is valid, and that the previous proof is valid.
+The number of constraints will always stay the same because it only proves two things of fixed sizes. This creates
+a chain structure, where verifying the latest node is the equivalent of verifying every node in the chain.
+It is an improvement from the previous technique for two reasons.
+First, because this allows to maintain a constant number of constraints in the circuit.
+Second, because you don't have to redo a trusted setup once the size of the proof is defined.
+This means the trusted setup remains the same, and you don't have to redo it.
+This implies that the latest node does not take longer to verify than the second node.
+However, each node still has to verify the previous node, which takes additional time. \cite{Nova23}
 
 
 \section{Accumulation}
-To mitigate the exponential growth of recursion proofs, the new scheme created by Nova defer every computationally heavy task to the end.
-All the different parts are accumulated at a later point. Unlike the aggregation scheme, the last part of accumulation does not grow with every new step.
-Instead of doing n times heavy work, we are doing it only once.
-The heavy part of the verification step in most SNARKS is found when opening the polynomial commitment.
+% I made a mistake, I talk about Nova accumulation but Nova accumulation is the folding scheme, which we discuss later.
+% This parapgrah is an introduction to accumulation schemes
+Accumulation schemes offer a different approach to aggregating proofs than IVC. 
+Instead of verifying proofs at each step, accumulation defers all heavy computational tasks to the final step.
+This allows proofs to be efficiently added to an accumulator while minimalizing the intermediate verification workload. 
+Each step adds a new proof to the accumulator while maintaining a small and constant-sized state. 
+Unlike recursion, where each proof is verified within the circuit immediately, accumulation schemes delay all verification until the final stage, 
+where all accumulated proofs are checked at once.
 
+There are different types of accumulation schemes, each handling proof accumulation in a distinct way.
+Some, like polynomial accumulation, track commitments to polynomial evaluations over multiple steps. 
+Others, such as accumulation based on cryptographic accumulators (e.g., RSA or Merkle accumulators), focus on aggregating statements into a compact structure. 
+Regardless of the method, the core idea remains the same: verification is deferred to the final proof, preventing the verification cost from increasing with each step.
 
-\subsection{Polynomial Commitments}
-\label{subsec:pc}
-A polynomial commitment is a cryptographic technique that allows to commit to (or "lock") a polynomial's data 
-in such a way that the data can later be revealed (or "unlocked") while ensuring integrity and privacy.
+Accumulation schemes relate to Incrementally Verifiable Computation (IVC) because both aim to make verifying long computations more efficient. 
+However, the key difference is that IVC requires each step to verify the previous one while keeping proof sizes constant, while accumulation postpones all verification until the final step. 
+This makes accumulation more suitable for cases where verifying everything at the end is preferable to verifying at every step.
 
-Polynomial commitments are binding, meaning that once a commitment is made, it is impossible to alter the original polynomial without detection. 
-The commitments are also much shorter than the polynomial data itself. While collisions are theoretically possible due to the pigeonhole principle, 
-it is computationally infeasible to find a second polynomial that matches the same commitment.
+The advantage is clear: instead of paying the cost of verification $n$ times throughout the process, we pay it once at the end. 
+This is especially useful when multiple independent proofs need to be efficiently combined without introducing the recursive overhead of IVC. 
+However, this benefit comes with a tradeoff. Since all verifications are deferred, the final step can be computationally expensive.\cite{BB20}
 
-Additionally, polynomial commitments can be hiding, which means no information about the polynomial is leaked to the verifier.
-For example, we can create a commitment by hashing a polynomial with a collision-resistant hash function like SHA-256, and only the hash value is shared. 
-To make it hiding, a random factor could be added to the polynomial data before hashing.
-
-Instead of committing to a full dataset, we can commit specifically to a polynomial. 
-Committing to the coefficients of the polynomial directly would reveal the polynomial when the commitment is opened. 
-Instead, we want the ability to open the commitment only at a specific point of the polynomial, without revealing the entire polynomial itself. 
-A polynomial commitment allows one party to prove to another that they possess a polynomial that evaluates to a certain value at a specific point without revealing any other information about the polynomial.
-\cite{VR23}
-
-There are many different polynomial schemes, such as KZG, Bulletproofs and FRI. 
-In these schemes, the setup processes and the commitments vary significantly. 
-KZG commitments rely on a trusted setup to generate elliptic curve parameters\cite{KZG}, Bulletproofs avoids the use of setup by using logarithm-based techniques\cite{BP18}, 
-and FRI evaluates polynomial through proximity checks\cite{FRI} .
-%-- few lines describing different polynomial schemes
 
 \subsection{Halo accumulation}
-
 The concept of deferring the polynomial commitment opening, and consolidating them into a single operation, was introduced by Bowe, Grigg, and Hopwood Halo.\cite{BGH23}
 This process involves two parts:
 the first part is fast, where you output a polynomial and its commitment.
-The second part is expensive, where we verify the pair $(f_1, c_1)$ of the polynomial $f_1$ and its commitment $c_1$.
-The second part can be accumulated if the commitment scheme is additively homomorphic.
+The second part is expensive, where we verify the pair $(f_1, c_1)$ of the polynomial $f_1$ and its commitment $c_1$. We open the polynomial only at a specific point.
+The second part can be accumulated if the commitment scheme is additively homomorphic. 
 Instead of individually verifying each pair, we accumulate the pairs and verify their linear combinations ($c_1+c_2+...$ is a commitment for $f_1+f_2+...$). \cite{VR23}
 
-\section{Folding scheme}
-Nova is an advanced polynomial commitment scheme designed to enhance the efficiency of recursive proofs by leveraging sophisticated accumulation techniques.
-Instead of accumulating the hard part at the end, the folding scheme accumulates everything up until the end.
-The setup is similar to the recursion scheme, but instead of computing the proof of the previous block, the R1CS are folded together at every block.
-Instead of having $n$ set of R1CS, we are left with a single set. The new R1CS are called relaxed R1CS, and are used to compute a single proof at the end of the folding.
-\cite{Nova23}  \cite{ASI23}
 
+\section{Folding scheme}
+In the Nova scheme, the folding technique accumulates the R1CS progressively as the computation proceeds rather than accumulating only the complex portions of the R1CS. 
+This means that at each step in the folding process, instead of storing the separate R1CS sets for each node and combining them later, we incrementally combine them into a single R1CS set. 
+This set, called "relaxed R1CS," simplifies the final proof generation.
+As a result, we avoid the need to handle multiple sets of R1CS in the final step, leading to a more efficient recursive proof process. 
+The relaxed R1CS is then used to compute a single proof at the end of the folding process.
+\cite{Nova23}  \cite{ASI23} \cite{vODC24F}
 
 \subsection{Relaxed R1CS}
 Going back to the previous \hyperref[subsec:r1cs]{section}, we previously defined what an R1CS is.
 The goal is to combine 2 R1CS and obtain another R1CS. If we are able to do that, we can fold every R1CS together and be left with only one.
-\\
+
 
 If we \textbf{define our R1CS}:
 \begin{quote}
@@ -146,6 +157,8 @@ We know $Az_i \circ Bz_i = Dz_i$ for $ i = 1,2$
 
 \textbf{Recall}: Our R1CS needs to be valid for any element of the field.
 To prove this, the verifier choose a random point $r$ at which we will evaluate our constraints system.
+
+The naïve approach to folding an R1CS is to sum the two instances together.
 
 \textbf{First attempt}:
 \begin{quote}
@@ -172,8 +185,14 @@ Then:
    Where $E$ is a combination of the remaining values.
    \\
 \end{quote}
-This is not quite an R1CS, because it is not of the form $Az_i \circ Bz_i = Dz_i$.
+
+Simply summing the constraints does not preserve the R1CS structure we just defined: $Az_i \circ Bz_i = Dz_i$.
+Since the direct addition of two R1CS instances does not produce another valid R1CS, we need a different approach.
+
 We need to modify the R1CS so that it can be folded.
+To solve this, we introduce a relaxed R1CS, which includes a new error term $E$.
+The goal is to have the new terms produced by the folding comprised in the term $E$.
+We will try the new form: $Az_i \circ Bz_i = Dz_i Ez_i$.
 \\
 \\
 Let's \textbf{define a relaxed R1CS}:
@@ -212,5 +231,10 @@ $=(c_1+rc_2)(Dz_1+rDz_2)+E_1+r^2E_2+rT$
 \\
 $=c(Dz) + E$
 \end{quote}
-We have a valid relaxed R1CS.\cite{ZKM10} \cite{FG23}
+We have a valid relaxed R1CS.
 
+\paragraph{Validity}
+While the error term $E$ allows folding, it questions the validity of the proof. As long as $E$ is bounded, the proof remains valid. 
+The relaxed formulation preserves constraint structure, enables incremental folding, and prevents uncontrolled error propagation. 
+The system can return to a strict R1CS if needed by proving $E = 0$ in the final verification, ensuring flexibility and correctness.
+\cite{Nova23}

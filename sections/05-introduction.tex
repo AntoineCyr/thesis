@@ -55,6 +55,13 @@ Second, the folding scheme is relatively new, and researchers are still explorin
 
 \section{Results}
 The proof of liabilities circuits are evaluated and compared based on the number of constraints and proof time. 
-In this thesis, we demonstrate that the new liabilities circuit performs better when the number of changes is 0.05\% of users or less. 
-Additionally, we show that when combined with the Nova folding scheme, it remains superior even with 1\% of changes. 
+In this thesis, we demonstrate that the new liabilities circuit performs better when the number of changes is 0.05\% of users or less.
+The new circuit is also better the fewer users we have, but it performs well enough with a high number of users. For instance, at 1 million users, 
+the new circuit is 3 times smaller than the old circuit (1 000M constraints vs 3 000M constraints).
+At 1000 users, the results are way better; we have 300k constraints vs 3M constraints. 
+
+Additionally, we show that when combined with the Nova folding scheme, the new circuit remains superior even with 1\% of changes. 
+The folding circuit performs better the more users we have.
+For instance at 256 users the proof time is similar(around 50 seconds), but at 1M users we have around 20 000 seconds vs 200 000 seconds. 
+
 The percentage of changes is defined by the number of root changes in the tree between a previously proven Merkle tree and the targeted Merkle tree.

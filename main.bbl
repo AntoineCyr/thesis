@@ -82,6 +82,12 @@ B.~Bünz, J.~Bootle, D.~Boneh, A.~Poelstra, P.~Wuille, and G.~Maxwell.
 \newblock pages 319--334, 2018.
 \newblock Accessed: 2024-09-08.
 
+\bibitem{BB20}
+B.~Bünz, A.~Chiesa, P.~Mishra, and N.~Spooner.
+\newblock Proof-carrying data from accumulation schemes.
+\newblock {\em Cryptology ePrint Archive}, (2020/499), 2020.
+\newblock Accessed: 2025-01-29.
+
 \bibitem{DBBBCC15}
 G.~G. Dagher, B.~Bunz, J.~Bonneau, J.~Clark, and D.~Boneh.
 \newblock Provisions: Privacy-preserving proofs of solvency for bitcoin
@@ -163,6 +169,16 @@ L.~Team.
 Trace.
 \newblock The proof supply chain.
 \newblock {\em Figment Capital}, January 2024.
+
+\bibitem{vODC24F}
+E.~van Oorschot, Y.~Deng, and J.~Clark.
+\newblock Folding (sangria).
+\newblock GitHub Pages, 2024.
+
+\bibitem{vODC24}
+E.~van Oorschot, Y.~Deng, and J.~Clark.
+\newblock Kzg commitments.
+\newblock GitHub Pages, 2024.
 
 \bibitem{VR23}
 Veridise.

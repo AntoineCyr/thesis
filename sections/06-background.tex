@@ -356,6 +356,143 @@ $T$ using Polynomial Commitments, such as KZG, Bulletproofs, or FRI.
 The purpose of this step is to reveal only certain evaluations of the polynomial, without disclosing the entire polynomial itself.\cite{VB16}
 
 
+\subsection{Polynomial Commitments}
+\label{subsec:pc}
+A polynomial commitment is a cryptographic technique that allows to commit to (or "lock") a polynomial's data 
+in such a way that the data can later be revealed (or "unlocked") while ensuring integrity and privacy.
+
+Polynomial commitments are binding, meaning that once a commitment is made, it is computationally infeasible to alter the original polynomial without detection. 
+The commitments are generally constant size. While collisions are theoretically possible due to the pigeonhole principle, finding a second polynomial that matches the same commitment is computationally infeasible.
+
+Additionally, polynomial commitments can be hiding, which means the verifier is not exposed to any information about the polynomial.
+For example, we can create a commitment by hashing a polynomial with a collision-resistant hash function like SHA-256, and only the hash value is shared. 
+To make it hiding, a random factor could be added to the polynomial data before hashing.
+
+Instead of committing to an entire dataset (a set of values or a table), we can commit to a polynomial that represents or encodes this data. 
+This is useful because polynomials can be compact representations of structured data.
+
+The naïve approach to committing to a polynomial is simply revealing its coefficients directly.
+This approach fails because the information is not hidden, among other things.
+
+A well-designed polynomial commitment scheme allows flexibility: it enables someone to either open the commitment to reveal the entire polynomial,
+or to open it at a specific evaluation point. 
+This is a necessary parameter of the scheme, as it allows verification that someone has knowledge of a polynomial that evaluates at a certain point without revealing the polynomial itself.
+
+For the proof to be complete, the polynomial must be evaluated at $d+1$ unique points, where $d$ is the degree of the polynomial.
+However, to be succinct, we want to verify the least number of points possible.
+
+The question is, how many points do we need to verify to have a high confidence in the polynomial?
+In a cryptographic setting, $q$ is a large prime. If $q$ is 256-bits and the polynomial is degree 1000, 
+then the probability of giving the right value at random is $1000/2^256$ (As we recall, a polynomial of degree 1000 has 1000 roots). 
+Therefore, after checking just one random point, it is statistically probable that the polynomials will be the same if the point matches. \cite{VR23}
+
+There are many different polynomial schemes, such as KZG, Bulletproofs and FRI. 
+In these schemes, the setup processes and the commitments vary significantly. 
+
+KZG commitments rely on a trusted setup to generate elliptic curve parameters\cite{KZG}. The KZG setup is universal. Once it is done, it can be useable by anyone. 
+There are many different versions available to the public; the Ethereum Foundation has implemented one of these versions. 
+
+Bulletproofs avoids using a trusted setup by using logarithm-based techniques\cite{BP18}. 
+However, while the KZG proofs are constant size, Bulletproofs are logarithmic.
+
+FRI evaluates polynomials through proximity checks.\cite{FRI} FRI is post-quantum since it relies only on hash function security. 
+Other schemes rely on cryptographic assumptions, such as the hardness of the discrete logarithm problem, which quantum computers can efficiently solve.
+
+
+\subsubsection{KZG}
+KZG commitments work by evaluating the polynomial at a single secret point $\tau$. 
+As we just saw, evaluating a single point is statistically sufficient.
+This approach ensures that the commitment remains succinct.
+
+To achieve this, a trusted setup generates a structured random string (SRS) containing powers of $\tau$
+of a specific polynomial degree. 
+\[
+\langle g^{\tau^0}, g^{\tau^1}, g^{\tau^2}, g^{\tau^3}, \dots, g^{\tau^d} \rangle \equiv \text{SRS}
+\]
+where \( g \) is a generator.  
+The prover uses these precomputed values to commit to \( f(x) \) without knowing \( \tau \) or \( P(\tau) \).
+
+\begin{equation*}
+ K_P(\tau) = \text{Commit}(P(\tau))
+\end{equation*}
+\begin{equation*}
+ = g^{c_0} (g^\tau)^{c_1} (g^{\tau^2})^{c_2} (g^{\tau^3})^{c_3} \dots
+\end{equation*}
+\begin{equation*}
+ = g^{c_0 + c_1 \tau + c_2 \tau^2 + c_3 \tau^3 + \dots}
+\end{equation*}
+\begin{equation*}
+ = g^{P(\tau)}
+\end{equation*}BulletProofs
+
+The commitment is succinct because the polynomial degree does not impact the size.
+
+
+To open the polynomial, the prover can send the coefficients and the verifier will recompute $K_P(\tau)$.
+This is of little use since the prover could have simply hash the coefficient to get a similar result.
+KZG offers additionnal features that works specifically with polynomials.
+
+Additive homomorphism in KZG allows commitments of polynomials to be combined in a way that reflects polynomial addition. 
+If two polynomials $f$ and $g$ have a sum $f + g = h$, then their commitments $C_f$ and $C_g$ have the sum $C_f + C_g = C_h$.
+
+Multiplication is not exactly homormorphic in KZG, but we can get something close to it using bilinear pairing.
+The idea is to assert the value for $K_{P_1(\tau)} \cdot K_{P_2(\tau)}$ and convince it is correct given $K_{P_1(\tau)}$ and $K_{P_2(\tau)}$.
+
+\begin{quote}
+   \begin{equation*}
+ e(K_{P_1(\tau)}, K_{P_2(\tau)}) \stackrel{?}{=} e(K_{P_1(\tau) + P_2(\tau)}, g)
+   \end{equation*}
+   \begin{equation*}
+ e(g^{P_1(\tau)}, g^{P_2(\tau)}) = e(g^{P_1(\tau) \cdot P_2(\tau)}, g)
+   \end{equation*}
+   \begin{equation*}
+ = e(g, g)^{P_1(\tau) \cdot P_2(\tau)}
+   \end{equation*}
+\end{quote}
+   
+
+
+The most beneficial property of KZG, and any polynomial commitment scheme, is being able to open the commiment at specific points.
+
+KZG commitments allow proving that a polynomial \( P(x) \) has a root at \( r \) by demonstrating that \( (x - r) \) divides \( P(x) \) without remainder.
+As we recall, we can write any polynomial in a factorized format:
+
+$P(x) = (x - r_0)(x - r_1)(x - r_2) \dots$
+
+If \( r \) is a root, \( P(x) \) is divisible by \( (x - r) \), so we define:
+
+$Q(x) = \frac{P(x)}{x - r}$
+
+The prover commits to \( K_{Q(\tau)} \) and provides it to the verifier.
+
+The verifier can compute $K_{V(\tau)}$ by treating $x-r$ as a polynomial:
+
+$V(x) = x - r = -r + 1 * x$
+and using KZG to produce it.
+\begin{quote}
+   \begin{equation*}
+ e(K_{P(\tau)}, g) \stackrel{?}{=} e(K_{Q(\tau)}, K_{V(\tau)})
+   \end{equation*}
+   \begin{equation*}
+ e(g^{P(\tau)}, g) = e(g^{Q(\tau)}, g^{V(\tau)})
+   \end{equation*}
+   \begin{equation*}
+ e(g, g)^{P(\tau)} = e(g, g)^{Q(\tau) \cdot V(\tau)}
+   \end{equation*}
+\end{quote}
+
+
+This proof is independent of the polynomial degree of $Q$ and $P$, making it efficient even for large polynomials.
+
+
+The security of the commitments relies on properly generating the trusted setup. 
+If the secret $\tau$ is leaked or manipulated, the security of the scheme could be compromised. 
+To mitigate this, multi-party computation ceremonies ensure that at least one participant securely destroys their contribution to the SRS. 
+Zero-knowledge proofs can also be used to validate that the setup was generated correctly without revealing $\tau$.
+
+KZG is the standard in terms of commitments for SNARKS. It is efficient and forms the basis of many cryptographic protocols. \cite{vODC24}
+
+
 \section{Proof of solvency}
 
 A proof of solvency is a system where we prove that an entity, in most cases an exchange, holds enough assets to cover

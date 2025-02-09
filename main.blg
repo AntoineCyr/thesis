@@ -1,4 +1,4 @@
-This is BibTeX, Version 0.99d (TeX Live 2023)
+This is BibTeX, Version 0.99d (TeX Live 2024)
 Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: main.aux
 The style file: abbrv.bst
@@ -12,6 +12,7 @@ Warning--empty year in BPR
 Warning--empty year in BPS
 Warning--empty journal in BFM88
 Warning--empty journal in BP18
+Warning--there's a number but no volume in BB20
 Warning--empty journal in DBBBCC15
 Warning--empty journal in GMW91
 Warning--empty journal in KZG
@@ -21,45 +22,45 @@ Warning--empty year in KK23
 Warning--empty journal in chainlink_blog
 Warning--empty journal in CC22
 Warning--empty journal in NZ20
-You've used 34 entries,
+You've used 37 entries,
             2118 wiz_defined-function locations,
-            681 strings with 7388 characters,
-and the built_in function-call counts, 8634 in all, are:
-= -- 838
-> -- 350
+            696 strings with 7696 characters,
+and the built_in function-call counts, 9506 in all, are:
+= -- 918
+> -- 409
 < -- 4
-+ -- 147
-- -- 110
-* -- 436
-:= -- 1457
-add.period$ -- 105
-call.type$ -- 34
-change.case$ -- 157
++ -- 170
+- -- 130
+* -- 492
+:= -- 1611
+add.period$ -- 115
+call.type$ -- 37
+change.case$ -- 176
 chr.to.int$ -- 0
-cite$ -- 52
-duplicate$ -- 377
-empty$ -- 702
-format.name$ -- 110
-if$ -- 1816
+cite$ -- 56
+duplicate$ -- 401
+empty$ -- 764
+format.name$ -- 130
+if$ -- 1994
 int.to.chr$ -- 0
-int.to.str$ -- 34
-missing$ -- 25
-newline$ -- 175
-num.names$ -- 62
-pop$ -- 227
+int.to.str$ -- 37
+missing$ -- 26
+newline$ -- 191
+num.names$ -- 68
+pop$ -- 252
 preamble$ -- 1
-purify$ -- 123
+purify$ -- 139
 quote$ -- 0
-skip$ -- 309
+skip$ -- 329
 stack$ -- 0
-substring$ -- 300
-swap$ -- 80
+substring$ -- 315
+swap$ -- 83
 text.length$ -- 4
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 136
-warning$ -- 18
-while$ -- 71
-width$ -- 36
-write$ -- 338
-(There were 18 warnings)
+type$ -- 148
+warning$ -- 19
+while$ -- 77
+width$ -- 39
+write$ -- 371
+(There were 19 warnings)
