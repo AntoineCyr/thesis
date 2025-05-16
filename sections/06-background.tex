@@ -96,8 +96,9 @@ To gain custody of your Bitcoin, you need to request a transfer to your own wall
 Once you have Bitcoins in your wallet, you can transact on the network without needing a third party.
 Unless you are running a node, you will need to trust a 3rd party, whether it is a marketplace, or over the counter, to first acquire Bitcoin.
 
-
-When your Bitcoin is held in the marketplace's custody, it cannot be track onchain. It blends with the plarform's holdings.
+Since the Bitcoin ledger is public, you can use tools to see the transactions on the network, and to see which wallet address owns how many Bitcoin. 
+When your Bitcoin is held in the marketplace's custody, it cannot be track onchain (onchain refers to everything happening in the blockchain). 
+It blends with the plarform's holdings, because the marketplace does not have as many wallets as it has clients.
 Marketplaces manage many wallets, some public and some private, which enhances the privacy of deposits and withdrawals but contradicts Bitcoin's design for transparency and independence from third parties. 
 This lack of visibility poses a challenge, as users have no proof of the marketplace's solvency to reimburse all clients. 
 However, this issue is being addressed through the introduction of proof of solvency (or proof of reserve) mechanisms, 
@@ -129,9 +130,11 @@ Therefore, noninteractive zero-knowledge proofs offer enhanced efficiency and sc
 
 \subsection{SNARKS}
 One of the recent advances for non-interactive proofs is what is known as SNARK (non-interactive argument of knowledge).
+As a recall the 
+
 This means a proof that is:
 \begin{itemize}
-\item \textbf{Succinct}: The size of the proof is very small compared to the size of the witness.
+\item \textbf{Succinct}: The size of the proof is very small compared to the size of the witness (the secret information).
 \item \textbf{Non-interactive}: There are no rounds of interactions between the prover and the verifier.
 \item \textbf{Argument}: It is secure only against provers with bounded computational resources. A dishonest prover with unlimited computational power could potentially prove a false statement.
 \item \textbf{Knowledge-sound}: A valid proof can only be generated if the prover knows the witness. \cite{NZ20}
@@ -168,7 +171,7 @@ These gates are configured to execute arithmetic operations such as addition, su
 
 \subsubsection{R1CS}
 \label{subsec:r1cs}
-The first step is to express our circuit as a set of constraint where each constraint contains only one arithmetic operation.
+The first step is to express our arithmetic circuit as a set of constraints where each constraint contains only one arithmetic operation.
 \begin{quote}
 $s_1 = x * x$
 \\
@@ -383,7 +386,7 @@ However, to be succinct, we want to verify the least number of points possible.
 
 The question is, how many points do we need to verify to have a high confidence in the polynomial?
 In a cryptographic setting, $q$ is a large prime. If $q$ is 256-bits and the polynomial is degree 1000, 
-then the probability of giving the right value at random is $1000/2^256$ (As we recall, a polynomial of degree 1000 has 1000 roots). 
+then the probability of giving the right value at random is $1000/2^{256}$ (As we recall, a polynomial of degree 1000 has 1000 roots). 
 Therefore, after checking just one random point, it is statistically probable that the polynomials will be the same if the point matches. \cite{VR23}
 
 There are many different polynomial schemes, such as KZG, Bulletproofs and FRI. 
@@ -423,7 +426,7 @@ The prover uses these precomputed values to commit to \( f(x) \) without knowing
 \end{equation*}
 \begin{equation*}
  = g^{P(\tau)}
-\end{equation*}BulletProofs
+\end{equation*}
 
 The commitment is succinct because the polynomial degree does not impact the size.
 
@@ -501,8 +504,8 @@ it has many limitations. Obviously it requires the trust of another 3rd party, b
 to hold an audit every single day, and in the Bitcoin world things move fast. It is essential to be able to fill a proof of solvency every single day.
 The implementation of a mechanism to produce daily proofs of solvency is therefore of the utmost importance.
 
-A proof of solvency is composed of a proof of assets, where we verify what assets the marketplace as control over, and the proof of liabilities,
-where we confirm that the total amount of user deposits is smaller than the marketplaces assets.
+A proof of solvency is composed of a proof of assets, where we verify what assets the marketplace has control over, and the proof of liabilities, 
+where we confirm that the total amount of user deposits is smaller than the sum of the marketplace's assets.
 
 The first paper about a proof of solvency focuses only on the proof of liabilities. In his paper Gregory Maxwell addresses the issue of verifying
 the solvency of Bitcoin exchanges. \cite{chainlink_blog}

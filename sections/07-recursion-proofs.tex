@@ -4,8 +4,8 @@
 
 \chapter{Recursion proofs}
 
-This chapter serves as an intermediary background exploration,
-diving into more advanced concepts beyond last chapter concepts.
+This chapter serves as an intermediary background exploration, 
+diving into more advanced concepts beyond the last chapter concepts.
 The realm of zero knowledge is dynamic and continuously evolving,
 marked by ongoing advancements and active research endeavors. Among these advancements,
 recursion proofs is one of the most important and active subjects. Recursion proofs are created to accelerate
@@ -57,7 +57,7 @@ The setup phase generates public parameters that assist in creating and verifyin
  The process involves two phases.
  
   In the first phase, you create your initial proofs.
-  In the second phase, these proofs are combined into "proof of proofs". 
+  In the second phase, these proofs are combined into \verb|"proof of proofs"|. 
   The second phase can be viewed as a tree, with the initial proofs being the leaves. Each parent node proves the proof of the child nodes.
   The tree can have any number of degrees. You can go from a tree of 2 levels to a binary tree with as many levels as needed.
  
@@ -82,7 +82,7 @@ The setup phase generates public parameters that assist in creating and verifyin
 
 \section{Recursion scheme}
 The following technique is the recursion scheme, or Incrementally Verifiable Computation (IVC). Like the aggregation, the proof is separated into nodes.
-However, in this case each node serves two purposes. Provings that the node itself is valid, and that the previous proof is valid.
+However, in this case each node serves two purposes. Proving that the node itself is valid, and that the previous proof is valid.
 The number of constraints will always stay the same because it only proves two things of fixed sizes. This creates
 a chain structure, where verifying the latest node is the equivalent of verifying every node in the chain.
 It is an improvement from the previous technique for two reasons.
