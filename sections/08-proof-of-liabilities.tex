@@ -12,6 +12,7 @@ Assigning a value to a signal contributes to the constraint system and the witne
 Input and outputs are signals, and you can have additional intermediate signals.
 During circuit compilation, constraints are generated in r1cs format. Additionally, compiling a circuit produces a witness file containing the data essential for verifying the constraints and demonstrating the correct behavior of the circuit.
 
+
 \paragraph{Constraints} 
 
 A zero knowledge circuit has generally two types of constraints: range check and arithmetic.
@@ -20,6 +21,12 @@ The simple arithmetic case is when we define a value in Circom $a = b + c$. Circ
 A range check verifies that a value lies within specified bounds.
 In Circom, the range check constraint is transform to be arithmetic as well. For example, to check $x<n$, we would use a library function $lessThan$.
 The function decomposes the numbers in bits, and then does a series of bit equality to determine the result. The bit equalities are compiled by Circom in arithmetic constraints.
+
+In Circom, we use a specific type of variable type called a signal. Usually when we assign a value to a signal, a constraint is created.
+There is a way to assign value without creating a constraint, but it adds complexity and we never use it in this paper. 
+Therefore it is safe to assume that every time we assign a value to a signal, we create a constraint. 
+Every variables in this chapter will be of the type signal.
+This means that the values will be constrained automatically as we define them.
 
 
 \paragraph{SnarkJS} 
@@ -62,6 +69,15 @@ The root hash will be used to verify the inclusion of the balances.
 In a complete proof of reserves, the balance sum would be a private output. We would have another circuit proving that the sum of liabilities is smaller
 than the sum of assets, without revealing the balance.
 
+The circuit follow the zero knowledge \hyperref[subsec:zkp]{properties} we highlighted previously. 
+\paragraph{Properties}
+\begin{itemize}
+   \item Completeness: If the input balances are non-negative and within the range, a Merkle sum tree will be produced alongside the proof. This is enforced by the arithmetic constraints and range checks.
+   \item Soundness: If any input balance is negative or outside the range, a valid proof cannot be produced. Moreover, the Merkle sum tree cannot produce an inacurate root hash and sum if the inputs are valid due to constraints ensuring sum accuracy and Merkle path integrity.
+   \item Zero-Knowledge: The verifier learns only the public outputs, from which he does not gain any information about the individual inputs. The hash provides not useful information.
+   \end{itemize}
+
+
 \section{Proof of inclusion}
 \label{subsec:pi}
 The proof of inclusion aims to prove that the balance of a user is included in the Merkle tree created in the proof of liabilities. 
@@ -102,7 +118,16 @@ The constraints in the circuit ensure the path from the leafs to the root is cor
 In the \hyperref[subsec:pic]{circuit}, we verify that the combination of the user balance, sum, and Merkle path gives the right root hash and root sum. 
 The circuit iterates over the path, combining values to recompute the root without revealing private data. 
 There is no additional verifications since they are already done for this root hash, in the proof of liabilities. 
-Constraints enforce the hash and sum calculations and path directions, coded as equations in Circom.
+Constraints enforce the hash and sum calculations and path directions. 
+Each new value in Circom is defined in a way that adds a constraint. For instance the Root sum is constrained to be equal to its two childs, the childs are constrained to be equal to their two childs, and so on.
+
+Once again, the circuit follow the zero knowledge \hyperref[subsec:zkp]{properties}. 
+\paragraph{Properties}
+\begin{itemize}
+   \item Completeness: If a user's balance and email hash are included in the Merkle tree, an honest prover can provide a valid Merkle path. This is verified by recomputing with constraints the public root hash and sum.
+   \item Soundness: If the user's balance or email hash is not in the Merkle tree, or if the Merkle path is incorrect, no dishonest prover can produce a valid proof. This is because the hash function is collision resistant.
+   \item Zero-Knowledge: The verifier only learns wheter the user's balance is included in the Merkle tree, and nothing about the private inputs. All of the tree internal structure is preserved with the SNARK privacy properties.
+   \end{itemize}
 
 \section{Daily proof of liabilities}
 We aim to enhance our current \hyperref[subsec:pl]{circuit} by minimizing the work needed in subsequent rounds.
@@ -144,7 +169,7 @@ The constraints ensure correct hash and sum updates, valid path directions and v
    \item List of new values (private) - 1 per change: Updated balances, hidden to safeguard individual amounts.
    \item List of temporary root hash (private) - 1 per change: Intermediate Merkle tree top values, kept secret to conceal tree updates.
    \item List of temporary root sum (private) - 1 per change: Intermediate total balance sums, hidden to preserve privacy.
-   \item Old root hash (public): Previous Merkle tree’s top value, shared to verify the starting tree.
+   \item Old root hash (public): Previous Merkle tree's top value, shared to verify the starting tree.
    \item Old root sum (public): Previous total balance sum, shared to confirm the initial sum.
    \item List of neighbors sum (private) - 1 list per change: Sums of nearby nodes in Merkle paths, kept secret to hide tree structure.
    \item List of neighbors hash (private) - 1 list per change: Hashed nearby nodes in Merkle paths, hidden to ensure privacy.
@@ -178,6 +203,14 @@ For every change in the Merkle tree, we have the Merkle path with the old values
 The \hyperref[subsec:plcc]{circuit} is iterating over the changes and gives a final root hash and final root sum. 
 The circuit verifies each old path, updates the leaf with new values, and recomputes the hash and sum up the tree. 
 The constraints enforce hash and sum calculations, valid path directions, and range checks.
+
+The change circuit also follow the zero knowledge \hyperref[subsec:zkp]{properties}. 
+\paragraph{Properties}
+\begin{itemize}
+   \item Completeness: If the changes are valid, with correct old and new Merkle paths, an honest prover can generate a proof that convinces an honest verifier of the statement. This is enforced by constraints on the paths and updates.
+   \item Soundness: If any change is invalid, or if the old state is manipulated, no dishonest prover can produce a valid proof because of the constraints.
+   \item Zero-Knowledge: The verifier learns only the public outputs and nothing about the private inputs.
+   \end{itemize}
 
 \subsubsection{Minimizing the number of changes}
 To minimize the number of constraints, we want to minimize the number of changes.

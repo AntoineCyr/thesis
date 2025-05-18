@@ -2,12 +2,28 @@
 
 \chapter{Conclusion}
 
-This thesis introduces a novel approach to generating a more compact proof of liabilities. 
-Leveraging a fresh circuit design, along with leveraging prior proofs and the folding scheme, we achieved notable reductions in proof size. 
-This smaller proof position itself well to be generated daily, and even at higher frequencies.
-Our analysis demonstrates the superior performance of the folding scheme combined with the updated circuit, compared to the existing model. 
-The significance of a more concise proof of liabilities cannot be overstated, serving as a cornerstone for broader adoption of robust proof of solvency.
+This thesis introduces a novel approach to generating a compact proof of liabilities. 
+Leveraging a fresh circuit design, prior proofs, and the Nova folding scheme, we achieved significant reductions in proof size. 
+This smaller proof is suited for daily generation and even higher frequencies, such as hourly updates.
+Our analysis demonstrates the superior performance of the folding scheme combined with the updated circuit compared to the existing model. 
+The significance of a concise proof of liabilities cannot be overstated, as it serves as a cornerstone for broader adoption of robust proof of solvency.
 
 To complete the proof of solvency for marketplace integration, a proof of assets is imperative. 
 One challenge in this endeavor lies in conducting proofs for multiple currencies. 
-However, by employing the folding scheme, we can segment the proof of assets into currency-specific proofs before conducting the folded proof, mitigating this complexity.
+However, by employing the folding scheme, we can segment the proof of assets into currency-specific proofs before generating the folded proof, mitigating this complexity.
+
+Despite these advancements, several security considerations remain. 
+A key vulnerability is the reliance on users to verify their inclusion proofs, as insufficient does not guarantee a valid tree. 
+Additionally, the system assumes the validity of the state used in each proof, requiring verifiers to check every proof individually. 
+To address this, a promising direction for future work is to incorporate recursive proofs alongside the existing folding scheme. 
+Each recursive proof would verify the previous proof, enabling a verifier to validate only the latest proof without trusting the initial state of the tree. 
+
+Another area for improvement is exploring alternative SNARK designs. 
+This paper uses Groth16 to benchmark recursion techniques, but other SNARKs could address vulnerabilities, such as post-quantum risks or the trusted setup required by Groth16. 
+
+Finally, before deploying the code in production, a thorough audit is essential. 
+While the Merkle tree design prevents proving false balances, the constraints must be correctly implemented and comprehensive to ensure this guarantee. 
+Rigorous auditing will be critical to validate the circuit's integrity.
+
+By addressing these security and optimization challenges, the proposed proof of liabilities system can pave the way for scalable, 
+secure, and practical solvency proofs in blockchain-based marketplaces.

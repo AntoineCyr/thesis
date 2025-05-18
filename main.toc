@@ -33,33 +33,36 @@
 \contentsline {paragraph}{Circom}{41}{section*.10}%
 \contentsline {paragraph}{Constraints}{42}{section*.11}%
 \contentsline {paragraph}{SnarkJS}{42}{section*.12}%
-\contentsline {section}{\numberline {4.1}Proof of liabilities}{42}{section.4.1}%
+\contentsline {section}{\numberline {4.1}Proof of liabilities}{43}{section.4.1}%
 \contentsline {paragraph}{Inputs}{43}{section*.13}%
 \contentsline {paragraph}{Outputs}{43}{section*.14}%
-\contentsline {section}{\numberline {4.2}Proof of inclusion}{44}{section.4.2}%
-\contentsline {paragraph}{Inputs}{45}{section*.15}%
-\contentsline {paragraph}{Outputs}{46}{section*.16}%
-\contentsline {section}{\numberline {4.3}Daily proof of liabilities}{46}{section.4.3}%
-\contentsline {subsection}{\numberline {4.3.1}Aggregation proofs}{47}{subsection.4.3.1}%
-\contentsline {subsection}{\numberline {4.3.2}Other recursion proofs}{47}{subsection.4.3.2}%
-\contentsline {subsection}{\numberline {4.3.3}Change circuit}{48}{subsection.4.3.3}%
-\contentsline {paragraph}{Inputs}{48}{section*.17}%
-\contentsline {paragraph}{Outputs}{50}{section*.18}%
-\contentsline {subsubsection}{Minimizing the number of changes}{51}{section*.19}%
-\contentsline {subsubsection}{Constraint analysis}{51}{section*.20}%
-\contentsline {section}{\numberline {4.4}Daily proof of inclusion}{54}{section.4.4}%
-\contentsline {subsection}{\numberline {4.4.1}Circuit Design}{58}{subsection.4.4.1}%
-\contentsline {paragraph}{Inputs}{59}{section*.21}%
-\contentsline {paragraph}{Outputs}{59}{section*.22}%
-\contentsline {paragraph}{Steps}{60}{section*.23}%
-\contentsline {section}{\numberline {4.5}Folded daily proof of liabilities}{61}{section.4.5}%
-\contentsline {subsection}{\numberline {4.5.1}Circuit design}{63}{subsection.4.5.1}%
-\contentsline {paragraph}{Inputs}{64}{section*.24}%
-\contentsline {paragraph}{Outputs}{65}{section*.25}%
-\contentsline {paragraph}{Steps}{65}{section*.26}%
-\contentsline {chapter}{\numberline {5}Conclusion}{66}{chapter.5}%
-\contentsline {chapter}{\numberline {A}Sample Code}{67}{appendix.A}%
-\contentsline {section}{\numberline {A.1}Proof of liabilities}{67}{section.A.1}%
-\contentsline {section}{\numberline {A.2}Proof of inclusion}{70}{section.A.2}%
-\contentsline {section}{\numberline {A.3}Change circuit}{71}{section.A.3}%
-\contentsline {chapter}{Bibliography}{77}{appendix*.27}%
+\contentsline {paragraph}{Properties}{44}{section*.15}%
+\contentsline {section}{\numberline {4.2}Proof of inclusion}{45}{section.4.2}%
+\contentsline {paragraph}{Inputs}{46}{section*.16}%
+\contentsline {paragraph}{Outputs}{47}{section*.17}%
+\contentsline {paragraph}{Properties}{47}{section*.18}%
+\contentsline {section}{\numberline {4.3}Daily proof of liabilities}{48}{section.4.3}%
+\contentsline {subsection}{\numberline {4.3.1}Aggregation proofs}{48}{subsection.4.3.1}%
+\contentsline {subsection}{\numberline {4.3.2}Other recursion proofs}{49}{subsection.4.3.2}%
+\contentsline {subsection}{\numberline {4.3.3}Change circuit}{49}{subsection.4.3.3}%
+\contentsline {paragraph}{Inputs}{50}{section*.19}%
+\contentsline {paragraph}{Outputs}{51}{section*.20}%
+\contentsline {paragraph}{Properties}{52}{section*.21}%
+\contentsline {subsubsection}{Minimizing the number of changes}{53}{section*.22}%
+\contentsline {subsubsection}{Constraint analysis}{53}{section*.23}%
+\contentsline {section}{\numberline {4.4}Daily proof of inclusion}{56}{section.4.4}%
+\contentsline {subsection}{\numberline {4.4.1}Circuit Design}{60}{subsection.4.4.1}%
+\contentsline {paragraph}{Inputs}{61}{section*.24}%
+\contentsline {paragraph}{Outputs}{61}{section*.25}%
+\contentsline {paragraph}{Steps}{62}{section*.26}%
+\contentsline {section}{\numberline {4.5}Folded daily proof of liabilities}{63}{section.4.5}%
+\contentsline {subsection}{\numberline {4.5.1}Circuit design}{65}{subsection.4.5.1}%
+\contentsline {paragraph}{Inputs}{66}{section*.27}%
+\contentsline {paragraph}{Outputs}{67}{section*.28}%
+\contentsline {paragraph}{Steps}{67}{section*.29}%
+\contentsline {chapter}{\numberline {5}Conclusion}{68}{chapter.5}%
+\contentsline {chapter}{\numberline {A}Sample Code}{70}{appendix.A}%
+\contentsline {section}{\numberline {A.1}Proof of liabilities}{70}{section.A.1}%
+\contentsline {section}{\numberline {A.2}Proof of inclusion}{73}{section.A.2}%
+\contentsline {section}{\numberline {A.3}Change circuit}{74}{section.A.3}%
+\contentsline {chapter}{Bibliography}{80}{appendix*.30}%
