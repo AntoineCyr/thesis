@@ -1,9 +1,15 @@
 % !TEX root = ../main.tex
 
 \chapter{Proof construction}
-We will be using Circom to generate an arithmetic circuit, and SnarkJS for the proof generation.
+In this chapter we will construct the proof of liabilities and proof of inclusion. We will go through different circuit designs to find the optimal proof of inclusion and proof of liabilities.
+We will be working with a proof of inclusion derived from existing literature, and a novel proof of liabilities.
 
-\paragraph{Circom} 
+\section{Constants}
+Before constructing the circuits, we need to define the constants that will be shared between the
+different circuits.
+
+
+\subsection{Circom} 
 
 Circom is a domain-specific language designed for creating arithmetic circuits, specifically utilized in zk-SNARKs. These proofs verify calculations without revealing private data, like proving you have funds without showing your account.
 Within Circom, circuit code is written to define the desired constraints. One notable distinction from other languages is the utilization of signals and templates.
@@ -12,13 +18,21 @@ Assigning a value to a signal contributes to the constraint system and the witne
 Input and outputs are signals, and you can have additional intermediate signals.
 During circuit compilation, constraints are generated in r1cs format. Additionally, compiling a circuit produces a witness file containing the data essential for verifying the constraints and demonstrating the correct behavior of the circuit.
 
+\subsection{MiMCSponge} 
+MiMCSonge is a standard hashing algorithm often used in zero knowledge protocols. It was chosen because it is secure and well integraded with circom.
+The hash function is $F_i(x) = (x + k + c_i)^3$, where $i$ is the number of round, $k$ a fixed constant, and $c_i$ a constant that is specific for a round.
+In our implementation, we use $i = 220$ and $k = 1$, which are both standard values. We use 4 inputs, the two sums and two hashes of the children. 
+The hash function is a sponge construction, which means that it can take any number of inputs and produce any number of outputs. It does the 220 rounds on the first input, then add the second input and start over again.
 
-\paragraph{Constraints} 
+
+\subsection{Constraints} 
 
 A zero knowledge circuit has generally two types of constraints: range check and arithmetic.
 The simple arithmetic case is when we define a value in Circom $a = b + c$. Circom compiled the assignment to create an arithmetic constraint that verifies the equality.
 
-A range check verifies that a value lies within specified bounds.
+A range check verifies that a value lies within specified bounds. This is needed because we are working in a finite field. This means that an overflow would cause the value to go back to 0.
+We limit the range of the values to make sure we never have any overflow. This is critical because an overflow would change the balance sum, which is what we are trying to prove.
+
 In Circom, the range check constraint is transform to be arithmetic as well. For example, to check $x<n$, we would use a library function $lessThan$.
 The function decomposes the numbers in bits, and then does a series of bit equality to determine the result. The bit equalities are compiled by Circom in arithmetic constraints.
 
@@ -26,14 +40,29 @@ In Circom, we use a specific type of variable type called a signal. Usually when
 There is a way to assign value without creating a constraint, but it adds complexity and we never use it in this paper. 
 Therefore it is safe to assume that every time we assign a value to a signal, we create a constraint. 
 Every variables in this chapter will be of the type signal.
-This means that the values will be constrained automatically as we define them.
+This means that the values will be constrained automatically as we define them. 
 
 
-\paragraph{SnarkJS} 
+\subsection{SnarkJS} 
 
 SnarkJS is a JavaScript library that provides tools for working with zk-SNARKs, including circuit compilation.
 SnarkJS facilitates generating zk-SNARK proofs for specific instances of the circuit using the r1cs and witness file.
 SnarkJS also provides utilities for verifying the proofs.
+
+\subsection{Benchmark} 
+We use Groth16 as a SNARK design choice because it is simple and fast. 
+We will benchmark the circuits using the prover time and verifier time. The prover time does not include the time to generate the setup.
+The setup needs to be generated for every circuit, but it only needs to be generated once. This is why we exlucde it from our benchmarks.
+The prover time is the time to generate the proof, which includes generating the constraints, and folding them when we are using the folding schene. 
+The verifier time is the time to verify the proof.
+
+\subsection{Tree construction}
+The size of the tree is dynamic with the number of users. For instance if we have $2^5 - 10$ users, we will use a tree of 5 levels. This means we will
+have 10 empty nodes. We will use empty hash and 0 as the value for the empty nodes. Those values are valid inputs for the MiMCSponge hash construction,
+and will give a valid hash has an output. An empty node has no impact on the state of the tree.
+
+The size of the tree decides the number of constraints. We need a separate setup for every tree size, but they those setups are precomputed. 
+For instance, a power of Tau of 8 (8 refers to the number of degree of the QAP polynomial) can handle up to 256 constraints, 9 for 512 constraints, and so on.
 
 
 \section{Proof of liabilities}
@@ -421,6 +450,8 @@ The circuit processes each change by verifying old paths, updating leaves, and r
    \item Root hash: Final Merkle tree top value.
    \item Root sum: Final total balance sum.
    \end{itemize}
+
+
 
 
 %Mina proof of recursion

@@ -18,8 +18,13 @@ Additionally, the system assumes the validity of the state used in each proof, r
 To address this, a promising direction for future work is to incorporate recursive proofs alongside the existing folding scheme. 
 Each recursive proof would verify the previous proof, enabling a verifier to validate only the latest proof without trusting the initial state of the tree. 
 
-Another area for improvement is exploring alternative SNARK designs. 
-This paper uses Groth16 to benchmark recursion techniques, but other SNARKs could address vulnerabilities, such as post-quantum risks or the trusted setup required by Groth16. 
+Another area for improvement are exploring alternative SNARK designs, testing different hash algorithms or optimizing the number of constraints. 
+This paper uses Groth16 to benchmark different circuit designs, but other SNARKs could address vulnerabilities, such as post-quantum risks or the trusted setup required by Groth16. 
+In similar fashion, other hash algorithms have different degree of security and different speed. You could optimize for either depending on the need. Other potential hashes often use in 
+zero knowledge includes Poseidon and Keccak. 
+
+The number of constraints could also be optimized. The current implementation uses a naive construction for the constraints, insuring that the construction is secure. It could be worth exploring merging
+some constraints together to minimize their number.
 
 Finally, before deploying the code in production, a thorough audit is essential. 
 While the Merkle tree design prevents proving false balances, the constraints must be correctly implemented and comprehensive to ensure this guarantee. 

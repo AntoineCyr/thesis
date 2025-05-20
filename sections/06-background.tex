@@ -355,6 +355,8 @@ To show that $T$ is divided by $Z$, it is sufficient to verify $T(x) = 0$ at $1,
 More formally, we have shown that there exist a Polynomial $H$ such that $T(x)=H(x) \cdot Z(x)$
 (i.e. if $T$ is divided by $Z$, then it will be perfectly divisible and will leave no remainder)
 
+
+Groth16 is an all in one zkSNARK, meaning the polynomial commitment scheme is included in the design. Other SNARK desings such as Plonk and Marlin.
 In a zkSNARK, the prover demonstrates that a polynomial $Z$ exactly divides another polynomial
 $T$ using Polynomial Commitments, such as KZG, Bulletproofs, or FRI. 
 The purpose of this step is to reveal only certain evaluations of the polynomial, without disclosing the entire polynomial itself.\cite{VB16}
