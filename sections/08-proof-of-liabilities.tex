@@ -18,11 +18,17 @@ Assigning a value to a signal contributes to the constraint system and the witne
 Input and outputs are signals, and you can have additional intermediate signals.
 During circuit compilation, constraints are generated in r1cs format. Additionally, compiling a circuit produces a witness file containing the data essential for verifying the constraints and demonstrating the correct behavior of the circuit.
 
+% JC: An example would help for templates and signals
+
 \subsection{MiMCSponge} 
-MiMCSonge is a standard hashing algorithm often used in zero knowledge protocols. It was chosen because it is secure and well integraded with circom.
+MiMCSonge is a standard hashing algorithm often used in zero knowledge protocols. It was chosen because it is secure and well integrated with circom.
 The hash function is $F_i(x) = (x + k + c_i)^3$, where $i$ is the number of round, $k$ a fixed constant, and $c_i$ a constant that is specific for a round.
 In our implementation, we use $i = 220$ and $k = 1$, which are both standard values. We use 4 inputs, the two sums and two hashes of the children. 
 The hash function is a sponge construction, which means that it can take any number of inputs and produce any number of outputs. It does the 220 rounds on the first input, then add the second input and start over again.
+
+% JC: If you haven't already give a 1 paragraph description of what a hash function is (collision resistant and pre-image resistant) ... 
+% JC: ANY hash function (sponge or not) can take any size input by operating in rounds, sponge is just a modern way to do it that is easier to make security assertions about
+
 
 
 \subsection{Constraints} 
@@ -30,11 +36,17 @@ The hash function is a sponge construction, which means that it can take any num
 A zero knowledge circuit has generally two types of constraints: range check and arithmetic.
 The simple arithmetic case is when we define a value in Circom $a = b + c$. Circom compiled the assignment to create an arithmetic constraint that verifies the equality.
 
+% JC: Using $a=b+c \bmod q$ would help with the next paragraph. $q$ is a parameter of the elliptic curve Circom uses (configurable)
+
 A range check verifies that a value lies within specified bounds. This is needed because we are working in a finite field. This means that an overflow would cause the value to go back to 0.
 We limit the range of the values to make sure we never have any overflow. This is critical because an overflow would change the balance sum, which is what we are trying to prove.
 
+% JC: say more as multiplications can get big fast
+
 In Circom, the range check constraint is transform to be arithmetic as well. For example, to check $x<n$, we would use a library function $lessThan$.
 The function decomposes the numbers in bits, and then does a series of bit equality to determine the result. The bit equalities are compiled by Circom in arithmetic constraints.
+
+% JC: small numbers have a lot of leading 0's when represented in binary. Proving an $n$-bit number has $i$ leading zeros proves it is less than $2^n-i$ 
 
 In Circom, we use a specific type of variable type called a signal. Usually when we assign a value to a signal, a constraint is created.
 There is a way to assign value without creating a constraint, but it adds complexity and we never use it in this paper. 
@@ -49,17 +61,25 @@ SnarkJS is a JavaScript library that provides tools for working with zk-SNARKs, 
 SnarkJS facilitates generating zk-SNARK proofs for specific instances of the circuit using the r1cs and witness file.
 SnarkJS also provides utilities for verifying the proofs.
 
+%JC: this could be clearer. Your idea -> Circom -> circuit -> SnarkJS -> proof
+
+
 \subsection{Benchmark} 
 We use Groth16 as a SNARK design choice because it is simple and fast. 
 We will benchmark the circuits using the prover time and verifier time. The prover time does not include the time to generate the setup.
-The setup needs to be generated for every circuit, but it only needs to be generated once. This is why we exlucde it from our benchmarks.
-The prover time is the time to generate the proof, which includes generating the constraints, and folding them when we are using the folding schene. 
+The setup needs to be generated for every circuit, but it only needs to be generated once. This is why we exclude it from our benchmarks.
+The prover time is the time to generate the proof, which includes generating the constraints, and folding them when we are using the folding scheme. 
 The verifier time is the time to verify the proof.
 
+% Also should mention that setup is trusted and think about who is going to do the setup... you could also punt on this and say that you benchmark groth16 but in practice someone might want to use universal setup (plonk) or transparent setup (starks) 
+
 \subsection{Tree construction}
+
 The size of the tree is dynamic with the number of users. For instance if we have $2^5 - 10$ users, we will use a tree of 5 levels. This means we will
 have 10 empty nodes. We will use empty hash and 0 as the value for the empty nodes. Those values are valid inputs for the MiMCSponge hash construction,
 and will give a valid hash has an output. An empty node has no impact on the state of the tree.
+
+% JC: this says "the tree" as if the reader will know there is a tree and what it is... you should back up and explain what the tree is and what it is used for
 
 The size of the tree decides the number of constraints. We need a separate setup for every tree size, but they those setups are precomputed. 
 For instance, a power of Tau of 8 (8 refers to the number of degree of the QAP polynomial) can handle up to 256 constraints, 9 for 512 constraints, and so on.
@@ -67,19 +87,19 @@ For instance, a power of Tau of 8 (8 refers to the number of degree of the QAP p
 
 \section{Proof of liabilities}
 \label{subsec:pl}
-The proof of liabilities operates on a list of balances and a list of email hashes as private inputs.
+The proof of liabilities operates on a list of balances and a list of email hashes as private inputs. %JC: say why in a sentence
 The first purpose of the circuit is to validate that all values are non-negative and that all balances fall within a specified range.
-These verifications are crucial to prevent overflow or underflow issues, given that the operations occur within a finite field. 
+These verifications are crucial to prevent overflow or underflow issues, given that the operations occur within a finite field. % issues = attacks, worth empahsizing that an insolvent exchange can get away with a proof if it can exploit overflows (maybe an example? easiest way it to encode "negative" ballances which in finite fields are just really big values that will overflow) 
 The circuit sums balances, checks ranges, and builds a Merkle tree by repeatedly combining values with a secure scrambling process called hashing, which is complex to ensure privacy.
 
 Subsequently, the proof of liabilities constructs a Merkle tree and outputs the total balance sum and the root hash of the Merkle tree.
-The pseudocode for the circuit is found \hyperref[subsec:plc]{here}.
+The pseudocode for the circuit is found in Appendix~\ref{subsec:plc}.
 
 
 \paragraph{Inputs}
 \begin{itemize}
    \item List of balance (private): List of user balances, kept secret to protect individual amounts.
-   \item List of email hash (private): User emails, hidden to protect identities and used in the Merkle tree.
+   \item List of email hash (private): User emails, hidden to protect identities and used in the Merkle tree. %JC: used to prevent "clash attacks" where Alice and Bob happen to both have 5.5 BTC on the exchange so the exchange says to Alice, your index is 50294 in the tree and goes to Bob and says the same thing, index 50294. Alice and Bob are happy and the exchange can only include 5.5 BTC instead of 11 BTC on its balance sheet. By including emails, Alice or Bob will recognize the email is not right for them. 
    \end{itemize}
 
 \paragraph{Outputs}
@@ -89,8 +109,10 @@ The pseudocode for the circuit is found \hyperref[subsec:plc]{here}.
    \item No negative values: True if all balances are zero or positive, ensuring valid data.
    \item All small range: True if balances are within a safe range, preventing math errors.
    \end{itemize}
+   
+% Small range (first bit is 0) => no negative values... I would combine and just say all balances are small, positive values without possibility of overflow under addition. $n$ balances where each balance is $k$ bits and they are added together, then the sum can never exceed $n \cdot (2^k - 1)$
 
-This proof of liabilities operates as intended because it returns the sum of the liabilities, which is exact because of the verifications.
+This proof of liabilities operates as intended because it returns the sum of the liabilities, which is exact because of the verifications. %If users verify, that is another issue
 It also returns the root hash, ensuring you cannot alter any values inside the merkle tree. The merkle tree is hidden so that we do not
 give any information about users and their balances.
 The root hash will be used to verify the inclusion of the balances.

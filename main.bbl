@@ -17,8 +17,11 @@ Zero knowledge proofs.
 
 \bibitem{FG23}
 L.~A.
-\newblock An incomplete guide to folding: Nova, sangria, supernova, hypernova, protostar.
-\newblock \url{https://taiko.mirror.xyz/tk8LoE-rC2w0MJ4wCWwaJwbq8-Ih8DXnLUf7aJX1FbU}, August 2023.
+\newblock An incomplete guide to folding: Nova, sangria, supernova, hypernova,
+  protostar.
+\newblock
+  \url{https://taiko.mirror.xyz/tk8LoE-rC2w0MJ4wCWwaJwbq8-Ih8DXnLUf7aJX1FbU},
+  August 2023.
 
 \bibitem{MB17}
 A.~M. Antonopoulos.
@@ -28,7 +31,8 @@ A.~M. Antonopoulos.
 
 \bibitem{BM22}
 Bake.
-\newblock Merkle tree proof of reserves and liabilities: Raising the bar for enhanced transparency, Dec 2022.
+\newblock Merkle tree proof of reserves and liabilities: Raising the bar for
+  enhanced transparency, Dec 2022.
 
 \bibitem{LZK}
 B.~Barak.
@@ -86,12 +90,14 @@ B.~Bünz, A.~Chiesa, P.~Mishra, and N.~Spooner.
 
 \bibitem{DBBBCC15}
 G.~G. Dagher, B.~Bunz, J.~Bonneau, J.~Clark, and D.~Boneh.
-\newblock Provisions: Privacy-preserving proofs of solvency for bitcoin exchanges.
+\newblock Provisions: Privacy-preserving proofs of solvency for bitcoin
+  exchanges.
 \newblock 2015.
 
 \bibitem{GMW91}
 O.~Goldreich, S.~Micali, and A.~Wigderson.
-\newblock Interactive and noninteractive zero knowledge are equivalent in the help model?
+\newblock Interactive and noninteractive zero knowledge are equivalent in the
+  help model?
 \newblock page 113–131, 1991.
 
 \bibitem{GMR89}
@@ -102,7 +108,8 @@ S.~Goldwasser, S.~Micali, and C.~Rackoff.
 \bibitem{GR16}
 J.~Groth.
 \newblock On the size of pairing-based non-interactive zero-knowledge proofs.
-\newblock In {\em Proceedings of the 2016 ACM Conference on Computer and Communications Security (CCS)}, pages 480--491. ACM, 2016.
+\newblock In {\em Proceedings of the 2016 ACM Conference on Computer and
+  Communications Security (CCS)}, pages 480--491. ACM, 2016.
 
 \bibitem{GP21}
 Y.~Ji and K.~Chalkias.
@@ -185,7 +192,8 @@ Veridise.
 
 \bibitem{VRS23}
 Veridise.
-\newblock Recursive snarks and incrementally verifiable computation (ivc) part i: Recursive snarks and incrementally verifiable computation.
+\newblock Recursive snarks and incrementally verifiable computation (ivc) part
+  i: Recursive snarks and incrementally verifiable computation.
 \newblock {\em Veridise}, July 2023.
 
 \end{thebibliography}
