@@ -2,20 +2,20 @@
 
 \chapter{Introduction}
 
-In the context of cryptocurrencies, the trust between marketplaces and users is at an all time low. Following the recent bankruptcy and mishandling of customer funds by marketplaces like FTX, users want and need to know that marketplaces have all the funds in their possession. 
-Traditional financial institutions commonly rely on audits as the established method to demonstrate their solvency. The outcomes of third-party examinations gain universal acceptance due to the trust placed in these third parties. However, auditing a cryptocurrency marketplace presents certain challenges. 
-Audits are not a scalable solution because the funds can be moved around more quickly than in the traditional finance world. This would call for a high-frequency auditing approach, perhaps even daily audits. Here, automating the process becomes advantageous.
+In the context of cryptocurrencies, trust between marketplaces and users is at an all-time low. Following the recent bankruptcy and mishandling of customer funds by marketplaces like FTX, users want and need to know that marketplaces have all the funds in their possession. 
+Traditional financial institutions commonly rely on audits as the established method to demonstrate their solvency. The outcomes of third-party examinations are universally accepted due to the trust placed in these third parties. However, auditing a cryptocurrency marketplace presents specific challenges. 
+Audits are not a scalable solution because funds can be moved around more quickly than in traditional finance. This would call for a high-frequency auditing approach, perhaps even daily audits. Here, automating the process becomes advantageous.
 
-Another challenge pertains to trust in the third party, which must be mutual. The institution needs to trust that their data won't be compromised, and the public must trust the authenticity of the audit results. This is where zero-knowledge proofs come into play. 
+Another challenge pertains to trust in the third party, which must be mutual. The institution must trust that their data will not be compromised, and the public must trust the authenticity of the audit results. This is where zero-knowledge proofs come into play. 
 
-The proof of solvency uses zero-knowledge to demonstrate, without revealing any information, that the assets in control are greater than the liabilities. The proof of solvency is made up of a proof of asset and a proof of liabilities, a structure that is self-explanatory.
+The proof of solvency uses zero-knowledge to demonstrate, without revealing any information, that the assets in control are greater than the liabilities. It consists of a proof of assets and a proof of liabilities, a self-explanatory structure.
 
 This paper extends the work done on proof of liabilities only. The most prevalent way to implement a proof of liabilities is by using a Merkle Sum tree. 
-In a Merkle tree, every parent node represents the hash of its child nodes. In the Merkle Sum tree, each node additionally holds the balance information. The leaf nodes consist of user IDs along with their respective balances, while the root node contains the hash of the entire tree, summarizing the total balance.
+In a Merkle tree, every parent node represents the hash of its child nodes. In the Merkle Sum tree, each node additionally holds the balance information. The leaf nodes consist of user IDs and their respective balances, while the root node contains the hash of the entire tree, summarizing the total balance.
 
-Alongside the proof of liabilities, there is a proof of inclusion, where you demonstrate that for each customer, their balance is included in the tree. This is achieved by proving the Merkle path, which is sufficient for validation.
+Alongside the proof of liabilities, there is a proof of inclusion, where you demonstrate that each customer's balance is included in the tree. This is achieved by proving the Merkle path, which is sufficient for validation.
 
-This paper explores a way to minimize the cost of doing these proofs everyday, while maintaining complete privacy (i.e the Merkle tree is kept private).
+This paper explores a way to minimize the cost of doing these proofs every day while maintaining complete privacy (i.e., keeping the Merkle tree private).
 
 
 \section{Outline}
@@ -23,45 +23,45 @@ This paper explores a way to minimize the cost of doing these proofs everyday, w
 Chapter 2 gives the background information needed to understand this paper.
 It elaborates on Bitcoin, including its transactions, the network, proof-of-work, and Merkle tree. Marketplaces are also discussed. 
 Additionally, the chapter delves into Zero Knowledge, covering non-interactive proofs, SNARKs, and arithmetic circuits.
-The concept of proof of solvency, with a focus on real-world applications, is introduced. 
+The concept of proof of solvency, focusing on real-world applications, is introduced. 
 
-Chapter 3 goes deeper into zero knowledge, more specifically the different recursion techniques, which will be used to reduce the proof size and make 
+Chapter 3 goes deeper into zero knowledge, more specifically, the different recursion techniques, which will be used to reduce the proof size and make 
 daily proofs easier.
-The techniques include aggregation, recursion schemes, accumulation and folding scheme.
+The techniques include aggregation, recursion schemes, accumulation and folding schemes.
 
 Finally, Chapter 4 explores the proof and circuit construction of the thesis.
 We start with a simple circuit for the proof of liabilities, as well as a circuit for the proof of inclusion for a Merkle tree.
-Next, we modify the initial proof of inclusion to prove the inclusion of many Merkle trees at the same time, using the folding scheme.
-The folding scheme is a recent technique brought to us by Nova that allows to "fold" many circuits together, reducing the proof size. 
-This new inclusion circuit was implemented by them using their technique.
+Next, we modify the initial proof of inclusion to prove the inclusion of many Merkle trees simultaneously using the folding scheme.
+The folding scheme is a recent technique by Nova that allows to "fold" many circuits together, reducing the proof size. 
+They proposed using this scheme to do the proof of inclusion, which we will implement.
 
-For the proof of liabilities, we adopt an alternate strategy aiming to reduce the size of generating the proof on the second day, 
-given the original Merkle tree is already established. This is the first novel proof of the thesis.
+For the proof of liabilities, we adopt an alternate strategy to reduce the proof size on the second day, 
+given that the original Merkle tree is already established. This is the first novel idea of the thesis.
 This involves developing a secondary liabilities circuit that constructs a Merkle tree, utilizing an initial Merkle tree alongside the changes as input.
 We then optimize it using the folding scheme.
 
 
 \section{Motivation}
 The novel aspect of this thesis emerged after noticing the significant boost that the Nova folding scheme provided
-to the proof of inclusion. This observation led me to ask: how can this be applied elsewhere? The answer is straightforward: the key component of the proof of liabilities, 
+to the proof of inclusion. This observation led me to ask: How can this be applied elsewhere? The answer is straightforward: the key component of the proof of liabilities, 
 which is the proof of liabilities itself, can benefit from this approach.
 
 Given how obvious this seems, why hasn't anyone else done it? 
-There are two main reasons. First, the traditional method of conducting a proof of liabilities doesn't benefit from the 
+There are two main reasons. First, the traditional method of conducting a proof of liabilities does not benefit from the 
 Nova folding scheme. This thesis introduces a new circuit specifically designed to be used with the folding scheme. 
-Without it, the circuit wouldn't be scalable, as the proofs would grow with each change. 
-Second, the folding scheme is relatively new, and researchers are still exploring its full potential and all its applications.
+Without it, the circuit would not be scalable, as the proofs would grow with each change. 
+Second, the folding scheme is relatively new, and researchers are still exploring its full potential and applications.
 
 
 \section{Results}
 The proof of liabilities circuits are evaluated and compared based on the number of constraints and proof time. 
-In this thesis, we demonstrate that the new liabilities circuit performs better when the number of changes is 0.05\% of users or less.
+This thesis demonstrates that the new liabilities circuit performs better when the number of changes is 0.05\% of users or less.
 The new circuit is also better the fewer users we have, but it performs well enough with a high number of users. For instance, at 1 million users, 
 the new circuit is 3 times smaller than the old circuit (1 000M constraints vs 3 000M constraints).
 At 1000 users, the results are way better; we have 300k constraints vs 3M constraints. 
 
 Additionally, we show that when combined with the Nova folding scheme, the new circuit remains superior even with 1\% of changes. 
 The folding circuit performs better the more users we have.
-For instance at 256 users the proof time is similar(around 50 seconds), but at 1M users we have around 20 000 seconds vs 200 000 seconds. 
+For instance, the proof time at 256 users is similar(around 50 seconds), but at 1M users, we have around 20,000 seconds vs. 200,000 seconds. 
 
 The percentage of changes is defined by the number of root changes in the tree between a previously proven Merkle tree and the targeted Merkle tree.
