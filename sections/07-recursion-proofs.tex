@@ -1,17 +1,15 @@
 % !TEX root = ../main.tex
 
-
-
 \chapter{Recursion proofs}
 
 This chapter serves as an intermediary background exploration, 
-diving into more advanced concepts beyond the last chapter concepts.
-The realm of zero knowledge is dynamic and continuously evolving,
-marked by ongoing advancements and active research endeavors. Among these advancements,
-recursion proofs is one of the most important and active subjects. Recursion proofs are created to accelerate
+diving into more advanced concepts beyond the last chapter's concepts.
+Zero-knowledge is dynamic and continuously evolving,
+marked by ongoing advancements and active research endeavors. 
+Recursion proofs are among the most important and active subjects of these advancements. Recursion proofs are created to accelerate
 the generation of multiple zero-knowledge proofs.
-Recursion proofs differ in their design, they can vary significantly and serve different use cases.
-In this section, we will examine these variations, distinguishing between them.
+Recursion proofs differ in their design. They can vary significantly and serve different use cases.
+In this section, we will examine these variations and distinguish between them.
 We aim to identify the most suitable method for our daily proof of liabilities and proof of inclusion. \cite{Nova23}
 
 
@@ -36,7 +34,7 @@ The setup phase generates public parameters that assist in creating and verifyin
    \( V(\text{vp}, x, \pi) \) & Verifier function that uses the verification parameters \( \text{vp} \), public input \( x \), and proof \( \pi \) to decide whether to accept or reject. \\ \hline
    \( C(x, w) \) & Arithmetic circuit to generate the polynomial, taking public input \( x \) and private witness \( w \). \\ \hline
    \( w \) & Private witness, representing the prover's secret input. \\ \hline
-   \( x \) & Public input, accessible to both the prover and verifier. \\ \hline
+   \( x \) & Public input, accessible to the prover and verifier. \\ \hline
    \end{tabular}
    \end{table}
    
@@ -56,14 +54,14 @@ The setup phase generates public parameters that assist in creating and verifyin
  It takes a list of proofs as input and outputs a single proof.
  The process involves two phases.
  
-  In the first phase, you create your initial proofs.
-  In the second phase, these proofs are combined into \verb|"proof of proofs"|. 
-  The second phase can be viewed as a tree, with the initial proofs being the leaves. Each parent node proves the proof of the child nodes.
-  The tree can have any number of degrees. You can go from a tree of 2 levels to a binary tree with as many levels as needed.
+ In the first phase, we create our initial proofs.
+ In the second phase, these proofs are combined into \verb|"proof of proofs"|. 
+ The second phase can be considered a tree, with the initial proofs being the leaves. Each parent node proves the proof of the child nodes.
+ The tree can have any number of degrees. We can go from a tree of 2 levels to a binary tree with as many levels as needed.
  
- This is a simple process. Each node has its proof, and then you prove that the other proofs are valid, giving you only one proof
+ This is a simple process. Each node has its proof, and then we prove that the other proofs are valid, giving us only one proof
  to verify. Since there are two different phases, two different circuits need to be constructed.
- On the surface, you can parallelize the initial proofs, which decreases the proving time, and you only have one proof to verify, which reduces the verifying time.
+ On the surface, we can parallelize the initial proofs, which decreases the proving time, and we only have one proof to verify, which reduces the verifying time.
  
  However, there are still some aggregation issues.
  The main issue is that a verification circuit is more complex than a proof of transaction.
@@ -73,35 +71,33 @@ The setup phase generates public parameters that assist in creating and verifyin
  This becomes a scaling issue since the proof time of the second circuit grows linearly with the number of proofs to verify. \cite{Nova23}
 \iffalse
 \begin{figure}[H]
-   \centering
-   \includegraphics[width=130mm]{AggregationProof.png}
-   \caption{Aggregation Proof \cite{TP24}}
-   \label{overflow}
-   \end{figure}
+ \centering
+ \includegraphics[width=130mm]{AggregationProof.png}
+ \caption{Aggregation Proof \cite{TP24}}
+ \label{overflow}
+ \end{figure}
 \fi
 
 \section{Recursion scheme}
 The following technique is the recursion scheme, or Incrementally Verifiable Computation (IVC). Like the aggregation, the proof is separated into nodes.
-However, in this case each node serves two purposes. Proving that the node itself is valid, and that the previous proof is valid.
+However, in this case, each node serves two purposes: to prove that the node itself is valid and that the previous proof is valid.
 The number of constraints will always stay the same because it only proves two things of fixed sizes. This creates
 a chain structure, where verifying the latest node is the equivalent of verifying every node in the chain.
 It is an improvement from the previous technique for two reasons.
-First, because this allows to maintain a constant number of constraints in the circuit.
-Second, because you don't have to redo a trusted setup once the size of the proof is defined.
-This means the trusted setup remains the same, and you don't have to redo it.
+First, this allows the maintenance of a constant number of constraints in the circuit.
+Second, we do not have to redo a trusted setup once the proof size is defined.
+This means the trusted setup remains the same; we do not have to redo it.
 This implies that the latest node does not take longer to verify than the second node.
 However, each node still has to verify the previous node, which takes additional time. \cite{Nova23}
 
 
 \section{Accumulation}
-% I made a mistake, I talk about Nova accumulation but Nova accumulation is the folding scheme, which we discuss later.
-% This parapgrah is an introduction to accumulation schemes
 Accumulation schemes offer a different approach to aggregating proofs than IVC. 
 Instead of verifying proofs at each step, accumulation defers all heavy computational tasks to the final step.
 This allows proofs to be efficiently added to an accumulator while minimalizing the intermediate verification workload. 
 Each step adds a new proof to the accumulator while maintaining a small and constant-sized state. 
 Unlike recursion, where each proof is verified within the circuit immediately, accumulation schemes delay all verification until the final stage, 
-where all accumulated proofs are checked at once.
+where all accumulated proofs are checked simultaneously.
 
 There are different types of accumulation schemes, each handling proof accumulation in a distinct way.
 Some, like polynomial accumulation, track commitments to polynomial evaluations over multiple steps. 
@@ -118,10 +114,10 @@ However, this benefit comes with a tradeoff. Since all verifications are deferre
 
 
 \subsection{Halo accumulation}
-The concept of deferring the polynomial commitment opening, and consolidating them into a single operation, was introduced by Bowe, Grigg, and Hopwood Halo.\cite{BGH23}
+The concept of deferring the polynomial commitment opening and consolidating them into a single operation was introduced by Bowe, Grigg, and Hopwood Halo.\cite{BGH23}
 This process involves two parts:
-the first part is fast, where you output a polynomial and its commitment.
-The second part is expensive, where we verify the pair $(f_1, c_1)$ of the polynomial $f_1$ and its commitment $c_1$. We open the polynomial only at a specific point.
+The first part is fast, where we output a polynomial and its commitment.
+The second part is expensive. In it, we verify the pair $(f_1, c_1)$ of the polynomial $f_1$ and its commitment $c_1$. We open the polynomial only at a specific point.
 The second part can be accumulated if the commitment scheme is additively homomorphic. 
 Instead of individually verifying each pair, we accumulate the pairs and verify their linear combinations ($c_1+c_2+...$ is a commitment for $f_1+f_2+...$). \cite{VR23}
 
@@ -135,34 +131,34 @@ The relaxed R1CS is then used to compute a single proof at the end of the foldin
 \cite{Nova23}  \cite{ASI23} \cite{vODC24F}
 
 \subsection{Relaxed R1CS}
-Going back to the previous \hyperref[subsec:r1cs]{section}, we previously defined what an R1CS is.
-The goal is to combine 2 R1CS and obtain another R1CS. If we are able to do that, we can fold every R1CS together and be left with only one.
+Returning to the previous \hyperref[subsec:r1cs]{section}, we previously defined what an R1CS is.
+The goal is to combine 2 R1CS and obtain another R1CS. If we succeed, we can fold every R1CS together and be left with only one.
 
 
 If we \textbf{define our R1CS}:
 \begin{quote}
 \textbf{fix an R1CS} program $A,B,D \in \mathbb{F}^{u \times v}_p $
 \\
-We define $x$ as the public input, and $w$ as the witness.
+We define $x$ as the public input and $w$ as the witness.
 \\
 Instance 1: $ x_1 \in \mathbb{F}^n_p $, $ z_1 = (x_1, w_1) \in \mathbb{F}^v_p$
 \\
 Instance 2: $x_2 \in \mathbb{F}^n_p $, $ z_2 = (x_2, w_2) \in \mathbb{F}^v_p$
 \\
-Where $u$ is the number of constraints in the R1CS, $v$ is the number of variables in the constraint system, $p$ as the private field, and $n$ the number of public variables.
+Where $u$ is the number of constraints in the R1CS, $v$ is the number of variables in the constraint system, $p$ is the private field, and $n$ is the number of public variables.
 \\
 We know $Az_i \circ Bz_i = Dz_i$ for $ i = 1,2$
 \end{quote}
 
 
-\textbf{Recall}: Our R1CS needs to be valid for any element of the field.
-To prove this, the verifier choose a random point $r$ at which we will evaluate our constraints system.
+\textbf{Recall}: Our R1CS must be valid for any field element.
+To prove this, the verifier chooses a random point $r$ at which we will evaluate our constraints system.
 
 The naïve approach to folding an R1CS is to sum the two instances together.
 
 \textbf{First attempt}:
 \begin{quote}
-Lets define $r$ as a random variable:
+Let us define $r$ as a random variable:
 \\
 $r \leftarrow \mathbb{F}_p$
 \\
@@ -182,7 +178,7 @@ Then:
    \\
    $=Dz_1 + r^2Dz_2 + E$
    \\
-   Where $E$ is a combination of the remaining values.
+ Where $E$ is a combination of the remaining values.
    \\
 \end{quote}
 
@@ -197,7 +193,7 @@ We will try the new form: $Az_i \circ Bz_i = Dz_i Ez_i$.
 \\
 Let's \textbf{define a relaxed R1CS}:
 \begin{quote}
-$A, B,D \in \mathbb{F}^{u \times v}_p, (x \in  \mathbb{F}^n_p, c \in \mathbb{F}_p, E \in \mathbb{F}^u_p) $
+$A, B,D \in \mathbb{F}^{u \times v}_p, (x \in \mathbb{F}^n_p, c \in \mathbb{F}_p, E \in \mathbb{F}^u_p) $
 \\
 Witness: $ z = (x,w) \in \mathbb{F}^v_p s.t. (Az) \circ (Bz) = c(Dz) + E$
 \end{quote}
@@ -236,5 +232,5 @@ We have a valid relaxed R1CS.
 \paragraph{Validity}
 While the error term $E$ allows folding, it questions the validity of the proof. As long as $E$ is bounded, the proof remains valid. 
 The relaxed formulation preserves constraint structure, enables incremental folding, and prevents uncontrolled error propagation. 
-The system can return to a strict R1CS if needed by proving $E = 0$ in the final verification, ensuring flexibility and correctness.
+If needed, the system can return to a strict R1CS by proving $E = 0$ in the final verification, ensuring flexibility and correctness.
 \cite{Nova23}

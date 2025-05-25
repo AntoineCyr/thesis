@@ -1,13 +1,13 @@
 # Fdb version 4
-["bibtex main"] 1748198597.69952 "main.aux" "main.bbl" "main" 1748198601.87401 0
+["bibtex main"] 1748198597.69952 "main.aux" "main.bbl" "main" 1748200417.05805 0
   "./bib/pulp.bib" 1739027703.02969 10347 8156528b5cf4ffc21504d7265adfd5a2 ""
   "/usr/local/texlive/2024/texmf-dist/bibtex/bst/base/abbrv.bst" 1292289607 20329 b5fed53e10044d0f8112183785c759b1 ""
-  "main.aux" 1748198601.56771 16354 81cdca4bcff4e82b5167cbe3ba105414 "pdflatex"
+  "main.aux" 1748200416.75076 16354 81cdca4bcff4e82b5167cbe3ba105414 "pdflatex"
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["pdflatex"] 1748198597.81499 "/Users/antoinecyr/Documents/Concordia/thesis/main.tex" "main.pdf" "main" 1748198601.87418 0
+["pdflatex"] 1748200413.01421 "/Users/antoinecyr/Documents/Concordia/thesis/main.tex" "main.pdf" "main" 1748200417.05822 0
   "/Users/antoinecyr/Documents/Concordia/thesis/main.tex" 1739060094.56485 1284 a27b8081d151a58c4e20ee779a76fa81 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1136849721 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
@@ -147,12 +147,12 @@
   "Proof time vs verifier time.png" 1738029285.91377 17174 3265f859083129dd330a5f6a4b702d19 ""
   "Proof time.png" 1738029285.91386 19533 f0ff70ac9bf24ae02d22f60837708f15 ""
   "SNARKCircuit.png" 1738029285.91551 234405 dc9fdd0f9ccf86cd5f70f647f44982f6 ""
-  "main.aux" 1748198601.56771 16354 81cdca4bcff4e82b5167cbe3ba105414 "pdflatex"
+  "main.aux" 1748200416.75076 16354 81cdca4bcff4e82b5167cbe3ba105414 "pdflatex"
   "main.bbl" 1748198597.81182 5254 1d1945629334ff101254ca3c3cc5f2c9 "bibtex main"
-  "main.lof" 1748198601.56986 2202 1f00f7b13fbe0daccd3fa6418f80006b "pdflatex"
-  "main.out" 1748198601.56943 7140 68b1a94eb1f708fd4714daabd1ae2bfc "pdflatex"
+  "main.lof" 1748200416.75285 2202 1f00f7b13fbe0daccd3fa6418f80006b "pdflatex"
+  "main.out" 1748200416.7524 7140 68b1a94eb1f708fd4714daabd1ae2bfc "pdflatex"
   "main.tex" 1739060094.56485 1284 a27b8081d151a58c4e20ee779a76fa81 ""
-  "main.toc" 1748198601.56974 5524 52410cb9ce1645af6374e213ed4019bf "pdflatex"
+  "main.toc" 1748200416.75273 5524 52410cb9ce1645af6374e213ed4019bf "pdflatex"
   "sections/00-cover.tex" 1738029285.92827 589 307742f5739a58dc8873cb72093dc200 ""
   "sections/01-sigs.tex" 1738029285.92832 1439 5ded1a8e49fbf83ed83d6c1caa369eb2 ""
   "sections/02-abstract.tex" 1738029285.92839 1131 3e915617ff7c028b58c04dfeeb79e3bc ""
@@ -160,7 +160,7 @@
   "sections/04-contents.tex" 1738029285.92851 118 694d22950f0bbc2c89bc35ad7742c888 ""
   "sections/05-introduction.tex" 1748197197.10302 5871 f6037988fb1fea3a6a0770f36ed5c1c9 ""
   "sections/06-background.tex" 1748198593.4233 31719 b4aa875d94a5b15055cf9362acf9eb16 ""
-  "sections/07-recursion-proofs.tex" 1747337145.82392 13208 ebb09c0f49dc62a822a1050c2c3ee9b9 ""
+  "sections/07-recursion-proofs.tex" 1748200412.79876 12952 6e05116fba00f7e1662c13949b33600a ""
   "sections/08-proof-of-liabilities.tex" 1748111977.30747 37606 30ac30ad34929cdac691155e244d04e6 ""
   "sections/09-conclusion.tex" 1747704136.98524 2963 b7390f13d92a6419aa96321a9c92ddd6 ""
   "sections/10-appendix.tex" 1748052440.49405 6527 0de4c5f538fb101906d0209e6ea7a8d5 ""
