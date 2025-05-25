@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2025.2.8)  25 MAY 2025 15:13
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2025.2.8)  25 MAY 2025 16:16
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -632,8 +632,8 @@ Overfull \hbox (1.68867pt too wide) in paragraph at lines 167--174
 pdfTeX warning (ext4): destination with the same identifier (name{figure.4.2}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.182    \item R
-                oot sum (public): Total balance sum, shared for verification. <./MerklePath.png (PNG copy)>] [51] [52]
+l.183    \item U
+                ser balance (public): User's balance, shared to prove it is ... <./MerklePath.png (PNG copy)>] [51] [52]
 <FailureProbability.png, id=695, 702.625pt x 467.7475pt>
 File: FailureProbability.png Graphic file (type png)
 <use FailureProbability.png>
@@ -676,7 +676,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{figure.4.5}) h
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
 l.358 E
-       ven with more than 1 million users, there is still 3 times fewer cons... <./Number of constraints.png>] [62
+       ven with more than 1 million users, our new circuit has three times f... <./Number of constraints.png>] [62
 pdfTeX warning (ext4): destination with the same identifier (name{figure.4.6}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
@@ -708,7 +708,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{figure.4.8}) h
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
 l.411 T
-       he key takeaway here is that without folding, you require $4\%$ of us... <./FailureProbabilityRound2.png>] [66
+       he key takeaway is that we require $4\%$ of users to verify every rou... <./FailureProbabilityRound2.png>] [66
 pdfTeX warning (ext4): destination with the same identifier (name{figure.4.9}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
@@ -723,8 +723,8 @@ Package pdftex.def Info: FoldingCircuit.png  used on input line 450.
 pdfTeX warning (ext4): destination with the same identifier (name{figure.4.10}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.460 
-       <./FoldingCircuit.png (PNG copy)>]
+l.458 T
+       hese steps encompass all the public values we initially had in the ci... <./FoldingCircuit.png (PNG copy)>]
 <Proof time.png, id=796, 602.25pt x 372.39125pt>
 File: Proof time.png Graphic file (type png)
 <use Proof time.png>
@@ -880,7 +880,7 @@ L3 programming layer <2024-02-20>
 LaTeX Warning: There were multiply-defined labels.
 
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 68B1A94EB1F708FD4714DAABD1AE2BFC;7140.
+(rerunfilecheck)             Checksum: 778489986010CEFAE9E029FC8E5721FA;7130.
  ) 
 Here is how much of TeX's memory you used:
  14691 strings out of 474116
@@ -891,7 +891,7 @@ Here is how much of TeX's memory you used:
  1141 hyphenation exceptions out of 8191
  80i,14n,82p,671b,2081s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb>
-Output written on main.pdf (97 pages, 3084437 bytes).
+Output written on main.pdf (97 pages, 3083898 bytes).
 PDF statistics:
  1235 PDF objects out of 1440 (max. 8388607)
  1063 compressed objects within 11 object streams

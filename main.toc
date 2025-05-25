@@ -37,7 +37,7 @@
 \contentsline {subsection}{\numberline {4.1.3}Constraints}{43}{subsection.4.1.3}%
 \contentsline {subsection}{\numberline {4.1.4}SnarkJS}{44}{subsection.4.1.4}%
 \contentsline {subsection}{\numberline {4.1.5}Benchmark}{45}{subsection.4.1.5}%
-\contentsline {subsection}{\numberline {4.1.6}Tree construction}{46}{subsection.4.1.6}%
+\contentsline {subsection}{\numberline {4.1.6}Tree construction}{45}{subsection.4.1.6}%
 \contentsline {section}{\numberline {4.2}Proof of liabilities}{46}{section.4.2}%
 \contentsline {paragraph}{Inputs}{47}{section*.10}%
 \contentsline {paragraph}{Outputs}{47}{section*.11}%
@@ -51,10 +51,10 @@
 \contentsline {subsection}{\numberline {4.4.2}Collusion}{53}{subsection.4.4.2}%
 \contentsline {subsection}{\numberline {4.4.3}User verification}{53}{subsection.4.4.3}%
 \contentsline {section}{\numberline {4.5}Daily proof of liabilities}{55}{section.4.5}%
-\contentsline {subsection}{\numberline {4.5.1}Aggregation proofs}{55}{subsection.4.5.1}%
+\contentsline {subsection}{\numberline {4.5.1}Recursion scheme}{55}{subsection.4.5.1}%
 \contentsline {subsection}{\numberline {4.5.2}Other recursion proofs}{56}{subsection.4.5.2}%
 \contentsline {subsection}{\numberline {4.5.3}Change circuit}{56}{subsection.4.5.3}%
-\contentsline {paragraph}{Inputs}{57}{section*.16}%
+\contentsline {paragraph}{Inputs}{56}{section*.16}%
 \contentsline {paragraph}{Outputs}{58}{section*.17}%
 \contentsline {paragraph}{Properties}{59}{section*.18}%
 \contentsline {subsubsection}{Minimizing the number of changes}{60}{section*.19}%
