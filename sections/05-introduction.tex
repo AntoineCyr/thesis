@@ -13,7 +13,7 @@ The proof of solvency uses zero-knowledge to demonstrate, without revealing any 
 This paper extends the work done on proof of liabilities only. The most prevalent way to implement a proof of liabilities is by using a Merkle Sum tree. 
 In a Merkle tree, every parent node represents the hash of its child nodes. In the Merkle Sum tree, each node additionally holds the balance information. The leaf nodes consist of user IDs and their respective balances, while the root node contains the hash of the entire tree, summarizing the total balance.
 
-Alongside the proof of liabilities, there is a proof of inclusion, where you demonstrate that each customer's balance is included in the tree. This is achieved by proving the Merkle path, which is sufficient for validation.
+Alongside the proof of liabilities, there is a proof of inclusion, where we demonstrate that each customer's balance is included in the tree. This is achieved by proving the Merkle path, which is sufficient for validation.
 
 This paper explores a way to minimize the cost of doing these proofs every day while maintaining complete privacy (i.e., keeping the Merkle tree private).
 
@@ -22,10 +22,10 @@ This paper explores a way to minimize the cost of doing these proofs every day w
 
 Chapter 2 gives the background information needed to understand this paper.
 It elaborates on Bitcoin, including its transactions, the network, proof-of-work, and Merkle tree. Marketplaces are also discussed. 
-Additionally, the chapter delves into Zero Knowledge, covering non-interactive proofs, SNARKs, and arithmetic circuits.
+Additionally, the chapter delves into zero-Knowledge, covering non-interactive proofs, SNARKs, and arithmetic circuits.
 The concept of proof of solvency, focusing on real-world applications, is introduced. 
 
-Chapter 3 goes deeper into zero knowledge, more specifically, the different recursion techniques, which will be used to reduce the proof size and make 
+Chapter 3 goes deeper into zero-knowledge, more specifically, the different recursion techniques, which will be used to reduce the proof size and make 
 daily proofs easier.
 The techniques include aggregation, recursion schemes, accumulation and folding schemes.
 
