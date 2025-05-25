@@ -2,16 +2,17 @@
 \contentsline {chapter}{List of Figures}{viii}{chapter*.4}%
 \contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}%
 \contentsline {section}{\numberline {1.1}Outline}{2}{section.1.1}%
-\contentsline {section}{\numberline {1.2}Motivation}{4}{section.1.2}%
+\contentsline {section}{\numberline {1.2}Motivation}{3}{section.1.2}%
 \contentsline {section}{\numberline {1.3}Results}{4}{section.1.3}%
 \contentsline {chapter}{\numberline {2}Background}{6}{chapter.2}%
 \contentsline {section}{\numberline {2.1}Bitcoin}{6}{section.2.1}%
-\contentsline {subsection}{\numberline {2.1.1}Transactions}{7}{subsection.2.1.1}%
-\contentsline {subsection}{\numberline {2.1.2}Network}{8}{subsection.2.1.2}%
-\contentsline {subsection}{\numberline {2.1.3}Proof-of-work}{10}{subsection.2.1.3}%
-\contentsline {subsection}{\numberline {2.1.4}Merkle Tree}{11}{subsection.2.1.4}%
-\contentsline {section}{\numberline {2.2}Marketplaces}{11}{section.2.2}%
-\contentsline {section}{\numberline {2.3}Zero Knowledge}{12}{section.2.3}%
+\contentsline {subsection}{\numberline {2.1.1}Hash function}{7}{subsection.2.1.1}%
+\contentsline {subsection}{\numberline {2.1.2}Transactions}{8}{subsection.2.1.2}%
+\contentsline {subsection}{\numberline {2.1.3}Network}{9}{subsection.2.1.3}%
+\contentsline {subsection}{\numberline {2.1.4}Proof-of-work}{10}{subsection.2.1.4}%
+\contentsline {subsection}{\numberline {2.1.5}Merkle Tree}{11}{subsection.2.1.5}%
+\contentsline {section}{\numberline {2.2}Marketplaces}{12}{section.2.2}%
+\contentsline {section}{\numberline {2.3}Zero Knowledge}{13}{section.2.3}%
 \contentsline {subsection}{\numberline {2.3.1}Non interactive proofs}{13}{subsection.2.3.1}%
 \contentsline {subsection}{\numberline {2.3.2}SNARKS}{14}{subsection.2.3.2}%
 \contentsline {subsubsection}{Arithmetic circuit}{15}{section*.5}%
@@ -31,42 +32,46 @@
 \contentsline {paragraph}{Validity}{40}{section*.9}%
 \contentsline {chapter}{\numberline {4}Proof construction}{41}{chapter.4}%
 \contentsline {section}{\numberline {4.1}Constants}{41}{section.4.1}%
-\contentsline {subsection}{\numberline {4.1.1}Circom}{41}{subsection.4.1.1}%
-\contentsline {subsection}{\numberline {4.1.2}MiMCSponge}{42}{subsection.4.1.2}%
+\contentsline {subsection}{\numberline {4.1.1}Circom}{42}{subsection.4.1.1}%
+\contentsline {subsection}{\numberline {4.1.2}MiMCSponge}{43}{subsection.4.1.2}%
 \contentsline {subsection}{\numberline {4.1.3}Constraints}{43}{subsection.4.1.3}%
 \contentsline {subsection}{\numberline {4.1.4}SnarkJS}{44}{subsection.4.1.4}%
-\contentsline {subsection}{\numberline {4.1.5}Benchmark}{44}{subsection.4.1.5}%
-\contentsline {subsection}{\numberline {4.1.6}Tree construction}{44}{subsection.4.1.6}%
-\contentsline {section}{\numberline {4.2}Proof of liabilities}{45}{section.4.2}%
-\contentsline {paragraph}{Inputs}{45}{section*.10}%
-\contentsline {paragraph}{Outputs}{46}{section*.11}%
-\contentsline {paragraph}{Properties}{46}{section*.12}%
-\contentsline {section}{\numberline {4.3}Proof of inclusion}{47}{section.4.3}%
-\contentsline {paragraph}{Inputs}{48}{section*.13}%
-\contentsline {paragraph}{Outputs}{49}{section*.14}%
-\contentsline {paragraph}{Properties}{49}{section*.15}%
-\contentsline {section}{\numberline {4.4}Daily proof of liabilities}{50}{section.4.4}%
-\contentsline {subsection}{\numberline {4.4.1}Aggregation proofs}{50}{subsection.4.4.1}%
-\contentsline {subsection}{\numberline {4.4.2}Other recursion proofs}{51}{subsection.4.4.2}%
-\contentsline {subsection}{\numberline {4.4.3}Change circuit}{51}{subsection.4.4.3}%
-\contentsline {paragraph}{Inputs}{52}{section*.16}%
-\contentsline {paragraph}{Outputs}{53}{section*.17}%
-\contentsline {paragraph}{Properties}{54}{section*.18}%
-\contentsline {subsubsection}{Minimizing the number of changes}{55}{section*.19}%
-\contentsline {subsubsection}{Constraint analysis}{55}{section*.20}%
-\contentsline {section}{\numberline {4.5}Daily proof of inclusion}{58}{section.4.5}%
-\contentsline {subsection}{\numberline {4.5.1}Circuit Design}{62}{subsection.4.5.1}%
-\contentsline {paragraph}{Inputs}{63}{section*.21}%
-\contentsline {paragraph}{Outputs}{63}{section*.22}%
-\contentsline {paragraph}{Steps}{64}{section*.23}%
-\contentsline {section}{\numberline {4.6}Folded daily proof of liabilities}{65}{section.4.6}%
-\contentsline {subsection}{\numberline {4.6.1}Circuit design}{67}{subsection.4.6.1}%
-\contentsline {paragraph}{Inputs}{68}{section*.24}%
-\contentsline {paragraph}{Outputs}{69}{section*.25}%
-\contentsline {paragraph}{Steps}{69}{section*.26}%
-\contentsline {chapter}{\numberline {5}Conclusion}{70}{chapter.5}%
-\contentsline {chapter}{\numberline {A}Sample Code}{73}{appendix.A}%
-\contentsline {section}{\numberline {A.1}Proof of liabilities}{73}{section.A.1}%
-\contentsline {section}{\numberline {A.2}Proof of inclusion}{76}{section.A.2}%
-\contentsline {section}{\numberline {A.3}Change circuit}{77}{section.A.3}%
-\contentsline {chapter}{Bibliography}{83}{appendix*.27}%
+\contentsline {subsection}{\numberline {4.1.5}Benchmark}{45}{subsection.4.1.5}%
+\contentsline {subsection}{\numberline {4.1.6}Tree construction}{46}{subsection.4.1.6}%
+\contentsline {section}{\numberline {4.2}Proof of liabilities}{46}{section.4.2}%
+\contentsline {paragraph}{Inputs}{47}{section*.10}%
+\contentsline {paragraph}{Outputs}{47}{section*.11}%
+\contentsline {paragraph}{Properties}{48}{section*.12}%
+\contentsline {section}{\numberline {4.3}Proof of inclusion}{49}{section.4.3}%
+\contentsline {paragraph}{Inputs}{50}{section*.13}%
+\contentsline {paragraph}{Outputs}{51}{section*.14}%
+\contentsline {paragraph}{Properties}{51}{section*.15}%
+\contentsline {section}{\numberline {4.4}Vulnerabilities}{52}{section.4.4}%
+\contentsline {subsection}{\numberline {4.4.1}Clash attack}{52}{subsection.4.4.1}%
+\contentsline {subsection}{\numberline {4.4.2}Collusion}{53}{subsection.4.4.2}%
+\contentsline {subsection}{\numberline {4.4.3}User verification}{53}{subsection.4.4.3}%
+\contentsline {section}{\numberline {4.5}Daily proof of liabilities}{55}{section.4.5}%
+\contentsline {subsection}{\numberline {4.5.1}Aggregation proofs}{55}{subsection.4.5.1}%
+\contentsline {subsection}{\numberline {4.5.2}Other recursion proofs}{56}{subsection.4.5.2}%
+\contentsline {subsection}{\numberline {4.5.3}Change circuit}{56}{subsection.4.5.3}%
+\contentsline {paragraph}{Inputs}{57}{section*.16}%
+\contentsline {paragraph}{Outputs}{58}{section*.17}%
+\contentsline {paragraph}{Properties}{59}{section*.18}%
+\contentsline {subsubsection}{Minimizing the number of changes}{60}{section*.19}%
+\contentsline {subsubsection}{Constraint analysis}{60}{section*.20}%
+\contentsline {section}{\numberline {4.6}Daily proof of inclusion}{63}{section.4.6}%
+\contentsline {subsection}{\numberline {4.6.1}Circuit Design}{66}{subsection.4.6.1}%
+\contentsline {paragraph}{Inputs}{67}{section*.21}%
+\contentsline {paragraph}{Outputs}{67}{section*.22}%
+\contentsline {paragraph}{Steps}{67}{section*.23}%
+\contentsline {section}{\numberline {4.7}Folded daily proof of liabilities}{69}{section.4.7}%
+\contentsline {subsection}{\numberline {4.7.1}Circuit design}{71}{subsection.4.7.1}%
+\contentsline {paragraph}{Inputs}{72}{section*.24}%
+\contentsline {paragraph}{Outputs}{73}{section*.25}%
+\contentsline {paragraph}{Steps}{73}{section*.26}%
+\contentsline {chapter}{\numberline {5}Conclusion}{74}{chapter.5}%
+\contentsline {chapter}{\numberline {A}Sample Code}{77}{appendix.A}%
+\contentsline {section}{\numberline {A.1}Proof of liabilities}{77}{section.A.1}%
+\contentsline {section}{\numberline {A.2}Proof of inclusion}{80}{section.A.2}%
+\contentsline {section}{\numberline {A.3}Change circuit}{81}{section.A.3}%
+\contentsline {chapter}{Bibliography}{86}{appendix*.27}%

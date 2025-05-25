@@ -283,11 +283,23 @@ INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmtt12.tfm
 INPUT ./sections/08-proof-of-liabilities.tex
 INPUT ./sections/08-proof-of-liabilities.tex
 INPUT sections/08-proof-of-liabilities.tex
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/listings/lstlang1.sty
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/listings/lstlang1.sty
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/listings/lstlang1.sty
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/listings/lstmisc.sty
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/listings/lstmisc.sty
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/listings/lstmisc.sty
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmtt10.tfm
 INPUT ./MerklePath.png
 INPUT ./MerklePath.png
 INPUT ./MerklePath.png
 INPUT ./MerklePath.png
 INPUT ./MerklePath.png
+INPUT ./FailureProbability.png
+INPUT ./FailureProbability.png
+INPUT ./FailureProbability.png
+INPUT ./FailureProbability.png
+INPUT ./FailureProbability.png
 INPUT ./MerklePath.png
 INPUT ./MerklePath.png
 INPUT ./MerklePath.png
@@ -307,11 +319,6 @@ INPUT ./Number of constraints .05.png
 INPUT ./Number of constraints .05.png
 INPUT ./Number of constraints .05.png
 INPUT ./Number of constraints .05.png
-INPUT ./FailureProbability.png
-INPUT ./FailureProbability.png
-INPUT ./FailureProbability.png
-INPUT ./FailureProbability.png
-INPUT ./FailureProbability.png
 INPUT ./FailureProbabilityRound1.png
 INPUT ./FailureProbabilityRound1.png
 INPUT ./FailureProbabilityRound1.png
@@ -351,7 +358,6 @@ INPUT sections/10-appendix.tex
 INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/listings/lstlang1.sty
 INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/listings/lstlang1.sty
 INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/listings/lstlang1.sty
-INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/jknappen/ec/tcti1200.tfm
 INPUT ./main.bbl
 INPUT ./main.bbl
 INPUT main.bbl
@@ -372,7 +378,7 @@ INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb
-INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfti1200.pfb

@@ -12,6 +12,8 @@ highlight the shortcomings and challenges associated with current solvency verif
 paving the way for a daily proof in the subsequent sections.
 
 
+
+
 \section{Bitcoin}
 Bitcoin is recognized as the world's first successful cryptocurrency and decentralized digital currency.
 The goal of Bitcoin is to allow financial transactions to be settled on their own, without the need of a middleman, typically financial institutions.
@@ -21,6 +23,12 @@ Bitcoin defines two different concepts: Bitcoin the cryptocurrency, and Bitcoin 
 The Bitcoin blockchain is a decentralized ledger that records all Bitcoin (the cryptocurrency) transactions immutably and transparently.
 This blockchain serves as a verifiable record of all Bitcoin transactions, accessible to every participant in the network.
 The transparency afforded by the public blockchain engenders trust and accountability. \cite{MB17}
+
+\subsection{Hash function}
+A hash function is a mathematic function that takes an input (or message) of any size and produces a fixed size output, called a hash or digest.
+A good hash function, such as SHA-256, is collision-resistant, meaning it is computationally infeasible to find two different inputs that produce the same output. 
+It is also pre-image resistant. This means it is nearly impossible to determine the original input from the output. We can also say that is is hiding.
+The hash function is also deterministic, e.i. it will always produce the same output.
 
 
 \subsection{Transactions}

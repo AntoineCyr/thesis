@@ -13,7 +13,6 @@ def sum_merkle_tree(levels, inputs, balances[inputs],
     # Outputs variables for sum, root hash, and range checks
     root_sum = 0
     root_hash = 0
-    not_negative = False
     all_small_range = False
 
     # Define signals lists for sum and hash nodes at each level
@@ -24,7 +23,6 @@ def sum_merkle_tree(levels, inputs, balances[inputs],
     level_size = inputs
     max_bits = 100
     temp_not_big = 0
-    temp_not_negative = 0
 
     # Loop through each input
     for i in range(inputs):
@@ -32,19 +30,14 @@ def sum_merkle_tree(levels, inputs, balances[inputs],
         hash_nodes[0][i] = email_hashes[i]
         sum_nodes[0][i] = balances[i]
 
-        # Perform range check and negative check
+        # Perform range check
         rangecheck = RangeCheck(maxBits,balances[i])
         tempNotBig += rangecheck
-        negativecheck = NegativeCheck(newValues[i])
-        tempNotNegative += negativecheck
 
     # Check if all balances are within a small range
     if temp_not_big == inputs:
         all_small_range = True
 
-    # Check if all balances are non-negative
-    if temp_not_negative == inputs:
-        not_negative = True
 
     # Loop through each level
     for i in range(levels):
@@ -64,7 +57,7 @@ def sum_merkle_tree(levels, inputs, balances[inputs],
     root_sum = sum_nodes[levels][0]
     root_hash = hash_nodes[levels][0]
 
-    return root_sum, root_hash, not_negative, all_small_range
+    return root_sum, root_hash, all_small_range
 
 \end{lstlisting}
 
@@ -119,7 +112,6 @@ def liabilities(levels, changes,oldEmailHash[changes],
 
     # Part 1: Check validity of new values
     tempNotBig = 0
-    tempNotNegative = 0
     maxBits = 100
 
     # Iterate through each change
@@ -127,17 +119,12 @@ def liabilities(levels, changes,oldEmailHash[changes],
         # Calculate currentSum
         currentSum += newValues[i] - oldValues[i]
 
-        # Perform range check and negative check
+        # Perform range check
         rangecheck = RangeCheck(maxBits,newValues[i])
         tempNotBig += rangecheck
-        negativecheck = NegativeCheck(newValues[i])
-        tempNotNegative += negativecheck
 
     # Check if all new values are within range
     allSmallRange = IsEqual([changes, tempNotBig])
-
-    # Check if all new values are not negative
-    notNegative = IsEqual([changes, tempNotNegative])
 
     # Check if newSum equals currentSum
     equalSum = IsEqual([newSum, currentSum])
@@ -192,7 +179,7 @@ def liabilities(levels, changes,oldEmailHash[changes],
     validHash = tempValidHash[changes] * tempOldHashEqual[changes]
     validSum = tempValidSum[changes] * tempOldSumEqual[changes]
 
-    return (notNegative,allSmallRange,validHash, 
+    return (allSmallRange,validHash, 
             validSum,newRootHash,newSum)
     
 \end{lstlisting}
