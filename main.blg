@@ -22,45 +22,45 @@ Warning--empty year in KK23
 Warning--empty journal in chainlink_blog
 Warning--empty journal in CC22
 Warning--empty journal in NZ20
-You've used 37 entries,
+You've used 38 entries,
             2118 wiz_defined-function locations,
-            696 strings with 7696 characters,
-and the built_in function-call counts, 9506 in all, are:
-= -- 918
-> -- 409
+            700 strings with 7740 characters,
+and the built_in function-call counts, 9703 in all, are:
+= -- 935
+> -- 416
 < -- 4
-+ -- 170
-- -- 130
-* -- 492
-:= -- 1611
-add.period$ -- 115
-call.type$ -- 37
-change.case$ -- 176
++ -- 173
+- -- 132
+* -- 498
+:= -- 1643
+add.period$ -- 117
+call.type$ -- 38
+change.case$ -- 180
 chr.to.int$ -- 0
-cite$ -- 56
-duplicate$ -- 401
-empty$ -- 764
-format.name$ -- 130
-if$ -- 1994
+cite$ -- 57
+duplicate$ -- 408
+empty$ -- 786
+format.name$ -- 132
+if$ -- 2037
 int.to.chr$ -- 0
-int.to.str$ -- 37
+int.to.str$ -- 38
 missing$ -- 26
-newline$ -- 191
-num.names$ -- 68
-pop$ -- 252
+newline$ -- 195
+num.names$ -- 70
+pop$ -- 261
 preamble$ -- 1
-purify$ -- 139
+purify$ -- 142
 quote$ -- 0
-skip$ -- 329
+skip$ -- 337
 stack$ -- 0
-substring$ -- 315
-swap$ -- 83
+substring$ -- 320
+swap$ -- 84
 text.length$ -- 4
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 148
+type$ -- 152
 warning$ -- 19
-while$ -- 77
-width$ -- 39
-write$ -- 371
+while$ -- 79
+width$ -- 40
+write$ -- 379
 (There were 19 warnings)

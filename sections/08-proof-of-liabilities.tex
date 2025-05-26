@@ -369,8 +369,11 @@ The user is responsible for requesting proof that their balance is included in t
 Ideally, a Merkle tree would be published at least daily. However, it is once again impractical to require every user to verify their inclusion daily.
 Nevertheless, each user verifying their inclusion in the tree increases the chance that the proof of liabilities is valid and includes every balance.
 This is why it is primordial to find a way to make it easier to verify the inclusion. This is where Nova folding schemes come in.
-In a talk\cite{NS23}, Nova suggested using the folding scheme to verify the proof of inclusion from multiple rounds simultaneously. 
-However, no literature on their implementation or circuit design was found. 
+Nova suggested using the folding scheme to verify the proof of inclusion from multiple rounds simultaneously\cite{NS23}. 
+This is used in a zero-knowledge proof of reserves tool called Summa \cite{Summa24}.
+They implemented a similar proof of inclusion to what we are working on. They have similar Merkle tree inputs, outputs and constraints. However, they 
+use Halo2, and their circuit can handle multiple cryptocurrencies. Halo2 is an established tool for generating SNARKS, using Plonk instead of Groth16, like us.
+
 
 The novel way to generate proof of inclusion is to generate a proof of inclusion that is valid from the day the account is created to the day the user requests it.
 Normally, you would need to create 500 different proofs for 500 days. However, as we saw in the previous section, the Nova folding scheme enables combining 500 proofs into just one.
