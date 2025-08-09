@@ -175,7 +175,7 @@ These gates are configured to execute arithmetic operations such as addition, su
 \begin{figure}[H]
 \centering
 \includegraphics[width=130mm]{ArithmeticCircuit.png}
-\caption{General Arithmetic circuit for }
+\caption{General Arithmetic circuit}
 \label{overflow}
 \end{figure}
 
@@ -187,7 +187,7 @@ $s_1 = x * x$
 \\
 $s_2 = s_1 * x$
 \\
-$s_3 = s_2 * x$
+$s_3 = s_2 + x$
 \\
 $~out = s_3 + 5$
 \end{quote}
@@ -301,10 +301,10 @@ In order to get a polynomial, we need to do a Lagrange interpolation on a set of
 For a polynomial of degree $n$, we need $n+1$ set points for the interpolation to give the polynomial.
 We need a polynomial of degree $n$, where $n$ is the number of rows $- 1$. (Same thing as the number of gates $-1$). 
 Therefore, we need a set of 4 points to have a polynomial.
-We can get 18 ($3x6$) polynomials by transposing our matrices.
+We can get 18 ($3*6$) polynomials by transposing our matrices.
 For instance, the first column of $A^T$ is our first polynomial $[0,0,0,5]$.
 This gives us the set of points $[(1,0),(2,0),(3,0),(4,5)]$.
-The polynomial interpretation of this set of points is $f(x) = 535x^3+636x^2+116x+636$
+The polynomial interpretation of this set of points is $f(x) = 535x^3+636x^2+116x+636$.
 Doing the same for every column of $A$, $B$ and $C$, we get the matrices:
 \begin{quote}
    \[
@@ -354,7 +354,8 @@ We define $Z$ as $(x - 1) * (x - 2) * (x - 3) * ...$, the simplest polynomial th
 
 In this case, computing T:
 \begin{quote}
-$T(x) = S \cdot Am * S \cdot Bm - S \cdot Cm  $
+$T(x) = S \cdot A_m * S \cdot B_m - S \cdot C_m  $
+
 $T(x) = 139*x^6 + 372*x^5 + 275*x^4 + 58*x^3 + 147*x^2 + 379*x + 553$
 \end{quote}
 

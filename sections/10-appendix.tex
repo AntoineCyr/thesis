@@ -160,7 +160,7 @@ def liabilities(levels, changes,oldEmailHash[changes],
         sumNodes[1][j][i+1] = sumNode[0][j][i] + neighborsSum[j][i]
             
 
-        # Old calculated old hash is in tempHash
+        # Old calculated hash is in tempHash
         hashEqual = IsEqual(hashNodes[0][j][levels], tempHash[j])
         tempOldHashEqual[j+1] = tempOldHashEqual[j] * hashEqual
 
