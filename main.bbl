@@ -1,17 +1,17 @@
 \begin{thebibliography}{10}
 
-\bibitem{ZKM2}
-Zero knowledge proofs.
+\bibitem{ZKM10}
+Zero knowledge proofs, lecture 10.
 \newblock MOOC, 2023.
 \newblock Dan Boneh, Shafi Goldwasser, Dawn Song, Justin Thaler, Yupeng Zhang.
 
-\bibitem{ZKM10}
-Zero knowledge proofs.
+\bibitem{ZKM2}
+Zero knowledge proofs, lecture 2.
 \newblock MOOC, 2023.
 \newblock Dan Boneh, Shafi Goldwasser, Dawn Song, Justin Thaler, Yupeng Zhang.
 
 \bibitem{ZKM3}
-Zero knowledge proofs.
+Zero knowledge proofs, lecture 3.
 \newblock MOOC, 2023.
 \newblock Dan Boneh, Shafi Goldwasser, Dawn Song, Justin Thaler, Yupeng Zhang.
 
@@ -30,10 +30,10 @@ A.~M. Antonopoulos.
 Bake.
 \newblock Merkle tree proof of reserves and liabilities: Raising the bar for enhanced transparency, Dec 2022.
 
-\bibitem{LZK}
+\bibitem{Barak16}
 B.~Barak.
 \newblock Lecture 14: Zero knowledge proofs.
-\newblock {\em Boaz Barak's Blog}.
+\newblock {\em CS127: Cryptography}, Spring 2016.
 
 \bibitem{FRI}
 E.~Ben-Sasson, I.~Bentov, Y.~Horesh, and M.~Riabzev.
@@ -123,10 +123,6 @@ A.~Kate and G.~M. Zaverucha.
 A.~Kothapalli, S.~Setty, and I.~Tzialla.
 \newblock Nova: Recursive zero-knowledge arguments from folding schemes.
 \newblock 2021.
-
-\bibitem{KK23}
-Kraken.
-\newblock Proof of reserves.
 
 \bibitem{chainlink_blog}
 D.~Malkhi.

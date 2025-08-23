@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2025.2.8)  8 AUG 2025 20:04
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2025.2.8)  23 AUG 2025 19:25
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -610,7 +610,7 @@ Chapter 2.
 [6
 
 ] [7] [8]
-<BitcoinBlock.png, id=406, 803.0pt x 602.25pt>
+<BitcoinBlock.png, id=405, 803.0pt x 602.25pt>
 File: BitcoinBlock.png Graphic file (type png)
 <use BitcoinBlock.png>
 Package pdftex.def Info: BitcoinBlock.png  used on input line 61.
@@ -622,45 +622,45 @@ has been already used, duplicate ignored
                                                   \__shipout_drop_firstpage_...
 l.80 
       <./BitcoinBlock.png>] [11] [12] [13] [14] [15]
-<ArithmeticCircuit.png, id=457, 803.0pt x 602.25pt>
+<ArithmeticCircuit.png, id=451, 803.0pt x 602.25pt>
 File: ArithmeticCircuit.png Graphic file (type png)
 <use ArithmeticCircuit.png>
-Package pdftex.def Info: ArithmeticCircuit.png  used on input line 177.
+Package pdftex.def Info: ArithmeticCircuit.png  used on input line 190.
 (pdftex.def)             Requested size: 369.88582pt x 277.42432pt.
- [16
+ [16] [17
 pdfTeX warning (ext4): destination with the same identifier (name{figure.2.2}) 
 has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.193 \end{quote}
-                  <./ArithmeticCircuit.png (PNG copy)>] [17] [18] [19] [20]
-[21] [22] [23]
-Overfull \hbox (2.76724pt too wide) in paragraph at lines 407--409
+l.217 \begin{quote}
+                    <./ArithmeticCircuit.png (PNG copy)>] [18] [19] [20]
+[21] [22] [23] [24]
+Overfull \hbox (2.76724pt too wide) in paragraph at lines 424--426
 []\OT1/cmr/m/n/12 KZG com-mit-ments rely on a trusted setup to gen-er-ate el-li
 p-tic curve parameters[[]].
  []
 
-[24] [25] [26] [27]
-<MerkleTreeLiabilities.png, id=532, 560.0925pt x 291.0875pt>
+[25] [26] [27] [28]
+<MerkleTreeLiabilities.png, id=534, 560.0925pt x 291.0875pt>
 File: MerkleTreeLiabilities.png Graphic file (type png)
 <use MerkleTreeLiabilities.png>
-Package pdftex.def Info: MerkleTreeLiabilities.png  used on input line 529.
+Package pdftex.def Info: MerkleTreeLiabilities.png  used on input line 547.
 (pdftex.def)             Requested size: 369.88582pt x 192.24269pt.
- [28
+ [29
 pdfTeX warning (ext4): destination with the same identifier (name{figure.2.3}) 
 has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.540 
+l.558 
        <./MerkleTreeLiabilities.png>]
-Overfull \hbox (13.3587pt too wide) in paragraph at lines 551--555
+Overfull \hbox (13.3587pt too wide) in paragraph at lines 569--573
 \OT1/cmr/m/n/12 In re-cent years, sev-eral ma-jor cryp-tocur-rency ex-changes, 
 in-clud-ing Bi-nance, Crypto.com,
  []
 
-[29]) (./sections/07-recursion-proofs.tex [30]
+[30]) (./sections/07-recursion-proofs.tex [31]
 Chapter 3.
-[31
+[32
 
 ]
 <SNARKCircuit.png, id=565, 724.7075pt x 272.01625pt>
@@ -668,45 +668,45 @@ File: SNARKCircuit.png Graphic file (type png)
 <use SNARKCircuit.png>
 Package pdftex.def Info: SNARKCircuit.png  used on input line 44.
 (pdftex.def)             Requested size: 369.88582pt x 138.83852pt.
- [32
+ [33
 pdfTeX warning (ext4): destination with the same identifier (name{table.3.1}) h
 as been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
 l.48 
-     ] [33
+     ] [34
 pdfTeX warning (ext4): destination with the same identifier (name{figure.3.1}) 
 has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
 l.80 
-      <./SNARKCircuit.png>] [34] [35] [36] [37]
-Underfull \hbox (badness 10000) in paragraph at lines 175--183
+      <./SNARKCircuit.png>] [35] [36] [37] [38]
+Underfull \hbox (badness 10000) in paragraph at lines 174--182
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 188--195
+Underfull \hbox (badness 10000) in paragraph at lines 187--194
 
  []
 
-[38] [39]) (./sections/08-proof-of-liabilities.tex [40]
+[39] [40]) (./sections/08-proof-of-liabilities.tex [41]
 Chapter 4.
-[41
+[42
 
 ] (/usr/local/texlive/2024/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2024/02/21 1.10 listings language file
 )
 (/usr/local/texlive/2024/texmf-dist/tex/latex/listings/lstmisc.sty
 File: lstmisc.sty 2024/02/21 1.10 (Carsten Heinz)
-) [42
+) [43
 pdfTeX warning (ext4): destination with the same identifier (name{figure.4.1}) 
 has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
 l.46 
-     ] [43] [44] [45] [46] [47] [48]
-<MerklePath.png, id=672, 722.7pt x 542.025pt>
+     ] [44] [45] [46] [47] [48] [49]
+<MerklePath.png, id=668, 722.7pt x 542.025pt>
 File: MerklePath.png Graphic file (type png)
 <use MerklePath.png>
 Package pdftex.def Info: MerklePath.png  used on input line 171.
@@ -720,111 +720,111 @@ r/m/n/12 = [\OML/cmm/m/it/12 Hash\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 User\OT1/cmr
 n/12 2\OML/cmm/m/it/12 ; R\OT1/cmr/m/n/12 2)]$
  []
 
-[49] [50
+[50] [51
 pdfTeX warning (ext4): destination with the same identifier (name{figure.4.2}) 
 has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
 l.183    \item U
                 ser balance (public): User's balance, shared to prove it is ...
- <./MerklePath.png (PNG copy)>] [51] [52]
-<FailureProbability.png, id=695, 702.625pt x 467.7475pt>
+ <./MerklePath.png (PNG copy)>] [52] [53]
+<FailureProbability.png, id=691, 702.625pt x 467.7475pt>
 File: FailureProbability.png Graphic file (type png)
 <use FailureProbability.png>
 Package pdftex.def Info: FailureProbability.png  used on input line 233.
 (pdftex.def)             Requested size: 369.88582pt x 246.242pt.
- [53] [54
+ [54] [55
 pdfTeX warning (ext4): destination with the same identifier (name{figure.4.3}) 
 has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
 l.248 
-       <./FailureProbability.png>] [55] [56] [57]
+       <./FailureProbability.png>] [56] [57] [58]
 File: MerklePath.png Graphic file (type png)
 <use MerklePath.png>
 Package pdftex.def Info: MerklePath.png  used on input line 308.
 (pdftex.def)             Requested size: 199.16928pt x 149.37575pt.
-<MerklePathTemp.png, id=721, 722.7pt x 542.025pt>
+<MerklePathTemp.png, id=718, 722.7pt x 542.025pt>
 File: MerklePathTemp.png Graphic file (type png)
 <use MerklePathTemp.png>
 Package pdftex.def Info: MerklePathTemp.png  used on input line 310.
 (pdftex.def)             Requested size: 199.16928pt x 149.37575pt.
- [58] [59
+ [59] [60
 pdfTeX warning (ext4): destination with the same identifier (name{figure.4.4}) 
 has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
 l.334 
        <./MerklePathTemp.png (PNG copy)>]
-<Number of constraints.png, id=738, 602.25pt x 372.39125pt>
+<Number of constraints.png, id=734, 602.25pt x 372.39125pt>
 File: Number of constraints.png Graphic file (type png)
 <use Number of constraints.png>
 Package pdftex.def Info: Number of constraints.png  used on input line 341.
 (pdftex.def)             Requested size: 369.88582pt x 228.72093pt.
- [60]
-<Number of constraints .05.png, id=745, 602.25pt x 372.39125pt>
+ [61]
+<Number of constraints .05.png, id=741, 602.25pt x 372.39125pt>
 File: Number of constraints .05.png Graphic file (type png)
 <use Number of constraints .05.png>
 Package pdftex.def Info: Number of constraints .05.png  used on input line 354.
 
 (pdftex.def)             Requested size: 369.88582pt x 228.72093pt.
- [61
+ [62
 pdfTeX warning (ext4): destination with the same identifier (name{figure.4.5}) 
 has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
 l.358 E
        ven with more than 1 million users, our new circuit has three times f...
- <./Number of constraints.png>] [62
+ <./Number of constraints.png>] [63
 pdfTeX warning (ext4): destination with the same identifier (name{figure.4.6}) 
 has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
 l.368 
-       <./Number of constraints .05.png>] [63]
-<FailureProbabilityRound1.png, id=763, 748.7975pt x 500.87125pt>
+       <./Number of constraints .05.png>] [64]
+<FailureProbabilityRound1.png, id=760, 748.7975pt x 500.87125pt>
 File: FailureProbabilityRound1.png Graphic file (type png)
 <use FailureProbabilityRound1.png>
 Package pdftex.def Info: FailureProbabilityRound1.png  used on input line 392.
 (pdftex.def)             Requested size: 369.88582pt x 247.41614pt.
-<FailureProbabilityRound2.png, id=765, 736.7525pt x 496.85625pt>
+<FailureProbabilityRound2.png, id=762, 736.7525pt x 496.85625pt>
 File: FailureProbabilityRound2.png Graphic file (type png)
 <use FailureProbabilityRound2.png>
 Package pdftex.def Info: FailureProbabilityRound2.png  used on input line 401.
 (pdftex.def)             Requested size: 369.88582pt x 249.44342pt.
- [64
+ [65
 pdfTeX warning (ext4): destination with the same identifier (name{figure.4.7}) 
 has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
 l.405 
        <./FailureProbabilityRound1.png>]
-<FailureProbabilityRound3.png, id=773, 721.69624pt x 483.8075pt>
+<FailureProbabilityRound3.png, id=769, 721.69624pt x 483.8075pt>
 File: FailureProbabilityRound3.png Graphic file (type png)
 <use FailureProbabilityRound3.png>
 Package pdftex.def Info: FailureProbabilityRound3.png  used on input line 410.
 (pdftex.def)             Requested size: 369.88582pt x 247.96402pt.
- [65
+ [66
 pdfTeX warning (ext4): destination with the same identifier (name{figure.4.8}) 
 has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
 l.414 T
        he key takeaway is that we require $4\%$ of users to verify every rou...
- <./FailureProbabilityRound2.png>] [66
+ <./FailureProbabilityRound2.png>] [67
 pdfTeX warning (ext4): destination with the same identifier (name{figure.4.9}) 
 has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
 l.424    \item L
                 ist of neighbors sum (private): Sums of nearby Merkle tree n...
- <./FailureProbabilityRound3.png>] [67]
-<FoldingCircuit.png, id=793, 803.0pt x 602.25pt>
+ <./FailureProbabilityRound3.png>] [68]
+<FoldingCircuit.png, id=789, 803.0pt x 602.25pt>
 File: FoldingCircuit.png Graphic file (type png)
 <use FoldingCircuit.png>
 Package pdftex.def Info: FoldingCircuit.png  used on input line 453.
 (pdftex.def)             Requested size: 369.88582pt x 277.42432pt.
- [68
+ [69
 pdfTeX warning (ext4): destination with the same identifier (name{figure.4.10})
  has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
@@ -832,36 +832,36 @@ pdfTeX warning (ext4): destination with the same identifier (name{figure.4.10})
 l.461 T
        hese steps encompass all the public values we initially had in the ci...
  <./FoldingCircuit.png (PNG copy)>]
-<Proof time.png, id=798, 602.25pt x 372.39125pt>
+<Proof time.png, id=794, 602.25pt x 372.39125pt>
 File: Proof time.png Graphic file (type png)
 <use Proof time.png>
 Package pdftex.def Info: Proof time.png  used on input line 476.
 (pdftex.def)             Requested size: 369.88582pt x 228.72093pt.
- [69]
-<Proof time vs verifier time.png, id=803, 602.25pt x 372.39125pt>
+ [70]
+<Proof time vs verifier time.png, id=800, 602.25pt x 372.39125pt>
 File: Proof time vs verifier time.png Graphic file (type png)
 <use Proof time vs verifier time.png>
 Package pdftex.def Info: Proof time vs verifier time.png  used on input line 49
-0.
+4.
 (pdftex.def)             Requested size: 369.88582pt x 228.72093pt.
- [70
+ [71
 pdfTeX warning (ext4): destination with the same identifier (name{figure.4.11})
  has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.494 
-       <./Proof time.png>] [71
+l.497    \end{figure}
+                      <./Proof time.png>] [72
 pdfTeX warning (ext4): destination with the same identifier (name{figure.4.12})
  has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.504 \paragraph
-                {Inputs} <./Proof time vs verifier time.png>] [72])
-(./sections/09-conclusion.tex [73]
+l.507 
+       <./Proof time vs verifier time.png>] [73]) (./sections/09-conclusion.tex
+[74]
 Chapter 5.
-[74
+[75
 
-]) [75] (./sections/10-appendix.tex [76]
+]) (./sections/10-appendix.tex [76]
 Appendix A.
 (/usr/local/texlive/2024/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2024/02/21 1.10 listings language file
@@ -992,13 +992,13 @@ L3 programming layer <2024-02-20>
 LaTeX Warning: There were multiply-defined labels.
 
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 778489986010CEFAE9E029FC8E5721FA;7130.
+(rerunfilecheck)             Checksum: DD7FA99C7F02744BCF681E0A3E58FA34;7130.
  ) 
 Here is how much of TeX's memory you used:
- 14692 strings out of 474116
- 225254 string characters out of 5743683
+ 14691 strings out of 474116
+ 225258 string characters out of 5743683
  1960187 words of memory out of 5000000
- 36406 multiletter control sequences out of 15000+600000
+ 36405 multiletter control sequences out of 15000+600000
  567118 words of font info for 70 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  80i,14n,82p,626b,2081s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -1020,10 +1020,10 @@ e/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/
 24/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb></usr/local/texlive/202
 4/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive
 /2024/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb>
-Output written on main.pdf (97 pages, 3084465 bytes).
+Output written on main.pdf (97 pages, 3085911 bytes).
 PDF statistics:
- 1237 PDF objects out of 1440 (max. 8388607)
- 1065 compressed objects within 11 object streams
+ 1232 PDF objects out of 1440 (max. 8388607)
+ 1060 compressed objects within 11 object streams
  406 named destinations out of 1000 (max. 500000)
  516 words of extra memory for PDF output out of 10000 (max. 10000000)
 

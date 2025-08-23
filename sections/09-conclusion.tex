@@ -2,33 +2,23 @@
 
 \chapter{Conclusion}
 
-This thesis introduces a novel approach to generating a compact proof of liabilities. 
-We leveraged a fresh circuit design, prior proofs, and the Nova folding scheme to achieve significant reductions in proof size. 
-This smaller proof suits daily generation and even higher frequencies, such as hourly updates.
-Our analysis demonstrates the superior performance of the folding scheme combined with the updated circuit compared to the existing model. 
-The significance of a concise proof of liabilities cannot be overstated, as it serves as a cornerstone for the broader adoption of robust proof of solvency.
+By combining a new circuit design, prior proofs, and the Nova folding scheme, we achieve significant reductions in proof size, enabling daily or even hourly generation.
+While the relative cost of each proof decreases with higher frequency, the absolute cost rises compared to current monthly proofs. This tradeoff is worthwhile, as monthly proofs are insufficient. 
+Smaller exchanges may adopt this approach more easily, given their lower rate of changes.
+Our analysis confirms the superior performance of the folding scheme with the updated circuit, establishing concise liability proofs as a cornerstone for robust solvency systems.
 
-A proof of assets is imperative to complete the proof of solvency for marketplace integration. 
-One challenge in this endeavor lies in conducting proofs for multiple currencies. 
-However, by employing the folding scheme, we can segment the proof of assets into currency-specific proofs before generating the folded proof, mitigating this complexity.
+A proof of assets remains necessary to complete proof of solvency. Handling multiple currencies is a key challenge, but the folding scheme allows asset proofs to be segmented per currency before aggregation, reducing complexity.
 
-Despite these advancements, several security considerations remain. 
-A key vulnerability is the reliance on users to verify their inclusion proofs, as insufficient does not guarantee a valid tree. 
-Additionally, the system assumes the validity of the state used in each proof, requiring verifiers to check every proof individually. 
-To address this, incorporating recursive proofs alongside the existing folding scheme is a promising direction for future work. 
-Each recursive proof would verify the previous proof, enabling a verifier to validate only the latest proof without trusting the tree's initial state. 
+Security considerations persist. Reliance on users to verify inclusion proofs is insufficient to guarantee a valid tree, and each proof assumes state validity, forcing verifiers to check all proofs individually. 
+Recursive proofs offer a solution: each proof verifies the previous one, allowing a verifier to validate only the latest proof.
 
-Another area for improvement is exploring alternative SNARK designs, testing different hash algorithms, or optimizing the number of constraints. 
-This paper uses Groth16 to benchmark different circuit designs, but other SNARKs could address vulnerabilities, such as post-quantum risks or the trusted setup required by Groth16. 
-Similarly, other hash algorithms have different degrees of security and different speed. We could optimize for either, depending on the need. Other potential hashes are often used in 
-zero-knowledge includes Poseidon and Keccak. 
+Performance can also be improved. The change circuit can be parallelized, unlike the folding circuit, which behaves like a linked list. 
+This makes the change circuit central to the long-term goal of live proving for example, parallelizing 100 change proofs in a single block before aggregation.
 
-The number of constraints could also be optimized. The current implementation uses a naive construction for the constraints, ensuring the construction is secure. It could be worth exploring merging
-some constraints together to minimize their number.
+Further work includes exploring alternative SNARK designs, testing different hash functions, and optimizing constraint counts. While Groth16 provides benchmarks, other SNARKs may mitigate trusted setup or post-quantum risks. 
+Likewise, Poseidon or Keccak may offer better tradeoffs in speed or security. 
+The current implementation uses a secure but naive constraint construction, leaving room for merging constraints to reduce overhead.
 
-Finally, a thorough audit is essential before deploying the code in production. 
-While the Merkle tree design prevents proving false balances, the constraints must be correctly implemented and comprehensive to ensure this guarantee. 
-Rigorous auditing will be critical to validate the circuit's integrity.
+Finally, rigorous auditing is essential before deployment. While the Merkle tree design prevents false balances, correctness depends on comprehensive and accurate constraint implementation.
 
-By addressing these security and optimization challenges, the proposed proof of liabilities system can pave the way for scalable, 
-secure, and practical solvency proofs in blockchain-based marketplaces.
+By addressing these challenges, the proposed system can deliver scalable, secure, and practical solvency proofs for blockchain marketplaces, and represents the right step towards live proving: a proof every block.

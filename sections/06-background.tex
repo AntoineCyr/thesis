@@ -18,11 +18,11 @@ paving the way for a daily proof in the subsequent sections.
 Bitcoin is recognized as the world's first successful cryptocurrency and decentralized digital currency.
 The goal of Bitcoin is to allow financial transactions to be settled independently without the need for a middleman, typically financial institutions.
 Bitcoin is built on a peer-to-peer network, which means that every participant helps to secure the transaction history and propagate new transactions.
-No single point of failure allows transactions to occur in real-time, in contrast to the delays encountered in the traditional finance world.
+No single point of failure allows transactions to occur in real-time, in contrast to the delays encountered in the traditional finance world. \cite{MB17}
 Bitcoin defines two concepts: Bitcoin, the cryptocurrency, and Bitcoin, the blockchain. The cryptocurrency resides on the blockchain.
 The Bitcoin blockchain is a decentralized ledger that records all Bitcoin (the cryptocurrency) transactions immutably and transparently.
 This blockchain serves as a verifiable record of all Bitcoin transactions, accessible to every participant in the network.
-The transparency afforded by the public blockchain engenders trust and accountability. \cite{MB17}
+The transparency afforded by the public blockchain engenders trust and accountability. 
 
 \subsection{Hash function}
 A hash function is a mathematical function that takes an input (or message) of any size and produces a fixed-size output, called a hash or digest.
@@ -33,7 +33,7 @@ The hash function is also deterministic, i.e. it will always produce the same ou
 
 \subsection{Transactions}
 For every network participant, there is a public key, a private key and a wallet address associated with the participant.
-The public key is derived from the private key using elliptic curve multiplication, and the wallet address is derived from the public key using a hashing function.
+The public key is derived from the private key using elliptic curve multiplication, and the wallet address is derived from the public key using a hashing function. \cite{MB17}
 Both are one-way functions, meaning they cannot be derived the other way around.
 The public key serves as the network's unique identifier, but it is the wallet address that typically defines a participant.
 The wallet address is similar to a bank account number. When a party send Bitcoin to someone, they send it to their wallet address.
@@ -45,7 +45,7 @@ We verify a Bitcoin transaction's digital signature using the sender's public ke
 This is done through ECDSA, where the signature is compared to a computed value derived from the transaction hash and the public key.
 If they match, it confirms the transaction was signed with the corresponding private key, validating the transaction.
 Sending a transaction is the easiest problem to solve. The real challenge is keeping track of who owns what and avoiding the double spending problem.
-The methodology for managing this is to keep the history of every single transaction. The transactions are bundled into blocks, and the chain of blocks creates the blockchain. \cite{MB17}
+The methodology for managing this is to keep the history of every single transaction. The transactions are bundled into blocks, and the chain of blocks creates the blockchain.
 
 \subsection{Network}
 The challenge of the network is to have every single node achieve consensus on the transaction history. Nodes are computers connected to the network
@@ -54,7 +54,7 @@ The nodes put the transactions into a block and try to publish it. To publish a 
 When a node solves the challenge, it broadcasts the block to every node. The node accepts the block if all transactions are valid. There is no formal
 way of approving a new block. A node shows its acceptance by starting to work on a new block using the hash of the accepted block as the previous hash.
 If multiple blocks are propagated at the same time, some nodes might accept different blocks, creating multiple chains. To solve this issue, the longest chain is considered to be the correct one.
-If two chains have the same length, nodes keep working on their respective chains until one receives a new block, breaking the tie. \cite{MB17}
+If two chains have the same length, nodes keep working on their respective chains until one receives a new block, breaking the tie.
 
 \begin{figure}[H]
    \centering
@@ -76,7 +76,7 @@ The nonce value is there solely for that purpose. Once a block is published, we 
 The immutability of the older blocks makes Bitcoin secure. To modify a block in the middle of the chain, we would need to redo the work of every block made after it.
 The longest chain is determined by the cumulative proof-of-work invested in it. This is why we say that Bitcoin is secure as long as $51\%$ of the nodes are honest.
 The chain with the majority of nodes working on it will grow the fastest and thus be the accepted chain.
-The difficulty of the new block is determined by an average in order to generate blocks at a steady pace. A Bitcoin reward is also associated with mining (publishing) a block. \cite{MB17}
+The difficulty of the new block is determined by an average in order to generate blocks at a steady pace. A Bitcoin reward is also associated with mining (publishing) a block.
 
 
 \subsection{Merkle Tree}
@@ -118,7 +118,8 @@ While this is a positive development, current proof of solvency methods have sho
 Zero-knowledge proof is a cryptographic technique allowing a prover to demonstrate knowledge of a fact without divulging additional information. 
 For instance, rather than revealing the solution to an equation, zero-knowledge proofs enable the prover to show that they know the solution without revealing it. 
 In this context, a witness is the secret information or evidence that supports the validity of the statement being proven. 
-The goal is to construct a proof that is both sound and complete and is zero-knowledge \cite{LZK}.
+The goal is to construct a proof that is both sound and complete and is zero-knowledge.
+
 
 \label{subsec:zkp}
 \begin{itemize}
@@ -127,24 +128,34 @@ The goal is to construct a proof that is both sound and complete and is zero-kno
 \item \textbf{Zero-Knowledge}: If the statement is true,  a verifier learns nothing other than the statement is true. \cite{LC23}
 \end{itemize}
 
+\paragraph{Formal definition}: A proof system $(P,V)$ for $L$ is zero-knowledge if for every efficient verifier strategy $V*$ there exists an efficient probabilistic algorithm $S*$ (known as the simulator) such that for every $x \in L$, 
+the following random variables are computationally indistinguishable:
+ \begin{itemize}
+   \item The output of $V*$ after interacting with $P$ on input $x$.
+   \item The output of $S*$ on input $x$.
+\end{itemize}
+That is, we can show the verifier does not gain anything from the interaction, because no matter what algorithm $V*$
+ he uses, whatever he learned as a result of interacting with the prover, he could have just as equally learned by simply running the standalone algorithm $S*$
+ on the same input. \cite{Barak16}
 
 \subsection{Non interactive proofs}
 
 Zero-knowledge proofs were initially designed as interactive: multiple rounds of interaction between the prover and the verifier \cite{GMR89}.
 Leading to what are called interactive zero-knowledge proofs. This interaction allows the prover to demonstrate knowledge of the solution without revealing additional information.
 An alternative model was proposed in which the verifier and prover share a reference string during a trusted setup. Once we have the reference string, a single message is needed between the prover and the verifier.
-Eliminating multiple rounds of interaction simplifies the verification process and reduces the computational power required.
-Therefore, non-interactive zero-knowledge proofs offer enhanced efficiency and scalability, which will be needed later.  \cite{BFM88} \cite{GMW91}
+Eliminating multiple rounds of interaction simplifies the verification process and reduces the computational power required.\cite{BFM88}
+Therefore, non-interactive zero-knowledge proofs offer enhanced efficiency and scalability, which will be needed later. 
 
 
 \subsection{SNARKS}
 One recent advance for non-interactive proofs is SNARK (Non-Interactive Argument of Knowledge).
 
+
 This means a proof that is:
 \begin{itemize}
 \item \textbf{Succinct}: The proof size is minimal compared to the witness size (the secret information).
 \item \textbf{Non-interactive}: There are no rounds of interactions between the prover and the verifier.
-\item \textbf{Argument}: It is secure only against provers with bounded computational resources. A dishonest prover with unlimited computational power could potentially prove a false statement.
+\item \textbf{Argument}: It is sound only against provers with bounded computational resources. A dishonest prover with unlimited computational power could potentially prove a false statement.
 \item \textbf{Knowledge-sound}: A valid proof can only be generated if the prover knows the witness. \cite{NZ20}
 \end{itemize}
 
@@ -160,6 +171,8 @@ There are many techniques to construct a SNARK, but all of them follow the same 
  We will show the core general idea behind a SNARK. 
 We must transform the code we want to prove in a quadratic arithmetic program (QAP) to construct the SNARK.
 The best example of a SNARK using this technique is Groth16\cite{GR16}, one of the most widely used SNARK today.
+Groth16 is a Perfect Zero-Knowledge system, where the distribution of the view generated by the simulator is exactly the same as the view generated by the honest prover and verifier. 
+There exist also Statistical and Computational Zero-Knowledge systems, both of which relies on a weaker assumption of zero-knowledge. 
 
 
 \subsubsection{Arithmetic circuit}
@@ -226,9 +239,12 @@ $a$ and $b$ both represents $x$, while $c$ represents $s_1$.
 Now, if we do the dot product:
 \begin{quote}
    $s \cdot a =  [1,35,3,9,27,30] \cdot [0,0,1,0,0,0] = 0*1+0*35+1*3+0*9+0*27+0*30= 3$ 
+
    $s \cdot b = [1,35,3,9,27,30] \cdot [0,0,1,0,0,0] = 3$ 
+
    $s \cdot c = [1,35,3,9,27,30] \cdot [0,0,0,1,0,0] = 9$ 
-$s \cdot a * s \cdot b - s \cdot c =  3 * 3 - 9 = 0$
+
+   $s \cdot a * s \cdot b - s \cdot c =  3 * 3 - 9 = 0$
 
 This shows that our solution vector satisfies the first gate.
 \end{quote}
@@ -304,26 +320,26 @@ Therefore, we need a set of 4 points to have a polynomial.
 We can get 18 ($3*6$) polynomials by transposing our matrices.
 For instance, the first column of $A^T$ is our first polynomial $[0,0,0,5]$.
 This gives us the set of points $[(1,0),(2,0),(3,0),(4,5)]$.
-The polynomial interpretation of this set of points is $f(x) = 535x^3+636x^2+116x+636$.
+The polynomial interpretation of this set of points is $f(x) = 0.833x^3 - 5x^2 + 9.166x -5$.
 Doing the same for every column of $A$, $B$ and $C$, we get the matrices:
 \begin{quote}
    \[
  A_m =
    \begin{bmatrix}
-      636 & 116 & 636 & 535 \\
+      0.833 & -5 & 9.166 & -5 \\
       0   & 0   & 0   & 0   \\
-      8   & 416 & 5   & 213 \\
-      635 & 330 & 637 & 321 \\
-      4   & 634 & 324 & 320 \\
-      640 & 536 & 640 & 107
+      -0.66   & 5 & -11.33   & 8 \\
+      0.5 & -4 & 9.5 & -6 \\
+      -0.5   & 3.5 & -7 & 4 \\
+      0.166 & -1 & 1.833 & -1
    \end{bmatrix}
    \]
    \[
  B_m =
    \begin{bmatrix}
-      3   & 529 & 323 & 427 \\
+      -0.33   & 2.5 & -5.166 & 3 \\
       0   & 0   & 0   & 0   \\
-      639 & 112 & 318 & 214 \\
+      0.33 & -2.5 & 5.166 & -2 \\
       0   & 0   & 0   & 0   \\
       0   & 0   & 0   & 0   \\
       0   & 0   & 0   & 0
@@ -333,11 +349,11 @@ Doing the same for every column of $A$, $B$ and $C$, we get the matrices:
  C_m =
    \begin{bmatrix}
       0   & 0   & 0   & 0   \\
-      640 & 536 & 640 & 107 \\
+      0.166 & -1 & 1.833 & -1 \\
       0   & 0   & 0   & 0   \\
-      4   & 423 & 322 & 534 \\
-      635 & 330 & 637 & 321 \\
-      4   & 634 & 324 & 320
+      -0.166   & 1.5 & -4.33 & 4 \\
+      0.5 & -4 & 9.5 & -6 \\
+      -0.5   & 3.5 & -7 & 4
    \end{bmatrix}
    \]
    \end{quote}
@@ -356,13 +372,14 @@ In this case, computing T:
 \begin{quote}
 $T(x) = S \cdot A_m * S \cdot B_m - S \cdot C_m  $
 
-$T(x) = 139*x^6 + 372*x^5 + 275*x^4 + 58*x^3 + 147*x^2 + 379*x + 553$
+$T(x) = -3.44x^6 + 51.5x^5 - 294.77x^4 + 805.833x^3 - 1063.77x^2 + 592.66x - 88$
 \end{quote}
 
-In this case, we use $Z = (x-1)(x-2)(x-3)(x-4)$
+In this case, we use $Z = (x-1)(x-2)(x-3)(x-4)$.
+
 To show that $T$ is divided by $Z$, it is sufficient to verify $T(x) = 0$ at $1,2,3$ and $4$.
 
-More formally, we have shown that there exists a Polynomial $H$ such that $T(x)=H(x) \cdot Z(x)$
+More formally, we have shown that there exists a polynomial $H$ such that $T(x)=H(x) \cdot Z(x)$
 (i.e. if $T$ is divided by $Z$, then it will be perfectly divisible and will leave no remainder)
 
 
@@ -512,7 +529,8 @@ KZG is the standard in terms of commitments for SNARKS. It is efficient and form
 
 A proof of solvency is a system where we prove that an entity, in most cases an exchange, holds enough assets to cover
 the balance of every customer. In traditional finance, this would be done through an audit. While an audit can be helpful,
-it has many limitations. It requires the trust of another third party, but it also poses a time constraint. Thus, it is impractical, even impossible, to hold an audit daily, and things move fast in the Bitcoin world. It is essential to be able to fill a proof of solvency every single day.
+it has many limitations. It requires the trust of another third party, but it also poses a time constraint. Thus, it is impractical, even impossible, to hold an audit daily, and things move fast in the Bitcoin world.
+Big money transfers does not need approval and can be sent within minutes. It is essential to be able to fill a proof of solvency every single day.
 Therefore, implementing a mechanism to produce daily proof of solvency is of the utmost importance.
 
 A proof of solvency is composed of a proof of assets, where we verify what assets the marketplace has control over, and the proof of liabilities, 
@@ -551,7 +569,7 @@ Since these 2 papers, a lot of work has been done to evolve the proof of solvenc
 In recent years, several major cryptocurrency exchanges, including Binance, Crypto.com, and Kraken, have taken steps to enhance transparency by providing various proof of reserves.
 Binance has implemented a proof of reserves system where they publish a monthly Merkle tree as their proof of liabilities and disclose a list of their assets (every cryptocurrency under their control) \cite{BPR}.
 Crypto.com published a one-time audit \cite{CC22}.
-Kraken also publishes proof of liabilities every few months without proof of assets. \cite{KK23}.
+Kraken also publishes proof of liabilities every few months without proof of assets. \cite{BPR}.
 
 Although these proof of reserves may seem promising initially, they are primarily superficial.
 The proofs have many shortcomings; they are insufficient to prove that the marketplaces are solvent.

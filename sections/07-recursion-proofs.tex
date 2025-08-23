@@ -124,11 +124,10 @@ Instead of individually verifying each pair, we accumulate the pairs and verify 
 
 \section{Folding scheme}
 In the Nova scheme, the folding technique accumulates the R1CS progressively as the computation proceeds rather than accumulating only the complex portions of the R1CS. 
-This means that at each step in the folding process, instead of storing the separate R1CS sets for each node and combining them later, we incrementally combine them into a single R1CS set. 
+This means that at each step in the folding process, instead of storing the separate R1CS sets for each node and combining them later, we incrementally combine them into a single R1CS set. \cite{Nova23}
 This set, called "relaxed R1CS," simplifies the final proof generation.
 As a result, we avoid the need to handle multiple sets of R1CS in the final step, leading to a more efficient recursive proof process. 
 The relaxed R1CS is then used to compute a single proof at the end of the folding process.
-\cite{Nova23}  \cite{ASI23} \cite{vODC24F}
 
 \subsection{Relaxed R1CS}
 Returning to the previous \hyperref[subsec:r1cs]{section}, we previously defined what an R1CS is.
@@ -188,14 +187,16 @@ Since the direct addition of two R1CS instances does not produce another valid R
 We need to modify the R1CS so that it can be folded.
 To solve this, we introduce a relaxed R1CS, which includes a new error term $E$.
 The goal is to have the new terms produced by the folding comprised in the term $E$.
-We will try the new form: $Az_i \circ Bz_i = Dz_i Ez_i$.
+We will try the new form: $Az \circ Bz = c(Dz) + E$.
 \\
 \\
 Let's \textbf{define a relaxed R1CS}:
 \begin{quote}
 $A, B,D \in \mathbb{F}^{u \times v}_p, (x \in \mathbb{F}^n_p, c \in \mathbb{F}_p, E \in \mathbb{F}^u_p) $
 \\
-Witness: $ z = (x,w) \in \mathbb{F}^v_p s.t. (Az) \circ (Bz) = c(Dz) + E$
+Witness: $ z = (x,w) \in \mathbb{F}^v_p$ 
+\\
+s.t. $(Az) \circ (Bz) = c(Dz) + E$
 \end{quote}
 Lets \textbf{fix the R1CS} program once again:
 \begin{quote}
@@ -213,7 +214,9 @@ We know $(Az_i) \circ (Bz_i) = c_i(Dz_i) + E_i$ for $ i = 1,2$
 \begin{quote}
 $T \leftarrow (Az_2) \circ (Bz_1) + (Az_1) \circ (Bz_2) - c_1(Dz_2) - c_2(Dz_1)$
 \\
-$x \leftarrow x_1 + rx_2, c \leftarrow c_1 + rc_2, E \leftarrow E_1 + rT +r^2E_2$
+$x \leftarrow x_1 + rx_2, c \leftarrow c_1 + rc_2,$
+\\
+$E \leftarrow E_1 + rT +r^2E_2$
 \\
 $z \leftarrow z_1 + rz_2 = (x_1 +rx_2, w_1 + rw_2)$
 \\
@@ -230,7 +233,6 @@ $=c(Dz) + E$
 We have a valid relaxed R1CS.
 
 \paragraph{Validity}
-While the error term $E$ allows folding, it questions the validity of the proof. As long as $E$ is bounded, the proof remains valid. 
+While the error term $E$ allows folding, it questions the validity of the proof. As long as $E$ is bounded, the proof remains valid. \cite{Nova23}
 The relaxed formulation preserves constraint structure, enables incremental folding, and prevents uncontrolled error propagation. 
 If needed, the system can return to a strict R1CS by proving $E = 0$ in the final verification, ensuring flexibility and correctness.
-\cite{Nova23}

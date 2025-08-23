@@ -6,7 +6,6 @@ Database file #1: bib/pulp.bib
 Warning--to sort, need author or key in ZKM2
 Warning--to sort, need author or key in ZKM10
 Warning--to sort, need author or key in ZKM3
-Warning--empty year in LZK
 Warning--empty journal in FRI
 Warning--empty year in BPR
 Warning--empty year in BPS
@@ -17,50 +16,48 @@ Warning--empty journal in DBBBCC15
 Warning--empty journal in GMW91
 Warning--empty journal in KZG
 Warning--empty journal in ASI23
-Warning--empty journal in KK23
-Warning--empty year in KK23
 Warning--empty journal in chainlink_blog
 Warning--empty journal in CC22
 Warning--empty journal in NZ20
-You've used 38 entries,
+You've used 37 entries,
             2118 wiz_defined-function locations,
-            700 strings with 7740 characters,
-and the built_in function-call counts, 9703 in all, are:
-= -- 935
-> -- 416
+            700 strings with 7818 characters,
+and the built_in function-call counts, 9505 in all, are:
+= -- 919
+> -- 409
 < -- 4
-+ -- 173
-- -- 132
-* -- 498
-:= -- 1643
-add.period$ -- 117
-call.type$ -- 38
-change.case$ -- 180
++ -- 170
+- -- 130
+* -- 487
+:= -- 1608
+add.period$ -- 115
+call.type$ -- 37
+change.case$ -- 176
 chr.to.int$ -- 0
-cite$ -- 57
-duplicate$ -- 408
-empty$ -- 786
-format.name$ -- 132
-if$ -- 2037
+cite$ -- 53
+duplicate$ -- 398
+empty$ -- 769
+format.name$ -- 130
+if$ -- 2000
 int.to.chr$ -- 0
-int.to.str$ -- 38
-missing$ -- 26
-newline$ -- 195
-num.names$ -- 70
-pop$ -- 261
+int.to.str$ -- 37
+missing$ -- 25
+newline$ -- 191
+num.names$ -- 68
+pop$ -- 251
 preamble$ -- 1
-purify$ -- 142
+purify$ -- 139
 quote$ -- 0
-skip$ -- 337
+skip$ -- 332
 stack$ -- 0
-substring$ -- 320
+substring$ -- 315
 swap$ -- 84
 text.length$ -- 4
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 152
-warning$ -- 19
-while$ -- 79
-width$ -- 40
-write$ -- 379
-(There were 19 warnings)
+type$ -- 148
+warning$ -- 16
+while$ -- 77
+width$ -- 39
+write$ -- 373
+(There were 16 warnings)
